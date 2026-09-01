@@ -1,0 +1,17 @@
+.DS_Store
+*.pdf
+*.epub
+*.mht
+*.xlsx
+*.xls
+*.docx
+*.pptx
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+discord-*.json
+source_assets/
+private/
+
