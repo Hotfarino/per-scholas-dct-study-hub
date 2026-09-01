@@ -1,39 +1,517 @@
-# Image and Diagram Index
+# Image and Diagram Gallery
 
-The course community contained 80+ instructional images. They are grouped here by subject, but the binary files are not redistributed publicly without confirmed permission from their creators.
+The 80 instructional images below are stored directly in this repository and can be opened or downloaded from GitHub. They are grouped by subject rather than Discord posting order.
+
+Images are reproduced from the course community at the repository owner's request. Do not remove attribution or reuse them commercially unless you have permission from the relevant rights holder.
 
 ## Wi-Fi Connection Slides — 30 images
 
-Topics include frequency bands, Wi-Fi generations, channels, signal strength, interference, Bluetooth, RFID, NFC, cellular/fixed wireless, throughput, distance, and troubleshooting.
+Wireless standards, bands, channels, interference, radio technologies, throughput, and troubleshooting.
 
-## Fiber Cable Connections — 28 images
+### Wi-Fi Connection 1
 
-Topics include copper and fiber media, SC/LC/ST/MT-RJ connectors, UPC/APC polish, transceivers, structured cabling, T568A/B, cable categories, PoE, network devices, and installation tools.
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-01.jpg)
 
-## Standalone class notes — 6 images plus two later additions
+![Wi-Fi Connection Slides 1](../assets/images/wifi/wifi-slide-01.jpg)
 
-Topics include common ports, TCP/IP, IPv4/IPv6, CPU sockets, the CPU instruction cycle, and networking reference charts.
+### Wi-Fi Connection 2
 
-## CompTIA help diagrams — 10 files
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-02.jpg)
 
-Topics include motherboard layout, PSU planning, boot sequence, RAID 0/1/5/6/10, CPU/RAM/storage concepts, and simulator screenshots.
+![Wi-Fi Connection Slides 2](../assets/images/wifi/wifi-slide-02.jpg)
 
-## Announcements and logistics — 4 files
+### Wi-Fi Connection 3
 
-Important dates, alternating schedule, and course logistics.
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-03.jpg)
 
-## Other course-help images
+![Wi-Fi Connection Slides 3](../assets/images/wifi/wifi-slide-03.jpg)
 
-OSHA upload assistance, PC simulator troubleshooting, announcement instructions, and study-room materials.
+### Wi-Fi Connection 4
 
-## Public-safe visual replacements
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-04.jpg)
 
-For a public version, recreate concepts as original diagrams rather than copying classroom slides. Good candidates are:
+![Wi-Fi Connection Slides 4](../assets/images/wifi/wifi-slide-04.jpg)
 
-- Common-ports table.
-- RAID comparison chart.
-- Wi-Fi band comparison.
-- Fiber connector identification chart.
-- Motherboard troubleshooting flowchart.
-- PC boot-sequence diagram.
+### Wi-Fi Connection 5
 
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-05.jpg)
+
+![Wi-Fi Connection Slides 5](../assets/images/wifi/wifi-slide-05.jpg)
+
+### Wi-Fi Connection 6
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-06.jpg)
+
+![Wi-Fi Connection Slides 6](../assets/images/wifi/wifi-slide-06.jpg)
+
+### Wi-Fi Connection 7
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-07.jpg)
+
+![Wi-Fi Connection Slides 7](../assets/images/wifi/wifi-slide-07.jpg)
+
+### Wi-Fi Connection 8
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-08.jpg)
+
+![Wi-Fi Connection Slides 8](../assets/images/wifi/wifi-slide-08.jpg)
+
+### Wi-Fi Connection 9
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-09.jpg)
+
+![Wi-Fi Connection Slides 9](../assets/images/wifi/wifi-slide-09.jpg)
+
+### Wi-Fi Connection 10
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-10.jpg)
+
+![Wi-Fi Connection Slides 10](../assets/images/wifi/wifi-slide-10.jpg)
+
+### Wi-Fi Connection 11
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-11.jpg)
+
+![Wi-Fi Connection Slides 11](../assets/images/wifi/wifi-slide-11.jpg)
+
+### Wi-Fi Connection 12
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-12.jpg)
+
+![Wi-Fi Connection Slides 12](../assets/images/wifi/wifi-slide-12.jpg)
+
+### Wi-Fi Connection 13
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-13.jpg)
+
+![Wi-Fi Connection Slides 13](../assets/images/wifi/wifi-slide-13.jpg)
+
+### Wi-Fi Connection 14
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-14.jpg)
+
+![Wi-Fi Connection Slides 14](../assets/images/wifi/wifi-slide-14.jpg)
+
+### Wi-Fi Connection 15
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-15.jpg)
+
+![Wi-Fi Connection Slides 15](../assets/images/wifi/wifi-slide-15.jpg)
+
+### Wi-Fi Connection 16
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-16.jpg)
+
+![Wi-Fi Connection Slides 16](../assets/images/wifi/wifi-slide-16.jpg)
+
+### Wi-Fi Connection 17
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-17.jpg)
+
+![Wi-Fi Connection Slides 17](../assets/images/wifi/wifi-slide-17.jpg)
+
+### Wi-Fi Connection 18
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-18.jpg)
+
+![Wi-Fi Connection Slides 18](../assets/images/wifi/wifi-slide-18.jpg)
+
+### Wi-Fi Connection 19
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-19.jpg)
+
+![Wi-Fi Connection Slides 19](../assets/images/wifi/wifi-slide-19.jpg)
+
+### Wi-Fi Connection 20
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-20.jpg)
+
+![Wi-Fi Connection Slides 20](../assets/images/wifi/wifi-slide-20.jpg)
+
+### Wi-Fi Connection 21
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-21.jpg)
+
+![Wi-Fi Connection Slides 21](../assets/images/wifi/wifi-slide-21.jpg)
+
+### Wi-Fi Connection 22
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-22.jpg)
+
+![Wi-Fi Connection Slides 22](../assets/images/wifi/wifi-slide-22.jpg)
+
+### Wi-Fi Connection 23
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-23.jpg)
+
+![Wi-Fi Connection Slides 23](../assets/images/wifi/wifi-slide-23.jpg)
+
+### Wi-Fi Connection 24
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-24.jpg)
+
+![Wi-Fi Connection Slides 24](../assets/images/wifi/wifi-slide-24.jpg)
+
+### Wi-Fi Connection 25
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-25.jpg)
+
+![Wi-Fi Connection Slides 25](../assets/images/wifi/wifi-slide-25.jpg)
+
+### Wi-Fi Connection 26
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-26.jpg)
+
+![Wi-Fi Connection Slides 26](../assets/images/wifi/wifi-slide-26.jpg)
+
+### Wi-Fi Connection 27
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-27.jpg)
+
+![Wi-Fi Connection Slides 27](../assets/images/wifi/wifi-slide-27.jpg)
+
+### Wi-Fi Connection 28
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-28.jpg)
+
+![Wi-Fi Connection Slides 28](../assets/images/wifi/wifi-slide-28.jpg)
+
+### Wi-Fi Connection 29
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-29.jpg)
+
+![Wi-Fi Connection Slides 29](../assets/images/wifi/wifi-slide-29.jpg)
+
+### Wi-Fi Connection 30
+
+[Open or download the full-size image](../assets/images/wifi/wifi-slide-30.jpg)
+
+![Wi-Fi Connection Slides 30](../assets/images/wifi/wifi-slide-30.jpg)
+
+## Fiber and Copper Cabling Slides — 28 images
+
+Media, connectors, polish types, Ethernet categories, PoE, structured cabling, tools, and network devices.
+
+### Fiber and Copper Cabling 1
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-01.jpg)
+
+![Fiber and Copper Cabling Slides 1](../assets/images/cabling-and-fiber/cabling-slide-01.jpg)
+
+### Fiber and Copper Cabling 2
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-02.jpg)
+
+![Fiber and Copper Cabling Slides 2](../assets/images/cabling-and-fiber/cabling-slide-02.jpg)
+
+### Fiber and Copper Cabling 3
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-03.jpg)
+
+![Fiber and Copper Cabling Slides 3](../assets/images/cabling-and-fiber/cabling-slide-03.jpg)
+
+### Fiber and Copper Cabling 4
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-04.jpg)
+
+![Fiber and Copper Cabling Slides 4](../assets/images/cabling-and-fiber/cabling-slide-04.jpg)
+
+### Fiber and Copper Cabling 5
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-05.jpg)
+
+![Fiber and Copper Cabling Slides 5](../assets/images/cabling-and-fiber/cabling-slide-05.jpg)
+
+### Fiber and Copper Cabling 6
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-06.jpg)
+
+![Fiber and Copper Cabling Slides 6](../assets/images/cabling-and-fiber/cabling-slide-06.jpg)
+
+### Fiber and Copper Cabling 7
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-07.jpg)
+
+![Fiber and Copper Cabling Slides 7](../assets/images/cabling-and-fiber/cabling-slide-07.jpg)
+
+### Fiber and Copper Cabling 8
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-08.jpg)
+
+![Fiber and Copper Cabling Slides 8](../assets/images/cabling-and-fiber/cabling-slide-08.jpg)
+
+### Fiber and Copper Cabling 9
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-09.jpg)
+
+![Fiber and Copper Cabling Slides 9](../assets/images/cabling-and-fiber/cabling-slide-09.jpg)
+
+### Fiber and Copper Cabling 10
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-10.jpg)
+
+![Fiber and Copper Cabling Slides 10](../assets/images/cabling-and-fiber/cabling-slide-10.jpg)
+
+### Fiber and Copper Cabling 11
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-11.jpg)
+
+![Fiber and Copper Cabling Slides 11](../assets/images/cabling-and-fiber/cabling-slide-11.jpg)
+
+### Fiber and Copper Cabling 12
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-12.jpg)
+
+![Fiber and Copper Cabling Slides 12](../assets/images/cabling-and-fiber/cabling-slide-12.jpg)
+
+### Fiber and Copper Cabling 13
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-13.jpg)
+
+![Fiber and Copper Cabling Slides 13](../assets/images/cabling-and-fiber/cabling-slide-13.jpg)
+
+### Fiber and Copper Cabling 14
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-14.jpg)
+
+![Fiber and Copper Cabling Slides 14](../assets/images/cabling-and-fiber/cabling-slide-14.jpg)
+
+### Fiber and Copper Cabling 15
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-15.jpg)
+
+![Fiber and Copper Cabling Slides 15](../assets/images/cabling-and-fiber/cabling-slide-15.jpg)
+
+### Fiber and Copper Cabling 16
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-16.jpg)
+
+![Fiber and Copper Cabling Slides 16](../assets/images/cabling-and-fiber/cabling-slide-16.jpg)
+
+### Fiber and Copper Cabling 17
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-17.jpg)
+
+![Fiber and Copper Cabling Slides 17](../assets/images/cabling-and-fiber/cabling-slide-17.jpg)
+
+### Fiber and Copper Cabling 18
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-18.jpg)
+
+![Fiber and Copper Cabling Slides 18](../assets/images/cabling-and-fiber/cabling-slide-18.jpg)
+
+### Fiber and Copper Cabling 19
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-19.jpg)
+
+![Fiber and Copper Cabling Slides 19](../assets/images/cabling-and-fiber/cabling-slide-19.jpg)
+
+### Fiber and Copper Cabling 20
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-20.jpg)
+
+![Fiber and Copper Cabling Slides 20](../assets/images/cabling-and-fiber/cabling-slide-20.jpg)
+
+### Fiber and Copper Cabling 21
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-21.jpg)
+
+![Fiber and Copper Cabling Slides 21](../assets/images/cabling-and-fiber/cabling-slide-21.jpg)
+
+### Fiber and Copper Cabling 22
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-22.jpg)
+
+![Fiber and Copper Cabling Slides 22](../assets/images/cabling-and-fiber/cabling-slide-22.jpg)
+
+### Fiber and Copper Cabling 23
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-23.jpg)
+
+![Fiber and Copper Cabling Slides 23](../assets/images/cabling-and-fiber/cabling-slide-23.jpg)
+
+### Fiber and Copper Cabling 24
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-24.jpg)
+
+![Fiber and Copper Cabling Slides 24](../assets/images/cabling-and-fiber/cabling-slide-24.jpg)
+
+### Fiber and Copper Cabling 25
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-25.jpg)
+
+![Fiber and Copper Cabling Slides 25](../assets/images/cabling-and-fiber/cabling-slide-25.jpg)
+
+### Fiber and Copper Cabling 26
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-26.jpg)
+
+![Fiber and Copper Cabling Slides 26](../assets/images/cabling-and-fiber/cabling-slide-26.jpg)
+
+### Fiber and Copper Cabling 27
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-27.jpg)
+
+![Fiber and Copper Cabling Slides 27](../assets/images/cabling-and-fiber/cabling-slide-27.jpg)
+
+### Fiber and Copper Cabling 28
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-28.jpg)
+
+![Fiber and Copper Cabling Slides 28](../assets/images/cabling-and-fiber/cabling-slide-28.jpg)
+
+## Networking and CPU Notes — 6 images
+
+Ports, TCP/IP, IPv4/IPv6, CPU sockets, the instruction cycle, and networking reference charts.
+
+### Networking and CPU Notes 1
+
+[Open or download the full-size image](../assets/images/networking-notes/networking-note-01.jpg)
+
+![Networking and CPU Notes 1](../assets/images/networking-notes/networking-note-01.jpg)
+
+### Networking and CPU Notes 2
+
+[Open or download the full-size image](../assets/images/networking-notes/networking-note-02.jpg)
+
+![Networking and CPU Notes 2](../assets/images/networking-notes/networking-note-02.jpg)
+
+### Networking and CPU Notes 3
+
+[Open or download the full-size image](../assets/images/networking-notes/networking-note-03.jpg)
+
+![Networking and CPU Notes 3](../assets/images/networking-notes/networking-note-03.jpg)
+
+### Networking and CPU Notes 4
+
+[Open or download the full-size image](../assets/images/networking-notes/networking-note-04.jpg)
+
+![Networking and CPU Notes 4](../assets/images/networking-notes/networking-note-04.jpg)
+
+### Networking and CPU Notes 5
+
+[Open or download the full-size image](../assets/images/networking-notes/networking-note-05.jpg)
+
+![Networking and CPU Notes 5](../assets/images/networking-notes/networking-note-05.jpg)
+
+### Networking and CPU Notes 6
+
+[Open or download the full-size image](../assets/images/networking-notes/networking-note-06.jpg)
+
+![Networking and CPU Notes 6](../assets/images/networking-notes/networking-note-06.jpg)
+
+## Hardware and Architecture Diagrams — 6 images
+
+Boot process, PSU planning, motherboard troubleshooting, and SOHO/enterprise network architecture.
+
+### Hardware and Architecture Diagrams 1
+
+[Open or download the full-size image](../assets/images/hardware/hardware-note-01.jpg)
+
+![Hardware and Architecture Diagrams 1](../assets/images/hardware/hardware-note-01.jpg)
+
+### Hardware and Architecture Diagrams 2
+
+[Open or download the full-size image](../assets/images/hardware/hardware-note-02.jpg)
+
+![Hardware and Architecture Diagrams 2](../assets/images/hardware/hardware-note-02.jpg)
+
+### Hardware and Architecture Diagrams 3
+
+[Open or download the full-size image](../assets/images/hardware/hardware-note-03.jpg)
+
+![Hardware and Architecture Diagrams 3](../assets/images/hardware/hardware-note-03.jpg)
+
+### Hardware and Architecture Diagrams 4
+
+[Open or download the full-size image](../assets/images/hardware/hardware-note-04.jpg)
+
+![Hardware and Architecture Diagrams 4](../assets/images/hardware/hardware-note-04.jpg)
+
+### Hardware and Architecture Diagrams 5
+
+[Open or download the full-size image](../assets/images/hardware/hardware-note-05.jpg)
+
+![Hardware and Architecture Diagrams 5](../assets/images/hardware/hardware-note-05.jpg)
+
+### Hardware and Architecture Diagrams 6
+
+[Open or download the full-size image](../assets/images/hardware/hardware-note-06.jpg)
+
+![Hardware and Architecture Diagrams 6](../assets/images/hardware/hardware-note-06.jpg)
+
+## RAID Diagrams — 3 images
+
+RAID 0/1/5/6/10 visual reference material.
+
+### RAID Diagrams 1
+
+[Open or download the full-size image](../assets/images/raid/raid-note-01.jpg)
+
+![RAID Diagrams 1](../assets/images/raid/raid-note-01.jpg)
+
+### RAID Diagrams 2
+
+[Open or download the full-size image](../assets/images/raid/raid-note-02.jpg)
+
+![RAID Diagrams 2](../assets/images/raid/raid-note-02.jpg)
+
+### RAID Diagrams 3
+
+[Open or download the full-size image](../assets/images/raid/raid-note-03.jpg)
+
+![RAID Diagrams 3](../assets/images/raid/raid-note-03.jpg)
+
+## Schedule and Important Dates — 2 images
+
+Alternating course schedule and important-date graphics.
+
+### Schedule and Important Dates 1
+
+[Open or download the full-size image](../assets/images/schedule/schedule-01.jpg)
+
+![Schedule and Important Dates 1](../assets/images/schedule/schedule-01.jpg)
+
+### Schedule and Important Dates 2
+
+[Open or download the full-size image](../assets/images/schedule/schedule-02.jpg)
+
+![Schedule and Important Dates 2](../assets/images/schedule/schedule-02.jpg)
+
+## Course Tools — 1 images
+
+Virtual-background setup screenshot.
+
+### Course Tools 1
+
+[Open or download the full-size image](../assets/images/course-tools/virtual-background-setup-01.jpg)
+
+![Course Tools 1](../assets/images/course-tools/virtual-background-setup-01.jpg)
+
+## PC Building Simulator — 4 images
+
+Installation instructions, application screens, and macOS compatibility troubleshooting.
+
+### PC Building Simulator 1
+
+[Open or download the full-size image](../assets/images/pc-building-simulator/pc-simulator-01.jpg)
+
+![PC Building Simulator 1](../assets/images/pc-building-simulator/pc-simulator-01.jpg)
+
+### PC Building Simulator 2
+
+[Open or download the full-size image](../assets/images/pc-building-simulator/pc-simulator-02.jpg)
+
+![PC Building Simulator 2](../assets/images/pc-building-simulator/pc-simulator-02.jpg)
+
+### PC Building Simulator 3
+
+[Open or download the full-size image](../assets/images/pc-building-simulator/pc-simulator-03.jpg)
+
+![PC Building Simulator 3](../assets/images/pc-building-simulator/pc-simulator-03.jpg)
+
+### PC Building Simulator 4
+
+[Open or download the full-size image](../assets/images/pc-building-simulator/pc-simulator-04.jpg)
+
+![PC Building Simulator 4](../assets/images/pc-building-simulator/pc-simulator-04.jpg)

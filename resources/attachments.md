@@ -1,6 +1,6 @@
 # Attachment Manifest
 
-This manifest records the useful attachment groups without republishing private or copyrighted files.
+This manifest records the useful attachment groups. The 80 instructional images are now available in the [public image gallery](images.md); private documents, books, credentials, and personal material remain excluded.
 
 | Course area | Files | Material |
 |---|---:|---|
@@ -16,6 +16,12 @@ This manifest records the useful attachment groups without republishing private 
 | OSHA help | 1 | Account/upload troubleshooting screenshot. |
 | Study room | 1 | Duplicate copy of the exam objectives. |
 
+## Available image downloads
+
+- [Browse all 80 images by subject](images.md)
+- [Open the file-by-file image manifest](../assets/images/manifest.md)
+- [Browse the image directories](../assets/images/)
+
 ## PDFs and books located
 
 - CompTIA A+ Core 1 `220-1201` exam objectives.
@@ -27,5 +33,4 @@ This manifest records the useful attachment groups without republishing private 
 - *Inside the Machine*.
 - AI fairness and early-career generative-AI EPUBs.
 
-Obtain these through authorized course channels, publishers, libraries, or official vendor sites. Do not upload them to a public repository unless you hold redistribution rights.
-
+Obtain the listed PDFs and books through authorized course channels, publishers, libraries, or official vendor sites. They are not included in this repository.

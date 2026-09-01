@@ -11,7 +11,10 @@
 *.jpeg
 *.gif
 *.webp
+!assets/images/**/*.png
+!assets/images/**/*.jpg
+!assets/images/**/*.jpeg
+!assets/images/**/*.webp
 discord-*.json
 source_assets/
 private/
-

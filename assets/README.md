@@ -1,6 +1,5 @@
 # Assets
 
-No Discord attachments are stored in this public repository.
+The [image gallery](../resources/images.md) contains 80 instructional images grouped under `assets/images/`.
 
-Only add images or documents when you created them, they are clearly licensed for redistribution, or you have written permission from the rights holder. Record the source and license beside every added asset.
-
+Account screenshots, credentials, personal profiles, resumes, books, and private document attachments remain excluded. The [image manifest](images/manifest.md) maps each public filename to its original attachment filename.
