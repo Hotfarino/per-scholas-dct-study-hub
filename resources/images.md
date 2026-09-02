@@ -1,6 +1,6 @@
 # Image and Diagram Gallery
 
-The 80 instructional images below are stored directly in this repository and can be opened or downloaded from GitHub. They are grouped by subject rather than Discord posting order.
+The 81 instructional images below are stored directly in this repository and can be opened or downloaded from GitHub. They are grouped by subject rather than Discord posting order.
 
 Images are reproduced from the course community at the repository owner's request. Do not remove attribution or reuse them commercially unless you have permission from the relevant rights holder.
 
@@ -188,7 +188,7 @@ Wireless standards, bands, channels, interference, radio technologies, throughpu
 
 ![Wi-Fi Connection Slides 30](../assets/images/wifi/wifi-slide-30.jpg)
 
-## Fiber and Copper Cabling Slides — 28 images
+## Cabling, Fiber, and Connector Images — 29 images
 
 Media, connectors, polish types, Ethernet categories, PoE, structured cabling, tools, and network devices.
 
@@ -359,6 +359,14 @@ Media, connectors, polish types, Ethernet categories, PoE, structured cabling, t
 [Open or download the full-size image](../assets/images/cabling-and-fiber/cabling-slide-28.jpg)
 
 ![Fiber and Copper Cabling Slides 28](../assets/images/cabling-and-fiber/cabling-slide-28.jpg)
+
+### Connector Identification Board — September 2, 2026
+
+Classroom identification review covering DVI variants, USB-C, VGA, SATA, Lightning, eSATA, DisplayPort, and USB Mini-B.
+
+[Open or download the full-size image](../assets/images/cabling-and-fiber/connector-identification-2026-09-02.jpg)
+
+![Connector Identification Board](../assets/images/cabling-and-fiber/connector-identification-2026-09-02.jpg)
 
 ## Standalone Wi-Fi Reference Images — 2 images
 

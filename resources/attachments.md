@@ -1,13 +1,13 @@
 # Attachment Manifest
 
-This manifest records the useful attachment groups. The 80 instructional images are now available in the [public image gallery](images.md); private documents, books, credentials, and personal material remain excluded.
+This manifest records the useful attachment groups. The 81 instructional images are now available in the [public image gallery](images.md); private documents, books, credentials, and personal material remain excluded.
 
 | Course area | Files | Material |
 |---|---:|---|
 | Wi-Fi Connection Slides | 30 | Wireless standards, bands, channels, radio technologies, performance, and troubleshooting. |
 | Fiber Cable Connections | 28 | Media, connectors, Ethernet categories, PoE, structured cabling, tools, and network devices. |
 | CompTIA help | 10 | Study guides, exam objectives, quizzes, PBQs, hardware diagrams, and troubleshooting images. |
-| Class notes | 8 | Ports, TCP/IP, IPv4/IPv6, CPU, and networking reference images. |
+| Class notes | 9 | Ports, TCP/IP, IPv4/IPv6, CPU, networking, and connector-identification reference images. |
 | PC simulator support thread | 4 | Screenshots and troubleshooting context. |
 | RAID thread | 3 | RAID diagrams and memory aids. |
 | Announcements | 5 | Schedule workbooks, important dates, and instructions. |
@@ -18,7 +18,7 @@ This manifest records the useful attachment groups. The 80 instructional images 
 
 ## Available image downloads
 
-- [Browse all 80 images by subject](images.md)
+- [Browse all 81 images by subject](images.md)
 - [Open the file-by-file image manifest](../assets/images/manifest.md)
 - [Browse the image directories](../assets/images/)
 
@@ -33,4 +33,4 @@ This manifest records the useful attachment groups. The 80 instructional images 
 - *Inside the Machine*.
 - AI fairness and early-career generative-AI EPUBs.
 
-Obtain the listed PDFs and books through authorized course channels, publishers, libraries, or official vendor sites. They are not included in this repository.
+See [Books and Legal Free Access](books.md) for authorized full-text editions, official samples, companion material, and free alternatives. Paid books are not included in this repository.

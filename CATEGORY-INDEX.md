@@ -33,7 +33,7 @@ Use this page when you want every resource for one subject in the same place.
 ## Cabling, fiber, and network devices
 
 - [Cabling, connectors, and network devices](guide/core-1-study-guide.md#4-cabling-connectors-and-network-devices)
-- [28 fiber and copper cabling slides](resources/images.md#fiber-and-copper-cabling-slides--28-images)
+- [29 cabling, fiber, and connector images](resources/images.md#cabling-fiber-and-connector-images--29-images)
 
 ## PC hardware and CPU
 
@@ -54,6 +54,12 @@ Use this page when you want every resource for one subject in the same place.
 - [Training platforms](resources/websites.md#training-platforms)
 - [Google AI courses](resources/websites.md#google-ai-courses)
 - [AI security, governance, and ethics](resources/industry-reading.md#ai-security-governance-and-ethics)
+- [AI books and legal access](resources/books.md#artificial-intelligence)
+
+## Linux and Python
+
+- [Linux books and legal access](resources/books.md#linux)
+- [Python books, source code, and tutorials](resources/books.md#python)
 
 ## Printers
 
@@ -87,7 +93,8 @@ Use this page when you want every resource for one subject in the same place.
 
 - [All videos](resources/videos.md)
 - [All websites and tools](resources/websites.md)
-- [All 80 images](resources/images.md)
+- [All 81 images](resources/images.md)
 - [Attachment manifest](resources/attachments.md)
 - [Image filename manifest](assets/images/manifest.md)
 - [Industry reading](resources/industry-reading.md)
+- [Books and legal free access](resources/books.md)

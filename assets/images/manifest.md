@@ -1,6 +1,6 @@
 # Image Manifest
 
-Total public instructional images: 80
+Total public instructional images: 81
 
 | Category | Public file | Original attachment filename |
 |---|---|---|
@@ -62,6 +62,7 @@ Total public instructional images: 80
 | Fiber and Copper Cabling Slides | [cabling-slide-26.jpg](cabling-and-fiber/cabling-slide-26.jpg) | `1544366474020393001_image.png` |
 | Fiber and Copper Cabling Slides | [cabling-slide-27.jpg](cabling-and-fiber/cabling-slide-27.jpg) | `1544366495604154489_image.png` |
 | Fiber and Copper Cabling Slides | [cabling-slide-28.jpg](cabling-and-fiber/cabling-slide-28.jpg) | `1544366536087834735_image.png` |
+| Connector Identification | [connector-identification-2026-09-02.jpg](cabling-and-fiber/connector-identification-2026-09-02.jpg) | `1544769968749420741_IMG_0312.jpg` |
 | CPU Reference Images | [cpu-instruction-cycle.jpg](hardware/cpu-instruction-cycle.jpg) | `1542904590612041809_3997DB5F-7CAD-466B-B27C-1CA0D52BD253.png` |
 | CPU Reference Images | [cpu-socket-reference.jpg](hardware/cpu-socket-reference.jpg) | `1542913126922588160_5701C623-39D9-4DE3-BFE8-C97D0957EC3B.png` |
 | Standalone Wi-Fi Reference Images | [wifi-bands-comparison.jpg](wifi/wifi-bands-comparison.jpg) | `1544365294183518309_0FA43F2E-49AC-4AAA-8649-73AAF3A35788.png` |
