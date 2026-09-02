@@ -360,45 +360,53 @@ Media, connectors, polish types, Ethernet categories, PoE, structured cabling, t
 
 ![Fiber and Copper Cabling Slides 28](../assets/images/cabling-and-fiber/cabling-slide-28.jpg)
 
-## Networking and CPU Notes — 6 images
+## Standalone Wi-Fi Reference Images — 2 images
 
-Ports, TCP/IP, IPv4/IPv6, CPU sockets, the instruction cycle, and networking reference charts.
+Quick-reference comparisons for the 2.4 GHz, 5 GHz, and 6 GHz bands.
 
-### Networking and CPU Notes 1
+### Wi-Fi Bands Comparison
 
-[Open or download the full-size image](../assets/images/networking-notes/networking-note-01.jpg)
+[Open or download the full-size image](../assets/images/wifi/wifi-bands-comparison.jpg)
 
-![Networking and CPU Notes 1](../assets/images/networking-notes/networking-note-01.jpg)
+![Wi-Fi Bands Comparison](../assets/images/wifi/wifi-bands-comparison.jpg)
 
-### Networking and CPU Notes 2
+### Wi-Fi Frequencies Reference
 
-[Open or download the full-size image](../assets/images/networking-notes/networking-note-02.jpg)
+[Open or download the full-size image](../assets/images/wifi/wifi-frequencies-reference.jpg)
 
-![Networking and CPU Notes 2](../assets/images/networking-notes/networking-note-02.jpg)
+![Wi-Fi Frequencies Reference](../assets/images/wifi/wifi-frequencies-reference.jpg)
 
-### Networking and CPU Notes 3
+## Networking Reference Images — 2 images
 
-[Open or download the full-size image](../assets/images/networking-notes/networking-note-03.jpg)
+TCP/IP, TCP vs. UDP, IPv4/IPv6, DHCP/APIPA, routing, and common port numbers.
 
-![Networking and CPU Notes 3](../assets/images/networking-notes/networking-note-03.jpg)
+### TCP/IP, IPv4, and IPv6 Review
 
-### Networking and CPU Notes 4
+[Open or download the full-size image](../assets/images/networking-notes/tcp-ip-ipv4-ipv6-review.jpg)
 
-[Open or download the full-size image](../assets/images/networking-notes/networking-note-04.jpg)
+![TCP/IP, IPv4, and IPv6 Review](../assets/images/networking-notes/tcp-ip-ipv4-ipv6-review.jpg)
 
-![Networking and CPU Notes 4](../assets/images/networking-notes/networking-note-04.jpg)
+### Common Ports List
 
-### Networking and CPU Notes 5
+[Open or download the full-size image](../assets/images/networking-notes/common-ports-list.jpg)
 
-[Open or download the full-size image](../assets/images/networking-notes/networking-note-05.jpg)
+![Common Ports List](../assets/images/networking-notes/common-ports-list.jpg)
 
-![Networking and CPU Notes 5](../assets/images/networking-notes/networking-note-05.jpg)
+## CPU Reference Images — 2 images
 
-### Networking and CPU Notes 6
+The CPU instruction cycle and an Intel/AMD socket reference.
 
-[Open or download the full-size image](../assets/images/networking-notes/networking-note-06.jpg)
+### CPU Instruction Cycle
 
-![Networking and CPU Notes 6](../assets/images/networking-notes/networking-note-06.jpg)
+[Open or download the full-size image](../assets/images/hardware/cpu-instruction-cycle.jpg)
+
+![CPU Instruction Cycle](../assets/images/hardware/cpu-instruction-cycle.jpg)
+
+### CPU Socket Reference
+
+[Open or download the full-size image](../assets/images/hardware/cpu-socket-reference.jpg)
+
+![CPU Socket Reference](../assets/images/hardware/cpu-socket-reference.jpg)
 
 ## Hardware and Architecture Diagrams — 6 images
 
@@ -478,7 +486,7 @@ Alternating course schedule and important-date graphics.
 
 ![Schedule and Important Dates 2](../assets/images/schedule/schedule-02.jpg)
 
-## Course Tools — 1 images
+## Course Tools — 1 image
 
 Virtual-background setup screenshot.
 

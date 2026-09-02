@@ -2,6 +2,12 @@
 
 An unofficial, community-organized study hub for CompTIA A+ Core 1 and foundational data-center support topics.
 
+## Browse by subject
+
+Start with the [category index](CATEGORY-INDEX.md) to find the notes, videos, websites, images, and practice material for one subject in the same place.
+
+Main categories: exam preparation, troubleshooting, networking, wireless/mobile, cabling/fiber, PC hardware/CPU, storage/RAID, virtualization/cloud/AI, printers, safety/OSHA, professional development, labs/projects, and course scheduling.
+
 ## Study material
 
 - [Complete Core 1 study guide](guide/core-1-study-guide.md)

@@ -62,12 +62,12 @@ Total public instructional images: 80
 | Fiber and Copper Cabling Slides | [cabling-slide-26.jpg](cabling-and-fiber/cabling-slide-26.jpg) | `1544366474020393001_image.png` |
 | Fiber and Copper Cabling Slides | [cabling-slide-27.jpg](cabling-and-fiber/cabling-slide-27.jpg) | `1544366495604154489_image.png` |
 | Fiber and Copper Cabling Slides | [cabling-slide-28.jpg](cabling-and-fiber/cabling-slide-28.jpg) | `1544366536087834735_image.png` |
-| Networking and CPU Notes | [networking-note-01.jpg](networking-notes/networking-note-01.jpg) | `1542904590612041809_3997DB5F-7CAD-466B-B27C-1CA0D52BD253.png` |
-| Networking and CPU Notes | [networking-note-02.jpg](networking-notes/networking-note-02.jpg) | `1542913126922588160_5701C623-39D9-4DE3-BFE8-C97D0957EC3B.png` |
-| Networking and CPU Notes | [networking-note-03.jpg](networking-notes/networking-note-03.jpg) | `1544365294183518309_0FA43F2E-49AC-4AAA-8649-73AAF3A35788.png` |
-| Networking and CPU Notes | [networking-note-04.jpg](networking-notes/networking-note-04.jpg) | `1544372781787914401_ACF04A7D-EF34-4F83-A3EF-878F32B6F6FE.png` |
-| Networking and CPU Notes | [networking-note-05.jpg](networking-notes/networking-note-05.jpg) | `1544410853535911976_Image20260901141651.png` |
-| Networking and CPU Notes | [networking-note-06.jpg](networking-notes/networking-note-06.jpg) | `1544421134231937094_576AEA83-EA43-4D7A-991A-77CB3B573BBD.png` |
+| CPU Reference Images | [cpu-instruction-cycle.jpg](hardware/cpu-instruction-cycle.jpg) | `1542904590612041809_3997DB5F-7CAD-466B-B27C-1CA0D52BD253.png` |
+| CPU Reference Images | [cpu-socket-reference.jpg](hardware/cpu-socket-reference.jpg) | `1542913126922588160_5701C623-39D9-4DE3-BFE8-C97D0957EC3B.png` |
+| Standalone Wi-Fi Reference Images | [wifi-bands-comparison.jpg](wifi/wifi-bands-comparison.jpg) | `1544365294183518309_0FA43F2E-49AC-4AAA-8649-73AAF3A35788.png` |
+| Standalone Wi-Fi Reference Images | [wifi-frequencies-reference.jpg](wifi/wifi-frequencies-reference.jpg) | `1544372781787914401_ACF04A7D-EF34-4F83-A3EF-878F32B6F6FE.png` |
+| Networking Reference Images | [tcp-ip-ipv4-ipv6-review.jpg](networking-notes/tcp-ip-ipv4-ipv6-review.jpg) | `1544410853535911976_Image20260901141651.png` |
+| Networking Reference Images | [common-ports-list.jpg](networking-notes/common-ports-list.jpg) | `1544421134231937094_576AEA83-EA43-4D7A-991A-77CB3B573BBD.png` |
 | Hardware and Architecture Diagrams | [hardware-note-01.jpg](hardware/hardware-note-01.jpg) | `1543426996946862130_image.png` |
 | Hardware and Architecture Diagrams | [hardware-note-02.jpg](hardware/hardware-note-02.jpg) | `1543841772030132294_ChatGPT_Image_Aug_31_2026_12_32_29_AM.png` |
 | Hardware and Architecture Diagrams | [hardware-note-03.jpg](hardware/hardware-note-03.jpg) | `1543845439663775774_PSU_Planning__Importance.png` |
