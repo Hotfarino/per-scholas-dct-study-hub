@@ -2,6 +2,12 @@
 
 This is a historical snapshot of the alternating calendar shared on August 28, 2026. Canvas and instructor announcements are the live source of truth.
 
+## Recent course notices
+
+- September 3: learners were asked to check for the Per Scholas Coursera invitation.
+- September 4: an announcement stated that two quizzes were due that day. Check Canvas for the exact quiz titles, instructions, and submission status.
+- September 7: Labor Day — no school.
+
 ## Weekly pattern
 
 - Monday: in person.
@@ -20,4 +26,3 @@ This is a historical snapshot of the alternating calendar shared on August 28, 2
 - November 20, 2026: graduation.
 
 Early calendar assignments covered OSHA/NFPA certificates, resume and career-plan drafts, PC-building simulator work, hardware installation, BIOS/UEFI, and troubleshooting labs. Several due dates changed after the first workbook was posted, so this repository does not reproduce assignment deadlines.
-

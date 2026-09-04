@@ -6,6 +6,7 @@ Use this page when you want every resource for one subject in the same place.
 
 - [Exam snapshot and priorities](guide/core-1-study-guide.md#exam-snapshot-and-priorities)
 - [Practice quizzes and labs](resources/practice.md)
+- [Live and recorded study sessions](resources/streams.md)
 - [Core 1 videos](resources/videos.md#comptia-a-core-1)
 - [Flashcards and exam review](resources/websites.md#flashcards-and-exam-review)
 - [Seven-day review plan](guide/core-1-study-guide.md#seven-day-review-plan)
@@ -55,6 +56,7 @@ Use this page when you want every resource for one subject in the same place.
 - [Google AI courses](resources/websites.md#google-ai-courses)
 - [AI security, governance, and ethics](resources/industry-reading.md#ai-security-governance-and-ethics)
 - [AI books and legal access](resources/books.md#artificial-intelligence)
+- [Cloud shared-responsibility review](guide/core-1-study-guide.md#cloud-shared-responsibility-review)
 
 ## Linux and Python
 
@@ -73,6 +75,7 @@ Use this page when you want every resource for one subject in the same place.
 
 - [Professional development and resume guidance](guide/core-1-study-guide.md#12-professional-development)
 - [Training platforms](resources/websites.md#training-platforms)
+- [Current career opportunities](resources/websites.md#career-opportunities)
 - [Data-center workforce reading](resources/industry-reading.md#data-centers-infrastructure-and-workforce)
 
 ## Labs, simulator, and projects
@@ -92,6 +95,7 @@ Use this page when you want every resource for one subject in the same place.
 ## Complete inventories
 
 - [All videos](resources/videos.md)
+- [Live and recorded study sessions](resources/streams.md)
 - [All websites and tools](resources/websites.md)
 - [All 81 images](resources/images.md)
 - [Attachment manifest](resources/attachments.md)

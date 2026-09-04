@@ -34,3 +34,9 @@ This manifest records the useful attachment groups. The 81 instructional images 
 - AI fairness and early-career generative-AI EPUBs.
 
 See [Books and Legal Free Access](books.md) for authorized full-text editions, official samples, companion material, and free alternatives. Paid books are not included in this repository.
+
+## Recently reviewed media not mirrored
+
+- A September 3 paid practice-exam screenshot was converted into an original [Wi-Fi troubleshooting sequence](../guide/core-1-study-guide.md#wi-fi-troubleshooting-order). The screenshot itself is not redistributed.
+- Two September 3 cloud-service infographics were converted into an original [shared-responsibility table](../guide/core-1-study-guide.md#cloud-shared-responsibility-review). One carried external branding and the other used “DaaS” to mean data as a service, which can conflict with desktop-as-a-service terminology.
+- A September 3 mock-exam stream is indexed in [Live and Recorded Study Sessions](streams.md). No authorized playback link was posted.

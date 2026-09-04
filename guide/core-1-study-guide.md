@@ -130,6 +130,17 @@ A Wi-Fi analyzer helps compare signal strength, encryption, congestion, and chan
 
 Advertised wireless speeds are theoretical. Distance, walls, interference, channel width, client capability, and shared airtime reduce real throughput.
 
+### Wi-Fi troubleshooting order
+
+When one phone cannot join Wi-Fi but other devices work, start with the affected client and use the least disruptive checks first:
+
+1. Confirm Wi-Fi is enabled, airplane mode is off, and the correct SSID and password are selected.
+2. Forget the saved network and reconnect, watching for authentication or certificate errors.
+3. Check whether the client receives a valid IP address, gateway, and DNS settings instead of an APIPA address.
+4. Verify band, wireless-generation, and security compatibility, especially for 5/6 GHz-only networks and WPA3.
+5. Restart or update the client, then inspect access-point configuration and logs if the problem remains.
+6. Reserve factory resets and hardware replacement for last, after configuration and compatibility checks fail.
+
 ### Short-range and wide-area technologies
 
 - Bluetooth: peripherals, audio, and short-range device connections.
@@ -331,6 +342,17 @@ Video: [CompTIA A+ 1201 mobile hardware review](https://www.youtube.com/watch?v=
 - Public, private, hybrid, and community describe deployment models.
 - Rapid elasticity, measured service, resource pooling, high availability, and shared responsibility are common concepts.
 - Synchronization, data residency, latency, Internet dependence, cost, security, and vendor lock-in are practical tradeoffs.
+
+### Cloud shared-responsibility review
+
+| Model | Provider generally manages | Customer generally manages |
+|---|---|---|
+| On-premises | Nothing in the local stack | Physical servers, storage, networking, virtualization, operating systems, middleware, runtime, applications, data, and access. |
+| IaaS | Physical facilities, servers, storage, networking, and the virtualization layer | Guest operating systems, middleware, runtime, applications, data, identities, and configuration. |
+| PaaS | Infrastructure, operating systems, middleware, and runtime | Application code, data, identities, and application configuration. |
+| SaaS | The application and its underlying platform and infrastructure | Users, data handling, access control, settings, endpoint security, and appropriate use. |
+
+Exact boundaries vary by product. “The provider manages it” does not remove the customer's responsibility for identity, data classification, secure configuration, and account activity.
 
 ## 10. Printers
 
@@ -538,8 +560,8 @@ The workbook records early assignments including OSHA and NFPA certificates, the
 | Server area | What was useful |
 |---|---|
 | `#notes-resources` | Channel reserved for links/files; no posted resources at capture time. |
-| `#announcements` | Schedule workbooks, important dates, assignment reminders, PD start, deadline changes. |
-| Course Help `#general` | Subnet/CIDR tools and Mac simulator workaround discussion. |
+| `#announcements` | Schedule workbooks, important dates, assignment reminders, Coursera access notice, deadline changes, and the September Google apprenticeship announcement. |
+| Course Help `#general` | Subnet/CIDR tools, cloud service-model diagrams, and Mac simulator workaround discussion. |
 | `#comptia-help` | Guides, official objectives, quizzes/PBQs, hardware and RAID diagrams, lab support. |
 | `#osha-help` | Final-review advice, certificate reminder, account-support discussion. Credentials were intentionally excluded. |
 | `#pd-help` | Resume examples, rubric archive, peer review, career-planning prompt. |
@@ -547,11 +569,11 @@ The workbook records early assignments including OSHA and NFPA certificates, the
 | `#class-notes` | Wi-Fi and fiber threads, networking/ports/IP diagrams, CPU notes, tutorials. |
 | `#it-news` | Industry-awareness reading; time-sensitive articles remain in the raw link inventory. |
 | `#content-recommendations` | Training platforms, optional Coursera/AI resources, professional learning. |
-| `#career-talk` | Career and certification discussion. |
+| `#career-talk` | Career and certification discussion, including time-sensitive apprenticeship opportunities. |
 | `#personal-projects` | Home-lab and self-hosting ideas. |
 | `#industry-videos` | Security/OS awareness videos. |
 | `#books` | Linux, Python, computer architecture, AI fairness, and generative-AI books. |
-| Study rooms | Duplicate official objectives and peer study coordination. |
+| Study rooms | Duplicate official objectives, peer study coordination, and live mock-exam sessions. |
 | Social/Watercooler channels | Reviewed by server-wide file/link search; unrelated entertainment content excluded from instructional sections. |
 
 

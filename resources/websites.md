@@ -35,10 +35,16 @@
 - [AI for Research and Insights](https://www.coursera.org/learn/google-ai-for-research-and-insights)
 - [AI for Writing and Communicating](https://www.coursera.org/learn/google-ai-for-writing-and-communicating)
 
+## Career opportunities
+
+- [Google Information Technology Apprenticeship — February 2027 start](https://www.google.com/about/careers/applications/jobs/results/127161382939304646-information-technology-apprenticeship/) — applications are scheduled for September 8–21, 2026. The listing names Austin and New York, requires less than one year of relevant IT experience, and says applicants must not be pursuing or have completed a bachelor's, master's, or PhD in an IT-related field. Verify the live listing before applying.
+- [Google apprenticeship overview and FAQs](https://www.google.com/about/careers/applications/buildyourfuture/apprenticeships)
+
+Prepare an updated English resume in PDF form before the application window opens. The job listing is the source of truth for eligibility, locations, and dates.
+
 ## PC Building Simulator and macOS discussion
 
 - [Heroic Games Launcher](https://heroicgameslauncher.com/)
 - [PC Building Simulator Mod Listing](https://www.nexusmods.com/pcbuildingsimulator/mods/351)
 
 These are third-party tools. Confirm licensing, institutional policy, system compatibility, and file safety before installing anything.
-
