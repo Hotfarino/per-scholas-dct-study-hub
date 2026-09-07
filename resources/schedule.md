@@ -6,7 +6,9 @@ This is a historical snapshot of the alternating calendar shared on August 28, 2
 
 - September 3: learners were asked to check for the Per Scholas Coursera invitation.
 - September 4: an announcement stated that two quizzes were due that day. Check Canvas for the exact quiz titles, instructions, and submission status.
+- September 6: peer homework discussion said Part 4 of the BIOS/IPL activity would be skipped, while computer disassembly and reassembly still needed completion. A possible in-person Wednesday lab was discussed but not confirmed; verify with the instructor or Canvas.
 - September 7: Labor Day — no school.
+- September 7: three private Canvas links for virtualization work were shared in `#comptia-help`. Open Canvas directly for the assignment titles, requirements, and current deadlines.
 
 ## Weekly pattern
 

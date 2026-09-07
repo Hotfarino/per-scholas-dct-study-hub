@@ -1,12 +1,12 @@
 # CompTIA A+ Core 1 and Data Center Support Study Guide
 
-Community-organized notes compiled from authorized course materials through September 1, 2026. Private course attachments are indexed but are not redistributed in this public repository.
+Community-organized notes compiled from authorized course materials through September 7, 2026. Private course attachments are indexed but are not redistributed in this public repository.
 
 > Use Canvas and instructor announcements for live deadlines. The Discord calendar and peer notes are snapshots and can be superseded. Peer-created quizzes are excellent practice, but the official CompTIA exam objectives are the authority for exam scope.
 
 ## Start here
 
-1. Read the official CompTIA A+ Core 1 objectives *(course attachment; not redistributed)*.
+1. Read the [official CompTIA A+ Core 1 `220-1201` objectives](https://assets.ctfassets.net/82ripq7fjls2/1oSdlyujpaX3GrM0rir6Ge/91afb2be72785281e8fb4c0d9a70c6f4/CompTIA-A-220-1201-Exam-Objectives-3.0.pdf).
 2. Review the beginner Modules 1–4 guide *(course attachment; not redistributed)*.
 3. Use the 60-question Modules 1–4 practice exam *(course attachment; not redistributed)*, then the five-task PBQ lab *(course attachment; not redistributed)*.
 4. Study the networking, Wi-Fi, cabling, RAID, and troubleshooting sections below.
@@ -20,6 +20,8 @@ The posted objectives are for CompTIA A+ Core 1 `220-1201`:
 - Passing score: 675 on a 100–900 scale.
 - Recommended experience: about 12 months of hands-on IT support.
 - Domain weights: Hardware and Network Troubleshooting 28%; Hardware 25%; Networking 23%; Mobile Devices 13%; Virtualization and Cloud Computing 11%.
+
+The `220-1101` series is the previous exam generation. Older flashcards can help with unchanged fundamentals, but do not use them to define current scope; map every topic against the `220-1201` objectives.
 
 Study in this order when time is limited:
 
@@ -330,11 +332,27 @@ Video: [CompTIA A+ 1201 mobile hardware review](https://www.youtube.com/watch?v=
 
 ### Virtualization
 
-- A hypervisor allocates CPU, memory, storage, and networking to virtual machines.
-- Type 1 runs on hardware; Type 2 runs as an application on a host OS.
-- VM resources are not free: avoid overcommitting critical systems and monitor host capacity.
+- A hypervisor allocates CPU, memory, storage, and networking to virtual machines. Type 1 runs on hardware; Type 2 runs as an application on a host OS.
+- Confirm that hardware virtualization support—Intel VT-x or AMD-V—is present and enabled in UEFI/BIOS. SLAT, called EPT on Intel and RVI/NPT on AMD, reduces virtual-memory translation overhead.
+- Size the host with CPU cores/threads, RAM, storage capacity and I/O, and network bandwidth for both the host and every running guest. Leave headroom; overcommitting can make the host and all guests slow or unstable.
+- A virtual NIC is the network interface presented to a guest. The hypervisor connects it to a virtual switch and then, depending on mode, to NAT, a host-only/internal network, or a bridged physical network.
+- VNC is a cross-platform remote-access protocol for viewing and controlling a graphical desktop across a network. Protect it with strong authentication and encryption appropriate to the implementation; do not expose it directly to the Internet.
 - Snapshots help with short-term rollback but are not a replacement for backups.
-- Containers share the host kernel and package applications more lightly than full VMs.
+
+| Full virtual machine | Container |
+|---|---|
+| Includes a complete guest OS and virtual hardware. | Shares the host kernel while isolating application processes and files. |
+| Usually consumes more RAM, storage, and startup time. | Usually starts faster and uses fewer resources. |
+| Can run a different supported guest OS and provides a stronger isolation boundary. | Must use a compatible host kernel; a host-kernel compromise can affect every container. |
+
+### Secure VirtualBox lab checklist
+
+1. Download VirtualBox from the [official Oracle page](https://www.virtualbox.org/wiki/Downloads), select the correct host OS and CPU architecture, and verify the checksum when practical.
+2. Patch the host, hypervisor, guest OS, and guest applications. Run daily work without unnecessary administrative privileges.
+3. Start with NAT for ordinary Internet access or a host-only/internal network for an isolated lab. Use bridged mode only when the VM must appear directly on the LAN, and firewall it like a physical computer.
+4. Disable shared clipboard, drag-and-drop, shared folders, USB passthrough, and remote display unless the lab requires them. Each feature creates another path between host and guest.
+5. Use strong authentication and MFA for management accounts, encrypt sensitive VM disks, protect recovery keys, collect useful logs, and restrict inbound/outbound traffic to required services.
+6. Maintain separate backups and test restoration. A snapshot, RAID array, or replicated VM is not by itself a backup.
 
 ### Cloud concepts
 
@@ -445,8 +463,10 @@ See the [complete grouped video catalog](../resources/videos.md) and [website/to
 - [Microsoft Learn](https://learn.microsoft.com/en-us/training/)
 - [Cisco Networking Academy](https://www.netacad.com/)
 - [Per Scholas Coursera program](https://www.coursera.org/programs/per-scholas-it-support-dqcop)
+- [Google IT Support Professional Certificate](https://www.coursera.org/google-certificates/google-it-support)
 - [Self-hosted applications/home lab](https://www.youtube.com/watch?v=DlzkIjhJ18o)
 - [Build a home cloud](https://www.youtube.com/watch?v=PF-vAvmP4_0)
+- [ThinkNAS 6-bay Tiny-PC home-lab project](https://www.reddit.com/r/homelab/comments/1n24p9m/thinknas_6bay_version_available/)
 - [Every Illegal Operating System](https://www.youtube.com/watch?v=2D2Z-eqK0YM)
 - [Dangerous hacking gadgets](https://www.youtube.com/watch?v=W4-D49TgHK4) — for awareness only; use security tools only on systems you own or have explicit authorization to test.
 
@@ -457,6 +477,7 @@ See the [complete grouped video catalog](../resources/videos.md) and [website/to
 - Inside the Machine *(course attachment; not redistributed)*: CPU and computer architecture.
 - AI Fairness *(course attachment; not redistributed)*: responsible AI and bias concepts.
 - Early-Career Professional's Guide to Generative AI *(course attachment; not redistributed)*.
+- The Spirit of a Cyborg *(publisher listing; no authorized free full edition located)*: AI ethics, human-technology convergence, digital spirituality, and moral responsibility.
 - Dion Core 1 study guide *(course attachment; not redistributed)*: detailed third-party review; use the official objectives to decide what is in scope.
 
 Suggested route through the books:
@@ -473,6 +494,7 @@ High-value groups:
 
 - `Wifi Connection Slides` thread: Wi-Fi generations, bands, channels, interference, cellular/fixed wireless, Bluetooth/RFID/NFC, throughput, and troubleshooting.
 - `Fiber Cable Connections` thread: copper/fiber media, connectors, transceivers, polish, structured cabling, tools, PoE, and network devices.
+- `#personal-projects`: three full-resolution cable-termination photos covering pair arrangement, T568B checking, crimping, and a reported successful cable test.
 - `#class-notes`: common ports, TCP/IP and IPv6 diagrams, CPU sockets, the CPU cycle, and supplemental networking charts.
 - `#comptia-help`: motherboard and PSU planning, boot process, storage/RAM/CPU, RAID 0/1/5/6/10, and lab screenshots.
 - `#announcements`: important dates and alternating-schedule images.
@@ -509,7 +531,7 @@ The latest posted workbook is the alternating schedule with assignments *(course
 
 ### Assignment snapshot
 
-The workbook records early assignments including OSHA and NFPA certificates, the first resume and Individual Career Plan drafts, PC-building simulator work, motherboard/power/storage/RAM/BIOS labs, and troubleshooting labs. Canvas remains the live source of truth. The Discord announcements specifically noted that several deadlines changed after the first calendar version.
+The workbook records early assignments including OSHA and NFPA certificates, the first resume and Individual Career Plan drafts, PC-building simulator work, motherboard/power/storage/RAM/BIOS labs, and troubleshooting labs. September 7 Discord notes also pointed learners to three private Canvas virtualization assignments. Canvas remains the live source of truth. The Discord announcements specifically noted that several deadlines changed after the first calendar version.
 
 ## Seven-day review plan
 
@@ -562,18 +584,18 @@ The workbook records early assignments including OSHA and NFPA certificates, the
 | `#notes-resources` | Channel reserved for links/files; no posted resources at capture time. |
 | `#announcements` | Schedule workbooks, important dates, assignment reminders, Coursera access notice, deadline changes, and the September Google apprenticeship announcement. |
 | Course Help `#general` | Subnet/CIDR tools, cloud service-model diagrams, and Mac simulator workaround discussion. |
-| `#comptia-help` | Guides, official objectives, quizzes/PBQs, hardware and RAID diagrams, lab support. |
+| `#comptia-help` | Guides, official objectives, quizzes/PBQs, hardware and RAID diagrams, lab support, and September 7 virtualization notes. |
 | `#osha-help` | Final-review advice, certificate reminder, account-support discussion. Credentials were intentionally excluded. |
 | `#pd-help` | Resume examples, rubric archive, peer review, career-planning prompt. |
-| `#homework-help` | Simulator walkthroughs, screenshot tip, Mac compatibility discussion. |
+| `#homework-help` | Simulator walkthroughs, screenshot tip, Mac compatibility discussion, current-vs.-previous exam guidance, and BIOS/disassembly lab clarification. |
 | `#class-notes` | Wi-Fi and fiber threads, networking/ports/IP diagrams, CPU notes, tutorials. |
-| `#it-news` | Industry-awareness reading; time-sensitive articles remain in the raw link inventory. |
+| `#it-news` | Industry-awareness reading, a Raspberry Pi/Docker case study, and an AI-ethics book recommendation. |
 | `#content-recommendations` | Training platforms, optional Coursera/AI resources, professional learning. |
 | `#career-talk` | Career and certification discussion, including time-sensitive apprenticeship opportunities. |
-| `#personal-projects` | Home-lab and self-hosting ideas. |
+| `#personal-projects` | Home-lab and self-hosting ideas, the ThinkNAS project, and Ethernet cable-termination photos. |
 | `#industry-videos` | Security/OS awareness videos. |
 | `#books` | Linux, Python, computer architecture, AI fairness, and generative-AI books. |
-| Study rooms | Duplicate official objectives, peer study coordination, and live mock-exam sessions. |
+| Study rooms | Duplicate official objectives, peer study coordination, live mock-exam sessions, and a virtualization screen-share session. |
 | Social/Watercooler channels | Reviewed by server-wide file/link search; unrelated entertainment content excluded from instructional sections. |
 
 

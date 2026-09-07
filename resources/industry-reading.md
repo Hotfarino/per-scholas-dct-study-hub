@@ -1,6 +1,6 @@
 # Industry-Awareness Reading List
 
-These links were captured from the course's IT-news channel in August 2026. News is time-sensitive; titles, access, and facts may change. Treat this as a reading queue, not a permanent factual reference.
+These links were captured from the course's IT-news channel through September 6, 2026. News is time-sensitive; titles, access, and facts may change. Treat this as a reading queue, not a permanent factual reference.
 
 ## Data centers, infrastructure, and workforce
 
@@ -40,3 +40,6 @@ These links were captured from the course's IT-news channel in August 2026. News
 
 - [Liquid-Metal Application and Laptop Reliability — Tom's Hardware](https://www.tomshardware.com/laptops/gaming-laptops/poor-liquid-metal-application-almost-destroys-asus-zephyrus-m16-laptop-eats-through-the-processor-lid-paste-replacement-triples-framerates-drops-temps-and-eliminates-hard-crashes)
 
+## Home labs, containers, and self-hosting
+
+- [A Raspberry Pi 5 Home Server Built Around Docker Containers — XDA](https://www.xda-developers.com/my-raspberry-pi-5-paid-for-itself-in-less-than-a-year-thanks-to-docker-containers/) — a personal cost-and-utility case study, not a guaranteed savings calculation.

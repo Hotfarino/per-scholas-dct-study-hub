@@ -1,8 +1,14 @@
 # Books and Legal Free Access
 
-Availability checked September 2, 2026. This page links only to publisher, author, or official-project sources. A Discord upload is not treated as permission to redistribute a book publicly.
+Availability checked September 7, 2026. This page links only to publisher, author, or official-project sources. A Discord upload is not treated as permission to redistribute a book publicly.
 
 ## Artificial intelligence
+
+### *The Spirit of a Cyborg: From the Dawn of the Information Age to a Shared Future with Intelligent Machines* — Nathaniel S. Borenstein
+
+**No authorized free full edition located.** The official publisher page currently lists a paperback edition and describes the book as a memoir and ethics-focused examination of AI, human-technology convergence, and moral responsibility. The listed price was $24.99 when checked; verify the live page before purchasing.
+
+- [Official iPub Cloud publisher page](https://ipubcloud.org/products/the-spirit-of-a-cyborg)
 
 ### *AI Fairness: Designing Equal Opportunity Algorithms* — Derek Leben
 

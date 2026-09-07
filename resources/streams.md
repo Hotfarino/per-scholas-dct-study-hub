@@ -7,6 +7,8 @@ This catalog tracks course-community study streams and links to recordings only 
 | Date | Session | Topics and format | Playback | Notes |
 |---|---|---|---|---|
 | September 3, 2026 | Peer-led CompTIA A+ mock exam | Screen-shared walkthrough of a third-party Udemy practice exam; scheduled for 8:00 p.m. Eastern in Study Room 1 | No authorized recording link posted | Session discussion continued until about 10:19 p.m. The paid exam questions are not reproduced here. |
+| September 6, 2026 | Peer-led CompTIA A+ practice exam | Screen-shared practice-exam review in Study Room 1; scheduled for 8:00 p.m. Eastern | No authorized recording link posted | Two session screenshots were posted around 8:53–8:55 p.m.; paid questions and screenshots are not reproduced here. |
+| September 7, 2026 | Virtualization study session | Live peer screen share with notes on hypervisors, containers, VM resources, VirtualBox security, VNC, and virtual NICs | No authorized recording link posted | Original recap material is incorporated into the study guide; private participant activity and course screens are excluded. |
 
 ## What can be documented
 

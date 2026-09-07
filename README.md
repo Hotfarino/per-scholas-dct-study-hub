@@ -2,7 +2,7 @@
 
 An unofficial, community-organized study hub for CompTIA A+ Core 1 and foundational data-center support topics.
 
-Last Discord resource review: September 4, 2026.
+Last Discord resource review: September 7, 2026.
 
 ## Browse by subject
 
@@ -19,7 +19,7 @@ Main categories: exam preparation, troubleshooting, networking, wireless/mobile,
 - [Books and legal free access](resources/books.md)
 - [Industry-awareness reading list](resources/industry-reading.md)
 - [Practice quizzes and labs](resources/practice.md)
-- [81-image gallery with full-size downloads](resources/images.md)
+- [84-image gallery with full-size downloads](resources/images.md)
 - [Attachment manifest](resources/attachments.md)
 - [Course schedule snapshot](resources/schedule.md)
 
@@ -28,7 +28,7 @@ Main categories: exam preparation, troubleshooting, networking, wireless/mobile,
 - Original summaries of hardware, networking, wireless, cabling, RAID, troubleshooting, mobile devices, virtualization, cloud, printers, safety, and professional development.
 - Public learning links grouped by subject instead of by Discord channel.
 - A session catalog for live study streams, authorized recordings, and original recap notes.
-- A public gallery containing 81 instructional images, separated into Wi-Fi, cabling/fiber/connectors, networking, hardware, RAID, schedule, course-tools, and PC-simulator groups.
+- A public gallery containing 84 instructional images, separated into Wi-Fi, cabling/fiber/connectors, hands-on cable termination, networking, hardware, RAID, schedule, course-tools, and PC-simulator groups.
 - A structured inventory of the useful PDFs, books, quizzes, and spreadsheets found in the course community.
 - Clear labels separating official objectives, third-party instruction, and peer-created practice material.
 

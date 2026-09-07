@@ -15,15 +15,26 @@
 
 ## Flashcards and exam review
 
+- [Official CompTIA A+ Core 1 `220-1201` objectives (PDF)](https://assets.ctfassets.net/82ripq7fjls2/1oSdlyujpaX3GrM0rir6Ge/91afb2be72785281e8fb4c0d9a70c6f4/CompTIA-A-220-1201-Exam-Objectives-3.0.pdf)
 - [Brainscape CompTIA A+ Core 1 Flashcards](https://www.brainscape.com/flashcards/comptia-a-core-1-20373519/packs/23377270)
 - [Quizlet CompTIA A+ 1200-Series Flashcards](https://quizlet.com/1024593451/comptia-a-1200-series-220-1201-220-1202-flash-cards/)
+
+Use sets labeled `220-1201` for the current Core 1 scope. A `220-1101` Quizlet was also shared on September 7, but that set targets the previous exam series and should only be used as supplemental review after mapping each topic to the current objectives.
 
 ## Training platforms
 
 - [Microsoft Learn](https://learn.microsoft.com/en-us/training/)
 - [Cisco Networking Academy](https://www.netacad.com/)
 - [Per Scholas IT Support on Coursera](https://www.coursera.org/programs/per-scholas-it-support-dqcop)
+- [Google IT Support Professional Certificate](https://www.coursera.org/google-certificates/google-it-support) — the public page permits free enrollment and lists financial-aid options, but graded work and the certificate may require a subscription or approved aid. Learners should use their Per Scholas invitation when available.
 - [IBM SkillsBuild Account Registration](https://www.ibm.com/account/reg/us-en/signup?formid=urx-54369)
+
+## Virtualization tools and documentation
+
+- [Oracle VirtualBox downloads](https://www.virtualbox.org/wiki/Downloads)
+- [Oracle VirtualBox user manual](https://www.virtualbox.org/manual/)
+
+Download only from the official site, choose the package for the host operating system and CPU architecture, verify published checksums when practical, and review the separate Extension Pack license before installing it.
 
 ## Google AI courses
 

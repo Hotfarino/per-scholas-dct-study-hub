@@ -34,7 +34,8 @@ Use this page when you want every resource for one subject in the same place.
 ## Cabling, fiber, and network devices
 
 - [Cabling, connectors, and network devices](guide/core-1-study-guide.md#4-cabling-connectors-and-network-devices)
-- [29 cabling, fiber, and connector images](resources/images.md#cabling-fiber-and-connector-images--29-images)
+- [32 cabling, fiber, connector, and termination-practice images](resources/images.md#cabling-fiber-and-connector-images--32-images)
+- [Cable termination practice workflow](resources/practice.md#hands-on-cabling)
 
 ## PC hardware and CPU
 
@@ -52,6 +53,7 @@ Use this page when you want every resource for one subject in the same place.
 ## Virtualization, cloud, and AI
 
 - [Virtualization and cloud](guide/core-1-study-guide.md#9-virtualization-and-cloud)
+- [VirtualBox tools and official documentation](resources/websites.md#virtualization-tools-and-documentation)
 - [Training platforms](resources/websites.md#training-platforms)
 - [Google AI courses](resources/websites.md#google-ai-courses)
 - [AI security, governance, and ethics](resources/industry-reading.md#ai-security-governance-and-ethics)
@@ -84,6 +86,7 @@ Use this page when you want every resource for one subject in the same place.
 - [Lab and PC Building Simulator videos](resources/videos.md#labs-and-pc-building-simulator)
 - [PC Building Simulator images](resources/images.md#pc-building-simulator--4-images)
 - [Home-lab and project videos](resources/videos.md#home-labs-and-projects)
+- [ThinkNAS and other home-lab projects](resources/practice.md#home-lab-projects)
 - [PC Building Simulator and macOS tools](resources/websites.md#pc-building-simulator-and-macos-discussion)
 
 ## Schedule and course tools
@@ -97,7 +100,7 @@ Use this page when you want every resource for one subject in the same place.
 - [All videos](resources/videos.md)
 - [Live and recorded study sessions](resources/streams.md)
 - [All websites and tools](resources/websites.md)
-- [All 81 images](resources/images.md)
+- [All 84 images](resources/images.md)
 - [Attachment manifest](resources/attachments.md)
 - [Image filename manifest](assets/images/manifest.md)
 - [Industry reading](resources/industry-reading.md)

@@ -1,6 +1,6 @@
 # Image and Diagram Gallery
 
-The 81 instructional images below are stored directly in this repository and can be opened or downloaded from GitHub. They are grouped by subject rather than Discord posting order.
+The 84 instructional images below are stored directly in this repository and can be opened or downloaded from GitHub. They are grouped by subject rather than Discord posting order.
 
 Images are reproduced from the course community at the repository owner's request. Do not remove attribution or reuse them commercially unless you have permission from the relevant rights holder.
 
@@ -188,7 +188,7 @@ Wireless standards, bands, channels, interference, radio technologies, throughpu
 
 ![Wi-Fi Connection Slides 30](../assets/images/wifi/wifi-slide-30.jpg)
 
-## Cabling, Fiber, and Connector Images — 29 images
+## Cabling, Fiber, and Connector Images — 32 images
 
 Media, connectors, polish types, Ethernet categories, PoE, structured cabling, tools, and network devices.
 
@@ -367,6 +367,28 @@ Classroom identification review covering DVI variants, USB-C, VGA, SATA, Lightni
 [Open or download the full-size image](../assets/images/cabling-and-fiber/connector-identification-2026-09-02.jpg)
 
 ![Connector Identification Board](../assets/images/cabling-and-fiber/connector-identification-2026-09-02.jpg)
+
+### Ethernet Cable Termination Practice — September 6, 2026
+
+These peer project photos show untwisting and arranging the four pairs, checking the T568B color order, and crimping an 8P8C modular plug. The poster reported that the completed cable passed testing without interference or crosstalk. Use a cable tester to verify pin order, continuity, shorts, opens, split pairs, and shield continuity where applicable.
+
+#### Pair preparation
+
+[Open or download the full-size JPEG](../assets/images/cabling-and-fiber/ethernet-cable-project-01.jpg)
+
+![Ethernet conductors arranged beside a T568A and T568B wiring reference](../assets/images/cabling-and-fiber/ethernet-cable-project-01.jpg)
+
+#### T568B order check
+
+[Open or download the full-size JPEG](../assets/images/cabling-and-fiber/ethernet-cable-project-02.jpg)
+
+![Ethernet conductors aligned with a T568B wiring reference before termination](../assets/images/cabling-and-fiber/ethernet-cable-project-02.jpg)
+
+#### Crimping the modular plug
+
+[Open or download the full-size JPEG](../assets/images/cabling-and-fiber/ethernet-cable-project-03.jpg)
+
+![Crimping an 8P8C modular plug onto an Ethernet cable](../assets/images/cabling-and-fiber/ethernet-cable-project-03.jpg)
 
 ## Standalone Wi-Fi Reference Images — 2 images
 

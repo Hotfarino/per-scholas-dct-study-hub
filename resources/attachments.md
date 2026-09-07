@@ -1,12 +1,13 @@
 # Attachment Manifest
 
-This manifest records the useful attachment groups. The 81 instructional images are now available in the [public image gallery](images.md); private documents, books, credentials, and personal material remain excluded.
+This manifest records the useful attachment groups. The 84 instructional images are now available in the [public image gallery](images.md); private documents, books, credentials, and personal material remain excluded.
 
 | Course area | Files | Material |
 |---|---:|---|
 | Wi-Fi Connection Slides | 30 | Wireless standards, bands, channels, radio technologies, performance, and troubleshooting. |
 | Fiber Cable Connections | 28 | Media, connectors, Ethernet categories, PoE, structured cabling, tools, and network devices. |
-| CompTIA help | 10 | Study guides, exam objectives, quizzes, PBQs, hardware diagrams, and troubleshooting images. |
+| Ethernet cable termination project | 3 | Full-resolution JPEGs showing pair preparation, T568B order checking, and crimping. |
+| CompTIA help | 17 | Study guides, exam objectives, quizzes, PBQs, hardware diagrams, troubleshooting images, and September 7 virtualization references. |
 | Class notes | 9 | Ports, TCP/IP, IPv4/IPv6, CPU, networking, and connector-identification reference images. |
 | PC simulator support thread | 4 | Screenshots and troubleshooting context. |
 | RAID thread | 3 | RAID diagrams and memory aids. |
@@ -14,19 +15,20 @@ This manifest records the useful attachment groups. The 81 instructional images 
 | Professional development | 4 | Three resume examples and an assignment-rubric archive. |
 | Books | 5 | Linux, Python, computer architecture, AI fairness, and generative-AI titles. |
 | OSHA help | 1 | Account/upload troubleshooting screenshot. |
-| Study room | 1 | Duplicate copy of the exam objectives. |
+| Study room | 3 | Duplicate objectives plus two paid-practice-exam screenshots that are indexed but not mirrored. |
 
 ## Available image downloads
 
-- [Browse all 81 images by subject](images.md)
+- [Browse all 84 images by subject](images.md)
 - [Open the file-by-file image manifest](../assets/images/manifest.md)
 - [Browse the image directories](../assets/images/)
 
 ## PDFs and books located
 
-- CompTIA A+ Core 1 `220-1201` exam objectives.
+- [Official CompTIA A+ Core 1 `220-1201` exam objectives](https://assets.ctfassets.net/82ripq7fjls2/1oSdlyujpaX3GrM0rir6Ge/91afb2be72785281e8fb4c0d9a70c6f4/CompTIA-A-220-1201-Exam-Objectives-3.0.pdf).
 - Beginner Modules 1–4 study guide.
 - Detailed third-party Core 1 study guide.
+- September 6 Core 1 thread containing a second copy of the objectives and a third-party `220-1201` study guide.
 - Three Google IT Support resume examples.
 - *Learning Modern Linux*.
 - *Python Crash Course*, third edition.
@@ -40,3 +42,5 @@ See [Books and Legal Free Access](books.md) for authorized full-text editions, o
 - A September 3 paid practice-exam screenshot was converted into an original [Wi-Fi troubleshooting sequence](../guide/core-1-study-guide.md#wi-fi-troubleshooting-order). The screenshot itself is not redistributed.
 - Two September 3 cloud-service infographics were converted into an original [shared-responsibility table](../guide/core-1-study-guide.md#cloud-shared-responsibility-review). One carried external branding and the other used “DaaS” to mean data as a service, which can conflict with desktop-as-a-service terminology.
 - A September 3 mock-exam stream is indexed in [Live and Recorded Study Sessions](streams.md). No authorized playback link was posted.
+- A September 6 practice-exam stream and a September 7 virtualization study session are indexed in [Live and Recorded Study Sessions](streams.md). No authorized playback link was posted for either session.
+- September 7 cloud and hypervisor graphics were used to expand the original [virtualization and cloud notes](../guide/core-1-study-guide.md#9-virtualization-and-cloud). Externally branded and course-screen images were not copied into the public repository.
