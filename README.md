@@ -2,7 +2,7 @@
 
 An unofficial, community-organized study hub for CompTIA A+ Core 1 and foundational data-center support topics.
 
-Last Discord resource review: September 8, 2026.
+Last course-resource review: September 9, 2026.
 
 ## Browse by subject
 

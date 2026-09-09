@@ -21,6 +21,31 @@
 
 Use sets labeled `220-1201` for the current Core 1 scope. A `220-1101` Quizlet was also shared on September 7, but that set targets the previous exam series and should only be used as supplemental review after mapping each topic to the current objectives.
 
+## Canvas Core 1 study materials
+
+The Per Scholas Canvas discussion (posted September 2, 2026) collects the following external practice activities. Course-scoped links and documents are intentionally not republished here. Most Wordwall sets are peer-created practice, not official CompTIA materials.
+
+### Ports, protocols, and networking
+
+- [Common Ports (220-1201)](https://wordwall.net/resource/93579092/comptia-a-core-1-220-1201-common-ports)
+- [Network Types](https://wordwall.net/resource/58486205/comptia-a-1101-28-network-types)
+- [OSI Network Model](https://wordwall.net/resource/211737/computing/osi-network-model)
+- [PC & Networking Tool Practice](https://wordwall.net/resource/60074416/chapter-2-pc-networking-tool-practice)
+- [802.11 Frequencies](https://wordwall.net/resource/52191990/comptia-a-core-1-80211-frequencies) and [802.11 Standards](https://wordwall.net/resource/52191927/comptia-a-core-1-80211-standards)
+- [IEEE 802 Frequency Test](https://wordwall.net/resource/38290156/ieee-802-frequency-test)
+
+### Cables, connectors, displays, and hardware
+
+- [Cable Types](https://wordwall.net/resource/3073584/comptia-a-cable-types), [Peripheral Cables](https://wordwall.net/resource/58514498/comptia-a-1101-31-peripheral-cables), and [Cables and Connectors](https://wordwall.net/resource/74117728/cables-and-connectors-comptia-a-1101)
+- [Ethernet Cables](https://wordwall.net/resource/57603244/ethernet-cables) and [Laptop Displays](https://wordwall.net/resource/58400475/comptia-a-1101-12-laptop-displays)
+- [PC Equipment](https://wordwall.net/resource/3151294/comptia-a-pc-equipments)
+- [Motherboard Components](https://wordwall.net/resource/19511068/comptia-a-motherboard-components) and [Motherboard Review](https://wordwall.net/resource/65301476/comptia-a-1101-motherboard)
+- [Magnetic Hard Drives](https://wordwall.net/resource/6672227/magnetic-hard-drives)
+- [RAID Array 2.0](https://wordwall.net/resource/24469522/1001-raid-array-20) and [RAID Array (1201)](https://wordwall.net/resource/93824558/1201-raid-array-comptia-a)
+- [Common Connector Types](https://wordwall.net/resource/20908486/core-1-32-identify-common-connector-types)
+- [Best-Practice Troubleshooting Methodology](https://wordwall.net/resource/22609699/51-given-a-scenario-use-the-best-practice-methodology-to)
+- [220-1101 Acronym List](https://wordwall.net/resource/70701157/comptia-a-core-1-220-1101-acronym-list) — legacy scope; verify against current `220-1201` objectives.
+
 ## Training platforms
 
 - [Microsoft Learn](https://learn.microsoft.com/en-us/training/)
