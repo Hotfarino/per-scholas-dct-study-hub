@@ -1,6 +1,6 @@
 # Industry-Awareness Reading List
 
-These links were captured from the course's IT-news channel through September 6, 2026. News is time-sensitive; titles, access, and facts may change. Treat this as a reading queue, not a permanent factual reference.
+These links were captured from the course's IT-news channel through September 8, 2026. News is time-sensitive; titles, access, and facts may change. Treat this as a reading queue, not a permanent factual reference.
 
 ## Data centers, infrastructure, and workforce
 
@@ -14,6 +14,7 @@ These links were captured from the course's IT-news channel through September 6,
 - [Georgia Chamber Responds to Data-Center Claims — WABE](https://www.wabe.org/georgia-chamber-pushes-back-on-alleged-misinformation-disinformation-about-data-centers/)
 - [QTS Data-Center Deal in Blakely — WTVY](https://www.wtvy.com/2026/08/14/qts-data-center-deal-brings-2875m-commitment-blakely/)
 - [SpaceX Legal Shield and Louisiana Residents — The Current](https://thecurrentla.com/2026/what-does-spacexs-legal-shield-mean-for-vermilion-parish-residents/)
+- [Arm CEO on AI, Cancer, and Data-Center Bottlenecks — Business Insider](https://www.businessinsider.com/arm-ceo-says-ai-could-cure-cancer-data-centers-bottleneck-2026-9) — an industry perspective on how compute demand and data-center capacity constrain ambitious AI applications; treat the forecast as commentary, not established medical evidence.
 
 ## AI security, governance, and ethics
 
