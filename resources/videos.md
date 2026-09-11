@@ -47,6 +47,8 @@ Links are grouped by study purpose. Duplicate Discord previews, channel-home lin
 - The YouTube lab-interface walkthrough above is the direct interface demonstration currently cataloged. CompTIA CertMaster/official interactive labs are proprietary; YouTube does not provide a complete authorized copy of every lab, so the catalog links public demonstrations and substitutes rather than claiming full coverage.
 - [Core 1 220-1201 PBQ 1 Walkthrough — DailyDebian](https://www.youtube.com/watch?v=FYtZCy7nPA8)
 - [Core 1 220-1201 PBQ 3 Walkthrough — DailyDebian](https://www.youtube.com/watch?v=KI3tAIIqNeU)
+- [CompTIA A+ 1201 PBQ: Network Configuration and Device Roles](https://www.youtube.com/watch?v=ur5DkjKac1k)
+- [Informatik Lab YouTube Playlists](https://www.youtube.com/@InformatikLab/playlists) — browse the creator’s PBQ and exam-practice walkthrough playlists; verify the exam number because older 220-1101 material is mixed in.
 - [Network Troubleshooting with Windows Command-Line Tools](https://www.classcentral.com/course/youtube-comptia-a-lesson-network-troubleshooting-275336) — free YouTube-hosted lesson covering `ipconfig`, `ping`, `tracert`, `netstat`, `nbtstat`, `nslookup`, and `net`.
 
 ## Home labs and projects
