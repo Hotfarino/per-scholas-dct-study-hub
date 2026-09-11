@@ -12,6 +12,8 @@ The files are indexed but not redistributed publicly because permission from the
 
 ## Lab walkthroughs
 
+- [ExamCompass Cloud Computing Concepts Quiz](https://www.examcompass.com/comptia-a-plus-220-1201-certification-exam-cloud-computing-concepts-quiz) — third-party practice; verify coverage against the current objectives and review the site's terms before using it.
+
 - [Explore the CompTIA Lab Interface](https://www.youtube.com/watch?v=aMy8I3IsqOs)
 - [Set Up a Desktop Computer Lab](https://www.youtube.com/watch?v=IZ_vAaqq6YI)
 

@@ -11,6 +11,8 @@ Links are grouped by study purpose. Duplicate Discord previews, channel-home lin
 - [Mobile Device Networks — Professor Messer](https://www.youtube.com/watch?v=1LADZLBV3vo)
 - [Printers Explained — Laser, Inkjet, Thermal, and Dot Matrix](https://youtu.be/JEVurb1uVFA)
 - [Module 10: CompTIA A+ Core 1 Printers — Narrated](https://www.youtube.com/watch?v=w_f9hgFwJiQ)
+- [How Does a Laser Printer Work?](https://www.youtube.com/watch?v=X3KunoMJeg8)
+- [Inkjet Printers — The Engineering Behind Them](https://www.youtube.com/watch?v=0PKFQciUWBU)
 
 ## Networking
 
