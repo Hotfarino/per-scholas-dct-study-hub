@@ -44,3 +44,4 @@ See [Books and Legal Free Access](books.md) for authorized full-text editions, o
 - A September 3 mock-exam stream is indexed in [Live and Recorded Study Sessions](streams.md). No authorized playback link was posted.
 - A September 6 practice-exam stream and a September 7 virtualization study session are indexed in [Live and Recorded Study Sessions](streams.md). No authorized playback link was posted for either session.
 - September 7 cloud and hypervisor graphics were used to expand the original [virtualization and cloud notes](../guide/core-1-study-guide.md#9-virtualization-and-cloud). Externally branded and course-screen images were not copied into the public repository.
+- September 11 personal-projects attachments (three JPEGs) were reviewed, but the Discord CDN links had expired (“This content is no longer available”), so no inaccessible copies were added.
