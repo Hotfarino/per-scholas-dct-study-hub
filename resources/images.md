@@ -4,6 +4,17 @@ The 84 instructional images below are stored directly in this repository and can
 
 Images are reproduced from the course community at the repository owner's request. Do not remove attribution or reuse them commercially unless you have permission from the relevant rights holder.
 
+## Browse images by subject
+
+- [Wireless and Wi-Fi](#wi-fi-connection-slides--30-images)
+- [Cabling, fiber, and connectors](#cabling-fiber-and-connector-images--32-images)
+- [Networking references](#networking-reference-images--2-images)
+- [CPU and hardware](#cpu-reference-images--2-images)
+- [Hardware and architecture diagrams](#hardware-and-architecture-diagrams--6-images)
+- [RAID and storage](#raid-diagrams--3-images)
+- [PC Building Simulator](#pc-building-simulator--4-images)
+- [Schedule and course tools](#schedule-and-important-dates--2-images)
+
 ## Wi-Fi Connection Slides — 30 images
 
 Wireless standards, bands, channels, interference, radio technologies, throughput, and troubleshooting.
