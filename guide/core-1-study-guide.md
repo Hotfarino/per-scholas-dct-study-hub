@@ -199,6 +199,8 @@ Videos:
 
 ### Devices
 
+The SOHO-versus-enterprise architecture reference contrasts a home-office modem/router and wireless LAN with enterprise firewalls, core/access switches, wireless access points, server rooms, DMZs, VPN gateways, and cloud connections. Use it as a topology-reading exercise: identify WAN, LAN, filtered traffic, VPN tunnels, and wireless links before troubleshooting.
+
 - Hub: repeats traffic to all ports.
 - Switch: forwards Layer 2 frames using a MAC address table.
 - Router: connects IP networks and often performs NAT.

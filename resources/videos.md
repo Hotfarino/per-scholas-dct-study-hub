@@ -7,6 +7,10 @@ Links are grouped by study purpose. Duplicate Discord previews, channel-home lin
 - [How to Pass CompTIA A+ in 2026 — Professor Messer](https://www.youtube.com/watch?v=AIfIA7hEgrw&list=PLG49S3nxzAnnes8ZGI-OBlKEukHCX46N8)
 - [CompTIA 1201 Mobile Device Hardware Review](https://www.youtube.com/watch?v=FdkzOEUnLRQ)
 - [USB Port Colors](https://www.youtube.com/watch?v=r2sBNRWcvTY)
+- [Mobile Device Accessories — Professor Messer](https://www.youtube.com/watch?v=14iM8lLBS0c)
+- [Mobile Device Networks — Professor Messer](https://www.youtube.com/watch?v=1LADZLBV3vo)
+- [Printers Explained — Laser, Inkjet, Thermal, and Dot Matrix](https://youtu.be/JEVurb1uVFA)
+- [Module 10: CompTIA A+ Core 1 Printers — Narrated](https://www.youtube.com/watch?v=w_f9hgFwJiQ)
 
 ## Networking
 
@@ -44,6 +48,6 @@ Links are grouped by study purpose. Duplicate Discord previews, channel-home lin
 - [Kitboga scam-awareness video](https://www.youtube.com/watch?v=7mceb_t8EIs)
 - [Industry video captured from the IT-news channel](https://www.youtube.com/watch?v=I4ljcdqSGTE)
 - [Industry video captured from the IT-news channel](https://www.youtube.com/watch?v=bVYmNJGjFnI)
+- [What Is a Data Silo?](https://www.youtube.com/watch?v=j6G-Go_LQdI)
 
 Security material is for defensive learning. Test only systems you own or are explicitly authorized to assess.
-

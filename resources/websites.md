@@ -55,11 +55,13 @@ The Per Scholas Canvas discussion (posted September 2, 2026) collects the follow
 - [Per Scholas IT Support on Coursera](https://www.coursera.org/programs/per-scholas-it-support-dqcop)
 - [Google IT Support Professional Certificate](https://www.coursera.org/google-certificates/google-it-support) — the public page permits free enrollment and lists financial-aid options, but graded work and the certificate may require a subscription or approved aid. Learners should use their Per Scholas invitation when available.
 - [IBM SkillsBuild Account Registration](https://www.ibm.com/account/reg/us-en/signup?formid=urx-54369)
+- [CompTIA A+ Lesson 8 Revision — Kahoot](https://create.kahoot.it/share/comptia-a-lesson-8-revision/c9110b19-8ec4-4d4c-8fc6-38cbab7772b9)
 
 ## Virtualization tools and documentation
 
 - [Oracle VirtualBox downloads](https://www.virtualbox.org/wiki/Downloads)
 - [Oracle VirtualBox user manual](https://www.virtualbox.org/manual/)
+- [Type 1 vs. Type 2 Hypervisors — AWS](https://aws.amazon.com/compare/the-difference-between-type-1-and-type-2-hypervisors/)
 
 Download only from the official site, choose the package for the host operating system and CPU architecture, verify published checksums when practical, and review the separate Extension Pack license before installing it.
 
