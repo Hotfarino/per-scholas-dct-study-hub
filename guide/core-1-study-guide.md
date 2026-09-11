@@ -94,6 +94,10 @@ TCP is connection-oriented, ordered, and acknowledged. UDP is connectionless and
 
 Practice resource: [Network Ports Explained](https://www.youtube.com/watch?v=g2fT-g9PX9o).
 
+#### Server-services review
+
+An attached cram-sheet image reviewed on September 11 groups high-yield services as follows: SMB uses TCP 445 for Windows file/print sharing; FTP uses TCP 20/21; SSH uses TCP 22; Telnet uses TCP 23 and is insecure; SMTP uses TCP 25, POP3 uses TCP 110/995, IMAP uses TCP 143/993, LDAP uses TCP 389/636, RDP uses TCP 3389, NTP uses UDP 123, SNMP uses UDP 161/162, and Syslog uses UDP 514. Proxy servers, firewalls/UTM, IDS/IPS, spam gateways, load balancers, legacy systems, embedded systems/ICS/SCADA, and IoT are related service concepts to recognize. Verify port details against the current CompTIA objectives.
+
 ### IPv4, subnetting, and IPv6
 
 - Private IPv4 ranges: `10.0.0.0/8`, `172.16.0.0/12`, and `192.168.0.0/16`.
@@ -263,6 +267,8 @@ Reference: [CPU anatomy](https://www.overclockers.co.uk/blog/anatomy-of-a-cpu/) 
 4. Use efficiency certification as one quality/energy indicator, not as a substitute for electrical quality.
 
 The posted example totals 490 W, adds 25% headroom to reach about 613 W, and selects a 650 W unit. See the PSU planning image *(course attachment; not redistributed)*.
+
+An attached motherboard-power image also reviewed the legacy 20-pin ATX P1 connector and the common 24-pin (2x12) connector. A 20+4 adapter can support older 20-pin boards when electrically compatible; confirm the motherboard and PSU documentation before connecting power.
 
 ## 6. RAID
 
