@@ -109,6 +109,10 @@ An attached cram-sheet image reviewed on September 11 groups high-yield services
 
 Classful IPv4 review is useful historical context: Class A, B, and C traditionally reserved different portions of an address for the network and host. Modern networks use CIDR for flexible allocation, but recognizing the first-octet patterns and the network/host trade-off still helps with subnetting fundamentals. Do not substitute classful rules for the current CIDR objectives.
 
+Additional class-note review: DHCP follows DORA (Discover, Offer, Request, Acknowledge) and uses UDP 67/68; DNS uses port 53 and common records include A, AAAA, CNAME, MX, and TXT; VLANs logically separate devices and need routing for inter-VLAN communication; VPNs provide encrypted remote or site-to-site tunnels. The well-known-port reference also reinforces FTP 20/21, SSH 22, Telnet 23, SMTP 25, HTTP/HTTPS 80/443, LDAP 389, SMB 445, and RDP 3389.
+
+Wi-Fi review reminder: 802.11b/g use 2.4 GHz, 802.11a/ac use 5 GHz, 802.11n spans 2.4/5 GHz, and newer ax/be generations add 6 GHz support where available. Verify current exam objectives and regional spectrum rules.
+
 Subnetting tools posted in Discord:
 
 - [CIDR reference and calculator](https://www.ipaddressguide.com/cidr)
