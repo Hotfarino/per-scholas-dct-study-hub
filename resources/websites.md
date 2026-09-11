@@ -19,6 +19,8 @@
 - [Brainscape CompTIA A+ Core 1 Flashcards](https://www.brainscape.com/flashcards/comptia-a-core-1-20373519/packs/23377270)
 - [Quizlet CompTIA A+ 1200-Series Flashcards](https://quizlet.com/1024593451/comptia-a-1200-series-220-1201-220-1202-flash-cards/)
 
+A Discord screenshot also showed a Brainscape deck collection organized by current objectives: networking (2.0), mobile devices (1.1), hardware (3.0), acronym review, port-number services, Q1–Q8 practice sets, hardware/network troubleshooting (5.0), the 2026–2027 A+ 220-1201/220-1202 collection, and virtualization/cloud (4.0). The screenshot itself is not mirrored because it shows account-specific progress; use the public deck link above and verify current access.
+
 Use sets labeled `220-1201` for the current Core 1 scope. A `220-1101` Quizlet was also shared on September 7, but that set targets the previous exam series and should only be used as supplemental review after mapping each topic to the current objectives.
 
 ## Canvas Core 1 study materials
