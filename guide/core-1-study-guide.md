@@ -107,6 +107,8 @@ An attached cram-sheet image reviewed on September 11 groups high-yield services
 - DHCP supplies address, mask, gateway, DNS, and lease information.
 - IPv6 uses 128-bit addresses; `fe80::/10` is link-local. Neighbor Discovery replaces ARP, SLAAC can self-configure addressing, and dual stack runs IPv4 and IPv6 together.
 
+Classful IPv4 review is useful historical context: Class A, B, and C traditionally reserved different portions of an address for the network and host. Modern networks use CIDR for flexible allocation, but recognizing the first-octet patterns and the network/host trade-off still helps with subnetting fundamentals. Do not substitute classful rules for the current CIDR objectives.
+
 Subnetting tools posted in Discord:
 
 - [CIDR reference and calculator](https://www.ipaddressguide.com/cidr)

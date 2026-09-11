@@ -19,6 +19,9 @@ Links are grouped by study purpose. Duplicate Discord previews, channel-home lin
 - [Wi-Fi Standards Explained](https://www.youtube.com/watch?v=hhks5xSpM-0)
 - [Network Connectors](https://www.youtube.com/watch?v=ktTtAQIvYkg)
 - [Network Ports Explained](https://www.youtube.com/watch?v=g2fT-g9PX9o)
+- [Class-notes video: `_a6us8kaq0g`](https://www.youtube.com/watch?v=_a6us8kaq0g)
+- [Class-notes video: `UBVVq-xz5i0`](https://www.youtube.com/watch?v=UBVVq-xz5i0)
+- [Class-notes video: `kc3kWoMIPPE`](https://youtu.be/kc3kWoMIPPE)
 
 ## RAID and storage
 
