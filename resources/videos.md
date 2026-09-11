@@ -41,6 +41,11 @@ Links are grouped by study purpose. Duplicate Discord previews, channel-home lin
 - [Additional PC Building Simulator video](https://www.youtube.com/watch?v=Z91g1gHt9gU)
 - [Additional course-support video](https://www.youtube.com/watch?v=iOPNu1g_wyw)
 
+### Current A+ lab/interface coverage
+
+- [Professor Messer’s free A+ 220-1201 course index](https://www.professormesser.com/free-a-plus-training/220-1201/220-1201-video/220-1201-training-course/) — 63 free Core 1 videos organized by the current objectives, including network configuration, hardware, printers, virtualization, and troubleshooting.
+- The YouTube lab-interface walkthrough above is the direct interface demonstration currently cataloged. CompTIA CertMaster/official interactive labs are proprietary; YouTube does not provide a complete authorized copy of every lab, so the catalog links public demonstrations and substitutes rather than claiming full coverage.
+
 ## Home labs and projects
 
 - [Self-Hosted Applications and Home Lab](https://www.youtube.com/watch?v=DlzkIjhJ18o)
