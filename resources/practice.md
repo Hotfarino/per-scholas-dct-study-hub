@@ -2,6 +2,8 @@
 
 ## Peer-created browser quizzes
 
+- [Free CompTIA A+ Core 1 PBQs — LabsDigest](https://labsdigest.com/lessons/free-comptia-a-core-1-pbqs/) — public third-party PBQ practice; verify the current objective mapping and site terms.
+
 The course community shared three self-contained HTML practice files:
 
 1. **Modules 1–4 Practice Exam** — 60 questions with classic, timed, and shuffled modes, explanations, and review.
