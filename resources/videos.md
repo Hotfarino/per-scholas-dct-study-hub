@@ -41,6 +41,7 @@ Links are grouped by study purpose. Duplicate Discord previews, channel-home lin
 - [Additional PC Building Simulator video](https://www.youtube.com/watch?v=Z91g1gHt9gU)
 - [Additional course-support video](https://www.youtube.com/watch?v=iOPNu1g_wyw)
 - [6.5 Challenge Lab: Install a SOHO Network](https://www.youtube.com/watch?v=CdjsBxLG_Bk) — Dreamset Services walkthrough of the SOHO-network challenge lab.
+- [6.1.6 Lab: Connect Fiber Optic Cables](https://www.youtube.com/watch?v=X6pIFR_V-Ng) — Dreamset Services walkthrough focused on fiber-optic cabling connections.
 
 ### Current A+ lab/interface coverage
 
