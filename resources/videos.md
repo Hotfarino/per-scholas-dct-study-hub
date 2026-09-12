@@ -42,6 +42,7 @@ Links are grouped by study purpose. Duplicate Discord previews, channel-home lin
 - [Additional course-support video](https://www.youtube.com/watch?v=iOPNu1g_wyw)
 - [6.5 Challenge Lab: Install a SOHO Network](https://www.youtube.com/watch?v=CdjsBxLG_Bk) — Dreamset Services walkthrough of the SOHO-network challenge lab.
 - [6.1.6 Lab: Connect Fiber Optic Cables](https://www.youtube.com/watch?v=X6pIFR_V-Ng) — Dreamset Services walkthrough focused on fiber-optic cabling connections.
+- [6.2.7 Lab: Configure IP Addresses](https://www.youtube.com/watch?v=_yQ7tI5pd6Q) — Dreamset Services walkthrough of IP-address configuration in a networking lab.
 
 ### Current A+ lab/interface coverage
 
