@@ -374,6 +374,7 @@ Video: [CompTIA A+ 1201 mobile hardware review](https://www.youtube.com/watch?v=
 - Public, private, hybrid, and community describe deployment models.
 - Rapid elasticity, measured service, resource pooling, high availability, and shared responsibility are common concepts.
 - Synchronization, data residency, latency, Internet dependence, cost, security, and vendor lock-in are practical tradeoffs.
+- Memory aid from the class `#general` discussion: deployment models are like housing (public = shared hotel, private = your own house, hybrid = house plus rented overflow, community = shared co-op); service models are like pizza (IaaS = bare ingredients/kitchen, PaaS = managed kitchen, SaaS = finished meal).
 
 ### Cloud shared-responsibility review
 
