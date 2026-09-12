@@ -40,6 +40,7 @@ Links are grouped by study purpose. Duplicate Discord previews, channel-home lin
 - [Install CrossOver on macOS](https://www.youtube.com/watch?v=L852z0dWsCU) — compatibility with the assigned simulator was discussed but not confirmed.
 - [Additional PC Building Simulator video](https://www.youtube.com/watch?v=Z91g1gHt9gU)
 - [Additional course-support video](https://www.youtube.com/watch?v=iOPNu1g_wyw)
+- [6.5 Challenge Lab: Install a SOHO Network](https://www.youtube.com/watch?v=CdjsBxLG_Bk) — Dreamset Services walkthrough of the SOHO-network challenge lab.
 
 ### Current A+ lab/interface coverage
 
