@@ -56,6 +56,7 @@ Links are grouped by study purpose. Duplicate Discord previews, channel-home lin
 
 ## Home labs and projects
 
+- [Forgotten PC = Cheap Home Server?](https://www.youtube.com/watch?v=fuvUonIaY78) — Hardware Haven video on repurposing an older PC as a home server.
 - [Self-Hosted Applications and Home Lab](https://www.youtube.com/watch?v=DlzkIjhJ18o)
 - [Build a Home Cloud](https://www.youtube.com/watch?v=PF-vAvmP4_0)
 
