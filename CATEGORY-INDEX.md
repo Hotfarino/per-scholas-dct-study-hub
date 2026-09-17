@@ -21,6 +21,7 @@ Use this page when you want every resource for one subject in the same place.
 ## Networking and IP addressing
 
 - [Network Devices — illustrated comic guide, Issue 01](guide/illustrated/core-1-220-1201/networking/01-network-devices/README.md)
+- [Ports and Protocols — illustrated comic guide, Issue 02](guide/illustrated/core-1-220-1201/networking/02-ports-and-protocols/README.md)
 - [Networking foundations](guide/core-1-study-guide.md#2-networking-foundations)
 - [Networking videos](resources/videos.md#networking)
 - [IP-addressing and subnetting tools](resources/websites.md#ip-addressing-and-subnetting)

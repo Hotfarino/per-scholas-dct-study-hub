@@ -52,7 +52,43 @@
       "certification": "CompTIA A+",
       "exam": "220-1201",
       "subject": "networking",
-      "status": "planned"
+      "status": "available",
+      "edition": "1.0.0",
+      "published": "2026-09-17",
+      "reviewed": "2026-09-17",
+      "primary_objectives": [
+        "2.1"
+      ],
+      "tags": [
+        "ports",
+        "protocols",
+        "tcp",
+        "udp",
+        "dns",
+        "dhcp",
+        "http",
+        "https",
+        "ftp",
+        "ssh",
+        "email",
+        "smb",
+        "rdp",
+        "ldap",
+        "netbios"
+      ],
+      "files": {
+        "landing_page": "core-1-220-1201/networking/02-ports-and-protocols/README.md",
+        "pdf": "core-1-220-1201/networking/02-ports-and-protocols/ports-and-protocols.pdf",
+        "cover": "core-1-220-1201/networking/02-ports-and-protocols/cover.jpg",
+        "text": "core-1-220-1201/networking/02-ports-and-protocols/lesson.md"
+      },
+      "pdf": {
+        "pages": 21,
+        "bytes": 18373961,
+        "sha256": "cddb100c49f24647aef74aad8fee27ded1556128f2b91fb6d10d9b2c2c9f483b"
+      },
+      "illustrations": 13,
+      "quiz_questions": 3
     },
     {
       "id": "network-city-03-ip-addressing",

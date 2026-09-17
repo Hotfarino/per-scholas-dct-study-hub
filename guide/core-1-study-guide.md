@@ -77,6 +77,8 @@ TCP is connection-oriented, ordered, and acknowledged. UDP is connectionless and
 
 ### Common ports
 
+Illustrated lesson: [Ports and Protocols — Network City, Issue 02](illustrated/core-1-220-1201/networking/02-ports-and-protocols/README.md), with service definitions, TCP/UDP distinctions, and two port maps.
+
 | Port | Protocol/service | Key idea |
 |---:|---|---|
 | 20/21 | FTP | Data/control; unencrypted file transfer. |

@@ -11,6 +11,7 @@ Colorful comic lessons with detailed illustrations, plain-language definitions, 
 | Issue | Guide | Subject | Primary objective | Format |
 |---|---|---|---|---|
 | 01 | [Network Devices — Network City](core-1-220-1201/networking/01-network-devices/README.md) | Networking | 2.5: networking hardware | Illustrated PDF + searchable text |
+| 02 | [Ports and Protocols — Network City](core-1-220-1201/networking/02-ports-and-protocols/README.md) | Networking | 2.1: ports, protocols, and purposes | Illustrated PDF + searchable text |
 
 ### Network City: Issue 01
 
@@ -22,13 +23,22 @@ Meet NICs, switches, routers, access points, firewalls, cable/DSL modems, ONTs, 
 
 [Open the guide and download options](core-1-220-1201/networking/01-network-devices/README.md) · [Read the text version](core-1-220-1201/networking/01-network-devices/lesson.md)
 
+### Network City: Issue 02
+
+<a href="core-1-220-1201/networking/02-ports-and-protocols/README.md"><img src="core-1-220-1201/networking/02-ports-and-protocols/cover.jpg" alt="Ports and Protocols illustrated comic cover" width="360"></a>
+
+**21 pages · 13 new comic illustrations · 3-question quiz with explained answers**
+
+Meet TCP and UDP, learn every service in objective 2.1, and use two port maps to connect numbers with real jobs. Includes secure variants and a complete website-loading mission.
+
+[Open the guide and download options](core-1-220-1201/networking/02-ports-and-protocols/README.md) · [Read the text version](core-1-220-1201/networking/02-ports-and-protocols/lesson.md)
+
 ### Planned lessons
 
 These are the agreed next topics, not published downloads. Issue numbers describe the series order, not CompTIA objective numbers.
 
 | Planned issue | Topic | Subject folder | Status |
 |---|---|---|---|
-| 02 | Ports and Protocols | Networking | Planned |
 | 03 | IP Addressing | Networking | Planned |
 | 04 | Wireless Standards | Networking | Planned |
 | 05 | Network Cables | Hardware / cabling | Planned |
