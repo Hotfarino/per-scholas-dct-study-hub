@@ -23,6 +23,13 @@ This manifest records the useful attachment groups. The 84 instructional images 
 - [Open the file-by-file image manifest](../assets/images/manifest.md)
 - [Browse the image directories](../assets/images/)
 
+## Original illustrated study guides
+
+These original publications are separate from the course-community attachment inventory.
+
+- [Network Devices — Network City, Issue 01](../guide/illustrated/core-1-220-1201/networking/01-network-devices/README.md): 21-page illustrated PDF, searchable text, definitions, acronym meanings, and a three-question quiz.
+- [Illustrated study-guide library and roadmap](../guide/illustrated/README.md).
+
 ## PDFs and books located
 
 - [Official CompTIA A+ Core 1 `220-1201` exam objectives](https://assets.ctfassets.net/82ripq7fjls2/1oSdlyujpaX3GrM0rir6Ge/91afb2be72785281e8fb4c0d9a70c6f4/CompTIA-A-220-1201-Exam-Objectives-3.0.pdf).

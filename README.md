@@ -12,6 +12,7 @@ Main categories: exam preparation, troubleshooting, networking, wireless/mobile,
 
 ## Study material
 
+- [Illustrated study guides — Network City comics](guide/illustrated/README.md)
 - [Complete Core 1 study guide](guide/core-1-study-guide.md)
 - [YouTube and video catalog](resources/videos.md)
 - [Live and recorded study sessions](resources/streams.md)
@@ -25,6 +26,7 @@ Main categories: exam preparation, troubleshooting, networking, wireless/mobile,
 
 ## What is included
 
+- Original illustrated study guides, starting with a 21-page Network Devices comic for Core 1 (220-1201), with a searchable text companion and an expandable lesson catalog.
 - Original summaries of hardware, networking, wireless, cabling, RAID, troubleshooting, mobile devices, virtualization, cloud, printers, safety, and professional development.
 - Public learning links grouped by subject instead of by Discord channel.
 - A session catalog for live study streams, authorized recordings, and original recap notes.

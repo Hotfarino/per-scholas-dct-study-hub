@@ -62,6 +62,8 @@ The standard six-step troubleshooting method supports scenario questions, but th
 
 ## 2. Networking foundations
 
+Prefer visual learning? Start with [Network Devices — Network City, Issue 01](illustrated/core-1-220-1201/networking/01-network-devices/README.md), a 21-page illustrated PDF with a searchable text companion.
+
 ### TCP/IP model
 
 | Layer | What to remember |

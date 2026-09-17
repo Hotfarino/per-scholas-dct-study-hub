@@ -18,3 +18,7 @@
 discord-*.json
 source_assets/
 private/
+
+# Original, reviewed illustrated study-guide publications
+!guide/illustrated/core-*/**/*.pdf
+!guide/illustrated/core-*/**/cover.jpg

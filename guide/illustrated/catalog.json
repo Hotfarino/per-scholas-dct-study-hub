@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "collection": "Illustrated Study Guides",
+  "updated": "2026-09-17",
+  "guides": [
+    {
+      "id": "network-city-01-network-devices",
+      "series": "Network City",
+      "issue": 1,
+      "title": "Network Devices",
+      "certification": "CompTIA A+",
+      "exam": "220-1201",
+      "subject": "networking",
+      "status": "available",
+      "edition": "1.0.0",
+      "published": "2026-09-17",
+      "reviewed": "2026-09-17",
+      "primary_objectives": [
+        "2.5"
+      ],
+      "tags": [
+        "network-devices",
+        "switches",
+        "routers",
+        "access-points",
+        "firewalls",
+        "modems",
+        "ont",
+        "nic",
+        "poe",
+        "patch-panels"
+      ],
+      "files": {
+        "landing_page": "core-1-220-1201/networking/01-network-devices/README.md",
+        "pdf": "core-1-220-1201/networking/01-network-devices/network-devices.pdf",
+        "cover": "core-1-220-1201/networking/01-network-devices/cover.jpg",
+        "text": "core-1-220-1201/networking/01-network-devices/lesson.md"
+      },
+      "pdf": {
+        "pages": 21,
+        "bytes": 15618182,
+        "sha256": "4fdf3bcf93713b9451f4753d38ecf5ce28281fb54022c074cf7d46445348018d"
+      },
+      "illustrations": 13,
+      "quiz_questions": 3
+    },
+    {
+      "id": "network-city-02-ports-and-protocols",
+      "series": "Network City",
+      "issue": 2,
+      "title": "Ports and Protocols",
+      "certification": "CompTIA A+",
+      "exam": "220-1201",
+      "subject": "networking",
+      "status": "planned"
+    },
+    {
+      "id": "network-city-03-ip-addressing",
+      "series": "Network City",
+      "issue": 3,
+      "title": "IP Addressing",
+      "certification": "CompTIA A+",
+      "exam": "220-1201",
+      "subject": "networking",
+      "status": "planned"
+    },
+    {
+      "id": "network-city-04-wireless-standards",
+      "series": "Network City",
+      "issue": 4,
+      "title": "Wireless Standards",
+      "certification": "CompTIA A+",
+      "exam": "220-1201",
+      "subject": "networking",
+      "status": "planned"
+    },
+    {
+      "id": "network-city-05-network-cables",
+      "series": "Network City",
+      "issue": 5,
+      "title": "Network Cables",
+      "certification": "CompTIA A+",
+      "exam": "220-1201",
+      "subject": "hardware",
+      "status": "planned"
+    },
+    {
+      "id": "network-city-06-computer-hardware",
+      "series": "Network City",
+      "issue": 6,
+      "title": "Computer Hardware",
+      "certification": "CompTIA A+",
+      "exam": "220-1201",
+      "subject": "hardware",
+      "status": "planned"
+    }
+  ]
+}

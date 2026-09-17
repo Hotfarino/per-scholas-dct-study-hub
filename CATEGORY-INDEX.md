@@ -4,6 +4,7 @@ Use this page when you want every resource for one subject in the same place.
 
 ## Exam preparation and practice
 
+- [Illustrated study-guide collection and planned lessons](guide/illustrated/README.md)
 - [Exam snapshot and priorities](guide/core-1-study-guide.md#exam-snapshot-and-priorities)
 - [Practice quizzes and labs](resources/practice.md)
 - [Live and recorded study sessions](resources/streams.md)
@@ -19,6 +20,7 @@ Use this page when you want every resource for one subject in the same place.
 
 ## Networking and IP addressing
 
+- [Network Devices — illustrated comic guide, Issue 01](guide/illustrated/core-1-220-1201/networking/01-network-devices/README.md)
 - [Networking foundations](guide/core-1-study-guide.md#2-networking-foundations)
 - [Networking videos](resources/videos.md#networking)
 - [IP-addressing and subnetting tools](resources/websites.md#ip-addressing-and-subnetting)
@@ -33,6 +35,7 @@ Use this page when you want every resource for one subject in the same place.
 
 ## Cabling, fiber, and network devices
 
+- [Network Devices comic: modems, ONTs, patch panels, and PoE](guide/illustrated/core-1-220-1201/networking/01-network-devices/README.md)
 - [Cabling, connectors, and network devices](guide/core-1-study-guide.md#4-cabling-connectors-and-network-devices)
 - [32 cabling, fiber, connector, and termination-practice images](resources/images.md#cabling-fiber-and-connector-images--32-images)
 - [Cable termination practice workflow](resources/practice.md#hands-on-cabling)
@@ -97,6 +100,7 @@ Use this page when you want every resource for one subject in the same place.
 
 ## Complete inventories
 
+- [Illustrated study-guide catalog](guide/illustrated/README.md)
 - [All videos](resources/videos.md)
 - [Live and recorded study sessions](resources/streams.md)
 - [All websites and tools](resources/websites.md)
