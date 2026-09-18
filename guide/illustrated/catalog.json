@@ -129,7 +129,7 @@
       "exam": "220-1201",
       "subject": "hardware",
       "status": "available",
-      "edition": "1.0.0",
+      "edition": "1.0.1",
       "published": "2026-09-18",
       "reviewed": "2026-09-18",
       "primary_objectives": [
@@ -163,8 +163,8 @@
       },
       "pdf": {
         "pages": 35,
-        "bytes": 16898709,
-        "sha256": "63844890bd47ab0618bfb44372b6e9fb0cf57df195c37793833cdd91a8e13d2b"
+        "bytes": 16898814,
+        "sha256": "668f6fc6ef5fcd9034f2c8bb89467d88f6bb061eb87ea6c0bcb9e88281d13537"
       },
       "illustrations": 18,
       "quiz_questions": 3

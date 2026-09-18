@@ -21,7 +21,7 @@ Meet the parts, check the fit, and solve the scenario. CPU captains, RAM worktab
 | Subject | Hardware |
 | Primary objectives | 3.1–3.8: displays, cables, RAM, storage, boards/CPUs/cards, power, printer setup and maintenance |
 | Series / issue | Network City / 06 |
-| Edition / status | 1.0.0 / Available |
+| Edition / status | 1.0.1 / Available |
 | Published / technically reviewed | September 18, 2026 |
 | Format | Illustrated PDF and Markdown text companion |
 
@@ -39,12 +39,16 @@ Meet the parts, check the fit, and solve the scenario. CPU captains, RAM worktab
 **35 pages · 18 original comic illustrations · 32 primary references · 3-question quiz.** Every page was rendered and visually inspected. Definitions and acronym meanings accompany the technical terms. This broad study guide supports objectives 3.1–3.8; consult the official objectives for the complete exam scope and device manuals for installation procedures.
 
 - [Catalog metadata](../../../catalog.json)
-- PDF SHA-256: `63844890bd47ab0618bfb44372b6e9fb0cf57df195c37793833cdd91a8e13d2b`
+- PDF SHA-256: `668f6fc6ef5fcd9034f2c8bb89467d88f6bb061eb87ea6c0bcb9e88281d13537`
 
 ## Attribution
 
 Original study material developed with AI assistance. Illustrations were made with the built-in image-generation tool. Fictional characters and glowing paths are memory aids, not literal wiring or service diagrams. This is independent material, not an official or endorsed CompTIA or Per Scholas publication.
 
+Physical dimensions use inches; cable distances use feet. Rounded conversions are marked as approximate. Standard names such as M.2 2280 remain unchanged.
+
 ## Revision history
+
+- **1.0.1 — 2026-09-18:** Converted physical measurements to inches and feet.
 
 - **1.0.0 — 2026-09-18:** First illustrated hardware edition. Issue 06 retains its planned series slot; Issues 03–05 remain planned.

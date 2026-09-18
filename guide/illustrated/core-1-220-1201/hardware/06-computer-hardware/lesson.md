@@ -2,7 +2,7 @@
 
 [Guide overview and illustrated PDF](README.md) · [All illustrated guides](../../../README.md)
 
-Searchable companion to Network City, Issue 06, edition 1.0.0. The PDF contains the finished comic illustrations. Reviewed September 18, 2026.
+Searchable companion to Network City, Issue 06, edition 1.0.1. The PDF contains the finished comic illustrations. Reviewed September 18, 2026.
 
 ## Meet the hardware team
 
@@ -54,9 +54,9 @@ Searchable companion to Network City, Issue 06, edition 1.0.0. The PDF contains 
 
 | Board family | Typical maximum size | What changes |
 | --- | --- | --- |
-| ATX | 305 × 244 mm | More room for slots and connectors |
-| microATX | 244 × 244 mm | Smaller board; often fewer slots |
-| Mini-ITX | 170 × 170 mm | Compact; limited expansion space |
+| ATX | 12 × 9.6 inches | More room for slots and connectors |
+| microATX | 9.6 × 9.6 inches | Smaller board; often fewer slots |
+| Mini-ITX | About 6.7 × 6.7 inches | Compact; limited expansion space |
 
 - **Form factor.** The size, shape, and mounting layout. ATX means Advanced Technology Extended. ITX means Information Technology eXtended. Actual boards can be smaller than a family’s maximum. [4]
 
@@ -212,7 +212,7 @@ Searchable companion to Network City, Issue 06, edition 1.0.0. The PDF contains 
 
 - **M.2.** A compact module/socket form factor. M.2 SSDs may use SATA or PCIe/NVMe. The slot must support the drive’s interface, keying, length, and boot requirements. [12]
 
-- **2280.** An M.2 size: 22 mm wide and 80 mm long. It is not a speed rating. mSATA, mini-SATA, is an older small SATA form factor; it is not the same connector as M.2.
+- **2280.** An M.2 size: about 0.87 inches wide and 3.15 inches long. The standard name 2280 uses a metric size code. It is not a speed rating. mSATA, mini-SATA, is an older small SATA form factor; it is not the same connector as M.2.
 
 - **SAS.** Serial Attached SCSI. SCSI means Small Computer System Interface. SAS is common in enterprise storage. A normal SATA controller cannot operate a SAS drive.
 
@@ -431,7 +431,7 @@ Searchable companion to Network City, Issue 06, edition 1.0.0. The PDF contains 
 
 - **Connector shapes.** Type-A is the familiar rectangle; Type-B is common on older printers; Mini/Micro are smaller legacy families. USB-C is reversible and oval. Its shape alone proves neither speed nor video support.
 
-- **Power / distance.** USB Power Delivery can negotiate supported power. Check device, charger, and cable ratings. Classic USB 2.0 High-Speed passive segments are commonly limited to 5 m; faster modes have cable-specific limits.
+- **Power / distance.** USB Power Delivery can negotiate supported power. Check device, charger, and cable ratings. Classic USB 2.0 High-Speed passive segments are commonly limited to about 16.4 ft; faster modes have cable-specific limits.
 
 > **Remember:** EXTRA CONTEXT: USB4 and Thunderbolt can add higher rates and other capabilities. A USB-C cable can still be limited to USB 2.0 data. Never guess from color alone.
 
@@ -461,9 +461,9 @@ Searchable companion to Network City, Issue 06, edition 1.0.0. The PDF contains 
 
 > Data, power, and control use different paths!
 
-- **SATA data / power.** A typical SATA data connector has 7 contacts; SATA power has 15. A cabled SATA drive normally needs both. Internal SATA data cable length is commonly limited to 1 m. [25]
+- **SATA data / power.** A typical SATA data connector has 7 contacts; SATA power has 15. A cabled SATA drive normally needs both. Internal SATA data cable length is commonly limited to about 3.28 ft. [25]
 
-- **eSATA.** External SATA. Uses an external connector and cable system, commonly up to 2 m. Ordinary eSATA does not supply drive power; some powered variants do.
+- **eSATA.** External SATA. Uses an external connector and cable system, commonly up to about 6.56 ft. Ordinary eSATA does not supply drive power; some powered variants do.
 
 - **Headers.** Groups of motherboard pins or sockets for case switches, lights, USB, audio, or fans. Use the exact pinout: which signal belongs at each position.
 
@@ -485,7 +485,7 @@ Searchable companion to Network City, Issue 06, edition 1.0.0. The PDF contains 
 
 - **Twisted pair.** Pairs of copper wires twist to help reduce interference. UTP means Unshielded Twisted Pair; STP means Shielded Twisted Pair. Cat means category, a performance classification.
 
-- **Common reach.** A standard copper Ethernet channel is often 100 m total, typically 90 m permanent cable plus patch cords. Cat 5e commonly supports 1 Gb/s at 100 m; Cat 6A supports 10 Gb/s at 100 m. [26]
+- **Common reach.** A standard copper Ethernet channel is often about 328 ft total, typically about 295 ft of permanent cable plus patch cords. Cat 5e commonly supports 1 Gb/s at about 328 ft; Cat 6A supports 10 Gb/s at about 328 ft. [26]
 
 - **RJ45 / RJ11.** RJ means Registered Jack. Ethernet’s 8-position modular plug is commonly called RJ45. RJ11-style connectors are smaller and commonly used for telephone service.
 

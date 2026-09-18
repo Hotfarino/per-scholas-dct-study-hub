@@ -43,3 +43,7 @@ The existing file ignore rules allow only the approved PDF/cover locations in th
 ## Attribution
 
 Identify AI-assisted text and generated artwork. Cite technical sources, preserve any required attribution, and distinguish independent practice from official objectives. Do not add a license for someone else's work or imply CompTIA endorsement.
+
+## Measurement preference
+
+Use inches for component dimensions and feet (ft) for cable distances in new or revised comic guides. Mark rounded conversions as approximate. Preserve industry-standard names such as M.2 2280, and explain metric-based naming when relevant.
