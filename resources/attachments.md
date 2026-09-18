@@ -30,6 +30,7 @@ These original publications are separate from the course-community attachment in
 - [Network Devices — Network City, Issue 01](../guide/illustrated/core-1-220-1201/networking/01-network-devices/README.md): 21-page illustrated PDF, searchable text, definitions, acronym meanings, and a three-question quiz.
 - [Ports and Protocols — Network City, Issue 02](../guide/illustrated/core-1-220-1201/networking/02-ports-and-protocols/README.md): 21-page illustrated PDF, searchable text, full port maps, acronym meanings, and a three-question quiz.
 - [Computer Hardware — Network City, Issue 06](../guide/illustrated/core-1-220-1201/hardware/06-computer-hardware/README.md): 35-page illustrated PDF, searchable text, component definitions, compatibility and safety notes, and a three-question quiz.
+- [Wi-Fi Standards and Wireless — Network City, Issue 04](../guide/illustrated/core-1-220-1201/networking/04-wireless-standards/README.md): 35-page comic PDF, 24 interactive PowerPoint flashcards, searchable text, and a three-question quiz.
 - [Illustrated study-guide library and roadmap](../guide/illustrated/README.md).
 
 ## PDFs and books located

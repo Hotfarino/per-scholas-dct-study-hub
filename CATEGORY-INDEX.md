@@ -20,6 +20,8 @@ Use this page when you want every resource for one subject in the same place.
 
 ## Networking and IP addressing
 
+- [Wi-Fi Standards and Wireless — comic PDF and interactive flashcards, Issue 04](guide/illustrated/core-1-220-1201/networking/04-wireless-standards/README.md)
+
 - [Network Devices — illustrated comic guide, Issue 01](guide/illustrated/core-1-220-1201/networking/01-network-devices/README.md)
 - [Ports and Protocols — illustrated comic guide, Issue 02](guide/illustrated/core-1-220-1201/networking/02-ports-and-protocols/README.md)
 - [Networking foundations](guide/core-1-study-guide.md#2-networking-foundations)
@@ -28,6 +30,8 @@ Use this page when you want every resource for one subject in the same place.
 - [Networking reference images](resources/images.md#networking-reference-images--2-images)
 
 ## Wireless and mobile devices
+
+- [Wi-Fi Standards and Wireless — comic PDF and interactive flashcards, Issue 04](guide/illustrated/core-1-220-1201/networking/04-wireless-standards/README.md)
 
 - [Wireless and mobile connectivity](guide/core-1-study-guide.md#3-wireless-and-mobile-connectivity)
 - [Mobile devices](guide/core-1-study-guide.md#8-mobile-devices)

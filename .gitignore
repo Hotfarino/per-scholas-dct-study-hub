@@ -22,3 +22,4 @@ private/
 # Original, reviewed illustrated study-guide publications
 !guide/illustrated/core-*/**/*.pdf
 !guide/illustrated/core-*/**/cover.jpg
+!guide/illustrated/core-*/**/wireless-flashcards.pptx

@@ -47,3 +47,7 @@ Identify AI-assisted text and generated artwork. Cite technical sources, preserv
 ## Measurement preference
 
 Use inches for component dimensions and feet (ft) for cable distances in new or revised comic guides. Mark rounded conversions as approximate. Preserve industry-standard names such as M.2 2280, and explain metric-based naming when relevant.
+
+## Interactive companions
+
+A lesson may include a PowerPoint flashcard companion in its existing folder. Record it under `files.presentation`, with slide count, bytes, and SHA-256 in `presentation`, and a top-level `flashcards` count. Keep the PDF as the full printable lesson. Explain Slide Show mode and any limitations on the landing page. Render every slide and validate all reveal, retry, menu, and next-card links before publishing. Use native links without macros.

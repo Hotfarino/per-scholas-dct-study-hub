@@ -124,6 +124,8 @@ Subnetting tools posted in Discord:
 
 ## 3. Wireless and mobile connectivity
 
+Illustrated lesson: [Wi-Fi Standards and Wireless — Network City, Issue 04](illustrated/core-1-220-1201/networking/04-wireless-standards/README.md). Includes the full comic PDF and a PowerPoint companion with 24 interactive flashcards.
+
 ### Frequency bands
 
 | Band | Strength | Tradeoff |

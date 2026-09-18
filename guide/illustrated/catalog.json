@@ -104,11 +104,51 @@
       "id": "network-city-04-wireless-standards",
       "series": "Network City",
       "issue": 4,
-      "title": "Wireless Standards",
+      "title": "Wi-Fi Standards and Wireless",
       "certification": "CompTIA A+",
       "exam": "220-1201",
       "subject": "networking",
-      "status": "planned"
+      "status": "available",
+      "edition": "1.0.0",
+      "published": "2026-09-18",
+      "reviewed": "2026-09-18",
+      "primary_objectives": [
+        "2.2"
+      ],
+      "supporting_objectives": [
+        "1.2",
+        "1.3"
+      ],
+      "tags": [
+        "wi-fi",
+        "wireless",
+        "802.11",
+        "bluetooth",
+        "nfc",
+        "rfid",
+        "flashcards"
+      ],
+      "files": {
+        "landing_page": "core-1-220-1201/networking/04-wireless-standards/README.md",
+        "pdf": "core-1-220-1201/networking/04-wireless-standards/wireless-standards.pdf",
+        "presentation": "core-1-220-1201/networking/04-wireless-standards/wireless-flashcards.pptx",
+        "cover": "core-1-220-1201/networking/04-wireless-standards/cover.jpg",
+        "text": "core-1-220-1201/networking/04-wireless-standards/lesson.md"
+      },
+      "pdf": {
+        "pages": 35,
+        "bytes": 11393248,
+        "sha256": "9d70947bf3471075f9f93ecb965c2b615e139266008e3c4b57b33745b32ce35b"
+      },
+      "presentation": {
+        "slides": 59,
+        "internal_links": 197,
+        "bytes": 35059046,
+        "sha256": "22084ce1415e57e614a53bce1bfe6c03d3ddebdd95a951ca815b7c9a3e8f22d7"
+      },
+      "illustrations": 14,
+      "flashcards": 24,
+      "quiz_questions": 3
     },
     {
       "id": "network-city-05-network-cables",

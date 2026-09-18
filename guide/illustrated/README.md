@@ -12,6 +12,7 @@ Colorful comic lessons with detailed illustrations, plain-language definitions, 
 |---|---|---|---|---|
 | 01 | [Network Devices — Network City](core-1-220-1201/networking/01-network-devices/README.md) | Networking | 2.5: networking hardware | Illustrated PDF + searchable text |
 | 02 | [Ports and Protocols — Network City](core-1-220-1201/networking/02-ports-and-protocols/README.md) | Networking | 2.1: ports, protocols, and purposes | Illustrated PDF + searchable text |
+| 04 | [Wi-Fi Standards and Wireless — Network City](core-1-220-1201/networking/04-wireless-standards/README.md) | Networking / wireless | 2.2: wireless technologies | Illustrated PDF + interactive PowerPoint + text |
 | 06 | [Computer Hardware — Network City](core-1-220-1201/hardware/06-computer-hardware/README.md) | Hardware | 3.1–3.8: components, displays, cables, and printers | Illustrated PDF + searchable text |
 
 ### Network City: Issue 01
@@ -34,6 +35,16 @@ Meet TCP and UDP, learn every service in objective 2.1, and use two port maps to
 
 [Open the guide and download options](core-1-220-1201/networking/02-ports-and-protocols/README.md) · [Read the text version](core-1-220-1201/networking/02-ports-and-protocols/lesson.md)
 
+### Network City: Issue 04
+
+<a href="core-1-220-1201/networking/04-wireless-standards/README.md"><img src="core-1-220-1201/networking/04-wireless-standards/cover.jpg" alt="Wi-Fi Standards and Wireless comic cover" width="360"></a>
+
+**35 pages · 14 original comic illustrations · 24 interactive flashcards · 3-question quiz**
+
+Learn Wi-Fi standards, bands, channels, performance, security, Bluetooth, NFC, and RFID. Use the 59-slide PowerPoint in Slide Show mode to reveal answers and retry cards. Includes 22 primary references and feet/inches for distances.
+
+[Download the PDF and interactive deck](core-1-220-1201/networking/04-wireless-standards/README.md) · [Read the text version](core-1-220-1201/networking/04-wireless-standards/lesson.md)
+
 ### Network City: Issue 06
 
 <a href="core-1-220-1201/hardware/06-computer-hardware/README.md"><img src="core-1-220-1201/hardware/06-computer-hardware/cover.jpg" alt="Computer Hardware illustrated comic cover" width="360"></a>
@@ -51,7 +62,6 @@ These are the agreed next topics, not published downloads. Issue numbers describ
 | Planned issue | Topic | Subject folder | Status |
 |---|---|---|---|
 | 03 | IP Addressing | Networking | Planned |
-| 04 | Wireless Standards | Networking | Planned |
 | 05 | Network Cables | Hardware / cabling | Planned |
 
 ## Organization
