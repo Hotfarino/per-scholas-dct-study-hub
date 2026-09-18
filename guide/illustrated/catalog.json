@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "collection": "Illustrated Study Guides",
-  "updated": "2026-09-17",
+  "updated": "2026-09-18",
   "guides": [
     {
       "id": "network-city-01-network-devices",
@@ -128,7 +128,46 @@
       "certification": "CompTIA A+",
       "exam": "220-1201",
       "subject": "hardware",
-      "status": "planned"
+      "status": "available",
+      "edition": "1.0.0",
+      "published": "2026-09-18",
+      "reviewed": "2026-09-18",
+      "primary_objectives": [
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.5",
+        "3.6",
+        "3.7",
+        "3.8"
+      ],
+      "tags": [
+        "hardware",
+        "cpu",
+        "motherboards",
+        "ram",
+        "storage",
+        "raid",
+        "power",
+        "displays",
+        "cables",
+        "printers",
+        "safety"
+      ],
+      "files": {
+        "landing_page": "core-1-220-1201/hardware/06-computer-hardware/README.md",
+        "pdf": "core-1-220-1201/hardware/06-computer-hardware/computer-hardware.pdf",
+        "cover": "core-1-220-1201/hardware/06-computer-hardware/cover.jpg",
+        "text": "core-1-220-1201/hardware/06-computer-hardware/lesson.md"
+      },
+      "pdf": {
+        "pages": 35,
+        "bytes": 16898709,
+        "sha256": "63844890bd47ab0618bfb44372b6e9fb0cf57df195c37793833cdd91a8e13d2b"
+      },
+      "illustrations": 18,
+      "quiz_questions": 3
     }
   ]
 }

@@ -228,6 +228,8 @@ Videos:
 
 ## 5. PC hardware
 
+Illustrated lesson: [Computer Hardware — Network City, Issue 06](illustrated/core-1-220-1201/hardware/06-computer-hardware/README.md), covering components, displays, cables, printers, definitions, and compatibility checks.
+
 ### Motherboard map
 
 Know these parts by sight and purpose:

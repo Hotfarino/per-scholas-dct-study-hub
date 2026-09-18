@@ -43,6 +43,8 @@ Use this page when you want every resource for one subject in the same place.
 
 ## PC hardware and CPU
 
+- [Computer Hardware — illustrated comic guide, Issue 06](guide/illustrated/core-1-220-1201/hardware/06-computer-hardware/README.md)
+
 - [PC hardware](guide/core-1-study-guide.md#5-pc-hardware)
 - [CPU reference images](resources/images.md#cpu-reference-images--2-images)
 - [Hardware and architecture diagrams](resources/images.md#hardware-and-architecture-diagrams--6-images)
