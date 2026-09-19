@@ -26,7 +26,7 @@ Main categories: exam preparation, troubleshooting, networking, wireless/mobile,
 
 ## What is included
 
-- Original illustrated study guides: Network Devices, Ports and Protocols, Wi-Fi Standards and Wireless, and Computer Hardware comics for Core 1 (220-1201), with colorful PDFs, searchable text companions, interactive wireless flashcards, and an expandable lesson catalog.
+- Original illustrated study guides: Network Devices, Ports and Protocols, Wi-Fi Standards and Wireless, Computer Hardware, and Printers and Scanners comics for Core 1 (220-1201), with colorful PDFs, searchable text companions, interactive wireless and printer flashcards, and an expandable lesson catalog.
 - Original summaries of hardware, networking, wireless, cabling, RAID, troubleshooting, mobile devices, virtualization, cloud, printers, safety, and professional development.
 - Public learning links grouped by subject instead of by Discord channel.
 - A session catalog for live study streams, authorized recordings, and original recap notes.

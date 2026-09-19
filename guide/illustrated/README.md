@@ -14,6 +14,7 @@ Colorful comic lessons with detailed illustrations, plain-language definitions, 
 | 02 | [Ports and Protocols — Network City](core-1-220-1201/networking/02-ports-and-protocols/README.md) | Networking | 2.1: ports, protocols, and purposes | Illustrated PDF + searchable text |
 | 04 | [Wi-Fi Standards and Wireless — Network City](core-1-220-1201/networking/04-wireless-standards/README.md) | Networking / wireless | 2.2: wireless technologies | Illustrated PDF + interactive PowerPoint + text |
 | 06 | [Computer Hardware — Network City](core-1-220-1201/hardware/06-computer-hardware/README.md) | Hardware | 3.1–3.8: components, displays, cables, and printers | Illustrated PDF + searchable text |
+| 07 | [Printers and Scanners — Network City](core-1-220-1201/hardware/07-printers/README.md) | Hardware / printers | 3.7, 3.8, 5.6: setup, maintenance, troubleshooting | Illustrated PDF + interactive PowerPoint + text |
 
 ### Network City: Issue 01
 
@@ -54,6 +55,16 @@ Learn Wi-Fi standards, bands, channels, performance, security, Bluetooth, NFC, a
 Explore CPUs, motherboards, RAM, storage/RAID, cooling, power, displays, cables, and printers. Includes acronym meanings, compatibility checks, safety notes, and 32 primary references.
 
 [Open the guide and download options](core-1-220-1201/hardware/06-computer-hardware/README.md) · [Read the text version](core-1-220-1201/hardware/06-computer-hardware/lesson.md)
+
+### Network City: Issue 07
+
+<a href="core-1-220-1201/hardware/07-printers/README.md"><img src="core-1-220-1201/hardware/07-printers/cover.jpg" alt="Printers and Scanners comic cover" width="360"></a>
+
+**38 pages · 12 original comic illustrations · 24 interactive flashcards · 3-question quiz**
+
+Learn laser, inkjet, thermal, and impact printers; all seven laser stages; setup, scanning, maintenance, and troubleshooting. Includes definitions, paper sizes in inches, and 24 primary references.
+
+[Download the PDF and interactive deck](core-1-220-1201/hardware/07-printers/README.md) · [Read the text version](core-1-220-1201/hardware/07-printers/lesson.md)
 
 ### Planned lessons
 

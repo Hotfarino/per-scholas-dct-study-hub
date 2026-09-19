@@ -398,6 +398,8 @@ Exact boundaries vary by product. “The provider manages it” does not remove 
 
 ## 10. Printers
 
+Illustrated lesson: [Printers and Scanners — Network City, Issue 07](illustrated/core-1-220-1201/hardware/07-printers/README.md). Includes a full comic PDF and 24 interactive PowerPoint flashcards.
+
 The Discord notes were light here, but the official objectives include printer deployment, maintenance, and troubleshooting. Review:
 
 - Laser process: processing, charging, exposing, developing, transferring, fusing, and cleaning.

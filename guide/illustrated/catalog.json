@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "collection": "Illustrated Study Guides",
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "guides": [
     {
       "id": "network-city-01-network-devices",
@@ -207,6 +207,56 @@
         "sha256": "668f6fc6ef5fcd9034f2c8bb89467d88f6bb061eb87ea6c0bcb9e88281d13537"
       },
       "illustrations": 18,
+      "quiz_questions": 3
+    },
+    {
+      "id": "network-city-07-printers",
+      "series": "Network City",
+      "issue": 7,
+      "title": "Printers and Scanners",
+      "certification": "CompTIA A+",
+      "exam": "220-1201",
+      "subject": "hardware",
+      "status": "available",
+      "edition": "1.0.0",
+      "published": "2026-09-19",
+      "reviewed": "2026-09-19",
+      "primary_objectives": [
+        "3.7",
+        "3.8",
+        "5.6"
+      ],
+      "tags": [
+        "printers",
+        "laser",
+        "inkjet",
+        "thermal",
+        "impact",
+        "scanning",
+        "maintenance",
+        "troubleshooting",
+        "flashcards"
+      ],
+      "files": {
+        "landing_page": "core-1-220-1201/hardware/07-printers/README.md",
+        "pdf": "core-1-220-1201/hardware/07-printers/printers.pdf",
+        "presentation": "core-1-220-1201/hardware/07-printers/printer-flashcards.pptx",
+        "cover": "core-1-220-1201/hardware/07-printers/cover.jpg",
+        "text": "core-1-220-1201/hardware/07-printers/lesson.md"
+      },
+      "pdf": {
+        "pages": 38,
+        "bytes": 8320219,
+        "sha256": "2665cfb1c0548641857d849bde03be8fc2d4ba1048495815a6baa159e8496ab6"
+      },
+      "presentation": {
+        "slides": 59,
+        "internal_links": 197,
+        "bytes": 30662165,
+        "sha256": "4028f97d8143d49e9eb8992322d226ef1736a248410d77e617568e58b0a5b98c"
+      },
+      "illustrations": 12,
+      "flashcards": 24,
       "quiz_questions": 3
     }
   ]

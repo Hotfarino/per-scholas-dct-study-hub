@@ -77,6 +77,8 @@ Use this page when you want every resource for one subject in the same place.
 
 ## Printers
 
+- [Printers and Scanners — comic PDF and interactive flashcards, Issue 07](guide/illustrated/core-1-220-1201/hardware/07-printers/README.md)
+
 - [Printer concepts and troubleshooting](guide/core-1-study-guide.md#10-printers)
 
 ## Safety and OSHA
