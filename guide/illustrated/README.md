@@ -15,6 +15,7 @@ Colorful comic lessons with detailed illustrations, plain-language definitions, 
 | 04 | [Wi-Fi Standards and Wireless — Network City](core-1-220-1201/networking/04-wireless-standards/README.md) | Networking / wireless | 2.2: wireless technologies | Illustrated PDF + interactive PowerPoint + text |
 | 06 | [Computer Hardware — Network City](core-1-220-1201/hardware/06-computer-hardware/README.md) | Hardware | 3.1–3.8: components, displays, cables, and printers | Illustrated PDF + searchable text |
 | 07 | [Printers and Scanners — Network City](core-1-220-1201/hardware/07-printers/README.md) | Hardware / printers | 3.7, 3.8, 5.6: setup, maintenance, troubleshooting | Illustrated PDF + interactive PowerPoint + text |
+| 08 | [Cloud, Servers, and Virtualization — Network City](core-1-220-1201/virtualization-cloud/08-cloud-servers-virtualization/README.md) | Virtualization / cloud / server roles | 2.3, 4.1, 4.2 | Illustrated PDF + interactive PowerPoint + text |
 
 ### Network City: Issue 01
 
@@ -66,6 +67,16 @@ Learn laser, inkjet, thermal, and impact printers; all seven laser stages; setup
 
 [Download the PDF and interactive deck](core-1-220-1201/hardware/07-printers/README.md) · [Read the text version](core-1-220-1201/hardware/07-printers/lesson.md)
 
+### Network City: Issue 08
+
+<a href="core-1-220-1201/virtualization-cloud/08-cloud-servers-virtualization/README.md"><img src="core-1-220-1201/virtualization-cloud/08-cloud-servers-virtualization/cover.jpg" alt="Cloud, Servers, and Virtualization comic cover" width="360"></a>
+
+**45 pages · 12 original comic illustrations · 24 interactive flashcards · 3-question quiz**
+
+Explore server roles, cloud service and deployment models, shared responsibility, hypervisors, virtual machines, containers, and VDI. Includes acronym meanings, practical scenarios, and 28 primary references.
+
+[Download the PDF and interactive deck](core-1-220-1201/virtualization-cloud/08-cloud-servers-virtualization/README.md) · [Read the text version](core-1-220-1201/virtualization-cloud/08-cloud-servers-virtualization/lesson.md)
+
 ### Planned lessons
 
 These are the agreed next topics, not published downloads. Issue numbers describe the series order, not CompTIA objective numbers.
@@ -81,7 +92,8 @@ Guides are grouped by **exam version → subject → numbered lesson**. The inde
 
 - **Networking:** devices, ports/protocols, IP addressing, and wireless.
 - **Hardware:** network cables/connectors and computer components.
-- **Future subjects:** mobile devices, virtualization/cloud, and troubleshooting as guides become available.
+- **Virtualization and cloud:** cloud services, virtual machines, containers, and server roles.
+- **Future subjects:** mobile devices and troubleshooting as guides become available.
 
 ## Accuracy and attribution
 

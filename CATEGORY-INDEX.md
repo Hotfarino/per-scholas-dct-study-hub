@@ -20,6 +20,8 @@ Use this page when you want every resource for one subject in the same place.
 
 ## Networking and IP addressing
 
+- [Cloud, Servers, and Virtualization — comic PDF and interactive flashcards, Issue 08](guide/illustrated/core-1-220-1201/virtualization-cloud/08-cloud-servers-virtualization/README.md)
+
 - [Wi-Fi Standards and Wireless — comic PDF and interactive flashcards, Issue 04](guide/illustrated/core-1-220-1201/networking/04-wireless-standards/README.md)
 
 - [Network Devices — illustrated comic guide, Issue 01](guide/illustrated/core-1-220-1201/networking/01-network-devices/README.md)
@@ -61,6 +63,8 @@ Use this page when you want every resource for one subject in the same place.
 - [RAID diagrams](resources/images.md#raid-diagrams--3-images)
 
 ## Virtualization, cloud, and AI
+
+- [Cloud, Servers, and Virtualization — comic PDF and interactive flashcards, Issue 08](guide/illustrated/core-1-220-1201/virtualization-cloud/08-cloud-servers-virtualization/README.md)
 
 - [Virtualization and cloud](guide/core-1-study-guide.md#9-virtualization-and-cloud)
 - [VirtualBox tools and official documentation](resources/websites.md#virtualization-tools-and-documentation)

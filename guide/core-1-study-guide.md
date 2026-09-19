@@ -353,6 +353,8 @@ Video: [CompTIA A+ 1201 mobile hardware review](https://www.youtube.com/watch?v=
 
 ## 9. Virtualization and cloud
 
+Illustrated lesson: [Cloud, Servers, and Virtualization — Network City, Issue 08](illustrated/core-1-220-1201/virtualization-cloud/08-cloud-servers-virtualization/README.md). All three topics in a 45-page comic PDF, with 24 interactive PowerPoint flashcards.
+
 ### Virtualization
 
 - A hypervisor allocates CPU, memory, storage, and networking to virtual machines. Type 1 runs on hardware; Type 2 runs as an application on a host OS.
