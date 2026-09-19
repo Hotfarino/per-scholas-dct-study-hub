@@ -301,6 +301,7 @@ RAID improves availability or performance; it is not a backup. Maintain separate
 Videos posted in `#comptia-help`:
 
 - [RAID 0, 1, 5, and 10 overview](https://www.youtube.com/watch?v=U-OCdTeZLac)
+- [RAID Ready — Study & Master RAID Fundamentals](https://raid-solutions-and-troubleshooting.b12sites.com/) — randomized quizzes, flashcards, and visual RAID review.
 - [RAID visual short](https://youtube.com/shorts/g-fLUpIgj2Y)
 - [RAID explanation](https://www.youtube.com/watch?v=Xo0XabwIW-M)
 - [Longer RAID walkthrough](https://www.youtube.com/watch?v=rgo0OPSw9_E&t=321s)

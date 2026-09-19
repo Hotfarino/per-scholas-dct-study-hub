@@ -3,6 +3,7 @@
 ## Peer-created browser quizzes
 
 - [Free CompTIA A+ Core 1 PBQs — LabsDigest](https://labsdigest.com/lessons/free-comptia-a-core-1-pbqs/) — public third-party PBQ practice; verify the current objective mapping and site terms.
+- [RAID Ready — Study & Master RAID Fundamentals](https://raid-solutions-and-troubleshooting.b12sites.com/) — public practice site shared in Discord; includes randomized RAID quizzes, searchable flashcards, pictorial study guides, and score tracking.
 
 The course community shared three self-contained HTML practice files:
 
