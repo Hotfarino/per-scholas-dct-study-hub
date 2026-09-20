@@ -309,6 +309,8 @@ Videos posted in `#comptia-help`:
 
 ## 7. Boot, UEFI, security, and display troubleshooting
 
+- Phishing-awareness reminder from the class announcements: do not enter Gmail or other credentials from an unexpected email link. Verify the sender through a trusted channel, inspect the destination domain, report suspicious messages, and change the password immediately if credentials were submitted. Course screenshots and the suspicious link are not copied into this public guide.
+
 ### Boot sequence
 
 1. Power rails stabilize and the CPU begins firmware execution.
