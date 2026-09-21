@@ -7,9 +7,12 @@ for(const name of [...new Set(cards.map(c=>c.category))]){const o=document.creat
 function render(){
  const c=deck[position];el('count').textContent=`${position+1} of ${deck.length}`;
  el('question').textContent=c.question;el('question').hidden=flipped;
+ const choices=el('choices');choices.replaceChildren();choices.hidden=flipped;
+ el('selection').hidden=flipped;el('selection').textContent=`Select ${c.correct.length===1?'ONE':c.correct.length===2?'TWO':c.correct.length===3?'THREE':c.correct.length} answer${c.correct.length===1?'':'s'}.`;
+ for(const option of c.options){const row=document.createElement('span');row.className='choice';row.textContent=`${option.label}. ${option.text}`;choices.append(row)}
  el('side').textContent=`${c.id} · ${flipped?'Answer':'Question'}`;
  el('back').hidden=!flipped;el('answer').textContent=c.answer;el('why').textContent=c.why;
- el('card').setAttribute('aria-pressed',String(flipped));el('card').setAttribute('aria-label',flipped?`${c.answer} ${c.why} Click to show question.`:`${c.question} Click to show answer.`);el('flipHint').textContent=flipped?'Click to see the question':'Click to flip';
+ el('card').setAttribute('aria-pressed',String(flipped));el('card').setAttribute('aria-label',flipped?`${c.answer} ${c.why} Click to show question.`:`${c.question} ${el('selection').textContent} ${c.options.map(o=>o.label+'. '+o.text).join(' ')} Click to show answer.`);el('flipHint').textContent=flipped?'Click to see the question':'Click to flip';
  el('prev').disabled=position===0;el('next').disabled=position===deck.length-1;
  const ref=el('references');ref.replaceChildren();ref.hidden=!flipped;
  const note=document.createElement('p');note.textContent=`Core 1 objective ${c.objective} · Source questions: ${c.originals.join(', ')}`;ref.append(note);

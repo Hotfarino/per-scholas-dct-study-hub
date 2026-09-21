@@ -4,7 +4,7 @@ Use this page when you want every resource for one subject in the same place.
 
 ## Exam preparation and practice
 
-- [Core 1 reviewed flashcards — 190 explained cards and a 942-question audit](guide/practice/core-1-220-1201/reviewed-flashcards/README.md)
+- [Core 1 reviewed flashcards — 763 multiple-choice cards and a 942-question audit](guide/practice/core-1-220-1201/reviewed-flashcards/README.md)
 
 - [Illustrated study-guide collection and planned lessons](guide/illustrated/README.md)
 - [Exam snapshot and priorities](guide/core-1-study-guide.md#exam-snapshot-and-priorities)
