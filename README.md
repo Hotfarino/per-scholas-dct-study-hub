@@ -12,6 +12,8 @@ Main categories: exam preparation, troubleshooting, networking, wireless/mobile,
 
 ## Study material
 
+- [Core 1 PBQ Workshop — 10 interactive scenarios, 62 tasks, server and IP practice](guide/practice/core-1-220-1201/pbq-workshop/README.md)
+
 - [Core 1 Concept Rescue — comic visual review, 33 practice questions, and YouTube lessons](guide/practice/core-1-220-1201/concept-rescue/README.md)
 
 - [Core 1 reviewed flashcards — 763 multiple-choice cards, scored review, and a 942-question audit](guide/practice/core-1-220-1201/reviewed-flashcards/README.md)
