@@ -28,3 +28,5 @@ Questions have been adapted and corrected, including faulty keys and missing dia
 IDs combine the source’s Exam A–H section and question number. PDF page numbers count from the cover. Each retained question maps to its own card; exact duplicates link to the matching retained card. The original PDF and downloaded third-party documentation are not redistributed.
 
 **Start over & shuffle answers** returns to the first question matching your filters and rearranges the answer choices. Displayed letters are reassigned; grading still follows the actual answer. Question order and saved results are preserved. Results and exports show answer text so old attempts remain clear after shuffling.
+
+Restart now shuffles both question order and answer choices, respecting the selected topic and question filter. Saved results remain attached to the original question IDs.
