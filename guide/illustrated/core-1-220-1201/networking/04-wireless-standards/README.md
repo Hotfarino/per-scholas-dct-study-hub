@@ -12,6 +12,10 @@ WOOSH! Meet radio-wave racers, channel traffic crews, security guards, and Bluet
 
 <img src="cover.jpg" alt="Colorful Network City Wi-Fi Standards and Wireless comic cover" width="420">
 
+## Flashcard repair — September 21, 2026
+
+The PowerPoint download now contains corrected button markup (revision 1.0.1). Download a fresh copy to replace older files. The PDF and lesson content are unchanged.
+
 ## Use the interactive flashcards
 
 1. Download the PowerPoint and open it in PowerPoint **Slide Show** mode.
@@ -52,6 +56,8 @@ Maximum PHY rates are theoretical standard ceilings, not promised download speed
 Technical references appear in the PDF, text companion, and PowerPoint. Consult the official objectives for complete exam scope. This is independent study material, not an official or endorsed CompTIA or Per Scholas publication.
 
 ## Attribution and revision history
+
+- **Flashcards 1.0.1 — 2026-09-21:** Corrected hyperlink element order for all navigation buttons. Verified destinations and unchanged slide content. Native PowerPoint playback remains untested.
 
 Original AI-assisted educational text and artwork. Comic illustrations were generated with the built-in image tool. Characters and glowing paths are memory aids.
 

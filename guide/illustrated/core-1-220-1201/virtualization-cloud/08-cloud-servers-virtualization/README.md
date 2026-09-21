@@ -12,6 +12,10 @@ WOOSH! Meet the service crew, a smiling cloud, and a hypervisor wizard. Learn ho
 
 <img src="cover.jpg" alt="Colorful Network City Cloud, Servers, and Virtualization comic cover" width="420">
 
+## Flashcard repair — September 21, 2026
+
+The PowerPoint download now contains corrected button markup (revision 1.0.1). Download a fresh copy to replace older files. The PDF and lesson content are unchanged.
+
 ## Use the interactive flashcards
 
 1. Download the PowerPoint and open it in **Slide Show** mode.
@@ -52,6 +56,8 @@ Extra lab and hardware context is labeled where appropriate. Vendor examples are
 Sources appear in the PDF, text companion, and deck. This is independent study material, not an official or endorsed CompTIA or Per Scholas publication.
 
 ## Attribution and revision history
+
+- **Flashcards 1.0.1 — 2026-09-21:** Corrected hyperlink element order for all navigation buttons. Verified destinations and unchanged slide content. Native PowerPoint playback remains untested.
 
 Original AI-assisted educational text and artwork. Illustrations were generated with the built-in image tool. Characters and glowing paths are memory aids; the written explanations state the technical rules.
 

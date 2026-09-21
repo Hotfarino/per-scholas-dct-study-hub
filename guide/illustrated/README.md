@@ -8,6 +8,8 @@ Colorful comic lessons with detailed illustrations, plain-language definitions, 
 
 ### Available now
 
+**Flashcard repair (September 21, 2026):** Wireless (04), Printers (07), and Cloud/Servers/Virtualization (08) PowerPoint downloads now contain corrected navigation-button markup. Download a fresh copy and use Slide Show mode.
+
 | Issue | Guide | Subject | Primary objective | Format |
 |---|---|---|---|---|
 | 01 | [Network Devices — Network City](core-1-220-1201/networking/01-network-devices/README.md) | Networking | 2.5: networking hardware | Illustrated PDF + searchable text |

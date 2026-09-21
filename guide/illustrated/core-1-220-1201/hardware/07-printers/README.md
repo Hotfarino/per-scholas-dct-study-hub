@@ -12,6 +12,10 @@ ZAP! Meet toner buddies, ink-drop artists, thermal twins, and a ribbon boxer. Fo
 
 <img src="cover.jpg" alt="Colorful Network City Printers and Scanners comic cover" width="420">
 
+## Flashcard repair — September 21, 2026
+
+The PowerPoint download now contains corrected button markup (revision 1.0.1). Download a fresh copy to replace older files. The PDF and lesson content are unchanged.
+
 ## Use the interactive flashcards
 
 1. Download the PowerPoint and open it in **Slide Show** mode.
@@ -52,6 +56,8 @@ A symptom is a clue, not proof that one part has failed. Printer speeds, duty cy
 Sources appear in the PDF, text companion, and deck. Consult official objectives for complete exam scope. This is independent study material, not an official or endorsed CompTIA or Per Scholas publication.
 
 ## Attribution and revision history
+
+- **Flashcards 1.0.1 — 2026-09-21:** Corrected hyperlink element order for all navigation buttons. Verified destinations and unchanged slide content. Native PowerPoint playback remains untested.
 
 Original AI-assisted educational text and artwork. Comic illustrations were generated with the built-in image tool. Characters and glowing paths are memory aids.
 

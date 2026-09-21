@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "collection": "Illustrated Study Guides",
-  "updated": "2026-09-19",
+  "updated": "2026-09-21",
   "guides": [
     {
       "id": "network-city-01-network-devices",
@@ -143,8 +143,10 @@
       "presentation": {
         "slides": 59,
         "internal_links": 197,
-        "bytes": 35059046,
-        "sha256": "22084ce1415e57e614a53bce1bfe6c03d3ddebdd95a951ca815b7c9a3e8f22d7"
+        "bytes": 35058822,
+        "sha256": "3a4b83b97859a76a0a5652980d0867fe0e2953ba74d15910bf63ff24b631997e",
+        "edition": "1.0.1",
+        "revised": "2026-09-21"
       },
       "illustrations": 14,
       "flashcards": 24,
@@ -252,8 +254,10 @@
       "presentation": {
         "slides": 59,
         "internal_links": 197,
-        "bytes": 30662165,
-        "sha256": "4028f97d8143d49e9eb8992322d226ef1736a248410d77e617568e58b0a5b98c"
+        "bytes": 30661929,
+        "sha256": "9ac0e6bc90e5af0343853b5624ded0945dbc7bc51779fa40dc30eb079a8ee333",
+        "edition": "1.0.1",
+        "revised": "2026-09-21"
       },
       "illustrations": 12,
       "flashcards": 24,
@@ -306,8 +310,10 @@
       "presentation": {
         "slides": 60,
         "internal_links": 199,
-        "bytes": 34532769,
-        "sha256": "3d3c9975b3863ba16d317c1a3917a9e3c89d5bef462f998520014569e73193b0"
+        "bytes": 34532540,
+        "sha256": "1d506ff0bb3cc65272945f6958a61d16fa420029c9b73c0a49a2d25d7d8cecb6",
+        "edition": "1.0.1",
+        "revised": "2026-09-21"
       },
       "illustrations": 12,
       "flashcards": 24,
