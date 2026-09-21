@@ -100,3 +100,5 @@ Guides are grouped by **exam version → subject → numbered lesson**. The inde
 ## Accuracy and attribution
 
 This is independent learning material, not an official CompTIA publication. Follow the [official 220-1201 exam objectives](https://assets.ctfassets.net/82ripq7fjls2/1oSdlyujpaX3GrM0rir6Ge/91afb2be72785281e8fb4c0d9a70c6f4/CompTIA-A-220-1201-Exam-Objectives-3.0.pdf) for exam scope. Each guide records its review date and sources. Artwork is AI-generated and uses memory-aid metaphors; technical notes explain actual device behavior.
+
+**New cloud flip cards:** [Download the click-to-flip browser deck](core-1-220-1201/virtualization-cloud/08-cloud-servers-virtualization/cloud-flip-cards.zip). Unzip and open `index.html`; no PowerPoint required.

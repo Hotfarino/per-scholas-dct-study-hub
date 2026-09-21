@@ -16,7 +16,15 @@ WOOSH! Meet the service crew, a smiling cloud, and a hypervisor wizard. Learn ho
 
 The PowerPoint download now contains corrected button markup (revision 1.0.1). Download a fresh copy to replace older files. The PDF and lesson content are unchanged.
 
-## Use the interactive flashcards
+## Click-to-flip flashcards
+
+The browser edition keeps all 24 questions. Click anywhere on a card to flip it, then choose **Next card**. Every new card starts with its question visible. **Previous** goes back; **Start again** restarts after card 24. Enter or Space flips the focused card; arrow keys change cards.
+
+- [Download the browser deck](cloud-flip-cards.zip): unzip it and open `index.html`. Works offline with no PowerPoint needed.
+- [Browser deck source](flip-cards/index.html)
+- [Owner's private hosted deck](https://network-city-cloud-flip-cards.bigdawgroof812178.chatgpt.site) (requires the owner's sign-in).
+
+## Use the PowerPoint flashcards
 
 1. Download the PowerPoint and open it in **Slide Show** mode.
 2. Choose a card. Say the full answer before selecting **Reveal Answer**.
