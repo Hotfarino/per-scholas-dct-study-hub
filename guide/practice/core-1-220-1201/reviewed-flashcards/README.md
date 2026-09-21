@@ -4,7 +4,11 @@ Text-only, black-and-white study deck aligned to relevant CompTIA A+ 220-1201 co
 
 [Open the interactive deck](https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site) (owner-private; sign-in may be required).
 
-For a portable copy, download [the complete study pack](reviewed-flashcards.zip), extract it, and open `flashcards-offline.html` in a browser. Read the multiple-choice answers on the front, choose your answer, click to flip for the answer and explanation, then click Next. Seven topic filters help you focus. The cards work offline; external reference links require internet access.
+Select your answer choices and choose **Check answer**. Open **Your results and missed questions** to see your mistakes, your selected answers, the correct answers, and accuracy by study section. Use **Review missed questions** for targeted practice, or **Not yet answered** to work through fresh questions. Multiple-answer questions require all correct choices.
+
+The hosted site saves attempts to your signed-in account across sessions and devices. Summary scores use your latest scored answer per question. **Download results CSV** includes every scored attempt, including earlier mistakes you later corrected. Revealing or skipping does not count. Tracking starts with this update; prior unscored answers cannot be recovered.
+
+For a portable copy, download [the complete study pack](reviewed-flashcards.zip), extract it, and open `flashcards-offline.html` in a browser. Offline scoring lasts only for the current open-page session: export results before closing or reloading. External references require internet. The adjacent `index.html` belongs to the hosted edition and requires its saved-progress API.
 
 ## Review results
 

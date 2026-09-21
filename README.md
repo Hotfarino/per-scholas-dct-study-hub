@@ -12,9 +12,9 @@ Main categories: exam preparation, troubleshooting, networking, wireless/mobile,
 
 ## Study material
 
-- [Core 1 Concept Rescue — illustrated review, 27 practice questions, and YouTube lessons](guide/practice/core-1-220-1201/concept-rescue/README.md)
+- [Core 1 Concept Rescue — illustrated review, 33 practice questions, and YouTube lessons](guide/practice/core-1-220-1201/concept-rescue/README.md)
 
-- [Core 1 reviewed flashcards — 763 multiple-choice cards and a 942-question audit](guide/practice/core-1-220-1201/reviewed-flashcards/README.md)
+- [Core 1 reviewed flashcards — 763 multiple-choice cards, scored review, and a 942-question audit](guide/practice/core-1-220-1201/reviewed-flashcards/README.md)
 
 - [Illustrated study guides — Network City comics](guide/illustrated/README.md)
 - [Complete Core 1 study guide](guide/core-1-study-guide.md)
