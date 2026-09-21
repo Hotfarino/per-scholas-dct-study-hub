@@ -4,9 +4,21 @@ const el=id=>document.getElementById(id);
 const cardMap=new Map(cards.map(c=>[c.id,c]));
 let deck=cards.slice(),position=0,flipped=false,selected=[],submitted=false,peeked=false,history=[],ready=false,saving=false,pendingAttempt=null;
 const topic=el('topic'),mode=el('mode');
+const optionOrders=new Map(cards.map(c=>[c.id,c.options.slice()]));
+function shuffleAnswers(){
+ for(const c of cards){
+  const before=optionOrders.get(c.id),order=before.slice();
+  for(let i=order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[order[i],order[j]]=[order[j],order[i]]}
+  if(order.length>1&&order.every((o,i)=>o.label===before[i].label))order.push(order.shift());
+  optionOrders.set(c.id,order);
+ }
+}
+const displayLabel=(c,key)=>String.fromCharCode(65+optionOrders.get(c.id).findIndex(o=>o.label===key));
+const displayAnswers=(c,keys)=>optionOrders.get(c.id).filter(o=>keys.includes(o.label)).map(o=>`${displayLabel(c,o.label)}. ${o.text}`).join('; ');
+
 const latest=()=>{const m=new Map();for(const a of history)m.set(a.cardId,a);return m};
 const isRight=(c,answer)=>answer.length===c.correct.length&&c.correct.every(x=>answer.includes(x));
-const choiceText=(c,letters)=>letters.map(k=>{const o=c.options.find(o=>o.label===k);return o?`${k}. ${o.text}`:k}).join('; ');
+const choiceText=(c,letters)=>letters.map(k=>{const o=c.options.find(o=>o.label===k);return o?o.text:k}).join('; ');
 function status(message){el('storageStatus').textContent=message}
 for(const name of [...new Set(cards.map(c=>c.category))]){const o=document.createElement('option');o.value=name;o.textContent=name;topic.append(o)}
 function resetCard(){flipped=false;selected=[];submitted=false;peeked=false;pendingAttempt=null}
@@ -23,16 +35,16 @@ function render(){
  el('objective').textContent=`Related Core 1 objectives: ${c.objective}`;
  const choices=el('choices');choices.replaceChildren();choices.hidden=flipped;
  el('selection').hidden=flipped;el('selection').textContent=`Select ${c.correct.length===1?'ONE':c.correct.length===2?'TWO':c.correct.length===3?'THREE':c.correct.length} answer${c.correct.length===1?'':'s'}.`;
- for(const option of c.options){
-  const label=node('label');label.className='choice';const input=node('input');input.type=c.correct.length===1?'radio':'checkbox';input.name='answer';input.value=option.label;input.checked=selected.includes(option.label);input.disabled=submitted||peeked||saving;input.setAttribute('aria-label',`${option.label}. ${option.text}`);
+ for(const option of optionOrders.get(c.id)){
+  const label=node('label');label.className='choice';const input=node('input');input.type=c.correct.length===1?'radio':'checkbox';input.name='answer';input.value=option.label;input.checked=selected.includes(option.label);input.disabled=submitted||peeked||saving;input.setAttribute('aria-label',`${displayLabel(c,option.label)}. ${option.text}`);
   input.addEventListener('change',()=>{if(input.type==='radio')selected=[option.label];else selected=input.checked?[...selected.filter(x=>x!==option.label),option.label]:selected.filter(x=>x!==option.label);render();[...choices.querySelectorAll('input')].find(x=>x.value===option.label)?.focus()});
-  label.append(input,node('span',`${option.label}. ${option.text}`));choices.append(label);
+  label.append(input,node('span',`${displayLabel(c,option.label)}. ${option.text}`));choices.append(label);
  }
- el('back').hidden=!flipped;el('answer').textContent=c.answer;el('why').textContent=c.why;
+ el('back').hidden=!flipped;el('answer').textContent=displayAnswers(c,c.correct);el('why').textContent=c.why;
  el('flip').textContent=flipped?'Show question':submitted?'Show answer':'Reveal without scoring';
  el('flip').disabled=saving;el('submit').hidden=flipped||submitted||peeked;el('submit').disabled=!ready||saving||selected.length!==c.correct.length;
  el('submit').textContent=saving?'Saving…':'Check answer';el('retry').hidden=!submitted&&!peeked;el('retry').disabled=saving;
- el('result').textContent=submitted?(isRight(c,selected)?'Correct.':'Not quite — review the explanation.')+` Your answer: ${choiceText(c,selected)}`:peeked?'Answer revealed without scoring. Choose Try again for a scored attempt.':'';
+ el('result').textContent=submitted?(isRight(c,selected)?'Correct.':'Not quite — review the explanation.')+` Your answer: ${displayAnswers(c,selected)}`:peeked?'Answer revealed without scoring. Choose Try again for a scored attempt.':'';
  const last=latest().get(c.id);el('previousResult').textContent=last?`Last scored attempt: ${last.correct?'correct':'incorrect'} · ${new Date(last.at).toLocaleString()}`:'Not yet scored';
  const ref=el('references');ref.replaceChildren();ref.hidden=!flipped;
  ref.append(node('p',`Related Core 1 objectives: ${c.objective} · Source questions: ${c.originals.join(', ')}`));
@@ -52,7 +64,7 @@ function renderProgress(){
  const list=el('missedList');list.replaceChildren();
  const missedCards=cards.filter(c=>m.get(c.id)?.correct===false&&(topic.value==='All topics'||c.category===topic.value));
  el('missedCount').textContent=missedCards.length?`${missedCards.length} questions to review in the selected topic.`:'No missed questions in the selected topic.';
- for(const c of missedCards){const a=m.get(c.id),li=node('li'),button=node('button',`${c.id} · ${c.category} — ${c.question}`);button.type='button';button.disabled=saving;button.addEventListener('click',()=>{topic.value='All topics';mode.value='all';deck=cards.slice();position=cards.findIndex(x=>x.id===c.id);resetCard();render();el('card').scrollIntoView({behavior:'smooth',block:'start'});el('flip').focus()});li.append(button,node('p',`Your answer: ${choiceText(c,a.selected)}`),node('p',`Correct: ${c.answer}`),node('p',`Objectives ${c.objective} · ${new Date(a.at).toLocaleString()}`));list.append(li)}
+ for(const c of missedCards){const a=m.get(c.id),li=node('li'),button=node('button',`${c.id} · ${c.category} — ${c.question}`);button.type='button';button.disabled=saving;button.addEventListener('click',()=>{topic.value='All topics';mode.value='all';deck=cards.slice();position=cards.findIndex(x=>x.id===c.id);resetCard();render();el('card').scrollIntoView({behavior:'smooth',block:'start'});el('flip').focus()});li.append(button,node('p',`Your answer: ${choiceText(c,a.selected)}`),node('p',`Correct: ${choiceText(c,c.correct)}`),node('p',`Objectives ${c.objective} · ${new Date(a.at).toLocaleString()}`));list.append(li)}
  el('export').disabled=!ready||!history.length;el('clear').disabled=!ready||!history.length||saving;
 }
 function flip(){if(saving||!deck.length)return;if(!flipped&&!submitted)peeked=true;flipped=!flipped;render()}
@@ -68,14 +80,14 @@ el('submit').addEventListener('click',checkAnswer);el('flip').addEventListener('
 el('card').addEventListener('click',e=>{if(!e.target.closest('label,input,button,a'))flip()});
 el('retry').addEventListener('click',()=>{resetCard();render()});
 el('prev').addEventListener('click',()=>move(-1));el('next').addEventListener('click',()=>move(1));
-el('restart').addEventListener('click',()=>{if(saving)return;position=0;resetCard();render()});
+el('restart').addEventListener('click',()=>{if(saving)return;shuffleAnswers();applyFilter();status('Answer choices shuffled. Saved results kept. '+window.ProgressStore.description)});
 topic.addEventListener('change',applyFilter);mode.addEventListener('change',applyFilter);
 el('reviewMissed').addEventListener('click',()=>{mode.value='missed';applyFilter();el('card').scrollIntoView({behavior:'smooth',block:'start'})});
 el('clear').addEventListener('click',()=>{el('resetConfirm').hidden=false});el('cancelReset').addEventListener('click',()=>{el('resetConfirm').hidden=true});
 el('confirmReset').addEventListener('click',async()=>{if(saving)return;saving=true;render();try{await window.ProgressStore.clear();history=[];el('resetConfirm').hidden=true;mode.value='all';applyFilter();status(window.ProgressStore.description)}catch{status('Could not reset progress. Your results have been kept.')}finally{saving=false;render()}});
 el('export').addEventListener('click',()=>{
  const rows=[['question_id','section','objectives','question','your_answer','correct_answer','result','attempt_time']];
- for(const a of history){const c=cardMap.get(a.cardId);if(c)rows.push([c.id,c.category,c.objective,c.question,choiceText(c,a.selected),c.answer,a.correct?'correct':'incorrect',a.at])}
+ for(const a of history){const c=cardMap.get(a.cardId);if(c)rows.push([c.id,c.category,c.objective,c.question,choiceText(c,a.selected),choiceText(c,c.correct),a.correct?'correct':'incorrect',a.at])}
  const csv=rows.map(row=>row.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(',')).join('\r\n');
  const url=URL.createObjectURL(new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8'})),a=node('a');a.href=url;a.download='core-1-practice-results.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 });

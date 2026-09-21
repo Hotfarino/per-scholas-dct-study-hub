@@ -10,3 +10,5 @@ Open flashcards-offline.html for offline study. It supports the same scoring int
 Independent study material aligned to public 220-1201 objectives and primary technical documentation. Not official or endorsed CompTIA questions, not checked against its private exam bank, and not complete exam coverage.
 
 IDs use Exam A-H and the original question number; PDF pages count from the cover. Original PDF and downloaded third-party reference documents are not redistributed.
+
+Start over & shuffle answers changes the choice order and displayed letters for all cards, then returns to the first matching question. Question order stays the same. Saved scores remain linked to answer content; results and CSV use answer text so earlier letters cannot be confused with the new order.
