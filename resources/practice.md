@@ -13,6 +13,10 @@ The course community shared three self-contained HTML practice files:
 
 The files are indexed but not redistributed publicly because permission from their authors has not been confirmed. Learners with authorized course access can locate them in the CompTIA help channel.
 
+## Course-access practice files
+
+- **220-1101 Practice Questions and Sample Sims** — 17.96 MB PDF shared in `#notes-resources` on September 18, 2026. It is not mirrored here; learners with authorized Discord access can retrieve it from that channel. This targets the legacy 220-1101 exam series, so use it only for supplemental practice and verify coverage against the current 220-1201 objectives.
+
 ## Lab walkthroughs
 
 - [ExamCompass Cloud Computing Concepts Quiz](https://www.examcompass.com/comptia-a-plus-220-1201-certification-exam-cloud-computing-concepts-quiz) — third-party practice; verify coverage against the current objectives and review the site's terms before using it.
