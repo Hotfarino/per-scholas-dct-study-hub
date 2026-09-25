@@ -17,6 +17,13 @@ The files are indexed but not redistributed publicly because permission from the
 
 - **220-1101 Practice Questions and Sample Sims** — 17.96 MB PDF shared in `#notes-resources` on September 18, 2026. It is not mirrored here; learners with authorized Discord access can retrieve it from that channel. This targets the legacy 220-1101 exam series, so use it only for supplemental practice and verify coverage against the current 220-1201 objectives.
 
+## New Discord review links (September 25, 2026)
+
+- **Exam 1 retake assignments (two Canvas assignments)** — available from the course Canvas account; these are private course links and are intentionally not published here.
+- **Seth's Lesson 12 Cheat Sheets** and **Notes from 9/25** — course-shared study threads in `#comptia-help`; these remain Discord-access resources and are not mirrored without a stable, authorized public source.
+
+The same channel also contains a **RAID PBQ** thread. Use the public [RAID Ready practice site](https://raid-solutions-and-troubleshooting.b12sites.com/) for hands-on review; do not rely on exam-dump sites or copied answer banks.
+
 ## Lab walkthroughs
 
 - [ExamCompass Cloud Computing Concepts Quiz](https://www.examcompass.com/comptia-a-plus-220-1201-certification-exam-cloud-computing-concepts-quiz) — third-party practice; verify coverage against the current objectives and review the site's terms before using it.
