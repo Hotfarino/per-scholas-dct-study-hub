@@ -29,6 +29,7 @@ Main categories: exam preparation, troubleshooting, networking, wireless/mobile,
 - [84-image gallery with full-size downloads](resources/images.md)
 - [Attachment manifest](resources/attachments.md)
 - [Course schedule snapshot](resources/schedule.md)
+- [Course information and how to use this hub](resources/course-info.md)
 
 ## What is included
 
