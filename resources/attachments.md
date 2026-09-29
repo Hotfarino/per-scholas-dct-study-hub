@@ -27,6 +27,10 @@ This manifest records the useful attachment groups. The 84 instructional images 
 
 - [PowerShell Command and Scripting Illustrated Guide](../assets/pdfs/powershell/PowerShell_Command_and_Scripting_Illustrated_Guide.pdf) — 15-page original ReportLab guide supplied from the user's local project; covers PowerShell commands, scripting basics, pipelines, variables, and administration concepts.
 
+## External slide decks
+
+- [Per Scholas course slide deck (Google Slides)](https://docs.google.com/presentation/d/1BoOPIXOztbe_gsjIiefy_tBYy66izABPtjcFPzFrYZw/edit?pli=1&slide=id.p2#slide=id.p2) — user-provided external deck; open it with the appropriate Google account. The deck is linked, not copied.
+
 These original publications are separate from the course-community attachment inventory.
 
 - [Network Devices — Network City, Issue 01](../guide/illustrated/core-1-220-1201/networking/01-network-devices/README.md): 21-page illustrated PDF, searchable text, definitions, acronym meanings, and a three-question quiz.
