@@ -1,6 +1,6 @@
 # Per Scholas Data Center Technician Study Hub
 
-An unofficial, community-organized study hub for CompTIA A+ Core 1 and foundational data-center support topics.
+An unofficial, community-organized study hub for CompTIA A+ Core 1, Core 2 and foundational data-center support topics.
 
 Last course-resource review: September 11, 2026.
 
@@ -11,6 +11,8 @@ Start with the [category index](CATEGORY-INDEX.md) to find the notes, videos, we
 Main categories: exam preparation, troubleshooting, networking, wireless/mobile, cabling/fiber, PC hardware/CPU, storage/RAID, virtualization/cloud/AI, printers, safety/OSHA, professional development, labs/projects, and course scheduling.
 
 ## Study material
+
+- [Core 2 Windows Network Workflow — illustrated slides, animated guide and real Windows lab](guide/illustrated/core-2-220-1202/windows-network-workflow/README.md)
 
 - [Core 1 PBQ Workshop — 10 interactive scenarios, 62 tasks, server and IP practice](guide/practice/core-1-220-1201/pbq-workshop/README.md)
 

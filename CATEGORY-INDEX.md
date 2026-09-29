@@ -26,6 +26,8 @@ Use this page when you want every resource for one subject in the same place.
 
 ## Networking and IP addressing
 
+- [Core 2 Windows Network Workflow — illustrated slides, animated guide and real Windows lab](guide/illustrated/core-2-220-1202/windows-network-workflow/README.md)
+
 - [Cloud, Servers, and Virtualization — comic PDF and interactive flashcards, Issue 08](guide/illustrated/core-1-220-1201/virtualization-cloud/08-cloud-servers-virtualization/README.md)
 
 - [Wi-Fi Standards and Wireless — comic PDF and interactive flashcards, Issue 04](guide/illustrated/core-1-220-1201/networking/04-wireless-standards/README.md)
