@@ -13,4 +13,4 @@ The animated guide includes Play/Pause, Previous/Next, a step selector, moving m
 
 Core 2 scope: Windows tools (1.4), commands (1.5), settings (1.6) and client networking (1.7), with supporting protocol foundations. Independent study material; not endorsed by CompTIA and not copied from live exam questions.
 
-The hosted copy at [the study hub](https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site/windows-network-workflow.html) is public and can be shared directly with classmates. No file download is required. The PowerPoint remains the 28-slide companion; the new practice interactions are in the HTML version.
+The hosted copy at [the study hub](https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site/windows-network-workflow.html) currently requires owner access; public access is pending confirmation of the site-wide audience change. Use the downloadable HTML file to share with classmates now. The PowerPoint remains the 28-slide companion; the new practice interactions are in the HTML version.
