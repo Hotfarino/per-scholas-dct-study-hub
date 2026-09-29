@@ -30,6 +30,7 @@ This manifest records the useful attachment groups. The 84 instructional images 
 ## External slide decks
 
 - [Per Scholas course slide deck (Google Slides)](https://docs.google.com/presentation/d/1BoOPIXOztbe_gsjIiefy_tBYy66izABPtjcFPzFrYZw/edit?pli=1&slide=id.p2#slide=id.p2) — user-provided external deck; open it with the appropriate Google account. The deck is linked, not copied.
+- [Per Scholas course slide deck 2 (Google Slides)](https://docs.google.com/presentation/d/1rpmslTRcK8jxpkXYebyDKLsHsdVlhJiLuaXGlUdFB4k/edit?slide=id.p2#slide=id.p2) — second user-provided external deck; open it with the appropriate Google account. The deck is linked, not copied.
 
 These original publications are separate from the course-community attachment inventory.
 
