@@ -19,4 +19,6 @@ This hub supports the Per Scholas DCT course community with supplemental study m
 
 Recent Discord updates include Lesson 12 cheat sheets, September 25 notes, RAID PBQ discussion, and Exam 1 retake guidance. These are indexed in the practice and attachment pages, but private Canvas/Discord files are not copied into this public repository.
 
+The hub also includes an original [PowerShell Command and Scripting Illustrated Guide](../assets/pdfs/powershell/PowerShell_Command_and_Scripting_Illustrated_Guide.pdf) supplied from the user's local project.
+
 This is an unofficial study companion. It does not replace instructor guidance, Canvas content, or the current official CompTIA objectives.
