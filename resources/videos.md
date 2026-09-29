@@ -16,6 +16,8 @@ Links are grouped by study purpose. Duplicate Discord previews, channel-home lin
 
 ## Networking
 
+- [Windows command-line tools and network configuration lesson](https://www.youtube.com/watch?v=6ky_6kUJebY) — user-provided Core 2 companion video.
+
 - [TCP vs. UDP](https://www.youtube.com/watch?v=uwoD5YsGACg)
 - [Cable vs. DSL vs. Fiber Internet](https://www.youtube.com/watch?v=qQYiwmamq38)
 - [Wi-Fi Standards Explained](https://www.youtube.com/watch?v=hhks5xSpM-0)
