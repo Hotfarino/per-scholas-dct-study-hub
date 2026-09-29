@@ -7,7 +7,7 @@ This manifest records the useful attachment groups. The 84 instructional images 
 | Wi-Fi Connection Slides | 30 | Wireless standards, bands, channels, radio technologies, performance, and troubleshooting. |
 | Fiber Cable Connections | 28 | Media, connectors, Ethernet categories, PoE, structured cabling, tools, and network devices. |
 | Ethernet cable termination project | 3 | Full-resolution JPEGs showing pair preparation, T568B order checking, and crimping. |
-| CompTIA help | 17 | Study guides, exam objectives, quizzes, PBQs, hardware diagrams, troubleshooting images, and September 7 virtualization references. |
+| CompTIA help | 51+ | Study guides, exam objectives, quizzes, PBQs, hardware diagrams, troubleshooting images, September 7 virtualization references, and the September 29 Core 1 infographic pack. |
 | Class notes | 9 | Ports, TCP/IP, IPv4/IPv6, CPU, networking, and connector-identification reference images. |
 | PC simulator support thread | 4 | Screenshots and troubleshooting context. |
 | RAID thread | 3 | RAID diagrams and memory aids. |
@@ -64,3 +64,4 @@ See [Books and Legal Free Access](books.md) for authorized full-text editions, o
 - Additional `#class-notes` images reviewed: a TCP/IP and seven-layer OSI comparison, a legacy 220-1101 rapid-review sheet, visual Class A/B/C IP-address analogies, and a reminder that modern networks use CIDR. Branded or course-shared images were summarized in the study guide rather than redistributed.
 - Additional class-note references reviewed: DHCP/DNS/VLAN/VPN, IPv4 subnetting, 802.11 standards, and well-known ports. Their concepts are summarized in the study guide; branded reference graphics are not redistributed.
 - September 25 `#comptia-help` updates: **Seth's Lesson 12 Cheat Sheets** (four-message thread) and **Notes from 9/25** (two-message thread). They are cataloged as authorized Discord-access study resources; no stable public attachment URL was exposed, so the files are not copied here. The same update included Canvas links for two Exam 1 retake assignments, indexed in [Practice Quizzes and Labs](practice.md).
+- September 29 `#comptia-help` added a **Core 1 retake infographic pack**: nine images for objectives 1.1–3.4, seven for 4.1–5.4, eight for 6.1–7.3 and ports, and ten for 8.1–10.3 and printers (34 images total). They are categorized by objective range, but remain Discord-access course attachments and are not mirrored without an authorized public source.

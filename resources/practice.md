@@ -24,6 +24,10 @@ The files are indexed but not redistributed publicly because permission from the
 
 The same channel also contains a **RAID PBQ** thread. Use the public [RAID Ready practice site](https://raid-solutions-and-troubleshooting.b12sites.com/) for hands-on review; do not rely on exam-dump sites or copied answer banks.
 
+## Core 1 infographic review pack (September 29, 2026)
+
+Discord shared 34 course-access infographics for learners retaking Core 1, grouped as **1.1–3.4**, **4.1–5.4**, **6.1–7.3 and ports**, and **8.1–10.3 and printers**. Use them as a visual checklist against the current official objectives; the original attachments remain in Discord and are not redistributed here.
+
 ## Lab walkthroughs
 
 - [ExamCompass Cloud Computing Concepts Quiz](https://www.examcompass.com/comptia-a-plus-220-1201-certification-exam-cloud-computing-concepts-quiz) — third-party practice; verify coverage against the current objectives and review the site's terms before using it.
