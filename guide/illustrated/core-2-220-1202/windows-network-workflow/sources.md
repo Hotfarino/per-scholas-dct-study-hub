@@ -29,3 +29,15 @@ Reviewed 2026-09-29. Independent material aligned to A+ Core 2 220-1202, especia
 - [IANA: Service port registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
 - [IETF: IPv4 link-local / RFC 3927](https://www.rfc-editor.org/rfc/rfc3927)
 - [IETF: Private IPv4 / RFC 1918](https://www.rfc-editor.org/rfc/rfc1918)
+
+## Core 1 foundations and extended route
+
+- [Cisco: Ethernet cabling limits](https://www.cisco.com/c/en/us/support/docs/switches/catalyst-6500-series-switches/12027-53.html)
+- [CompTIA A+ Core 1 (220-1201) public objectives](https://comptiacdn.azureedge.net/webcontent/docs/default-source/exam-objectives/comptia-a-220-1201-exam-objectives.pdf)
+- [Microsoft: DHCP overview](https://learn.microsoft.com/en-us/windows-server/networking/technologies/dhcp/dhcp-top)
+- [IETF: DHCPv4 exchange (RFC 2131)](https://www.rfc-editor.org/rfc/rfc2131)
+- [IETF: traditional NAT and port translation (RFC 3022)](https://www.rfc-editor.org/rfc/rfc3022)
+- [IETF: IPv6 address architecture (RFC 4291)](https://www.rfc-editor.org/rfc/rfc4291)
+- [Cisco: wireless RF reference](https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/technical-reference/wireless-rf-reference-guide.html)
+- [Prysmian: Cat 6A and 10GBASE-T](https://uk.prysmian.com/sites/uk.prysmian.com/files/2024-01/CAT%206A%20for%20PoE_Brochure.pdf)
+- [Microsoft: RDP ports](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/ports-used-by-rds)
