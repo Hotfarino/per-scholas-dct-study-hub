@@ -8,6 +8,8 @@ Colorful comic lessons with detailed illustrations, plain-language definitions, 
 
 ### Available now
 
+- [RAID: Follow the Data — interactive drive simulator, capacity/parity labs and flip cards](core-1-220-1201/storage/raid-workflow/README.md) · Core 1 objectives 3.4 and 5.2.
+
 **Flashcard repair (September 21, 2026):** Wireless (04), Printers (07), and Cloud/Servers/Virtualization (08) PowerPoint downloads now contain corrected navigation-button markup. Download a fresh copy and use Slide Show mode.
 
 | Issue | Guide | Subject | Primary objective | Format |

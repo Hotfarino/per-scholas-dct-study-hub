@@ -318,6 +318,37 @@
       "illustrations": 12,
       "flashcards": 24,
       "quiz_questions": 3
+    },
+    {
+      "id": "raid-workflow",
+      "title": "RAID: Follow the Data",
+      "certification": "CompTIA A+",
+      "exam": "220-1201",
+      "subject": "storage",
+      "status": "available",
+      "edition": "1.0.0",
+      "primary_objectives": [
+        "3.4",
+        "5.2"
+      ],
+      "tags": [
+        "raid",
+        "storage",
+        "interactive",
+        "capacity",
+        "parity",
+        "rebuild",
+        "flashcards"
+      ],
+      "files": {
+        "landing_page": "core-1-220-1201/storage/raid-workflow/README.md",
+        "interactive_html": "core-1-220-1201/storage/raid-workflow/RAID-Interactive-Guide.html",
+        "sources": "core-1-220-1201/storage/raid-workflow/sources.md"
+      },
+      "live_url": "https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site/raid-workflow.html",
+      "quiz_questions": 3,
+      "practice_scenarios": 5,
+      "flashcards": 20
     }
   ]
 }

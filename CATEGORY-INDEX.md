@@ -66,6 +66,8 @@ Use this page when you want every resource for one subject in the same place.
 
 ## Storage and RAID
 
+- [Interactive RAID Guide — levels 0, 1, 5, 6 and 10, simulations and explained practice](guide/illustrated/core-1-220-1201/storage/raid-workflow/README.md)
+
 - [RAID study notes](guide/core-1-study-guide.md#6-raid)
 - [RAID and storage videos](resources/videos.md#raid-and-storage)
 - [RAID diagrams](resources/images.md#raid-diagrams--3-images)
