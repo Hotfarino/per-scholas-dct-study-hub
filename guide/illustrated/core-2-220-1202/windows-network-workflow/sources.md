@@ -1,6 +1,6 @@
 # Windows Network Workflow — primary sources
 
-Reviewed 2026-09-29. Independent material aligned to A+ Core 2 220-1202, especially objectives 1.4–1.7.
+Independent material aligned to A+ Core 2 220-1202, especially objectives 1.4–1.7.
 
 - [CompTIA A+ 220-1202 objectives](https://comptiacdn.azureedge.net/webcontent/docs/default-source/exam-objectives/comptia-a-220-1202-exam-objectives.pdf)
 - [Microsoft: Network settings](https://support.microsoft.com/en-us/windows/experience/connectivity-networking/essential-network-settings-and-tasks-in-windows)
