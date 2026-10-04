@@ -37,6 +37,11 @@ Links are grouped by study purpose. Duplicate Discord previews, channel-home lin
 
 ## Labs and PC Building Simulator
 
+- [CompTIA A+ Lab 6.5 — Challenge Lab: Install a SOHO Network](https://www.youtube.com/watch?v=beOnwomIdo0) — public walkthrough shared in `#homework-help`.
+- [CompTIA A+ Core 2 Lab 2.4 — Resolve Help Desk Tickets](https://www.youtube.com/watch?v=3GByVK2woR8) — public walkthrough shared in `#homework-help`.
+- [CompTIA A+ Core 2 Lab 11.1.15 — Use Help Desk System](https://www.youtube.com/watch?v=TjrR-HP7xls) — public walkthrough shared in `#homework-help`.
+- [CompTIA A+ Core 2 Lab 2.1.16 — Explore the VM Lab Environment](https://www.youtube.com/watch?v=0-psHtkd00I) — public walkthrough shared in `#homework-help`.
+
 - [Explore the CompTIA Lab Interface](https://www.youtube.com/watch?v=aMy8I3IsqOs)
 - [Set Up a Desktop Computer Lab](https://www.youtube.com/watch?v=IZ_vAaqq6YI)
 - [Install CrossOver on macOS](https://www.youtube.com/watch?v=L852z0dWsCU) — compatibility with the assigned simulator was discussed but not confirmed.
