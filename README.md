@@ -12,6 +12,8 @@ Main categories: exam preparation, troubleshooting, networking, wireless/mobile,
 
 ## Study material
 
+- [Home Lab Workshop — build networks, racks, RAID and virtual machines](guide/labs/core-1-220-1201/home-lab-workshop/README.md)
+
 - [Interactive RAID Guide — drive failures, rebuilds, capacity, parity and 20 flip cards](guide/illustrated/core-1-220-1201/storage/raid-workflow/README.md)
 
 - [Core 1 + Core 2 Network Workflow — 28 interactive steps, Higgsfield illustrations and Windows lab](guide/illustrated/core-2-220-1202/windows-network-workflow/README.md)

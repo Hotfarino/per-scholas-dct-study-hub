@@ -108,6 +108,7 @@ Use this page when you want every resource for one subject in the same place.
 
 ## Labs, simulator, and projects
 
+- [Interactive Home Lab Workshop — guided networking, rack assembly, RAID, VMs and cloud](guide/labs/core-1-220-1201/home-lab-workshop/README.md)
 - [Practice labs](resources/practice.md)
 - [Lab and PC Building Simulator videos](resources/videos.md#labs-and-pc-building-simulator)
 - [PC Building Simulator images](resources/images.md#pc-building-simulator--4-images)
