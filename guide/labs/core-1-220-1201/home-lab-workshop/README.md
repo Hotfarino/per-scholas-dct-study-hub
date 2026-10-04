@@ -10,6 +10,22 @@ White panels, blue/teal controls, a daylight workbench and a new 16-cell equipme
 
 The inspector becomes a drawer on smaller screens. Equipment arranges into fewer columns on narrow benches. Image tiles retain square proportions, controls wrap, and the equipment shelf intentionally scrolls horizontally on phones.
 
+## Direct hardware operation
+
+Click equipment on the bench to open a larger operating panel. Choose cable and length, click its first socket, and click the destination socket. Existing connector/length/occupied-port/loop rules apply. Seated plugs and cable paths use the actual port positions. Click an occupied socket to unplug the cable. Power controls, PoE, supply loss, physical link indicators, disk status, UPS display and AP illumination derive from the same simulation state.
+
+The laptop has a simulated desktop, network status, command prompt (`ipconfig /all`, `ping 1.1.1.1`, `nslookup example.com`), and a browser teaching page. Opening the page runs the existing DHCP/addressing/routing/DNS/TCP/HTTPS checks. DNS lookup is checked independently from HTTPS. It never executes shell commands or loads an external OS. Activity lights illustrate the last successful test briefly; they are not measurements of actual traffic.
+
+These remain generic teaching chassis, not exact manufacturer replicas. Compact devices use a matched AC-to-DC adapter abstracted into the power cable. The custom server remains AM4/DDR4; it is not a Dell PowerEdge. USB, display outputs, firmware vendor UIs and real operating systems are outside this simulation. Power buttons on generic devices are teaching controls and should not be inferred to exist on every real model.
+
+Physical-reference research confirmed why brand labels cannot simply be applied to these chassis:
+
+- [TP-Link ER605 v2](https://www.tp-link.com/us/business-networking/vpn-router/er605/v2/) has five Ethernet ports, USB and a DC input; versions differ.
+- [TP-Link TL-SG2008P](https://www.tp-link.com/us/business-networking/poe-switch/tl-sg2008p/v1/) has eight Ethernet ports, four with PoE, and no SFP slot.
+- [Dell R740 technical guide](https://i.dell.com/sites/csdocuments/shared-content_data-sheets_documents/en/aa/poweredge_r740_r740xd_technical_guide.pdf) describes a dual-Xeon, 24-DIMM platform, not this custom AM4 server.
+- [Synology DS923+ hardware manual](https://global.download.synology.com/download/Document/Hardware/HIG/DiskStation/23-year/DS923%2B/enu/DS923p_HIG_enu.pdf) documents separate power, drive and LAN indicators.
+- [Ubiquiti U6 Lite datasheet](https://dl.ui.com/ds/u6-lite_ds.pdf) specifies its PoE-fed Ethernet input.
+
 ## Included
 
 - Seven guided configurations plus free build: wired networking, rack storage/NAS, virtualization, wireless, two routed subnets, cloud backup and fault finding.
@@ -54,6 +70,6 @@ Browser checks cover fault repair through successful HTTPS, rack mounting, ESD r
 
 Scene and equipment artwork was generated with the available image-generation tool. Higgsfield generation was unavailable without a plan upgrade; no upgrade was purchased. No personal attribution or dates appear in the simulator.
 
-## Run this copy locally
+## Run locally
 
-Run `python3 -m http.server 8767` in this folder, then open `http://localhost:8767/home-lab.html`. JavaScript modules require a local web server; opening the HTML file directly is not supported.
+Run `python3 -m http.server 8767` in this folder and open `http://localhost:8767/home-lab.html`. Modules need HTTP; opening the file directly is not supported.
