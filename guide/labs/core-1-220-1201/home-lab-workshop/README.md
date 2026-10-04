@@ -4,6 +4,12 @@ Public interactive simulator: https://core-1-reviewed-flashcards.bigdawgroof8121
 
 Begin with **Home network from zero**. The first guided path continues through a rack server, RAID and virtual machines. Open **Show exact steps & why** at each checkpoint. Use the device inspector to connect labeled ports and configure equipment, then send test traffic.
 
+## Bright workbench update
+
+White panels, blue/teal controls, a daylight workbench and a new 16-cell equipment atlas replace the dark tiles and drawn outlet. Drag an item back to the equipment shelf or the Return to shelf zone; clicking that zone returns the selected item too. Undo restores its configuration, hosted VMs, saved placement and cable connections when the original endpoints are still available. Fixed wall/ISP anchors cannot be returned. This is a workspace edit, not an instruction to disconnect running physical equipment.
+
+The inspector becomes a drawer on smaller screens. Equipment arranges into fewer columns on narrow benches. Image tiles retain square proportions, controls wrap, and the equipment shelf intentionally scrolls horizontally on phones.
+
 ## Included
 
 - Seven guided configurations plus free build: wired networking, rack storage/NAS, virtualization, wireless, two routed subnets, cloud backup and fault finding.
@@ -50,4 +56,4 @@ Scene and equipment artwork was generated with the available image-generation to
 
 ## Run this copy locally
 
-From this folder, run `python3 -m http.server 8000`, then open `http://localhost:8000/home-lab.html`. The hosted version is easiest to share. This folder contains the application files; test scripts live with the hosting source.
+Run `python3 -m http.server 8767` in this folder, then open `http://localhost:8767/home-lab.html`. JavaScript modules require a local web server; opening the HTML file directly is not supported.
