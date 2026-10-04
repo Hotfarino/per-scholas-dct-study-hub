@@ -7,14 +7,14 @@ Begin with **Home network from zero**. The first guided path continues through a
 ## Included
 
 - Seven guided configurations plus free build: wired networking, rack storage/NAS, virtualization, wireless, two routed subnets, cloud backup and fault finding.
-- Workbench, rack, rear-cable, network-map and server-interior views; realistic scene art and component illustrations.
+- Workbench, rack, rear-cable, network-map and server-interior views; realistic scene art and component illustrations. Drag shelf handles onto the bench and move placed devices; cables follow. View-specific positions survive browser save and JSON export/import. Arrow keys move focused equipment; Escape cancels a drag. Rack installation still uses validated rails and unit controls.
 - Power cords, wall/UPS/PDU chains, brief battery outages, rack supports and collision checks, ESD preparation, compatible CPU/RAM/NIC/storage installation.
 - SC provider fiber, copper Ethernet, passive patch panels, LC optical modules and SFP+ DAC; connector, occupied-port, distance and bridge-loop checks.
 - DHCP, static IPv4, subnet masks, gateways, DNS, NAT, switch access VLANs, Wi-Fi association and PoE.
 - RAID 0/1/5/6/10 capacity and failure rules, degraded arrays, replacement/rebuild; no claim that RAID replaces backups.
 - Hypervisor preparation, guest resource allocation, guest OS/start/service state, external/internal/private virtual-switch isolation, and external-guest DHCP addresses.
 - HTTPS/SMB/ICMP tests with explanations and animated routes; cloud model comparisons and simulated backup/recovery records.
-- Linked glossary, optional device-voice narration, browser-local saves and JSON export/import. Saves are not account-wide or cross-device unless exported.
+- Linked glossary; browser narration with voice choice, speed, play, pause/resume, stop, optional next-lesson reading, and device/test explanations. No autoplay. Browser-local saves and JSON export/import. Saves are not account-wide or cross-device unless exported.
 
 ## Scope and correctness
 
@@ -30,11 +30,17 @@ The model has IPv4 /24 DHCP pools, simplified provider/DNS services, two directl
 - [Dell RAID level specifications](https://www.dell.com/support/kbdoc/en-us/000128635/dell-servers-what-are-the-raid-levels-and-their-specifications)
 - [NIST cloud computing definitions](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf)
 
+### Workbench usability
+
+The lesson sits above the lab. Device settings are grouped into expandable sections, save tools are tucked away, and the bench can expand. On phones, the equipment shelf scrolls horizontally, the scene fits the screen, and the selected equipment opens a settings drawer. Click-to-add remains available alongside pointer dragging.
+
 ### Verification
 
 `node test-lab.mjs`: 90 assertions for connectivity, faults, parts, RAID, routing, power, Wi-Fi, VM isolation/resources and cloud requirements.
 
 `node test-lab-ui.mjs`: all inspectors/configurations/views, browser-save round trip, import validation, glossary and control integrity in a DOM harness.
+
+`node test-lab-ux.mjs`: drag/drop, cancellation, invalid drops, saved placement, grouped settings, cable suggestions, and narration state/cancellation.
 
 `node test-lab-save.mjs`: portable-file round trip and malformed-input rejection.
 
