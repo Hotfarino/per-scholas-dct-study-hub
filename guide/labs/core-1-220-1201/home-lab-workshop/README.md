@@ -70,6 +70,10 @@ Browser checks cover fault repair through successful HTTPS, rack mounting, ESD r
 
 Scene and equipment artwork was generated with the available image-generation tool. Higgsfield generation was unavailable without a plan upgrade; no upgrade was purchased. No personal attribution or dates appear in the simulator.
 
-## Run locally
+## Plug-and-socket practice
 
-Run `python3 -m http.server 8767` in this folder and open `http://localhost:8767/home-lab.html`. Modules need HTTP; opening the file directly is not supported.
+Open a device, choose a cable and its length in feet, then drag from an empty socket to the other device’s socket. The loose end follows the pointer; a green socket highlight indicates a possible fit. Release to run the full connection checks. A success prompt confirms both plugs seated and explains the next test. Error prompts explain why the connection failed; they never replace existing wiring.
+
+You may also click or keyboard-activate the first socket and then the second. After selecting the first end, the **Drag loose plug** handle lets you retry a missed drop. Escape or **Cancel cable** cancels the unfinished cable. Click an occupied socket with no cable pending, then choose **Unplug this cable**. Power and link indicators update from the simulated wiring. Physical connection success does not guarantee IP connectivity or a working website.
+
+For local use, serve this folder with `python3 -m http.server 8000`, then open `http://localhost:8000/home-lab.html`. JavaScript modules require an HTTP server.
