@@ -38,6 +38,13 @@ This manifest records the useful attachment groups. The 84 instructional images 
 - `13.2000000.png` — Windows command-line tools: Command Prompt elevation, navigation, file operations, Robocopy, DiskPart, CHKDSK/SFC, shutdown, and identity commands.
 - `13.300000.png` — Windows network configuration: Ethernet/Wi-Fi, IPv4/IPv6 addressing, client configuration, network profiles, firewall, VPN/WWAN, and proxy settings.
 
+### Latest user-provided references
+
+- [Windows command-line and network configuration companion video](https://www.youtube.com/watch?v=6ky_6kUJebY) — public YouTube reference paired with the Core 2 slides above.
+- [Per Scholas course slide deck 1](https://docs.google.com/presentation/d/1BoOPIXOztbe_gsjIiefy_tBYy66izABPtjcFPzFrYZw/edit?pli=1&slide=id.p2#slide=id.p2) — external Google Slides source.
+- [Per Scholas course slide deck 2](https://docs.google.com/presentation/d/1rpmslTRcK8jxpkXYebyDKLsHsdVlhJiLuaXGlUdFB4k/edit?slide=id.p2#slide=id.p2) — external Google Slides source.
+- [Per Scholas course slide deck 2, referenced slide](https://docs.google.com/presentation/d/1rpmslTRcK8jxpkXYebyDKLsHsdVlhJiLuaXGlUdFB4k/edit?slide=id.g3849c9ab0c4_0_412#slide=id.g3849c9ab0c4_0_412) — direct slide link.
+
 These two user-provided PNGs remain local source files until redistribution rights for the branded artwork are confirmed.
 
 These original publications are separate from the course-community attachment inventory.
