@@ -84,4 +84,18 @@ The virtualization dashboard separates host readiness, guest sizing, and guest o
 
 References: [Microsoft virtual-switch terminology](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/features-terminology), [Schneider surge strips and UPS connections](https://www.se.com/be/en/faqs/FA158852/), [Philips surge-protector connection guidance](https://www.philips.co.uk/c-f/XC000008875/can-i-daisy-chain-philips-surge-protectors).
 
-For local use, serve this folder with `python3 -m http.server 8000`, then open `http://localhost:8000/home-lab.html`. JavaScript modules require an HTTP server.
+## IP and Wi-Fi learning workspace
+
+Use **IP & Wi-Fi settings** above the bench to jump to the new workspace. Configure DHCP/static IPv4, masks, gateways, DNS, and the laptop’s active Ethernet/Wi-Fi path. The live address card shows the calculated lease or APIPA example and derives the subnet boundary from the mask. Private/public IPv4, IPv6 context, DHCP DORA, SSID, WPA2/WPA3, bands/channels and Windows settings have plain-language explanations.
+
+Access-point controls change the SSID, practice passphrase, security, 2.4/5 GHz band and matching channel subset. Router controls expose DHCP and offered DNS; More router settings opens the existing full inspector. Settings share the existing wiring, power, VLAN and routing model. Diagnostics stop at the first failing layer: power/boot, physical link or Wi-Fi association, IP, gateway/public ping, DNS, then TCP/TLS/HTTPS. Results are invalidated by build changes. This is troubleshooting order, not a literal packet capture.
+
+The client supports both modeled radio bands/security profiles, with no roaming or RF/interference model. Matching SSIDs and passphrases do not imply Internet access. WPA2/WPA3-Personal use the same 8–63 character teaching constraint here; it is not a statement that every real WPA3 implementation has that constraint. Channels are a US 20 MHz teaching subset. Lease assignment is immediate and deterministic, not a timer simulation. IPv6 is explained but not configured.
+
+`node test-lab-network.mjs` verifies malformed address rejection, non-/24 subnet calculation, gateway failure, DNS-versus-ping diagnosis, DHCP/APIPA, Wi-Fi authentication and power dependence, valid band/channel combinations, and live form/diagnostic resets. Browser QA checked healthy HTTPS, DNS failure, channel changes, unpowered AP failure, and layout at desktop and 390 px mobile width without horizontal overflow.
+
+Sources: [Microsoft Windows network settings](https://support.microsoft.com/en-us/windows/experience/connectivity-networking/essential-network-settings-and-tasks-in-windows), [Cisco wireless RF reference](https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/technical-reference/wireless-rf-reference-guide.html), and the CompTIA objectives linked above.
+
+## Run locally
+
+Serve this directory over HTTP (for example, `python3 -m http.server 8767`) and open `http://localhost:8767/home-lab.html`. JavaScript modules require HTTP; opening the HTML directly from disk is not supported. Share the public link above with classmates.
