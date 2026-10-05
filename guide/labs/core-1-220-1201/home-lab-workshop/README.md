@@ -99,3 +99,30 @@ Sources: [Microsoft Windows network settings](https://support.microsoft.com/en-u
 ## Run locally
 
 Serve this directory over HTTP (for example, `python3 -m http.server 8767`) and open `http://localhost:8767/home-lab.html`. JavaScript modules require HTTP; opening the HTML directly from disk is not supported. Share the public link above with classmates.
+
+
+## Lab studio: templates, tools and feedback
+
+Use **Planner & PowerShell** above the bench. Four working examples cover a connected home office, NAS recovery, a self-hosted VM lab, and trading-app staging. Enter a goal and parts notes; the planner matches one of these patterns, checks the numeric RAM/CPU/drive fields, and gives build steps and tradeoffs. It is a bounded rules-based planner, not live product search or an unrestricted AI designer. Numeric fields are authoritative; free-form notes are not a hardware inventory parser. Loading a template replaces the current bench with fixed teaching hardware; Undo restores the previous build.
+
+The searchable parts library explains eleven equipment types plus CPU, RAM, NIC and storage options. Six diagnostic tools use the existing simulation state. A basic cable check is distinct from bandwidth certification, a power budget is distinct from measured power, and a successful TCP connection is distinct from application or data health.
+
+Successful test paths show moving data pulses. Brief link pulses require a live data link. Power cables never carry data pulses. **Sound on** opts into connection, completion and error tones with a volume control; written results remain available. **Guided steps** and **Data pulses** can be disabled. Reduced-motion preferences are respected. The workbench/rack has its own scrollable viewport, zoom controls, Fit width, and Up/Down buttons. Expanding the bench recomputes its width and cable geometry.
+
+### PowerShell practice
+
+Ten command cards link to Microsoft references. The browser console reads IP configuration, performs modeled DNS/ICMP/TCP tests, lists guests, compares virtual-switch profiles, changes a guest’s switch and practices static addressing/DNS/DHCP. It accepts only the displayed command patterns; no real shell, arbitrary script, pipeline or external OS executes. State-changing commands update the lab and its network diagnostics. Differences from real Windows are stated beside each command.
+
+The downloadable `HomeLab.Tools.psm1` is a separate read-only Windows module with three helpers: `Get-HomeLabNetwork`, `Test-HomeLabService`, and `Get-HomeLabVM`. It requires the applicable Windows modules and permissions. Review the source before importing it. The TCP helper contacts the host supplied by the person running it. Its source was reviewed here; it was not executed on Windows in this macOS environment.
+
+### Latency and fresh data
+
+The trading template is a staging/replay exercise. The freshness sandbox checks event age, arrival silence, processing backlog, connection/subscription status, clock uncertainty and unresolved sequence gaps. Thresholds are practice values. A quiet feed may have an old last event without a broken connection; real acceptance policies depend on the feed and application. No live feeds, broker accounts or orders are connected, and no low-latency or no-stale-data guarantee is made. Host placement guidance emphasizes measuring actual paths and p50/p95/p99 delays before choosing a deployment location.
+
+Primary references: [Microsoft Get-NetIPConfiguration](https://learn.microsoft.com/en-us/powershell/module/nettcpip/get-netipconfiguration), [Test-NetConnection](https://learn.microsoft.com/en-us/powershell/module/nettcpip/test-netconnection), [Hyper-V Get-VM](https://learn.microsoft.com/en-us/powershell/module/hyper-v/get-vm), [New-NetIPAddress](https://learn.microsoft.com/en-us/powershell/module/nettcpip/new-netipaddress), [Alpaca streaming behavior](https://docs.alpaca.markets/us/docs/streaming-market-data), [Alpaca event timestamps](https://docs.alpaca.markets/us/docs/real-time-stock-pricing-data), and [AWS location/network requirements](https://docs.aws.amazon.com/wellarchitected/latest/framework/perf_networking_choose_workload_location_network_requirements.html). Trading-specific reliability is additional practical context, not an A+ exam objective.
+
+### Imagery and checks
+
+The new AI-generated bench backdrop is native 1672 × 941. It is not advertised as a native 4K photograph. Higgsfield required a paid plan; the available image generator supplied the fallback without a plan upgrade. `lab-reference-4k.svg` has a scalable 3840 × 2160 canvas with correct generic router/switch ports, server storage, rack positions and power/data paths. It is a technical vector reference, not a manufacturer photograph. Existing interactive sockets, switches and indicators remain tied to the teaching model.
+
+`node test-lab-studio.mjs` verifies four connected templates, resource and compatibility checks, PowerShell parser/state changes, isolation, stale-data rejection, optional sounds, scroll/zoom controls, tabs, search and template Undo. Existing lab regression checks also pass. Browser review covered desktop and 390 px layouts, independent rack scrolling at increased zoom, expanded-bench width, template Undo, PowerShell output, fresh/stale examples, data pulses and an empty error console. No horizontal page overflow was observed in those reviewed layouts.
