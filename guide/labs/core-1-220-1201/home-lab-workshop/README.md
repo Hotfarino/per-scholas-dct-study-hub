@@ -76,4 +76,12 @@ Open a device, choose a cable and its length in feet, then drag from an empty so
 
 You may also click or keyboard-activate the first socket and then the second. After selecting the first end, the **Drag loose plug** handle lets you retry a missed drop. Escape or **Cancel cable** cancels the unfinished cable. Click an occupied socket with no cable pending, then choose **Unplug this cable**. Power and link indicators update from the simulated wiring. Physical connection success does not guarantee IP connectivity or a working website.
 
+## Surge protector and VM dashboard
+
+Choose **Surge protector** from the equipment shelf to place it on the workbench. Connect POWER IN to a wall outlet, switch it on, then connect devices to its six outputs. It has no battery: removing wall power turns its loads off. This model blocks chaining through UPS/PDU/other surge strips, uses a 1,800 W total ceiling, and does not simulate voltage spikes or protection wear. The incoming cord uses a labeled teaching socket.
+
+The virtualization dashboard separates host readiness, guest sizing, and guest operation. Resource bars show existing reservations and the proposed VM. Presets fill RAM/vCPU/disk fields; validation uses the same engine as creation. Each guest shows install, start, web-service and HTTPS-test controls, a switch reachability diagram, and a local test explanation. No guest operating-system kernel executes in this simulation. External/internal/private terminology follows the Microsoft Hyper-V model. The two-guest diagrams illustrate reachability; they do not represent a live guest inventory.
+
+References: [Microsoft virtual-switch terminology](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/features-terminology), [Schneider surge strips and UPS connections](https://www.se.com/be/en/faqs/FA158852/), [Philips surge-protector connection guidance](https://www.philips.co.uk/c-f/XC000008875/can-i-daisy-chain-philips-surge-protectors).
+
 For local use, serve this folder with `python3 -m http.server 8000`, then open `http://localhost:8000/home-lab.html`. JavaScript modules require an HTTP server.
