@@ -2,7 +2,7 @@
 
 Public interactive simulator: https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site/home-lab.html
 
-Begin with **Home network from zero**. The first guided path continues through a rack server, RAID and virtual machines. Open **Show exact steps & why** at each checkpoint. Use the device inspector to connect labeled ports and configure equipment, then send test traffic.
+Begin with **Home network from zero**. The first guided path continues through a rack server, RAID and virtual machines. Open **Show exact steps & why** at each checkpoint. Drag directly between pictured sockets on the workbench. Use the device inspector for detailed configuration, then send test traffic.
 
 ## Bright workbench update
 
@@ -138,3 +138,14 @@ Browser checks covered real mouse dragging to the laptop and wall outlet, power-
 Open equipment that needs power: its input is preselected with a 6-ft cord. Drag the loose plug directly to a blue outlet, then use the **Turn on** button. No cable is added or switch changed merely by opening equipment. The suggested source prefers powered equipment with a free outlet and avoids chained surge protectors and downstream power sources. Existing wiring stays intact. When no suitable outlet is free, the prompt explains what is missing.
 
 **Cable options** holds manual cable type and length controls. Cancel returns to manual two-end practice; clicking matching sockets still works. Browser checks verified one-drag power, the explicit power-on action, manual options, an empty error console and no horizontal dialog overflow at 390 pixels. Automated checks also cover unavailable outlets, powered surge suggestions and reopening wired equipment.
+
+
+## Physical workbench connections — edition 25
+
+The four sockets on the two wall plates in the workbench photograph are now interactive. Grab the loose cord below equipment and drop it on a wall, surge, UPS or PDU socket. Drag between pictured device ports for data cabling. Blue outlines indicate matching connectors; green highlights a fitting drop. Invalid or occupied sockets and unsuitable cable lengths explain the error without adding a connection. A missed drop keeps the first end selected for retry; **Put cord down** or Escape cancels it. Clicking each socket is an alternative to dragging.
+
+Generic equipment uses a new 12-cell photorealistic atlas (native 1086 × 1448, 362 × 362 per cell). Ports align with the depicted connectors. Seated plugs, AC-to-DC adapter bricks, power lights, the laptop screen and the surge protector’s pictured rocker respond to the lab state. Click a seated plug and choose **Unplug this cable** to remove it. Device movement keeps the cords attached. The switch has eight copper ports plus its modeled SFP+ slot; older six-port saved builds load with ports 7 and 8 set to VLAN 1.
+
+The art depicts generic training equipment, not exact manufacturer replicas. The wall sockets share the existing simulated 1,800 W supply limit. Rear and overview modes remain simplified views. Compact devices use the matched adapter included in the teaching power cable. The laptop’s detailed apps open in its operating panel.
+
+Verification included real browser mouse drags to photographed wall sockets, Ethernet to the switch’s eighth port, wrong-connector rejection, unplugging, power and link states, surge rocker operation, device movement, 115% zoom, and a 390-pixel mobile layout without page overflow. All lab regression suites passed, including saved-build migration, RAID/VM behavior, networking, power rules, planner and PowerShell practice. No browser errors appeared during the reviewed flows.

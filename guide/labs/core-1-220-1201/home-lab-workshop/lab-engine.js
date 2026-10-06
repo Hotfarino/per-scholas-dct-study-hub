@@ -1,8 +1,8 @@
 // Deterministic teaching model. No raw sockets, hypervisor or hardware access.
 export const catalog={
- wall:{name:'120 V wall outlet',icon:12,u:0,watts:0,ports:{out1:'powerOut',out2:'powerOut'}},isp:{name:'ISP handoff',icon:15,u:0,watts:0,ports:{fiber:'sc'}},
+ wall:{name:'120 V wall outlet',icon:12,u:0,watts:0,ports:{out1:'powerOut',out2:'powerOut',out3:'powerOut',out4:'powerOut'}},isp:{name:'ISP handoff',icon:15,u:0,watts:0,ports:{fiber:'sc'}},
  laptop:{name:'Laptop client',icon:0,u:0,watts:65,ports:{ac:'powerIn',eth:'copper'}},router:{name:'Edge router',icon:1,u:1,watts:20,ports:{ac:'powerIn',wan:'copper',lan1:'copper',lan2:'copper'}},
- switch:{name:'Managed switch',icon:2,u:1,watts:35,ports:{ac:'powerIn',p1:'copper',p2:'copper',p3:'copper',p4:'copper',p5:'copper',p6:'copper',sfp:'sfp'}},
+ switch:{name:'Managed switch',icon:2,u:1,watts:35,ports:{ac:'powerIn',p1:'copper',p2:'copper',p3:'copper',p4:'copper',p5:'copper',p6:'copper',p7:'copper',p8:'copper',sfp:'sfp'}},
  server:{name:'2U lab server',icon:3,u:2,watts:250,ports:{ac:'powerIn',eth:'copper',sfp:'sfp'}},nas:{name:'Four-bay NAS',icon:7,u:2,watts:65,ports:{ac:'powerIn',eth:'copper'}},ap:{name:'Wi-Fi access point',icon:4,u:0,watts:15,ports:{ac:'powerIn',eth:'copper'}},
  surge:{name:'Surge protector',icon:13,u:0,watts:0,ports:{ac:'powerIn',out1:'powerOut',out2:'powerOut',out3:'powerOut',out4:'powerOut',out5:'powerOut',out6:'powerOut'}},
  ups:{name:'900 W UPS',icon:5,u:2,watts:10,ports:{ac:'powerIn',out1:'powerOut',out2:'powerOut'}},pdu:{name:'Rack PDU',icon:13,u:1,watts:0,ports:{ac:'powerIn',out1:'powerOut',out2:'powerOut',out3:'powerOut',out4:'powerOut',out5:'powerOut',out6:'powerOut',out7:'powerOut',out8:'powerOut'}},
