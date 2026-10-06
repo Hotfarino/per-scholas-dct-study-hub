@@ -1,5 +1,5 @@
-import * as E from './lab-engine.js?v=exploded28';
-import {equipmentFaces,wallSockets} from './lab-physical-layout.js?v=exploded28';
+import * as E from './lab-engine.js?v=pulses29';
+import {equipmentFaces,wallSockets} from './lab-physical-layout.js?v=pulses29';
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function explodedPhoto(d){
  const entries=Object.keys(E.catalog[d.type].ports);

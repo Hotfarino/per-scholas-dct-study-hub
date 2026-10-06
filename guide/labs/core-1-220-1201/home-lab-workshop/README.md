@@ -107,7 +107,7 @@ Use **Planner & PowerShell** above the bench. Four working examples cover a conn
 
 The searchable parts library explains eleven equipment types plus CPU, RAM, NIC and storage options. Six diagnostic tools use the existing simulation state. A basic cable check is distinct from bandwidth certification, a power budget is distinct from measured power, and a successful TCP connection is distinct from application or data health.
 
-Successful test paths show moving data pulses. Brief link pulses require a live data link. Power cables never carry data pulses. **Sound on** opts into connection, completion and error tones with a volume control; written results remain available. **Guided steps** and **Data pulses** can be disabled. Reduced-motion preferences are respected. The workbench/rack has its own scrollable viewport, zoom controls, Fit width, and Up/Down buttons. Expanding the bench recomputes its width and cable geometry.
+Healthy power connections pulse green continuously while power is available. Healthy physical data links pulse blue continuously, without first running a traffic test. These are status animations, not measured traffic or electrical waveforms. IP, DNS and application reachability require a separate network test. **Sound on** opts into connection, completion and error tones with a volume control; written results remain available. **Guided steps** and **Connection pulses** can be disabled. Reduced-motion preferences are respected. The workbench/rack has its own scrollable viewport, zoom controls, Fit width, and Up/Down buttons. Expanding the bench recomputes its width and cable geometry.
 
 ### PowerShell practice
 
@@ -180,3 +180,12 @@ Choose **Exploded connection view** on a cable task to open the lesson's two dev
 The hardware popup also offers **Exploded view** beside Front and Connections, plus **−**, **+**, and **Reset zoom**. Its equipment area supports 75–200% zoom and scrolling. View changes do not alter the build.
 
 Validation: all twelve lab test files passed, including the 42-task walkthrough and matching photo/socket counts for all thirteen equipment types. Browser checks covered a successful cable drag at 125%, stopping hints after success, no blinking for an unfinished Practice task, and contained mobile zoom at 390 px width.
+
+
+## Edition 29: continuous connection status
+
+Correct, energized power cords pulse green. Correct physical data links pulse blue. Animations continue in the bench, rack, rear, network map and hardware/exploded view; they do not expire after a connection or test. Green means power is available at the cord, even if the connected device is switched off. Blue indicates a physical link, not a guarantee of a valid IP address, DNS or Internet access. The legend and cable-trace readout explain this distinction.
+
+Damage, unavailable source power, incompatible connectors, unsupported lengths or missing optical modules stop the affected animation. Power-strip switches update downstream links immediately. Connection pulses can be switched off, and reduced-motion preferences remain respected. Cable tracing and zoom keep working.
+
+Validation: all thirteen lab test files passed. Browser checks confirmed continuous six-power/five-data pulses on a working lab without a traffic test; turning the PDU off stopped downstream pulses, and restoring it restored the status. The same behavior was checked across bench, rack, rear, network and exploded views, with no browser console errors.

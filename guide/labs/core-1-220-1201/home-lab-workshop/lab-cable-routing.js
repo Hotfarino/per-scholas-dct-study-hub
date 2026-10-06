@@ -1,4 +1,4 @@
-import * as E from './lab-engine.js?v=exploded28';
+import * as E from './lab-engine.js?v=pulses29';
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const clamp = (v, low, high) => Math.max(low, Math.min(high, v));
 const compact = new Set(['laptop','router','ont','nas','ap']);
@@ -89,7 +89,7 @@ export function setupCableManager(api) {
     }
     for (const n of scene.querySelectorAll('[data-scene-port]')) n.classList.toggle('cable-endpoint',!!link && [E.key(link.a,link.ap),E.key(link.b,link.bp)].includes(n.dataset.scenePort));
     clear.disabled = !link;
-    detail.textContent = link ? `${cableLabel(s,link)}. ${E.cableTypes[link.type]?.name} · ${link.length} ft. ${link.broken?'This cable is damaged. Repair or replace it in Connected cables.':link.type==='power'?'Carries power. A connected cord does not mean the device is switched on.':'Carries network data when the link is ready. Use Test the build to check the full connection.'}${link.type==='power' && [link.a,link.b].some(id=>compact.has(E.find(s,id)?.type))?' The small black block is an AC-to-DC power adapter.':''}` : (s.links.length?'All connections shown. Power and data use separate lanes. Routes are simplified; the configured length still controls the lab checks.':'Plug in a cable to see it here.');
+    detail.textContent = link ? `${cableLabel(s,link)}. ${E.cableTypes[link.type]?.name} · ${link.length} ft. ${link.broken?'This cable is damaged. Repair or replace it in Connected cables.':link.type==='power'?'Green pulses mean power is available through this cord. The device may still be switched off.':'Blue pulses mean the physical data link is ready. Use Test the build to check IP, DNS and services.'}${link.type==='power' && [link.a,link.b].some(id=>compact.has(E.find(s,id)?.type))?' The small black block is an AC-to-DC power adapter.':''}` : (s.links.length?'All connections shown. Power and data use separate lanes. Routes are simplified; the configured length still controls the lab checks.':'Plug in a cable to see it here.');
   }
   function refresh() {
     const s = api.getState();

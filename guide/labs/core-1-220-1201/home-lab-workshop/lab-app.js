@@ -1,10 +1,10 @@
-import {renderCableRoutes,setupCableManager} from './lab-cable-routing.js?v=exploded28';
-import {setupLearningGuide} from './lab-learning.js?v=exploded28';
-import {renderBenchEquipment,setupBenchConnections} from './lab-bench-connections.js?v=exploded28';
-import {setupStudio} from './lab-studio.js?v=exploded28';
-import {setupHardware,portState} from './lab-hardware.js?v=exploded28';
-import {setupLabUX} from './lab-ux.js?v=exploded28';
-import * as E from './lab-engine.js?v=exploded28';
+import {renderCableRoutes,setupCableManager} from './lab-cable-routing.js?v=pulses29';
+import {setupLearningGuide} from './lab-learning.js?v=pulses29';
+import {renderBenchEquipment,setupBenchConnections} from './lab-bench-connections.js?v=pulses29';
+import {setupStudio} from './lab-studio.js?v=pulses29';
+import {setupHardware,portState} from './lab-hardware.js?v=pulses29';
+import {setupLabUX} from './lab-ux.js?v=pulses29';
+import * as E from './lab-engine.js?v=pulses29';
 const $=id=>document.getElementById(id),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let s=E.fresh(),toastTimer,flowTimer;let ux=null,hardware=null,studio=null,benchConnections=null,learning=null,cables=null;const by=t=>E.ofType(s,t)[0],has=t=>!!by(t),allOn=ts=>ts.every(t=>by(t)&&E.powered(s,by(t).id)),networkOK=()=>by('laptop')&&E.test(s,by('laptop').id).ok;
 const term=(name,label=name)=>`<a href="#" data-term="${name}">${label}</a>`,opt=(v,t,cur)=>`<option value="${esc(v)}" ${String(cur)===String(v)?'selected':''}>${esc(t)}</option>`,select=(id,items,cur)=>`<select id="${id}">${items.map(([v,t])=>opt(v,t,cur)).join('')}</select>`,input=(id,v,type='text')=>`<input id="${id}" type="${type}" value="${esc(v)}">`,check=(id,on,label)=>`<label class="check"><input id="${id}" type="checkbox" ${on?'checked':''}> ${label}</label>`;
