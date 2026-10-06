@@ -1,7 +1,7 @@
-import * as E from './lab-engine.js?v=cables27';
-import {portState} from './lab-hardware.js?v=cables27';
-import {templates,recommend,buildTemplate,toolsCatalog,freshness} from './lab-planner.js?v=cables27';
-import {commands,runPowerShell} from './lab-powershell.js?v=cables27';
+import * as E from './lab-engine.js?v=exploded28';
+import {portState} from './lab-hardware.js?v=exploded28';
+import {templates,recommend,buildTemplate,toolsCatalog,freshness} from './lab-planner.js?v=exploded28';
+import {commands,runPowerShell} from './lab-powershell.js?v=exploded28';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function setupStudio(api){
  const $=id=>document.getElementById(id),state=()=>api.getState(),scene=$('scene');let owner=state(),undo=null,plan=null,audio=null,zoom=1,pulseUntil=0,pulseId=null,pulseTimer=null;

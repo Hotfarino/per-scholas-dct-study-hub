@@ -1,10 +1,10 @@
-import {renderCableRoutes,setupCableManager} from './lab-cable-routing.js?v=cables27';
-import {setupLearningGuide} from './lab-learning.js?v=cables27';
-import {renderBenchEquipment,setupBenchConnections} from './lab-bench-connections.js?v=cables27';
-import {setupStudio} from './lab-studio.js?v=cables27';
-import {setupHardware,portState} from './lab-hardware.js?v=cables27';
-import {setupLabUX} from './lab-ux.js?v=cables27';
-import * as E from './lab-engine.js?v=cables27';
+import {renderCableRoutes,setupCableManager} from './lab-cable-routing.js?v=exploded28';
+import {setupLearningGuide} from './lab-learning.js?v=exploded28';
+import {renderBenchEquipment,setupBenchConnections} from './lab-bench-connections.js?v=exploded28';
+import {setupStudio} from './lab-studio.js?v=exploded28';
+import {setupHardware,portState} from './lab-hardware.js?v=exploded28';
+import {setupLabUX} from './lab-ux.js?v=exploded28';
+import * as E from './lab-engine.js?v=exploded28';
 const $=id=>document.getElementById(id),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let s=E.fresh(),toastTimer,flowTimer;let ux=null,hardware=null,studio=null,benchConnections=null,learning=null,cables=null;const by=t=>E.ofType(s,t)[0],has=t=>!!by(t),allOn=ts=>ts.every(t=>by(t)&&E.powered(s,by(t).id)),networkOK=()=>by('laptop')&&E.test(s,by('laptop').id).ok;
 const term=(name,label=name)=>`<a href="#" data-term="${name}">${label}</a>`,opt=(v,t,cur)=>`<option value="${esc(v)}" ${String(cur)===String(v)?'selected':''}>${esc(t)}</option>`,select=(id,items,cur)=>`<select id="${id}">${items.map(([v,t])=>opt(v,t,cur)).join('')}</select>`,input=(id,v,type='text')=>`<input id="${id}" type="${type}" value="${esc(v)}">`,check=(id,on,label)=>`<label class="check"><input id="${id}" type="checkbox" ${on?'checked':''}> ${label}</label>`;
@@ -151,11 +151,11 @@ render();try{if(typeof setupLearningGuide==='undefined'&&!localStorage.getItem('
 
 ux=setupLabUX({getState:()=>s,positions,portPosition,drawCables,render,renderScene,renderInspector,toast,result,addDevice:type=>E.addDevice(s,type),returnToShelf:id=>E.returnToShelf(s,id),restoreFromShelf:record=>E.restoreFromShelf(s,record)});
 
-hardware=setupHardware({getState:()=>s,result,test:testResult,select:id=>{s.selected=id;renderScene();renderInspector()},settings:()=>ux?.revealInspector(),explain:()=>showTerm(E.find(s,s.selected)?.type||'port')});
+hardware=setupHardware({getState:()=>s,getConnection:()=>learning?.connection?.(),result,test:testResult,select:id=>{s.selected=id;renderScene();renderInspector()},settings:()=>ux?.revealInspector(),explain:()=>showTerm(E.find(s,s.selected)?.type||'port')});
 
 if(typeof setupStudio==='function')studio=setupStudio({getState:()=>s,result,test:testResult,renderScene,stopVoice:()=>ux?.stop(),replace:next=>{ux?.stop();s=next;render();ux?.onLesson();}});
 
 if(typeof setupBenchConnections==='function')benchConnections=setupBenchConnections({getState:()=>s,result,sound:type=>studio?.sound(type)});
 
 if(typeof setupCableManager==='function')cables=setupCableManager({getState:()=>s});
-if(typeof setupLearningGuide==='function')learning=setupLearningGuide({getState:()=>s,result,test:testResult,render,renderScene,stopVoice:()=>ux?.stop(),select:id=>{s.selected=id;renderInspector();},speak:text=>ux?.speak(text,'Current task')});
+if(typeof setupLearningGuide==='function')learning=setupLearningGuide({getState:()=>s,openConnection:spec=>{if(spec){benchConnections?.cancel?.();hardware?.openConnection(spec);}},result,test:testResult,render,renderScene,stopVoice:()=>ux?.stop(),select:id=>{s.selected=id;renderInspector();},speak:text=>ux?.speak(text,'Current task')});

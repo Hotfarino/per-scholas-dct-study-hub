@@ -169,3 +169,14 @@ Connected cables now follow rounded, orderly runs, with separate power and data 
 Open **Trace a cable** above the bench and choose one connection. Its route and both sockets stand out while the other wires fade. **Show all cables** restores the full build. The readout gives the two endpoints, cable type and configured length in feet; power, Ethernet, fiber and damaged cables also have a legend. This is visual organization only: the engine still checks actual configured cable lengths and connection rules.
 
 Validation covered the 11-cable saved lab, connected-device dragging, traffic pulses, alternate views, zoom and a 390 px mobile layout. The new cable-routing tests and all eleven existing lab test files passed.
+
+
+## Edition 28: guided destinations and exploded connections
+
+In **Guided · explain every step**, the exact destination for an unfinished cable task has a slow pulsing circle. The pulse ends when that connection succeeds. Practice and Free build do not blink destination hints; reduced-motion preferences keep hints static.
+
+Choose **Exploded connection view** on a cable task to open the lesson's two devices. The equipment picture has numbered circles that match its enlarged, interactive sockets. Click a circle to locate its socket below. Dashed lines explain the mapping; actual connections still use the existing cable engine. The wall images are crops of the workbench's wall plates, and the photo coordinates are shared with the bench. The view is a connection teaching diagram, not a mechanical disassembly model.
+
+The hardware popup also offers **Exploded view** beside Front and Connections, plus **−**, **+**, and **Reset zoom**. Its equipment area supports 75–200% zoom and scrolling. View changes do not alter the build.
+
+Validation: all twelve lab test files passed, including the 42-task walkthrough and matching photo/socket counts for all thirteen equipment types. Browser checks covered a successful cable drag at 125%, stopping hints after success, no blinking for an unfinished Practice task, and contained mobile zoom at 390 px width.

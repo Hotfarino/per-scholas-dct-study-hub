@@ -1,0 +1,40 @@
+/* Only the fully guided mode supplies animated destination hints. */
+body[data-learning-mode=guided] .learning-destination::before,
+body[data-learning-mode=guided] .photo-port-marker.hw-destination{animation:destinationBeacon 1.6s ease-in-out infinite}
+body[data-learning-mode=guided] .learning-destination::after,
+body[data-learning-mode=guided] .physical-port.hw-destination .socket-art::after{content:'';position:absolute;inset:-9px;border:3px solid #ee9b00;border-radius:50%;pointer-events:none;animation:destinationRing 1.6s ease-in-out infinite}
+@keyframes destinationBeacon{0%,100%{opacity:1;box-shadow:0 0 0 3px #fff,0 0 0 8px #ffbc3555}50%{opacity:.45;box-shadow:0 0 0 3px #fff,0 0 0 3px #ffbc351a}}
+@keyframes destinationRing{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.25;transform:scale(1.22)}}
+.hardware-view-tools{scroll-margin-top:105px;padding:12px 14px;margin:12px 0;border:1px solid #c7dbe9;background:#fff;border-radius:12px}
+.hardware-zoom{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.hardware-zoom button{min-width:42px;min-height:42px;font-size:14px}
+.hardware-zoom output{font-size:14px;min-width:44px;text-align:center;font-variant-numeric:tabular-nums}
+.hardware-view-tools p{margin:8px 0 0;font-size:14px;line-height:1.55;max-width:90ch}
+.hardware-viewport{position:relative;overflow:auto;max-height:64vh;min-height:280px;border:1px solid #c7dbe9;border-radius:12px;background:#edf4f9;scrollbar-gutter:stable;overscroll-behavior:contain}
+.hardware-viewport .hardware-stage{padding:14px 14px 70px;transform-origin:0 0;max-width:none;margin-inline:auto}
+.hardware-dialog .face-toggle{flex-wrap:wrap}
+.exploded-unit .exploded-photo-area{position:relative;z-index:1}
+.exploded-photo{position:relative;width:min(100%,270px);aspect-ratio:1;margin:0 auto;background-image:url('lab-physical-equipment.jpg');background-size:300% 400%;background-repeat:no-repeat;border-radius:8px}
+.photo-port-marker{position:absolute;transform:translate(-50%,-50%);padding:0;width:22px;height:22px;min-width:0;min-height:0;border:2px solid white;border-radius:50%;background:#1062b7;color:white;font:750 12px/1 system-ui;display:grid;place-items:center;z-index:3;box-shadow:0 0 0 1px #145a96;touch-action:manipulation}
+.photo-port-marker:hover,.photo-port-marker.photo-port-active{background:#07528d;color:white;box-shadow:0 0 0 3px #e8a01d}
+.exploded-gap{height:32px;display:flex;justify-content:center;align-items:center;position:relative;z-index:2}
+.exploded-gap span{background:#fff;padding:4px 12px;border:1px dashed #aec8db;border-radius:30px;font-size:13px;color:#47687c}
+.exploded-unit .connector-panel{position:relative;z-index:2;background:#f1f7fb;margin:0;border-color:#b9d1e1;max-width:none!important;width:100%}
+.exploded-unit .physical-ports,.exploded-unit.wall .physical-ports{display:grid;grid-template-columns:repeat(auto-fit,minmax(94px,1fr));width:100%;gap:12px;align-items:stretch}
+.exploded-unit .physical-port{min-height:132px;padding:10px 7px;scroll-margin:18px}
+.exploded-unit .physical-port b{font-size:12px;letter-spacing:0;display:flex;flex-direction:column;align-items:center;gap:6px}
+.exploded-unit .physical-port small{font-size:12px}
+.socket-number{display:grid;place-items:center;width:23px;height:23px;border-radius:50%;font:750 12px/1 system-ui;background:#1062b7;color:white}
+.exploded-unit .socket-art{width:62px;height:46px}
+.exploded-unit .panel-caption{font-size:14px}.exploded-unit .panel-caption span{font-size:12px}
+.exploded-unit .adapter-note{font-size:13px;margin:12px 0 0}
+.exploded-callout{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:visible}
+.exploded-callout path{fill:none;stroke:#387ea6;stroke-width:1.8;stroke-dasharray:5 5;opacity:.8;stroke-linejoin:round}
+.exploded-wall-photos{display:flex;justify-content:center;gap:18px;padding:20px 0;min-height:220px}
+.exploded-wall-photos figure{margin:0;width:42%;max-width:145px}
+.wall-photo-crop{position:relative;width:100%;aspect-ratio:100/116;overflow:hidden;border:1px solid #c7d4db;border-radius:8px}
+.wall-photo-crop img{position:absolute;width:1672%;max-width:none;height:auto;pointer-events:none}
+.exploded-wall-photos figcaption{font-size:13px;text-align:center;margin-top:10px;color:#42647a}
+@media(max-width:680px){.hardware-viewport .hardware-stage{padding:10px 8px 50px;gap:32px}.hardware-view-tools{scroll-margin-top:105px;padding:10px}.hardware-dialog .hardware-heading{position:sticky;top:0;display:grid;grid-template-columns:minmax(0,1fr) 94px;gap:8px}.hardware-dialog .hardware-heading h2{font-size:18px}.hardware-dialog .hardware-heading .eyebrow{font-size:10px}.hardware-dialog .hardware-heading button{min-height:44px;padding:8px;font-size:12px}.exploded-unit .physical-ports,.exploded-unit.wall .physical-ports{grid-template-columns:repeat(auto-fit,minmax(92px,1fr))}.photo-port-marker{width:20px;height:20px;font-size:11px}.exploded-gap span{font-size:12px}}
+@media(prefers-reduced-motion:reduce){body[data-learning-mode=guided] .learning-destination::before,body[data-learning-mode=guided] .learning-destination::after,body[data-learning-mode=guided] .photo-port-marker.hw-destination,body[data-learning-mode=guided] .physical-port.hw-destination .socket-art::after{animation:none!important}}
+body.lab-reduce-motion .learning-destination::before,body.lab-reduce-motion .learning-destination::after,body.lab-reduce-motion .photo-port-marker.hw-destination,body.lab-reduce-motion .physical-port.hw-destination .socket-art::after{animation:none!important}
