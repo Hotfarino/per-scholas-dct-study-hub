@@ -12,7 +12,7 @@ The inspector becomes a drawer on smaller screens. Equipment arranges into fewer
 
 ## Direct hardware operation
 
-Click equipment on the bench to open a larger operating panel. Choose cable and length, click its first socket, and click the destination socket. Existing connector/length/occupied-port/loop rules apply. Seated plugs and cable paths use the actual port positions. Click an occupied socket to unplug the cable. Power controls, PoE, supply loss, physical link indicators, disk status, UPS display and AP illumination derive from the same simulation state.
+Click equipment on the bench to open a larger operating panel. Choose cable and length, then drag the visible cord onto its first socket. Drag the loose end onto the destination socket. Direct socket-to-socket dragging and clicking each socket also work. Missed drops retain the first end for retry. Existing connector/length/occupied-port/loop rules apply. Seated plugs and cable paths use the actual port positions. Click an occupied socket to unplug the cable. Power controls, PoE, supply loss, physical link indicators, disk status, UPS display and AP illumination derive from the same simulation state.
 
 The laptop has a simulated desktop, network status, command prompt (`ipconfig /all`, `ping 1.1.1.1`, `nslookup example.com`), and a browser teaching page. Opening the page runs the existing DHCP/addressing/routing/DNS/TCP/HTTPS checks. DNS lookup is checked independently from HTTPS. It never executes shell commands or loads an external OS. Activity lights illustrate the last successful test briefly; they are not measurements of actual traffic.
 
@@ -126,3 +126,9 @@ Primary references: [Microsoft Get-NetIPConfiguration](https://learn.microsoft.c
 The new AI-generated bench backdrop is native 1672 × 941. It is not advertised as a native 4K photograph. Higgsfield required a paid plan; the available image generator supplied the fallback without a plan upgrade. `lab-reference-4k.svg` has a scalable 3840 × 2160 canvas with correct generic router/switch ports, server storage, rack positions and power/data paths. It is a technical vector reference, not a manufacturer photograph. Existing interactive sockets, switches and indicators remain tied to the teaching model.
 
 `node test-lab-studio.mjs` verifies four connected templates, resource and compatibility checks, PowerShell parser/state changes, isolation, stale-data rejection, optional sounds, scroll/zoom controls, tabs, search and template Undo. Existing lab regression checks also pass. Browser review covered desktop and 390 px layouts, independent rack scrolling at increased zoom, expanded-bench width, template Undo, PowerShell output, fresh/stale examples, data pulses and an empty error console. No horizontal page overflow was observed in those reviewed layouts.
+
+## Grab-and-plug cord interaction
+
+A visible cord tray is available as soon as equipment opens. Unconnected power inputs start with an AC power cord selected. The connection panels appear above the equipment screens. Drag the cord to the first socket, then drag its loose end to the other socket. The dialog scrolls near its edges while dragging; invalid, occupied and missed targets produce a written explanation. Cancel clears the pending cable. Power requires two valid endpoints and the relevant power switches.
+
+Browser checks covered real mouse dragging to the laptop and wall outlet, power-on screen behavior, a missed-drop retry and a 390-pixel layout with no horizontal dialog overflow. Automated checks cover a visible cord before selection, wrong first sockets, cable length, occupied sockets, cancellation and preserving pointer targets during a drag.
