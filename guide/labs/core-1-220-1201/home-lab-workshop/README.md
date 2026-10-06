@@ -2,7 +2,7 @@
 
 Public interactive simulator: https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site/home-lab.html
 
-Begin with **Home network from zero**. The first guided path continues through a rack server, RAID and virtual machines. Open **Show exact steps & why** at each checkpoint. Drag directly between pictured sockets on the workbench. Use the device inspector for detailed configuration, then send test traffic.
+Begin in **Guided** mode. The first visible task is **Add Laptop client**. Complete each task and press **Continue** after the lab confirms it. The path runs from first power-up through a home network, rack server, RAID and virtual machine. **All tools & other labs** opens the full workshop without removing the current build.
 
 ## Bright workbench update
 
@@ -149,3 +149,14 @@ Generic equipment uses a new 12-cell photorealistic atlas (native 1086 × 1448, 
 The art depicts generic training equipment, not exact manufacturer replicas. The wall sockets share the existing simulated 1,800 W supply limit. Rear and overview modes remain simplified views. Compact devices use the matched adapter included in the teaching power cable. The laptop’s detailed apps open in its operating panel.
 
 Verification included real browser mouse drags to photographed wall sockets, Ethernet to the switch’s eighth port, wrong-connector rejection, unplugging, power and link states, surge rocker operation, device movement, 115% zoom, and a 390-pixel mobile layout without page overflow. All lab regression suites passed, including saved-build migration, RAID/VM behavior, networking, power rules, planner and PowerShell practice. No browser errors appeared during the reviewed flows.
+
+
+## Beginner workflow — edition 26
+
+The default first visit has one current task beside the workbench, with 42 checked tasks across five chapters: first power-up, building the network, opening a page, building a rack server, and running a virtual machine. Each task says what to do, why it matters and what success looks like. The blue action adds the current device or locates the exact cord, port or settings section. Numbered highlights identify cable endpoints. Continue unlocks from the real simulation state; it does not mark an unfinished task complete.
+
+**Guided** shows explanations, highlights, optional task narration and help. **Practice** keeps the task and checks, with explanations and highlights available on request. **Free build** removes the lesson hints and exposes the full workspace. Changing help levels preserves equipment and wiring. Advanced areas remain available under **All tools & other labs**. Settings open at the relevant section; the VM chapter keeps the lesson next to the VM workspace.
+
+**Save my progress** explicitly saves the lab and current task in this browser. **Resume saved build** loads it. Export/import also preserves the task index. There is no automatic cross-device save. Existing saved builds remain compatible. The parts menu now retains its selected component while installing repeated items, such as four equal drives.
+
+Validation: all 42 tasks were completed through the browser, including direct cord dragging, DHCP configuration, installation of four drives, RAID 10, hypervisor setup and a successful laptop-to-guest HTTPS test. Automated regression checks cover the same complete path, blocked early advance, help modes without resets, optional hints, tool access and save/resume. Desktop and 390-pixel mobile reviews found no page overflow, and the reviewed flows produced no browser errors. The app remains an independent teaching simulation, not an official CompTIA product.

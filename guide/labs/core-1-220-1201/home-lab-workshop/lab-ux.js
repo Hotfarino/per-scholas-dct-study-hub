@@ -54,5 +54,5 @@ export function setupLabUX(api){
  for(const [id,name,label]of [['tidyBench','grid','Arrange'],['benchFocus','expand','Expand bench'],['stopVoice','stop','Stop'],['pauseVoice','pause','Pause'],['readDevice','volume','Explain device'],['readTest','volume','Read test result'],['helpOpen','book','Lab manual'],['glossaryOpen','book','Glossary'],['closeInspector','back','Back to bench'],['newLab','play','Start lab']])buttonIcon(id,name,label);
  for(const b of document.querySelectorAll('[data-view]')){const label=b.textContent;b.innerHTML=glyph({bench:'bench',rack:'rack',rear:'cable',network:'network',inside:'chip'}[b.dataset.view])+'<span>'+label+'</span>';}
  const brand=document.querySelector('.brand-icon');if(brand)brand.innerHTML=glyph('network');
- window.addEventListener('resize',()=>{if(!drag)api.renderScene()});window.addEventListener('pagehide',stop);organizeInspector();onLesson();return {organizeInspector,onLesson,stop,revealInspector,returnDevice};
+ window.addEventListener('resize',()=>{if(!drag)api.renderScene()});window.addEventListener('pagehide',stop);organizeInspector();onLesson();return {organizeInspector,onLesson,stop,speak,revealInspector,returnDevice};
 }
