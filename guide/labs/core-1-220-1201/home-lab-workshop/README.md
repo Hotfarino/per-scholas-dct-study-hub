@@ -160,3 +160,12 @@ The default first visit has one current task beside the workbench, with 42 check
 **Save my progress** explicitly saves the lab and current task in this browser. **Resume saved build** loads it. Export/import also preserves the task index. There is no automatic cross-device save. Existing saved builds remain compatible. The parts menu now retains its selected component while installing repeated items, such as four equal drives.
 
 Validation: all 42 tasks were completed through the browser, including direct cord dragging, DHCP configuration, installation of four drives, RAID 10, hypervisor setup and a successful laptop-to-guest HTTPS test. Automated regression checks cover the same complete path, blocked early advance, help modes without resets, optional hints, tool access and save/resume. Desktop and 390-pixel mobile reviews found no page overflow, and the reviewed flows produced no browser errors. The app remains an independent teaching simulation, not an official CompTIA product.
+
+
+## Edition 27: tidy cable runs
+
+Connected cables now follow rounded, orderly runs, with separate power and data lanes. Short same-row connections stay local. Cables remain anchored to their sockets when a device moves, the bench is arranged or the view zooms. Compact AC-to-DC adapters take less space.
+
+Open **Trace a cable** above the bench and choose one connection. Its route and both sockets stand out while the other wires fade. **Show all cables** restores the full build. The readout gives the two endpoints, cable type and configured length in feet; power, Ethernet, fiber and damaged cables also have a legend. This is visual organization only: the engine still checks actual configured cable lengths and connection rules.
+
+Validation covered the 11-cable saved lab, connected-device dragging, traffic pulses, alternate views, zoom and a 390 px mobile layout. The new cable-routing tests and all eleven existing lab test files passed.

@@ -1,5 +1,5 @@
-import * as E from './lab-engine.js?v=learn26';
-import {portState} from './lab-hardware.js?v=learn26';
+import * as E from './lab-engine.js?v=cables27';
+import {portState} from './lab-hardware.js?v=cables27';
 
 const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 // Coordinates refer to the photographed surface, so sockets and cables share one anchor.
