@@ -132,3 +132,9 @@ The new AI-generated bench backdrop is native 1672 × 941. It is not advertised 
 A visible cord tray is available as soon as equipment opens. Unconnected power inputs start with an AC power cord selected. The connection panels appear above the equipment screens. Drag the cord to the first socket, then drag its loose end to the other socket. The dialog scrolls near its edges while dragging; invalid, occupied and missed targets produce a written explanation. Cancel clears the pending cable. Power requires two valid endpoints and the relevant power switches.
 
 Browser checks covered real mouse dragging to the laptop and wall outlet, power-on screen behavior, a missed-drop retry and a 390-pixel layout with no horizontal dialog overflow. Automated checks cover a visible cord before selection, wrong first sockets, cable length, occupied sockets, cancellation and preserving pointer targets during a drag.
+
+## Quick power setup
+
+Open equipment that needs power: its input is preselected with a 6-ft cord. Drag the loose plug directly to a blue outlet, then use the **Turn on** button. No cable is added or switch changed merely by opening equipment. The suggested source prefers powered equipment with a free outlet and avoids chained surge protectors and downstream power sources. Existing wiring stays intact. When no suitable outlet is free, the prompt explains what is missing.
+
+**Cable options** holds manual cable type and length controls. Cancel returns to manual two-end practice; clicking matching sockets still works. Browser checks verified one-drag power, the explicit power-on action, manual options, an empty error console and no horizontal dialog overflow at 390 pixels. Automated checks also cover unavailable outlets, powered surge suggestions and reopening wired equipment.
