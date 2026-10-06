@@ -12,7 +12,7 @@ The inspector becomes a drawer on smaller screens. Equipment arranges into fewer
 
 ## Direct hardware operation
 
-Click once to select equipment. Double-click its picture for animated 3D exploded wiring; hold and drag to move it. Right-click for its connection list. Select Operate device above the bench for the larger operating panel, screens and power controls. Choose cable and length, then drag the visible cord onto its first socket. Drag the loose end onto the destination socket. Direct socket-to-socket dragging and clicking each socket also work. Missed drops retain the first end for retry. Existing connector/length/occupied-port/loop rules apply. Seated plugs and cable paths use the actual port positions. Click an occupied socket to unplug the cable. Power controls, PoE, supply loss, physical link indicators, disk status, UPS display and AP illumination derive from the same simulation state.
+Click once to select equipment. Double-click its picture for an assembled connection close-up; hold and drag to move it. Right-click for its connection list. Select Operate device above the bench for the larger operating panel, screens and power controls. Choose cable and length, then drag the visible cord onto its first socket. Drag the loose end onto the destination socket. Direct socket-to-socket dragging and clicking each socket also work. Missed drops retain the first end for retry. Existing connector/length/occupied-port/loop rules apply. Seated plugs and cable paths use the actual port positions. Click an occupied socket to unplug the cable. Power controls, PoE, supply loss, physical link indicators, disk status, UPS display and AP illumination derive from the same simulation state.
 
 The laptop has a simulated desktop, network status, command prompt (`ipconfig /all`, `ping 1.1.1.1`, `nslookup example.com`), and a browser teaching page. Opening the page runs the existing DHCP/addressing/routing/DNS/TCP/HTTPS checks. DNS lookup is checked independently from HTTPS. It never executes shell commands or loads an external OS. Activity lights illustrate the last successful test briefly; they are not measurements of actual traffic.
 
@@ -171,49 +171,29 @@ Open **Trace a cable** above the bench and choose one connection. Its route and 
 Validation covered the 11-cable saved lab, connected-device dragging, traffic pulses, alternate views, zoom and a 390 px mobile layout. The new cable-routing tests and all eleven existing lab test files passed.
 
 
-## Edition 28: guided destinations and exploded connections
-
-In **Guided · explain every step**, the exact destination for an unfinished cable task has a slow pulsing circle. The pulse ends when that connection succeeds. Practice and Free build do not blink destination hints; reduced-motion preferences keep hints static.
-
-Choose **Exploded connection view** on a cable task to open the lesson's two devices. The equipment picture has numbered circles that match its enlarged, interactive sockets. Click a circle to locate its socket below. Dashed lines explain the mapping; actual connections still use the existing cable engine. The wall images are crops of the workbench's wall plates, and the photo coordinates are shared with the bench. The view is a connection teaching diagram, not a mechanical disassembly model.
-
-The hardware popup also offers **Exploded view** beside Front and Connections, plus **−**, **+**, and **Reset zoom**. Its equipment area supports 75–200% zoom and scrolling. View changes do not alter the build.
-
-Validation: all twelve lab test files passed, including the 42-task walkthrough and matching photo/socket counts for all thirteen equipment types. Browser checks covered a successful cable drag at 125%, stopping hints after success, no blinking for an unfinished Practice task, and contained mobile zoom at 390 px width.
-
-
 ## Edition 29: continuous connection status
 
-Correct, energized power cords pulse green. Correct physical data links pulse blue. Animations continue in the bench, rack, rear, network map and hardware/exploded view; they do not expire after a connection or test. Green means power is available at the cord, even if the connected device is switched off. Blue indicates a physical link, not a guarantee of a valid IP address, DNS or Internet access. The legend and cable-trace readout explain this distinction.
+Correct, energized power cords pulse green. Correct physical data links pulse blue. Animations continue in the bench, rack, rear, network map and hardware close-up; they do not expire after a connection or test. Green means power is available at the cord, even if the connected device is switched off. Blue indicates a physical link, not a guarantee of a valid IP address, DNS or Internet access. The legend and cable-trace readout explain this distinction.
 
 Damage, unavailable source power, incompatible connectors, unsupported lengths or missing optical modules stop the affected animation. Power-strip switches update downstream links immediately. Connection pulses can be switched off, and reduced-motion preferences remain respected. Cable tracing and zoom keep working.
 
-Validation: all thirteen lab test files passed. Browser checks confirmed continuous six-power/five-data pulses on a working lab without a traffic test; turning the PDU off stopped downstream pulses, and restoring it restored the status. The same behavior was checked across bench, rack, rear, network and exploded views, with no browser console errors.
+Validation: all thirteen lab test files passed. Browser checks confirmed continuous six-power/five-data pulses on a working lab without a traffic test; turning the PDU off stopped downstream pulses, and restoring it restored the status. The same behavior was checked across bench, rack, rear, network and connection views, with no browser console errors.
 
 
-## Edition 30: exploded plugs and device wiring menu
+## Edition 32: direct cables and network rack
 
-The exploded view keeps the equipment chassis intact. Dotted leaders connect numbered sockets on its photograph to enlarged socket faces. Matching plugs pull away along their insertion axis, and connected wires run between those plugs. The visual gaps do not unplug the simulated cable. Green power and blue physical-link pulses remain active when eligible. Compact power paths include their matched AC-to-DC adapter. Connector images are generic illustrations, not vendor drawings or a mechanical disassembly.
+The exploded view and 3D opening controls have been removed after learner feedback. Double-click equipment or choose **Connection close-up** to see assembled devices and their sockets. Right-click still lists connected cables and empty sockets. Guided mode retains its exact destination beacons, explanations and checked tasks.
 
-Start with one focused socket and its actual peer. Click another numbered marker, choose a socket, or use Show all sockets to expand the fan-out. The diagram retains zoom and contained scrolling. Mobile users can pan sideways; the page itself remains contained.
+- **Plug in:** drag between compatible empty sockets, or drag a device’s ready power cord to an outlet.
+- **Unplug:** grab a seated plug, pull it away from all sockets, and release. Power and link indicators update immediately.
+- **Move one end:** drag a seated plug into another compatible empty socket. Rejected moves keep the original connection. Escape or an interrupted drag cancels without changing wiring.
+- **Mount:** check **Fit compatible rails / shelf when I mount**, then drag equipment to its bottom U number. Existing fitted supports also work. Selecting equipment and clicking a numbered space is the keyboard/touch alternative.
+- **Return to bench:** drag the rack device’s grip back onto open bench space, or select it and press **Return selected to bench**.
 
-- Click once to select a device.
-- Double-click its picture to open exploded wiring.
-- Hold and drag the picture to move the device, keeping cables attached.
-- Right-click for that device's connected cables, endpoints, lengths, readiness and empty sockets. Choose a connection to inspect its exact pair.
-- Touch: select the device and use Exploded wiring, Connections & wires or Operate device. Keyboard: Enter opens wiring; Shift + F10 opens the list; Escape closes it.
+The 12U rack checks occupied spaces, device height, supported equipment and low placement for the heavy UPS. A 2U server dropped at U4 occupies U4 and U5. Mounted devices leave the bench and appear once in the rack; their ports remain interactive and their cables follow. **View rack** enlarges the rack area. Zoom and internal scrolling help reach small sockets.
 
-Guided mode keeps its checked tasks and destination beacons. Instructions appear above the workbench, in the device-add prompts and in the manual. All fourteen automated lab test files passed. Browser checks verified distinct click/double-click/drag behavior, eleven preserved cables during device movement, device-specific right-click results, successful guided cable dragging, exact endpoints at 125% zoom, mobile containment and no console errors.
+Relocation preserves the cable’s type, length, ID and damaged state. It validates against the same engine before committing. Drag-out removes the complete modeled connection; persistent dangling half-cables are not modeled. Moving equipment preserves cables in this teaching simulation. Real equipment moves require appropriate support, cable slack and power procedures.
 
+Verification: all lab test suites passed, including the 42-task walkthrough and 90 engine assertions. New tests cover atomic cable moves, invalid/cancelled drag preservation, rack supports/collisions/height/UPS rules, non-rackable rejection, no duplicated mounted bench equipment, and unmounting without cable loss. Native browser drags mounted a PDU at U11, returned it to the bench, and unplugged laptop power with the screen turning off. At 390 px, the page and rack toolbar had no horizontal overflow; the bench retains intentional internal scroll/zoom. No browser application errors were reported.
 
-## Animated 3D wiring explorer · edition 31
-
-Double-click equipment, or select **3D exploded wiring**. All thirteen equipment types have real WebGL models. The chassis stays assembled while **Explode connections** pulls plugs outward along their insertion axes. **Fit together** and the slider reverse or pause the separation. Drag the 3D canvas to orbit; scroll/pinch or use the zoom buttons. Front, Back, Top, Angled, and **Focus socket** cameras help inspect the fit. Arrow keys orbit when the canvas is focused.
-
-Choose a socket on the model or from its numbered buttons to see the connector definition, fitting instructions, current status and actual other endpoint. Power pulses green when its source is available; physical data links pulse blue when ready. Empty sockets show a clearly labeled example plug. These status animations do not prove that IP, DNS or a website works. Opening the model never changes the build. **Open connection close-up** transfers the selected port to the existing checked wiring panel; its **3D model** button returns to the explorer.
-
-The models include laptop screen/keyboard, rack cases and drive fronts, outlet banks, RJ45 contacts and latches, power input shapes, and fiber/SFP+ connectors. Shapes and spacing are generic teaching geometry, not manufacturer CAD. Cable tails are shortened and label their other endpoint. Matched AC-to-DC adapters remain part of compact-device power cords. Actual wiring still uses the bench or the connection close-up.
-
-Rendering adapts to phone widths; desktop explanations scroll beside the canvas. Reduced motion removes automatic transitions and traveling status beads. A failed WebGL startup offers the connection close-up. Scene changes and closing dispose GPU resources. Three.js 0.186.1 is bundled locally in `lab-three.js`; its MIT license is included as `three-license.txt`.
-
-Verification: all existing lab test suites passed after integration. The new model test checks 13 types / 58 socket positions, correct live and empty states, peer mapping, power loss, damaged cables, and read-only snapshots. Browser checks loaded all equipment types and verified explosion/assembly, socket focus, model-to-wiring navigation, cleanup, and phone layout at 390 px without horizontal overflow.
+A complete 3D workspace remains a possible future design, with fixed bench/rack views and direct socket interaction. This edition improves the current illustrated simulator; it does not replace the entire environment with 3D.

@@ -1,5 +1,5 @@
-import * as E from './lab-engine.js?v=model31';
-import {portState} from './lab-hardware.js?v=model31';
+import * as E from './lab-engine.js?v=direct32';
+import {portState} from './lab-hardware.js?v=direct32';
 export const bodies={wall:[3.2,2.4,.18],isp:[1.8,1.5,.6],laptop:[4.4,.22,2.9],router:[4.2,.65,2.5],switch:[6,.65,2.6],server:[6,1.15,3.8],nas:[2.3,3,2.7],ap:[3,.5,3],surge:[5.5,.5,1.4],ups:[2,3.2,2.8],pdu:[6.2,.6,1.5],ont:[2.8,.6,2],panel:[5.8,.6,1.7]};
 export function portLayout(type){
  const [w,h,d]=bodies[type],entries=Object.entries(E.catalog[type].ports),base=h/2+.35;

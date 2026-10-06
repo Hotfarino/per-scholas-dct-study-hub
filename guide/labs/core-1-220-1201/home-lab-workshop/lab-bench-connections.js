@@ -1,10 +1,11 @@
-import * as E from './lab-engine.js?v=model31';
-import {portState} from './lab-hardware.js?v=model31';
+import {moveCableEnd} from './lab-direct-actions.js?v=direct32';
+import * as E from './lab-engine.js?v=direct32';
+import {portState} from './lab-hardware.js?v=direct32';
 
 const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 // Coordinates refer to the photographed surface, so sockets and cables share one anchor.
-export {wallSockets,equipmentFaces} from './lab-physical-layout.js?v=model31';
-import {wallSockets,equipmentFaces} from './lab-physical-layout.js?v=model31';
+export {wallSockets,equipmentFaces} from './lab-physical-layout.js?v=direct32';
+import {wallSockets,equipmentFaces} from './lab-physical-layout.js?v=direct32';
 const label = (port,kind) => kind==='powerIn'?'POWER IN':kind==='powerOut'?port.replace('out','OUT '):port.toUpperCase();
 const cordArt = '<svg viewBox="0 0 88 42" aria-hidden="true"><path d="M2 20C14 43 40 42 49 18S71 7 72 20" fill="none" stroke="currentColor" stroke-width="5"/><path d="M65 8V1m14 7V1m-7 7V3" stroke="#b1bbc5" stroke-width="3"/><rect x="60" y="8" width="25" height="25" rx="5" fill="currentColor"/><path d="M63 13h18m-18 5h18m-18 5h18" stroke="#617585"/></svg>';
 
@@ -17,6 +18,7 @@ export function renderBenchEquipment(s,map){
   const wall=E.find(s,'wall');
   let html=s.view==='bench'?`<div class="wall-outlet-plane" aria-label="Wall outlets in the room photograph">${Object.entries(wallSockets).map(([p,xy])=>socketMarkup(s,wall,p,xy,true)).join('')}</div>`:'';
   for(const d of s.devices){
+    if(d.rack!=null&&!(['wall','isp'].includes(d.type)))continue;
     if(d.type==='wall'&&s.view==='bench')continue;
     const [x,y]=map[d.id],on=E.powered(s,d.id),c=E.catalog[d.type];
     if(d.type==='wall'){
@@ -25,7 +27,7 @@ export function renderBenchEquipment(s,map){
     const face=equipmentFaces[d.type];if(!face)continue;
     const loose=c.ports.ac==='powerIn'&&!portState(s,d.id,'ac').plugged&&!on;
     html+=`<article class="device physical-device equipment-${d.type} ${on?'live':''} ${s.selected===d.id?'selected':''}" data-device="${d.id}" style="left:${x}%;top:${y}%" aria-label="${escapeHTML(d.name)}">
-      <div class="bench-device-face"><button type="button" class="bench-device-photo" data-device="${d.id}" aria-label="Inspect ${escapeHTML(d.name)}" title="Click to select; double-click for exploded wiring; hold and drag to move; right-click for connections" style="background-position:${face.tile%3*50}% ${Math.floor(face.tile/3)*100/3}%"></button>
+      <div class="bench-device-face"><button type="button" class="bench-device-photo" data-device="${d.id}" aria-label="Inspect ${escapeHTML(d.name)}" title="Click to select; double-click for connection close-up; hold and drag to move; right-click for connections" style="background-position:${face.tile%3*50}% ${Math.floor(face.tile/3)*100/3}%"></button>
       ${Object.entries(face.ports).filter(([p])=>c.ports[p]).map(([p,xy])=>socketMarkup(s,d,p,xy)).join('')}
       ${d.type==='surge'?`<button type="button" class="bench-rocker ${on?'is-on':''}" data-bench-power="${d.id}" aria-label="${d.on?'Switch off':'Switch on'} surge protector rocker" aria-pressed="${!!d.on}" title="Surge protector power switch"></button>`:''}${loose?`<svg class="resting-cord" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M${face.ports.ac[0]} ${face.ports.ac[1]} C${face.ports.ac[0]} 94,68 86,68 100"/></svg>`:''}${d.type==='laptop'&&on?'<span class="bench-screen-glow" aria-hidden="true"></span>':''}
       </div><div class="bench-device-caption"><b>${escapeHTML(d.name)}</b>${!['isp','panel'].includes(d.type)?`<button type="button" class="bench-power ${on?'is-on':''}" data-bench-power="${d.id}" aria-label="${d.on?'Switch off':'Switch on'} ${escapeHTML(d.name)}" aria-pressed="${!!d.on}">⏻<span>${d.on?'ON':'OFF'}</span></button>`:''}</div>
@@ -39,7 +41,7 @@ export function setupBenchConnections(api){
   const $=id=>document.getElementById(id),scene=$('scene');
   const state=()=>api.getState();let owner=state(),pending=null,drag=null,raf=0,ignoreClick=false;
   const tools=document.createElement('section');tools.id='benchConnectionTools';tools.className='bench-connection-tools';
-  tools.innerHTML=`<div class="bench-cable-controls"><label>Cable<select id="benchCable"><option value="auto">Match the starting port</option>${Object.entries(E.cableTypes).map(([id,c])=>`<option value="${id}">${escapeHTML(c.name)}</option>`).join('')}</select></label><label>Length · ft<input id="benchCableLength" type="number" min="1" max="984" value="6"></label><button id="benchCableCancel" type="button" disabled>Put cord down</button><button id="benchPortLabels" type="button" aria-pressed="true">Port labels on</button></div><div id="benchConnectionStatus" class="bench-connection-status" role="status" aria-live="polite">Grab a device’s loose power cord and drag it to an actual wall outlet. For data, drag between the sockets on two devices.</div><div id="benchConnectionAction"></div>`;
+  tools.innerHTML=`<div class="bench-cable-controls"><label>Cable<select id="benchCable"><option value="auto">Match the starting port</option>${Object.entries(E.cableTypes).map(([id,c])=>`<option value="${id}">${escapeHTML(c.name)}</option>`).join('')}</select></label><label>Length · ft<input id="benchCableLength" type="number" min="1" max="984" value="6"></label><button id="benchCableCancel" type="button" disabled>Put cord down</button><button id="benchPortLabels" type="button" aria-pressed="true">Port labels on</button></div><div id="benchConnectionStatus" class="bench-connection-status" role="status" aria-live="polite">Grab a device’s loose power cord and drag it to an actual wall outlet. For data, drag between matching sockets. Pull a seated plug away and release to unplug; drag it to another socket to move that end.</div><div id="benchConnectionAction"></div>`;
   $('benchViewport').before(tools);
   const tell=(text,ok=true)=>{const box=$('benchConnectionStatus');box.textContent=text;box.classList.toggle('error',!ok);box.setAttribute('role',ok?'status':'alert');};
   const endpoint=(id,p)=>E.find(state(),id)?.name+' · '+label(p,E.port(state(),id,p));
@@ -98,20 +100,20 @@ export function setupBenchConnections(api){
     const plug=e.target.closest('[data-bench-plug]'),socket=e.target.closest('[data-bench-port]');if(!plug&&!socket)return;
     e.stopPropagation();ignoreClick=false;
     const id=plug?.dataset.benchPlug||socket.dataset.benchDevice,port=plug?'ac':socket.dataset.benchPort;
-    if(portState(state(),id,port).plugged)return;
-    drag={pointerId:e.pointerId,startX:e.clientX,startY:e.clientY,x:e.clientX,y:e.clientY,id,port,moved:false};
+    const attached=portState(state(),id,port);
+    drag={pointerId:e.pointerId,startX:e.clientX,startY:e.clientY,x:e.clientX,y:e.clientY,id,port,moved:false,attached:attached.plugged?attached.link:null};
   });
   scene.addEventListener('pointermove',e=>{
     if(!drag||e.pointerId!==drag.pointerId)return;e.stopPropagation();drag.x=e.clientX;drag.y=e.clientY;
     if(!drag.moved&&Math.hypot(drag.x-drag.startX,drag.y-drag.startY)<5)return;
-    if(!drag.moved){if(pending&&(pending.id!==drag.id||pending.port!==drag.port)){tell('Finish the cord in your hand, or choose Put cord down first.',false);clearDrag();ignoreClick=true;return;}if(!pending&&!source(drag.id,drag.port)){clearDrag();ignoreClick=true;return;}drag.moved=true;scene.setPointerCapture?.(e.pointerId);document.body.classList.add('bench-cable-dragging');}
+    if(!drag.moved){if(drag.attached){const l=drag.attached;pending={id:l.a===drag.id&&l.ap===drag.port?l.b:l.a,port:l.a===drag.id&&l.ap===drag.port?l.bp:l.ap,cable:l.type};drag.moved=true;scene.setPointerCapture?.(e.pointerId);document.body.classList.add('bench-cable-dragging');tell('Pull away and release to unplug. Drop on another matching socket to move this end. Escape keeps the original cable.');}else {if(pending&&(pending.id!==drag.id||pending.port!==drag.port)){tell('Finish the cord in your hand, or choose Put cord down first.',false);clearDrag();ignoreClick=true;return;}if(!pending&&!source(drag.id,drag.port)){clearDrag();ignoreClick=true;return;}drag.moved=true;scene.setPointerCapture?.(e.pointerId);document.body.classList.add('bench-cable-dragging');}}
     e.preventDefault();if(!raf)raf=requestAnimationFrame(paintDrag);
   });
   scene.addEventListener('pointerup',e=>{
-    if(!drag||e.pointerId!==drag.pointerId)return;e.stopPropagation();const moved=drag.moved,target=hit(e.clientX,e.clientY);clearDrag();if(!moved)return;ignoreClick=true;
+    if(!drag||e.pointerId!==drag.pointerId)return;e.stopPropagation();const current=drag,moved=drag.moved,target=hit(e.clientX,e.clientY);clearDrag();if(!moved)return;ignoreClick=true;if(current.attached){pending=null;const r=moveCableEnd(state(),current.attached.id,current.id,current.port,target?{id:target.dataset.benchDevice,port:target.dataset.benchPort}:null);if(r.ok)api.result(r);else api.sound('error');tell(r.message,r.ok);highlight();return;}
     if(target)finish(target.dataset.benchDevice,target.dataset.benchPort);else{tell('The plug missed a socket. Your first end is still selected; drag its cord again or click a highlighted socket.',false);api.sound('error');}
   });
-  function cancelDrag(){if(!drag)return;clearDrag();ignoreClick=true;tell('Drag stopped. Try the loose plug again, or put the cord down.');}
+  function cancelDrag(){if(!drag)return;if(drag.attached)pending=null;clearDrag();ignoreClick=true;tell('Drag stopped. Try the loose plug again, or put the cord down.');}
   scene.addEventListener('pointercancel',cancelDrag);scene.addEventListener('lostpointercapture',cancelDrag);window.addEventListener('blur',cancelDrag);
   function putDown(){clearDrag();pending=null;ignoreClick=false;$('benchConnectionAction').innerHTML='';tell('Cord put down. No new connection was added.');highlight();}
   $('benchCableCancel').onclick=putDown;$('benchCable').onchange=putDown;
@@ -132,7 +134,7 @@ export function setupBenchConnections(api){
   function refresh(){
     if(owner!==state()){clearDrag();pending=null;owner=state();$('benchConnectionAction').innerHTML='';tell('Drag a device’s cord to an outlet, or connect two matching data ports.');}
     if(pending&&(!E.find(state(),pending.id)||portState(state(),pending.id,pending.port).plugged)){pending=null;clearDrag();}
-    tools.hidden=!['bench','rear'].includes(state().view);if(tools.hidden&&pending)putDown();
+    tools.hidden=!['bench','rear','rack'].includes(state().view);if(tools.hidden&&pending)putDown();
     scene.classList.toggle('hide-bench-labels',$('benchPortLabels').getAttribute('aria-pressed')==='false');highlight();
   }
   refresh();return {refresh,busy:()=>!!drag?.moved,cancel:putDown};
