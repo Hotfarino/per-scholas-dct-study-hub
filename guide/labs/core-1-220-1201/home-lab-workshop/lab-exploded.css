@@ -38,3 +38,62 @@ body[data-learning-mode=guided] .physical-port.hw-destination .socket-art::after
 @media(max-width:680px){.hardware-viewport .hardware-stage{padding:10px 8px 50px;gap:32px}.hardware-view-tools{scroll-margin-top:105px;padding:10px}.hardware-dialog .hardware-heading{position:sticky;top:0;display:grid;grid-template-columns:minmax(0,1fr) 94px;gap:8px}.hardware-dialog .hardware-heading h2{font-size:18px}.hardware-dialog .hardware-heading .eyebrow{font-size:10px}.hardware-dialog .hardware-heading button{min-height:44px;padding:8px;font-size:12px}.exploded-unit .physical-ports,.exploded-unit.wall .physical-ports{grid-template-columns:repeat(auto-fit,minmax(92px,1fr))}.photo-port-marker{width:20px;height:20px;font-size:11px}.exploded-gap span{font-size:12px}}
 @media(prefers-reduced-motion:reduce){body[data-learning-mode=guided] .learning-destination::before,body[data-learning-mode=guided] .learning-destination::after,body[data-learning-mode=guided] .photo-port-marker.hw-destination,body[data-learning-mode=guided] .physical-port.hw-destination .socket-art::after{animation:none!important}}
 body.lab-reduce-motion .learning-destination::before,body.lab-reduce-motion .learning-destination::after,body.lab-reduce-motion .photo-port-marker.hw-destination,body.lab-reduce-motion .physical-port.hw-destination .socket-art::after{animation:none!important}
+
+/* Wiring exploded along its connection axis: chassis → socket → plug → cable. */
+.hardware-viewport:has(.wiring-exploded-stage){background:#fff;max-height:70vh}
+.hardware-stage.wiring-exploded-stage{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;padding:24px 20px 120px;background:radial-gradient(circle at 50% 50%,#edf6fc 1px,transparent 1px) 0 0/20px 20px}
+.wiring-exploded-stage .exploded-unit{padding:16px;background:#ffffffed;border:1px solid #c8dce9;border-radius:16px;box-shadow:0 8px 24px #2949650a;min-width:0}
+.wiring-exploded-stage .exploded-unit>header{position:relative;z-index:2;align-items:center;gap:8px}
+.wiring-exploded-stage .exploded-unit h3{font-size:18px;overflow-wrap:anywhere;margin:4px 0}
+.wiring-exploded-stage .exploded-unit .eyebrow{font-size:12px}
+.exploded-port-choice{position:relative;z-index:2;display:grid;gap:5px;font-size:14px;margin:12px 0 20px;color:#3b5b71}
+.exploded-port-choice select{width:100%;min-width:0;font-size:14px;background:#f7fbfd}
+.exploded-fan{display:grid;grid-template-columns:minmax(120px,1fr) 192px;gap:24px;align-items:center;min-height:260px}
+.exploded-peer .exploded-fan{grid-template-columns:192px minmax(120px,1fr)}
+.exploded-peer .exploded-photo-area{grid-column:2;grid-row:1}.exploded-peer .connector-panel{grid-column:1;grid-row:1}
+.wiring-exploded-stage .exploded-photo{width:100%;border-radius:0;box-shadow:0 10px 18px #304d6014;outline:6px solid #fff}
+.wiring-exploded-stage .exploded-photo-area{padding:8px 0;background:#fff;align-self:center}
+.intact-caption{display:block;text-align:center;font-size:13px;margin-top:16px;color:#526b7c}
+.wiring-exploded-stage .exploded-unit .connector-panel{background:transparent;border:0;box-shadow:none;padding:0;margin:0!important;width:100%;z-index:3}
+.wiring-exploded-stage .exploded-unit .physical-ports{display:flex;flex-direction:column;gap:24px;width:100%}
+.wiring-exploded-stage .exploded-unit .panel-caption{font-size:14px;text-align:center;margin-bottom:18px;background:#fff;padding:4px}
+.wiring-exploded-stage .exploded-unit .panel-caption span{font-size:12px}
+.exploded-port-row[hidden]{display:none!important}
+.wiring-exploded-stage .exploded-unit .physical-port{display:flex;flex-direction:column;align-items:stretch;gap:12px;width:192px;min-height:142px;padding:10px 4px;border:1px solid #d0dfeb;border-radius:12px;background:#fff;box-shadow:0 6px 15px #233f5710;scroll-margin:16px}
+.wiring-exploded-stage .exploded-unit .physical-port b{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:7px;font-size:13px}
+.wiring-exploded-stage .exploded-unit .physical-port small{font-size:12px;line-height:1.5;min-height:36px}
+.exploded-assembly{display:flex;align-items:center;position:relative;width:180px;min-height:54px;margin:auto}
+.exploded-peer .exploded-assembly{flex-direction:row-reverse}
+.wiring-exploded-stage .exploded-unit .socket-art{width:52px;height:42px;flex:none}
+.insertion-guide{height:0;width:26px;border-top:2px dashed #829eaf;flex:none;position:relative}
+.insertion-guide:before{content:'';position:absolute;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:6px solid #688b9f;top:-5px;left:0}
+.exploded-peer .insertion-guide{transform:scaleX(-1)}
+.wiring-exploded-stage .exploded-plug{position:relative;display:block;left:auto;bottom:auto;top:auto;width:100px;height:56px;border:0;border-radius:0;background:none!important;box-shadow:none;flex:none}
+.wiring-exploded-stage .exploded-plug:before,.wiring-exploded-stage .exploded-plug:after{display:none}
+.exploded-plug svg{display:block;width:100%;height:100%;filter:drop-shadow(0 3px 2px #19384c33)}
+.exploded-peer .exploded-plug{transform:scaleX(-1)}
+.exploded-plug.example-plug{opacity:.38}
+.wire-terminal{position:absolute;right:1px;top:27px;width:2px;height:2px;display:block}
+.wiring-exploded-stage .exploded-callout{z-index:2}
+.wiring-exploded-stage .exploded-callout path{stroke:#567b93;stroke-width:1.5;stroke-dasharray:4 5}
+.wiring-exploded-stage .exploded-wall-photos{gap:6px;padding:8px 0;min-height:0}
+.wiring-exploded-stage .exploded-wall-photos figure{width:46%}
+.wiring-exploded-stage .exploded-wall-photos figcaption{font-size:12px}
+.wiring-exploded-stage .adapter-note{position:relative;z-index:2;font-size:13px;background:white;line-height:1.5;margin-top:18px}
+.wiring-exploded-stage .physical-wire{stroke-width:4}
+.wiring-exploded-stage .exploded-photo-area,.wiring-exploded-stage .connector-panel{animation:spreadWiring .32s ease-out both}
+@keyframes spreadWiring{from{opacity:.2;translate:0 10px}to{opacity:1;translate:0 0}}
+@media(max-width:680px){.hardware-stage.wiring-exploded-stage{padding:18px 16px 110px;gap:48px}.hardware-view-tools:has(#hwAllSockets) p:after{content:' Swipe sideways in the diagram to see both devices.';font-weight:650;color:#1467aa}}
+@media(prefers-reduced-motion:reduce){.wiring-exploded-stage .exploded-photo-area,.wiring-exploded-stage .connector-panel{animation:none}}
+body.lab-reduce-motion .wiring-exploded-stage .exploded-photo-area,body.lab-reduce-motion .wiring-exploded-stage .connector-panel{animation:none}
+/* Geometry is stable while measuring cable endpoints; the connector itself never slides. */
+.wiring-exploded-stage .exploded-plug{left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;animation:none!important}
+@keyframes spreadWiring{from{opacity:.2}to{opacity:1}}
+.hardware-stage.wiring-exploded-stage{padding:18px 20px 46px}
+.wiring-exploded-stage .exploded-unit{padding:12px}
+.wiring-exploded-stage .exploded-unit h3{font-size:16px}
+.wiring-exploded-stage .exploded-fan{min-height:210px}
+.wiring-exploded-stage .exploded-port-choice{margin:8px 0 10px}
+.wiring-exploded-stage .exploded-photo{max-width:200px}
+.wiring-exploded-stage .adapter-note{font-size:12px;line-height:1.4;margin-top:10px}
+.hardware-view-tools:has(#hwAllSockets){padding:10px 14px;margin:8px 0}

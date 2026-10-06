@@ -1,10 +1,10 @@
-import * as E from './lab-engine.js?v=pulses29';
-import {portState} from './lab-hardware.js?v=pulses29';
+import * as E from './lab-engine.js?v=explode30';
+import {portState} from './lab-hardware.js?v=explode30';
 
 const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 // Coordinates refer to the photographed surface, so sockets and cables share one anchor.
-export {wallSockets,equipmentFaces} from './lab-physical-layout.js?v=pulses29';
-import {wallSockets,equipmentFaces} from './lab-physical-layout.js?v=pulses29';
+export {wallSockets,equipmentFaces} from './lab-physical-layout.js?v=explode30';
+import {wallSockets,equipmentFaces} from './lab-physical-layout.js?v=explode30';
 const label = (port,kind) => kind==='powerIn'?'POWER IN':kind==='powerOut'?port.replace('out','OUT '):port.toUpperCase();
 const cordArt = '<svg viewBox="0 0 88 42" aria-hidden="true"><path d="M2 20C14 43 40 42 49 18S71 7 72 20" fill="none" stroke="currentColor" stroke-width="5"/><path d="M65 8V1m14 7V1m-7 7V3" stroke="#b1bbc5" stroke-width="3"/><rect x="60" y="8" width="25" height="25" rx="5" fill="currentColor"/><path d="M63 13h18m-18 5h18m-18 5h18" stroke="#617585"/></svg>';
 
@@ -25,7 +25,7 @@ export function renderBenchEquipment(s,map){
     const face=equipmentFaces[d.type];if(!face)continue;
     const loose=c.ports.ac==='powerIn'&&!portState(s,d.id,'ac').plugged&&!on;
     html+=`<article class="device physical-device equipment-${d.type} ${on?'live':''} ${s.selected===d.id?'selected':''}" data-device="${d.id}" style="left:${x}%;top:${y}%" aria-label="${escapeHTML(d.name)}">
-      <div class="bench-device-face"><button type="button" class="bench-device-photo" data-device="${d.id}" aria-label="Inspect ${escapeHTML(d.name)}" title="Drag the chassis to move it; click for detailed settings" style="background-position:${face.tile%3*50}% ${Math.floor(face.tile/3)*100/3}%"></button>
+      <div class="bench-device-face"><button type="button" class="bench-device-photo" data-device="${d.id}" aria-label="Inspect ${escapeHTML(d.name)}" title="Click to select; double-click for exploded wiring; hold and drag to move; right-click for connections" style="background-position:${face.tile%3*50}% ${Math.floor(face.tile/3)*100/3}%"></button>
       ${Object.entries(face.ports).filter(([p])=>c.ports[p]).map(([p,xy])=>socketMarkup(s,d,p,xy)).join('')}
       ${d.type==='surge'?`<button type="button" class="bench-rocker ${on?'is-on':''}" data-bench-power="${d.id}" aria-label="${d.on?'Switch off':'Switch on'} surge protector rocker" aria-pressed="${!!d.on}" title="Surge protector power switch"></button>`:''}${loose?`<svg class="resting-cord" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M${face.ports.ac[0]} ${face.ports.ac[1]} C${face.ports.ac[0]} 94,68 86,68 100"/></svg>`:''}${d.type==='laptop'&&on?'<span class="bench-screen-glow" aria-hidden="true"></span>':''}
       </div><div class="bench-device-caption"><b>${escapeHTML(d.name)}</b>${!['isp','panel'].includes(d.type)?`<button type="button" class="bench-power ${on?'is-on':''}" data-bench-power="${d.id}" aria-label="${d.on?'Switch off':'Switch on'} ${escapeHTML(d.name)}" aria-pressed="${!!d.on}">⏻<span>${d.on?'ON':'OFF'}</span></button>`:''}</div>

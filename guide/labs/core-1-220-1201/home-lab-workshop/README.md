@@ -12,7 +12,7 @@ The inspector becomes a drawer on smaller screens. Equipment arranges into fewer
 
 ## Direct hardware operation
 
-Click equipment on the bench to open a larger operating panel. Choose cable and length, then drag the visible cord onto its first socket. Drag the loose end onto the destination socket. Direct socket-to-socket dragging and clicking each socket also work. Missed drops retain the first end for retry. Existing connector/length/occupied-port/loop rules apply. Seated plugs and cable paths use the actual port positions. Click an occupied socket to unplug the cable. Power controls, PoE, supply loss, physical link indicators, disk status, UPS display and AP illumination derive from the same simulation state.
+Click once to select equipment. Double-click its picture for exploded wiring; hold and drag to move it. Right-click for its connection list. Select Operate device above the bench for the larger operating panel, screens and power controls. Choose cable and length, then drag the visible cord onto its first socket. Drag the loose end onto the destination socket. Direct socket-to-socket dragging and clicking each socket also work. Missed drops retain the first end for retry. Existing connector/length/occupied-port/loop rules apply. Seated plugs and cable paths use the actual port positions. Click an occupied socket to unplug the cable. Power controls, PoE, supply loss, physical link indicators, disk status, UPS display and AP illumination derive from the same simulation state.
 
 The laptop has a simulated desktop, network status, command prompt (`ipconfig /all`, `ping 1.1.1.1`, `nslookup example.com`), and a browser teaching page. Opening the page runs the existing DHCP/addressing/routing/DNS/TCP/HTTPS checks. DNS lookup is checked independently from HTTPS. It never executes shell commands or loads an external OS. Activity lights illustrate the last successful test briefly; they are not measurements of actual traffic.
 
@@ -189,3 +189,18 @@ Correct, energized power cords pulse green. Correct physical data links pulse bl
 Damage, unavailable source power, incompatible connectors, unsupported lengths or missing optical modules stop the affected animation. Power-strip switches update downstream links immediately. Connection pulses can be switched off, and reduced-motion preferences remain respected. Cable tracing and zoom keep working.
 
 Validation: all thirteen lab test files passed. Browser checks confirmed continuous six-power/five-data pulses on a working lab without a traffic test; turning the PDU off stopped downstream pulses, and restoring it restored the status. The same behavior was checked across bench, rack, rear, network and exploded views, with no browser console errors.
+
+
+## Edition 30: exploded plugs and device wiring menu
+
+The exploded view keeps the equipment chassis intact. Dotted leaders connect numbered sockets on its photograph to enlarged socket faces. Matching plugs pull away along their insertion axis, and connected wires run between those plugs. The visual gaps do not unplug the simulated cable. Green power and blue physical-link pulses remain active when eligible. Compact power paths include their matched AC-to-DC adapter. Connector images are generic illustrations, not vendor drawings or a mechanical disassembly.
+
+Start with one focused socket and its actual peer. Click another numbered marker, choose a socket, or use Show all sockets to expand the fan-out. The diagram retains zoom and contained scrolling. Mobile users can pan sideways; the page itself remains contained.
+
+- Click once to select a device.
+- Double-click its picture to open exploded wiring.
+- Hold and drag the picture to move the device, keeping cables attached.
+- Right-click for that device's connected cables, endpoints, lengths, readiness and empty sockets. Choose a connection to inspect its exact pair.
+- Touch: select the device and use Exploded wiring, Connections & wires or Operate device. Keyboard: Enter opens wiring; Shift + F10 opens the list; Escape closes it.
+
+Guided mode keeps its checked tasks and destination beacons. Instructions appear above the workbench, in the device-add prompts and in the manual. All fourteen automated lab test files passed. Browser checks verified distinct click/double-click/drag behavior, eleven preserved cables during device movement, device-specific right-click results, successful guided cable dragging, exact endpoints at 125% zoom, mobile containment and no console errors.
