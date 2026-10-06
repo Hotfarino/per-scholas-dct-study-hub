@@ -12,7 +12,7 @@ The inspector becomes a drawer on smaller screens. Equipment arranges into fewer
 
 ## Direct hardware operation
 
-Click once to select equipment. Double-click its picture for exploded wiring; hold and drag to move it. Right-click for its connection list. Select Operate device above the bench for the larger operating panel, screens and power controls. Choose cable and length, then drag the visible cord onto its first socket. Drag the loose end onto the destination socket. Direct socket-to-socket dragging and clicking each socket also work. Missed drops retain the first end for retry. Existing connector/length/occupied-port/loop rules apply. Seated plugs and cable paths use the actual port positions. Click an occupied socket to unplug the cable. Power controls, PoE, supply loss, physical link indicators, disk status, UPS display and AP illumination derive from the same simulation state.
+Click once to select equipment. Double-click its picture for animated 3D exploded wiring; hold and drag to move it. Right-click for its connection list. Select Operate device above the bench for the larger operating panel, screens and power controls. Choose cable and length, then drag the visible cord onto its first socket. Drag the loose end onto the destination socket. Direct socket-to-socket dragging and clicking each socket also work. Missed drops retain the first end for retry. Existing connector/length/occupied-port/loop rules apply. Seated plugs and cable paths use the actual port positions. Click an occupied socket to unplug the cable. Power controls, PoE, supply loss, physical link indicators, disk status, UPS display and AP illumination derive from the same simulation state.
 
 The laptop has a simulated desktop, network status, command prompt (`ipconfig /all`, `ping 1.1.1.1`, `nslookup example.com`), and a browser teaching page. Opening the page runs the existing DHCP/addressing/routing/DNS/TCP/HTTPS checks. DNS lookup is checked independently from HTTPS. It never executes shell commands or loads an external OS. Activity lights illustrate the last successful test briefly; they are not measurements of actual traffic.
 
@@ -204,3 +204,16 @@ Start with one focused socket and its actual peer. Click another numbered marker
 - Touch: select the device and use Exploded wiring, Connections & wires or Operate device. Keyboard: Enter opens wiring; Shift + F10 opens the list; Escape closes it.
 
 Guided mode keeps its checked tasks and destination beacons. Instructions appear above the workbench, in the device-add prompts and in the manual. All fourteen automated lab test files passed. Browser checks verified distinct click/double-click/drag behavior, eleven preserved cables during device movement, device-specific right-click results, successful guided cable dragging, exact endpoints at 125% zoom, mobile containment and no console errors.
+
+
+## Animated 3D wiring explorer · edition 31
+
+Double-click equipment, or select **3D exploded wiring**. All thirteen equipment types have real WebGL models. The chassis stays assembled while **Explode connections** pulls plugs outward along their insertion axes. **Fit together** and the slider reverse or pause the separation. Drag the 3D canvas to orbit; scroll/pinch or use the zoom buttons. Front, Back, Top, Angled, and **Focus socket** cameras help inspect the fit. Arrow keys orbit when the canvas is focused.
+
+Choose a socket on the model or from its numbered buttons to see the connector definition, fitting instructions, current status and actual other endpoint. Power pulses green when its source is available; physical data links pulse blue when ready. Empty sockets show a clearly labeled example plug. These status animations do not prove that IP, DNS or a website works. Opening the model never changes the build. **Open connection close-up** transfers the selected port to the existing checked wiring panel; its **3D model** button returns to the explorer.
+
+The models include laptop screen/keyboard, rack cases and drive fronts, outlet banks, RJ45 contacts and latches, power input shapes, and fiber/SFP+ connectors. Shapes and spacing are generic teaching geometry, not manufacturer CAD. Cable tails are shortened and label their other endpoint. Matched AC-to-DC adapters remain part of compact-device power cords. Actual wiring still uses the bench or the connection close-up.
+
+Rendering adapts to phone widths; desktop explanations scroll beside the canvas. Reduced motion removes automatic transitions and traveling status beads. A failed WebGL startup offers the connection close-up. Scene changes and closing dispose GPU resources. Three.js 0.186.1 is bundled locally in `lab-three.js`; its MIT license is included as `three-license.txt`.
+
+Verification: all existing lab test suites passed after integration. The new model test checks 13 types / 58 socket positions, correct live and empty states, peer mapping, power loss, damaged cables, and read-only snapshots. Browser checks loaded all equipment types and verified explosion/assembly, socket focus, model-to-wiring navigation, cleanup, and phone layout at 390 px without horizontal overflow.

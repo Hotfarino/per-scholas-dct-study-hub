@@ -1,12 +1,12 @@
-import * as E from './lab-engine.js?v=explode30';
-import {portState} from './lab-hardware.js?v=explode30';
+import * as E from './lab-engine.js?v=model31';
+import {portState} from './lab-hardware.js?v=model31';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function setupEquipmentActions(api){
  const scene=document.getElementById('scene'),s=()=>api.getState();let menuDevice=null,opener=null,owner=null;
  const menu=document.createElement('section');menu.id='equipmentWiringMenu';menu.className='equipment-wiring-menu';menu.hidden=true;menu.setAttribute('role','dialog');menu.setAttribute('aria-labelledby','wiringMenuTitle');document.body.append(menu);
- const strip=document.createElement('div');strip.className='equipment-action-strip';strip.innerHTML='<span id="equipmentSelection">Select a device to explore its wiring.</span><button type="button" id="equipmentExplode">Exploded wiring</button><button type="button" id="equipmentMenu" aria-haspopup="dialog">Connections & wires</button><button type="button" id="equipmentOperate">Operate device</button>';
+ const strip=document.createElement('div');strip.className='equipment-action-strip';strip.innerHTML='<span id="equipmentSelection">Select a device to explore its wiring.</span><button type="button" id="equipmentExplode">3D exploded wiring</button><button type="button" id="equipmentMenu" aria-haspopup="dialog">Connections & wires</button><button type="button" id="equipmentOperate">Operate device</button>';
  document.querySelector('.bench-toolbar').after(strip);
- const hint=document.createElement('details');hint.className='bench-gesture-help';hint.open=true;hint.innerHTML='<summary>How to use the workbench</summary><div><span><b>Click once</b> to select a device.</span><span><b>Double-click</b> its picture to spread out its plugs and wires.</span><span><b>Hold and drag</b> the device picture to move it.</span><span><b>Right-click</b> for its connections and wiring.</span></div><p>On a touch screen, tap a device, then use the buttons above. With a keyboard, focus the picture and press Enter to open; Shift + F10 shows wiring. Drag a cable or socket to connect it. Guided mode still tells you what to do next.</p>';
+ const hint=document.createElement('details');hint.className='bench-gesture-help';hint.open=true;hint.innerHTML='<summary>How to use the workbench</summary><div><span><b>Click once</b> to select a device.</span><span><b>Double-click</b> its picture to open a rotating 3D model of its plugs and wires.</span><span><b>Hold and drag</b> the device picture to move it.</span><span><b>Right-click</b> for its connections and wiring.</span></div><p>On a touch screen, tap a device, then use the buttons above. With a keyboard, focus the picture and press Enter to open; Shift + F10 shows wiring. Drag a cable or socket to connect it. Inside 3D, drag to rotate, scroll to zoom, and use the slider to pull plugs apart. Open connection close-up lets you wire the device. Guided mode still tells you what to do next.</p>';
  strip.after(hint);
  const selected=()=>E.find(s(),s().selected);
  function select(id){if(!E.find(s(),id))return;api.select(id);for(const el of scene.querySelectorAll('.device'))el.classList.toggle('selected',el.dataset.device===id);refresh();}

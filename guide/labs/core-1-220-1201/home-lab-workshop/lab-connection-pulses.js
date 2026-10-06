@@ -1,4 +1,4 @@
-import * as E from './lab-engine.js?v=explode30';
+import * as E from './lab-engine.js?v=model31';
 // Physical correctness is independent of a successful application/network test.
 export function cableIssue(s,l){
  const a=E.find(s,l.a),b=E.find(s,l.b),c=E.cableTypes[l.type],ap=E.port(s,l.a,l.ap),bp=E.port(s,l.b,l.bp);

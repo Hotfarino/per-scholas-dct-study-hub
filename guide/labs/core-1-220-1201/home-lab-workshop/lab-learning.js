@@ -1,4 +1,4 @@
-import * as E from './lab-engine.js?v=explode30';
+import * as E from './lab-engine.js?v=model31';
 const device=(s,type)=>E.ofType(s,type)[0];
 const id=(s,type)=>['wall','isp'].includes(type)?type:device(s,type)?.id;
 const wire=(s,a,ap,b,bp)=>s.links.some(l=>!l.broken&&((l.a===id(s,a)&&l.ap===ap&&l.b===id(s,b)&&l.bp===bp)||(l.b===id(s,a)&&l.bp===ap&&l.a===id(s,b)&&l.ap===bp)));
