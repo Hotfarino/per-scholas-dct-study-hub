@@ -1,4 +1,4 @@
-import * as E from './lab-engine.js?v=os38';
+import * as E from './lab-engine.js?v=os39';
 
 const names={wired:'Home network → rack → VMs',nas:'Shared storage & RAID',virtual:'Virtual machines',wifi:'Wi-Fi network',routed:'Routed networks',cloud:'Cloud backup',trouble:'Troubleshooting',free:'Free build'};
 export function screenPolicy(s){
@@ -13,6 +13,7 @@ export function screenPolicy(s){
 export function commandAllowed(s,command){
  const p=screenPolicy(s);
  if(/^(Get-VM(?:Switch)?|Connect-VMNetworkAdapter)\b/i.test(command)&&!p.vm)return false;
+ if(/^(?:(?:Get|Start|Stop|Restart)-Service|net (?:start|stop)|services\.msc|tasklist|Get-NetTCPConnection)\b/i.test(command)&&!p.service)return false;
  if(/^(?:sudo )?systemctl\b/.test(command)&&!p.service)return false;
  return true;
 }

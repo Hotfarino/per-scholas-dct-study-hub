@@ -1,5 +1,5 @@
-import * as E from './lab-engine.js?v=os38';
-import {portState} from './lab-hardware.js?v=os38';
+import * as E from './lab-engine.js?v=os39';
+import {portState} from './lab-hardware.js?v=os39';
 export const bodies={wall:[3.2,2.4,.18],isp:[1.8,1.5,.6],laptop:[4.4,.22,2.9],router:[4.2,.65,2.5],switch:[6,.65,2.6],server:[6,1.15,3.8],nas:[2.3,3,2.7],ap:[3,.5,3],surge:[5.5,.5,1.4],ups:[2,3.2,2.8],pdu:[6.2,.6,1.5],ont:[2.8,.6,2],panel:[5.8,.6,1.7]};
 export function equipmentDimensions(type,rack=false){if(!rack||!E.catalog[type]?.u)return [...bodies[type]];return [6,E.catalog[type].u*(6*1.75/19)-.06,type==='nas'?4.5:type==='ups'?4.7:bodies[type][2]];}
 export function equipmentPorts(type,rack=false){if(!rack||!E.catalog[type]?.u)return portLayout(type);if(!['nas','ups'].includes(type)){const dims=equipmentDimensions(type,true);return portLayout(type).map(p=>({...p,position:[p.position[0]*dims[0]/bodies[type][0],(p.position[1]-.35)*dims[1]/bodies[type][1]+.35,p.position[2]]}));}const [w,h,d]=equipmentDimensions(type,true),ports=Object.entries(E.catalog[type].ports),outputs=ports.filter(([,k])=>k==='powerOut');return ports.map(([id,kind])=>({id,kind,normal:[0,0,-1],position:[kind==='powerIn'?-2.3:kind==='powerOut'?(outputs.findIndex(([p])=>p===id)-(outputs.length-1)/2)*1.05:id==='eth'?1.05:2.1,h/2+.35,-d/2-.01]}));}
