@@ -1,5 +1,6 @@
 // Small original interface glyphs. Ubuntu app artwork is the attributed Yaru theme.
 const paths={
+ lab:'<rect x="2" y="2" width="20" height="20" rx="5" fill="#176fd0"/><path d="M6 7h5v5H6zm7 0h5v5h-5zM6 14h5v4H6zm7 0h5v4h-5z" fill="#fff"/>',
  start:'<path fill="#087cdb" d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/>',
  repos:'<path fill="#e9a918" d="M2 5a2 2 0 0 1 2-2h5l3 3h8a2 2 0 0 1 2 2v11H2z"/><path fill="#ffd76c" d="M2 8h20v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path fill="#e9ad30" d="M2 15h20v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/>',
  terminal:'<rect x="1" y="3" width="22" height="18" rx="3" fill="#282a30"/><path d="m5 8 4 4-4 4m7 0h6" stroke="#eee" stroke-width="1.8" fill="none"/>',

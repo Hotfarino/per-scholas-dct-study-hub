@@ -1,12 +1,12 @@
-import {installDisplay,displayCorners} from './lab-device-display.js?v=browser41';
-import {routeCable,roomObstacles} from './lab-world-routing.js?v=browser41';
-import {roundedCableCurve,createSeatedPlug} from './lab-world-cables.js?v=browser41';
-import {createBlenderEquipment,createBlenderRoom,setBlenderPortLight} from './lab-blender-assets.js?v=browser41';
-import * as T from './lab-three.js?v=browser41';
-import * as E from './lab-engine.js?v=browser41';
-import {createEquipment} from './lab-world-assets.js?v=browser41';
-import {portState} from './lab-hardware.js?v=browser41';
-import {WORLD,devicePosition,ensureWorldLayout} from './lab-world-state.js?v=browser41';
+import {installDisplay,displayCorners} from './lab-device-display.js?v=laptop42';
+import {routeCable,roomObstacles} from './lab-world-routing.js?v=laptop42';
+import {roundedCableCurve,createSeatedPlug} from './lab-world-cables.js?v=laptop42';
+import {createBlenderEquipment,createBlenderRoom,setBlenderPortLight} from './lab-blender-assets.js?v=laptop42';
+import * as T from './lab-three.js?v=laptop42';
+import * as E from './lab-engine.js?v=laptop42';
+import {createEquipment} from './lab-world-assets.js?v=laptop42';
+import {portState} from './lab-hardware.js?v=laptop42';
+import {WORLD,devicePosition,ensureWorldLayout} from './lab-world-state.js?v=laptop42';
 export function createWorldScene(host,api){
  const scene=new T.Scene();scene.background=new T.Color('#eef5fb');scene.fog=new T.Fog('#eef5fb',220,400);
  const renderer=new T.WebGLRenderer({antialias:true,alpha:false});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFShadowMap;renderer.setClearColor('#eef5fb');renderer.outputColorSpace=T.SRGBColorSpace;host.prepend(renderer.domElement);const canvas=renderer.domElement;canvas.setAttribute('aria-label','Interactive 3D workbench and 18U network rack');canvas.tabIndex=0;

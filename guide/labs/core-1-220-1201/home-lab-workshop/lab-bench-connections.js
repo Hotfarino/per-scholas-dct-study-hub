@@ -1,11 +1,11 @@
-import {moveCableEnd} from './lab-direct-actions.js?v=browser41';
-import * as E from './lab-engine.js?v=browser41';
-import {portState} from './lab-hardware.js?v=browser41';
+import {moveCableEnd} from './lab-direct-actions.js?v=laptop42';
+import * as E from './lab-engine.js?v=laptop42';
+import {portState} from './lab-hardware.js?v=laptop42';
 
 const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 // Coordinates refer to the photographed surface, so sockets and cables share one anchor.
-export {wallSockets,equipmentFaces} from './lab-physical-layout.js?v=browser41';
-import {wallSockets,equipmentFaces} from './lab-physical-layout.js?v=browser41';
+export {wallSockets,equipmentFaces} from './lab-physical-layout.js?v=laptop42';
+import {wallSockets,equipmentFaces} from './lab-physical-layout.js?v=laptop42';
 const label = (port,kind) => kind==='powerIn'?'POWER IN':kind==='powerOut'?port.replace('out','OUT '):port.toUpperCase();
 const cordArt = '<svg viewBox="0 0 88 42" aria-hidden="true"><path d="M2 20C14 43 40 42 49 18S71 7 72 20" fill="none" stroke="currentColor" stroke-width="5"/><path d="M65 8V1m14 7V1m-7 7V3" stroke="#b1bbc5" stroke-width="3"/><rect x="60" y="8" width="25" height="25" rx="5" fill="currentColor"/><path d="M63 13h18m-18 5h18m-18 5h18" stroke="#617585"/></svg>';
 

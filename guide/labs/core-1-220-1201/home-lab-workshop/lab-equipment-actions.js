@@ -1,5 +1,5 @@
-import * as E from './lab-engine.js?v=browser41';
-import {portState} from './lab-hardware.js?v=browser41';
+import * as E from './lab-engine.js?v=laptop42';
+import {portState} from './lab-hardware.js?v=laptop42';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function setupEquipmentActions(api){
  const scene=document.getElementById('scene'),s=()=>api.getState();let menuDevice=null,opener=null,owner=null;

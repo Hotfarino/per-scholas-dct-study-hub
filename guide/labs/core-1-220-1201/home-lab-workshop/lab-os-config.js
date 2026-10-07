@@ -1,6 +1,6 @@
-import * as E from './lab-engine.js?v=browser41';
-import {portState} from './lab-hardware.js?v=browser41';
-import {screenPolicy} from './lab-screen-policy.js?v=browser41';
+import * as E from './lab-engine.js?v=laptop42';
+import {portState} from './lab-hardware.js?v=laptop42';
+import {screenPolicy} from './lab-screen-policy.js?v=laptop42';
 export const holder=(s,id)=>E.find(s,id)||s.vms.find(v=>v.id===id);
 export function configuration(s,id){const h=holder(s,id);return {adapterEnabled:true,driverInstalled:true,dhcpReleased:false,hostname:(h?.id||'LAB-PC').toUpperCase(),allowServices:h?.firewall!==false,...h?.osState,allowServices:E.find(s,id)?h.firewall!==false:h?.osState?.allowServices!==false};}
 export function adapter(s,c){const q=configuration(s,c.id),name=c.device?.network?.wifi?'Wi-Fi':'Ethernet';const physical=c.vm?E.find(s,c.vm.host):c.device;const p=physical?.nic==='10g'?'sfp':'eth';const link=s.links.find(l=>l.type!=='power'&&!l.broken&&((l.a===physical?.id&&l.ap===p)||(l.b===physical?.id&&l.bp===p)));const peer=link&&E.find(s,link.a===physical.id?link.b:link.a);const wired=!!(physical&&portState(s,physical.id,p).live);const up=c.vm?!!c.vm.running:c.device?.network?.wifi?E.wifiAssociation(s,c.id).ok:wired;

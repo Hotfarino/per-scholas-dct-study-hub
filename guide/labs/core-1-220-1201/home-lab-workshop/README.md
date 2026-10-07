@@ -1,3 +1,18 @@
+## Edition 42 — configure and test from the laptop
+
+Build and wire equipment on the bench, then use **Laptop screen → Lab console**. The external inspector, network forms, VM/cloud workshop, test panel and planner now live inside the laptop display. The current guided task and Continue button remain above the screen. Optional OS repair exercises are folded under **More OS exercises**.
+
+- **Device setup → Edge router** opens Chrome at the router’s current numeric LAN address. Chrome and Firefox both accept that modeled HTTP address. Power, a working adapter, a compatible local subnet and a LAN path are required. Numeric local setup does not require DNS, NAT or Internet service. Invalid paths, disabled DHCP and a changed router address produce recovery guidance instead of a usable stale form.
+- **First router setup:** with DHCP off, Windows Settings → Network & internet → Edit → Manual (static IPv4) (or Ubuntu IPv4 settings) needs an unused address in the router’s subnet. The default /24 lab suggests 192.168.50.10, mask 255.255.255.0, gateway/DNS 192.168.50.1. Save, return to the router browser tab and reload. Enable DHCP, then explicitly return the laptop to DHCP automatic. No address is silently changed.
+- **Network tests** opens diagnostics inside Lab console. A laptop’s Internet HTTPS test opens `https://example.com` in that laptop’s Chrome. Reload checks current network state. Server-origin and file-sharing tests report their selected source, result and path in the console.
+- **Device setup** provides local switch/AP setup and a clearly labeled Bench service simulator for physical installation, firmware, RAID, OS installation and server services. Switch/AP setup checks power and the client’s LAN path. These teaching appliances do not model a management IP. Bench service represents hands-on access, not remote access to an unbooted or uncabled server.
+- **Virtual machines** retains resource sizing, guest installation/start, switch modes, service controls and tests. VM changes require the laptop’s network path to its ready host. **Cloud console** has an explicit backup source selector, with completion reflected immediately in the guided task.
+- **IP & Wi-Fi practice** shows readouts and diagnostics, with shortcuts into native OS settings or device setup. **Build planner & tools** retains templates, capability explanations and PowerShell practice. Mobile shortcuts open these laptop apps too.
+
+The router page is an independent generic teaching interface on modeled HTTP port 80. Authentication and TLS are not simulated; real management should use the device’s supported secure access and credentials. No browser page, command or configuration changes a real device. Existing build saves, 3D cabling, power and part-fit rules are preserved.
+
+Validation: all eight guided courses (247 task checks) completed through the laptop routing; router bootstrap/recovery, local access boundaries, public browsing, VM isolation, cloud completion, panel lifecycle and unique controls were checked. See `test-results/home-lab-laptop-42.md`.
+
 ## Edition 41 — Chrome and Firefox on the laptop
 
 To enter: connect laptop power, select it and press **Switch on**, then **Laptop screen** in the workbench toolbar or click the modeled LCD. Windows and Ubuntu now offer **Google Chrome** and **Mozilla Firefox** shortcuts on the desktop and in the taskbar/dock and app launcher.
@@ -78,7 +93,7 @@ The main workbench and 18U rack now share a real-time Three.js scene with Blende
 - NAS and UPS equipment use separately authored 2U rack variants rather than distorted tower geometry.
 - Drag equipment between the desk and numbered rack spaces. Support, height, collision and heavy-UPS placement rules apply. Mounting controls provide a click alternative.
 - Focus selected enlarges small sockets. The named socket buttons and equipment selector provide keyboard alternatives.
-- Device settings opens the inspector. Laptop screen retains the simulated desktop, terminal and browser.
+- Configure on laptop opens device setup inside the client display. Laptop screen also provides terminal, browsers and diagnostic tools.
 - Guided Find buttons frame both endpoints together. Guided destinations pulse; Practice and Free build do not flash the answers.
 - Green cable pulses show available power; blue pulses show physical link readiness. Neither is a traffic measurement. Test IP/DNS/services separately.
 - 3D desk coordinates are saved separately in layout.world and survive save/import and shelf Undo. Existing builds load into an orderly initial 3D arrangement.
