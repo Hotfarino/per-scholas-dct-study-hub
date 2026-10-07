@@ -1,5 +1,5 @@
-import * as T from './lab-three.js?v=screen37';
-import {bodies,portLayout} from './lab-model3d-data.js?v=screen37';
+import * as T from './lab-three.js?v=os38';
+import {bodies,portLayout} from './lab-model3d-data.js?v=os38';
 
 // Generic teaching hardware. Each returned group owns its resources; dispose by
 // traversing meshes and collecting unique geometries/materials in Sets.

@@ -1,3 +1,13 @@
+## Edition 38 — recognizable Windows, Ubuntu and terminal desktops
+
+The laptop now opens to an uncluttered desktop. Windows uses the blue Bloom wallpaper, centered taskbar, Start/search panel, file folders, account/tray area, and Windows-style Settings and title bars. Ubuntu 24.04 uses its Noble Numbat wallpaper, Yaru icons, GNOME workspace indicator, centered clock, left dock, application grid, and distinct window chrome. Artwork sources and licenses are packaged in `site/lab-os-artwork-credits.txt`.
+
+The teaching profile selector, coach, save and command-reference controls sit above the laptop, outside its OS display. Windows Terminal has PowerShell and Command Prompt tabs with separate transcripts. Ubuntu Terminal uses an aubergine background and colored Bash prompt. Commands use an inline input and Enter; ↑/↓ recalls commands, Ctrl+L clears the current shell. IP output uses each command’s recognizable field layout while deriving values from the model. Unmodeled adapter details are omitted.
+
+Windows Settings → Network & internet → Edit and Ubuntu Network → IPv4 settings edit the same simulated interface. File Explorer / Files opens the lab’s learning repositories. Start / Show applications searches installed learning apps; unavailable lab tools stay disabled. Start’s power control shuts down the simulated machine. The current lab still controls capabilities. VM consoles stay inside the physical client’s display with their own machine state and terminal history.
+
+These are independent, restricted interface recreations. The desktop and artwork do not imply affiliation with Microsoft, Canonical or CompTIA, or execution of real OS kernels. The Windows-style server host console remains a teaching management view. See `test-results/home-lab-os-38.md` for validation.
+
 ## Edition 37 — operating systems on the 3D computer screen
 
 Power the laptop and click its modeled LCD, or choose **Laptop screen / Open computer desktop**. The camera faces the Blender display and the interactive OS surface follows its real four corners. Windows 11 and Ubuntu 24.04 LTS teaching profiles share the physical client’s modeled network settings. The bezel remains visible; **Back to workbench** or Escape restores the workshop and camera. **Larger text** improves readability. Narrow phone screens provide a horizontally pannable workspace; landscape or a larger display is recommended for terminal exercises.

@@ -1,6 +1,6 @@
-import {commandAllowed,screenPolicy} from './lab-screen-policy.js?v=screen37';
-import * as E from './lab-engine.js?v=screen37';
-import {runPowerShell} from './lab-powershell.js?v=screen37';
+import {commandAllowed,screenPolicy} from './lab-screen-policy.js?v=os38';
+import * as E from './lab-engine.js?v=os38';
+import {runPowerShell} from './lab-powershell.js?v=os38';
 // Pure simulation adapter. It never invokes a real shell or sends network requests.
 export const maskFor=p=>Number.isInteger(p)&&p>=0&&p<=32?[24,16,8,0].map(b=>((p?0xffffffff<<(32-p):0)>>>b)&255).join('.'):null;
 export function subnet(ip,prefix){const n=E.ipNumber(ip),p=Number(prefix);if(n===null||!Number.isInteger(p)||p<0||p>32)return null;const mask=maskFor(p),m=E.ipNumber(mask),net=(n&m)>>>0,last=(net|~m)>>>0,fmt=v=>[24,16,8,0].map(b=>(v>>>b)&255).join('.'),count=2**(32-p);return {ip,prefix:p,mask,network:fmt(net),broadcast:p<31?fmt(last):'None (/31 or /32 special case)',first:fmt(p<31?net+1:net),last:fmt(p<31?last-1:last),addresses:count,hosts:p<31?count-2:count,bits:mask.split('.').map(x=>Number(x).toString(2).padStart(8,'0')).join('.'),note:p===31?'A /31 is for supported point-to-point links. Both addresses can be endpoints.':p===32?'A /32 describes one host address or route. It is not a normal shared LAN.':'Ordinary IPv4 subnet: reserve the network and broadcast addresses. Address ranges can include reserved space; this math is not an allocation recommendation.'};}
@@ -24,7 +24,12 @@ export function runCommand(s,id,raw,shell='powershell'){
  if(linux&&cmd==='pwd')return out(true,'/home/student');if((linux&&cmd==='ls')||(!linux&&/^(dir|Get-ChildItem)$/i.test(cmd)))return out(true,'Learning-Repositories/\n  01-Foundations/\n  02-Practice-Projects/\nOpen Files to browse these simulated folders.');
  if(linux&&cmd==='uname -a')return out(true,'Linux home-lab · Ubuntu 24.04 LTS desktop profile\nTeaching output: no guest kernel is executed; kernel build is not modeled.');
  const ipRead=linux?/^(ip (addr|address)( show)?|nmcli device show)$/:shell==='cmd'?/^ipconfig( \/all)?$/i:/^Get-NetIPConfiguration$/i;
- if(ipRead.test(cmd)){const n=a();return out(n.ok,`${linux?'Device':'InterfaceAlias'}: ${nic}\nIPv4: ${n.ip||'Unavailable'}\nMask: ${n.mask||'Unavailable'}\nGateway: ${n.gateway||'None'}\nDNS: ${n.dns||'None'}\nAddress method: ${c.device.network.mode}\n${n.why}`);}
+ if(ipRead.test(cmd)){const n=a(),mode=c.device.network.mode;if(!n.ok)return out(false,n.why);const sub=E.subnetInfo(n.ip,n.mask);
+  if(linux&&cmd==='nmcli device show')return out(true,`GENERAL.DEVICE:                         ${nic}\nGENERAL.TYPE:                           ${c.device.network.wifi?'wifi':'ethernet'}\nGENERAL.CONNECTION:                     Wired connection 1\nIP4.ADDRESS[1]:                         ${n.ip}/${sub.prefix}\nIP4.GATEWAY:                            ${n.gateway||'--'}\nIP4.DNS[1]:                             ${n.dns||'--'}`);
+  if(linux)return out(true,`${nic}:\n    inet ${n.ip}/${sub.prefix} brd ${sub.broadcast} scope global ${mode==='dhcp'?'dynamic ':''}${nic}`);
+  if(shell==='cmd')return out(true,`Windows IP Configuration\n\n${c.device.network.wifi?'Wireless LAN':'Ethernet'} adapter ${nic}:\n\n   IPv4 Address. . . . . . . . . . . : ${n.ip}\n   Subnet Mask . . . . . . . . . . . : ${n.mask}\n   Default Gateway . . . . . . . . . : ${n.gateway||''}${/\/all$/i.test(cmd)?'\n   DHCP Enabled. . . . . . . . . . . : '+(mode==='dhcp'?'Yes':'No')+'\n   DNS Servers . . . . . . . . . . . : '+(n.dns||''):''}`);
+  return out(true,`InterfaceAlias       : ${nic}\nIPv4Address          : ${n.ip}\nIPv4DefaultGateway   : ${n.gateway||''}\nDNSServer            : ${n.dns||''}`);
+ }
  if(linux&&cmd==='ip route'){const n=a(),sub=n.ok?E.subnetInfo(n.ip,n.mask):null;return out(n.ok,n.ok?`${sub.network}/${sub.prefix} dev ens18 scope link src ${n.ip}\n${n.gateway?'default via '+n.gateway+' dev ens18':'No default route'}`:n.why);}
  if((linux&&cmd==='nmcli device status')||(!linux&&/^Get-NetAdapter$/i.test(cmd))){const n=a();return out(n.ok,`${nic}   ${c.device.network.wifi?'wireless':'ethernet'}   ${n.ok?'configured':'check link/addressing'}\n${n.why}\nThis simplified view reports lab readiness; real adapter link state and IP readiness are separate.`);}
  if((linux&&(m=cmd.match(/^(?:resolvectl query|nslookup) (example\.com)$/)))||(!linux&&/^nslookup example\.com$/i.test(cmd))){const r=resolve(s,id);return out(r.ok,r.ok?'example.com → '+r.ip+'\nDocumentation-only address. No real DNS query.':r.why);}
