@@ -1,4 +1,4 @@
-import * as T from './lab-three.js?v=focus40';
+import * as T from './lab-three.js?v=browser41';
 // The authored Blender screen is the anchor. No guessed page coordinates.
 export function displayAnchor(model){
  let display=model.group.getObjectByName('Active_display');

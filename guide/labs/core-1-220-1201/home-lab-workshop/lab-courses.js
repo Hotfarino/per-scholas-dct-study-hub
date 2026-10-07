@@ -1,4 +1,4 @@
-import * as E from './lab-engine.js?v=focus40';
+import * as E from './lab-engine.js?v=browser41';
 export const courseNames={wired:'Home network → rack server → VMs',nas:'Rack storage & RAID',virtual:'Virtualization server',wifi:'Wireless home office',routed:'Two subnets, one router',cloud:'Local storage + cloud backup',trouble:'Repair a faulty network',free:'Build your own network'};
 const d=(s,t,n=0)=>E.ofType(s,t)[n], link=(s,a,ap,b,bp,an=0)=>s.links.some(l=>!l.broken&&((l.a===d(s,a,an)?.id&&l.ap===ap&&l.b===(d(s,b)?.id||b)&&l.bp===bp)||(l.b===d(s,a,an)?.id&&l.bp===ap&&l.a===(d(s,b)?.id||b)&&l.ap===bp)));
 export function buildCourse(mission,base){

@@ -1,3 +1,13 @@
+## Edition 41 — Chrome and Firefox on the laptop
+
+To enter: connect laptop power, select it and press **Switch on**, then **Laptop screen** in the workbench toolbar or click the modeled LCD. Windows and Ubuntu now offer **Google Chrome** and **Mozilla Firefox** shortcuts on the desktop and in the taskbar/dock and app launcher.
+
+Both are restricted browser simulations. Open `https://example.com` (or type `example.com`) to exercise the current machine’s modeled network path. Each browser has separate session history and working Back, Forward, Reload and Home controls. Reload reruns the current power/address/routing/DNS/HTTPS checks. Unsupported addresses explain the limit without claiming the network failed; no address triggers external browsing. The request trace is available under **See the request’s path**. Existing guided Browser tasks and project checks continue to use the same success evidence.
+
+Browser history is kept separately for each computer/VM while the page stays open. It is not included in saved/exported builds; OS-profile changes reset that profile’s desktop session. Cached results remain until a new navigation/reload, as a previously loaded page would. This is an independent educational recreation, not a full Chrome/Firefox installation or an endorsement by their vendors.
+
+Validation: `test-results/home-lab-browsers-41.md`.
+
 ## Edition 40 — a clearer workbench
 
 The current task and workbench come first. **Lesson options** groups help level, desktop access and save/resume. **View controls** holds top-down/rear cameras, pan/rotate, reset and Arrange desk. **More device actions** holds Focus selected, Exploded 3D and Return to shelf. **Connections & cables** opens automatically when a cable is picked up; named sockets and routing feedback stay available. The full instructions and “Why this matters” explanations expand on demand. All tools & other labs still reveals the equipment shelf and other exercises, with planning and IP/Wi-Fi tools grouped in expandable sections.

@@ -52,3 +52,5 @@ GNOME workspace indicator:
 https://release.gnome.org/45/
 GNOME Terminal:
 https://help.gnome.org/gnome-terminal/
+
+Edition 41: Chrome and Firefox identification icons are simplified inline vector redraws. Product names identify the independently recreated practice interfaces; no affiliation or endorsement is implied. Browser navigation uses the simulator’s own code and modeled responses, not the vendors’ browser engines.

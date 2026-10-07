@@ -1,4 +1,4 @@
-import * as E from './lab-engine.js?v=focus40';
+import * as E from './lab-engine.js?v=browser41';
 
 const names={wired:'Home network → rack → VMs',nas:'Shared storage & RAID',virtual:'Virtual machines',wifi:'Wi-Fi network',routed:'Routed networks',cloud:'Cloud backup',trouble:'Troubleshooting',free:'Free build'};
 export function screenPolicy(s){
@@ -6,7 +6,7 @@ export function screenPolicy(s){
  const vm=all||['wired','virtual'].includes(mission),cloud=all||mission==='cloud',wifi=all||mission==='wifi';
  const service=all||['wired','virtual','nas','cloud','trouble'].includes(mission);
  return {name:names[mission]||names.wired,vm,cloud,wifi,service,
-  apps:['repos','terminal','settings','browser','tools',...(vm?['vms']:[]),...(cloud?['cloud']:[])],
+  apps:['repos','terminal','settings','browser','firefox','tools',...(vm?['vms']:[]),...(cloud?['cloud']:[])],
   lessons:['start','shell','ip','subnet','dhcp','windows','linux','ports','diagnose',...(wifi?['wifi']:[]),...(vm?['vm']:[]),...(cloud?['cloud']:[])],
   projects:['read','static','dns','page','automatic',...(wifi?['wifi']:[]),...(vm?['service']:[]),...(cloud?['cloud']:[])]};
 }
