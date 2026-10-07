@@ -1,3 +1,11 @@
+## Edition 40 — a clearer workbench
+
+The current task and workbench come first. **Lesson options** groups help level, desktop access and save/resume. **View controls** holds top-down/rear cameras, pan/rotate, reset and Arrange desk. **More device actions** holds Focus selected, Exploded 3D and Return to shelf. **Connections & cables** opens automatically when a cable is picked up; named sockets and routing feedback stay available. The full instructions and “Why this matters” explanations expand on demand. All tools & other labs still reveals the equipment shelf and other exercises, with planning and IP/Wi-Fi tools grouped in expandable sections.
+
+The laptop key rows retain their correct physical positions; the upside-down key legends are corrected in the Blender authoring script and rebuilt GLB. A warm laminate tabletop, blue ESD mat, cool wall and softer scene lighting separate the equipment from its surroundings. Guided mode starts at the Desk camera. These are presentation changes: simulation rules, connection validation, guided-step completion, OS features, rack geometry, socket coordinates and saved-state format remain unchanged.
+
+Validation: `test-results/home-lab-focus-40.md`. Local browser review includes 1280-, 900- and 390-pixel layouts, phone menu bounds, guided laptop placement/power wiring/power-on, its Windows desktop, camera controls, help-level shortcut and expandable practice sections. Menu placement and the help-level shortcut were corrected during review.
+
 ## Edition 39 — configure, inspect and repair inside the OS
 
 Open the laptop desktop and use **Guided OS task → Start task**. Four tasks teach read/test/browse, disabled-adapter repair, missing-driver installation (Windows), and starting a web service (server-capable labs). Each shows one instruction, **Take me there**, and **Check & continue**. End task restores the fault it introduced. Completion is saved with the build.

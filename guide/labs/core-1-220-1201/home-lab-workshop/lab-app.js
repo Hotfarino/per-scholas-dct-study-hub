@@ -1,15 +1,16 @@
-import {setupDesktop} from './lab-desktop.js?v=os39';
-import {setupWorld} from './lab-world.js?v=os39';
-import {setupModel3D} from './lab-model3d.js?v=os39';
-import {setupRackActions,renderNetworkRack,rackGeometry,rackPosition} from './lab-rack.js?v=os39';
-import {setupEquipmentActions} from './lab-equipment-actions.js?v=os39';
-import {renderCableRoutes,setupCableManager} from './lab-cable-routing.js?v=os39';
-import {setupLearningGuide} from './lab-learning.js?v=os39';
-import {renderBenchEquipment,setupBenchConnections} from './lab-bench-connections.js?v=os39';
-import {setupStudio} from './lab-studio.js?v=os39';
-import {setupHardware,portState} from './lab-hardware.js?v=os39';
-import {setupLabUX} from './lab-ux.js?v=os39';
-import * as E from './lab-engine.js?v=os39';
+import {setupPresentation} from './lab-presentation.js?v=focus40';
+import {setupDesktop} from './lab-desktop.js?v=focus40';
+import {setupWorld} from './lab-world.js?v=focus40';
+import {setupModel3D} from './lab-model3d.js?v=focus40';
+import {setupRackActions,renderNetworkRack,rackGeometry,rackPosition} from './lab-rack.js?v=focus40';
+import {setupEquipmentActions} from './lab-equipment-actions.js?v=focus40';
+import {renderCableRoutes,setupCableManager} from './lab-cable-routing.js?v=focus40';
+import {setupLearningGuide} from './lab-learning.js?v=focus40';
+import {renderBenchEquipment,setupBenchConnections} from './lab-bench-connections.js?v=focus40';
+import {setupStudio} from './lab-studio.js?v=focus40';
+import {setupHardware,portState} from './lab-hardware.js?v=focus40';
+import {setupLabUX} from './lab-ux.js?v=focus40';
+import * as E from './lab-engine.js?v=focus40';
 const $=id=>document.getElementById(id),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let s=E.fresh(),toastTimer,flowTimer;let ux=null,hardware=null,studio=null,benchConnections=null,learning=null,cables=null,equipmentActions=null,rackActions=null,world=null,model3d=null,desktop=null;const by=t=>E.ofType(s,t)[0],has=t=>!!by(t),allOn=ts=>ts.every(t=>by(t)&&E.powered(s,by(t).id)),networkOK=()=>by('laptop')&&E.test(s,by('laptop').id).ok;
 const term=(name,label=name)=>`<a href="#" data-term="${name}">${label}</a>`,opt=(v,t,cur)=>`<option value="${esc(v)}" ${String(cur)===String(v)?'selected':''}>${esc(t)}</option>`,select=(id,items,cur)=>`<select id="${id}">${items.map(([v,t])=>opt(v,t,cur)).join('')}</select>`,input=(id,v,type='text')=>`<input id="${id}" type="${type}" value="${esc(v)}">`,check=(id,on,label)=>`<label class="check"><input id="${id}" type="checkbox" ${on?'checked':''}> ${label}</label>`;
@@ -176,3 +177,5 @@ if(typeof setupEquipmentActions==='function')equipmentActions=setupEquipmentActi
 if(typeof setupModel3D==='function')model3d=setupModel3D({getState:()=>s,openConnection:(id,p)=>world?.focusTarget({a:id,ap:p})});
 if(typeof setupWorld==='function')world=setupWorld({getState:()=>s,result,select:id=>{s.selected=id;renderInspector();equipmentActions?.refresh()},explode:(id,p)=>model3d?.open(id,p),operate:id=>{s.selected=id;renderInspector();ux?.revealInspector();document.body.classList.add('learning-settings-open');$('devicePanel').scrollIntoView({block:'start',behavior:'smooth'});},connections:(id,p)=>hardware?.openConnections(id,p),screen:id=>desktop?.open(id),returnDevice:id=>ux?.returnDevice(id)});
 learning?.refresh();
+
+if(typeof setupPresentation==='function')setupPresentation();

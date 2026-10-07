@@ -1,5 +1,5 @@
-import * as E from './lab-engine.js?v=os39';
-import {bodies,equipmentDimensions} from './lab-model3d-data.js?v=os39';
+import * as E from './lab-engine.js?v=focus40';
+import {bodies,equipmentDimensions} from './lab-model3d-data.js?v=focus40';
 export const WORLD={left:-23,right:11,back:-9,front:11,rackX:17,rackZ:1,rackBase:-8.5,unit:6*1.75/19};
 export const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 export function benchPosition(s,d){const list=s.devices.filter(x=>!['wall','isp'].includes(x.type)),i=Math.max(0,list.indexOf(d)),p=s.layout?.world?.[d.id];return p?[WORLD.left+(p[0]-9)/82*(WORLD.right-WORLD.left),0,WORLD.back+(p[1]-25)/64*(WORLD.front-WORLD.back)]:[-18+(i%4)*8,0,-5+Math.floor(i/4)*5];}

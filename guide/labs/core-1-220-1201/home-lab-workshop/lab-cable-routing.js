@@ -1,4 +1,4 @@
-import * as E from './lab-engine.js?v=os39';
+import * as E from './lab-engine.js?v=focus40';
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const clamp = (v, low, high) => Math.max(low, Math.min(high, v));
 const compact = new Set(['laptop','router','ont','nas','ap']);

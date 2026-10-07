@@ -24,3 +24,5 @@ The exploded viewer keeps the Blender chassis whole and animates only its connec
 References: [Blender glTF export](https://docs.blender.org/manual/en/5.1/addons/import_export/scene_gltf2.html), [meshoptimizer gltfpack](https://meshoptimizer.org/gltf/).
 
 The browser routes cables along the workbench and outside rack channel. The room includes cable-management hoops aligned with that channel. `equipmentDimensions()` and `equipmentPorts()` define the rack-variant geometry contract; the engine uses 18 numbered units while preserving existing lower-unit saved placements.
+
+Edition 40 corrects top-facing text orientation at authoring time: a label with a +Y simulation normal uses the identity Blender quaternion, avoiding the ambiguous parallel-axis track quaternion. Keyboard rows and all socket coordinates stay fixed. The worktop, room wall and floor now have separate materials; the ESD mat remains distinct. Rebuild and meshopt optimization are required before shipping the two GLB files.

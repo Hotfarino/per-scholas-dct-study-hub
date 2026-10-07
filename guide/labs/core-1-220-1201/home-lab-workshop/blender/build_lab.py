@@ -16,6 +16,10 @@ def material(name,c,metal=0,rough=.45,emission=0):
  if emission:p.inputs['Emission Color'].default_value=(*c,1);p.inputs['Emission Strength'].default_value=emission
  M[name]=m;return m
 for args in [('graphite',(.055,.065,.08),.35,.38),('black',(.008,.012,.019),.05,.58),('aluminum',(.48,.55,.61),.78,.3),('steel',(.23,.29,.34),.82,.32),('ivory',(.87,.9,.91),.06,.38),('white',(.96,.975,.99),.05,.32),('rubber',(.023,.027,.032),0,.83),('gold',(.72,.46,.09),.75,.3),('blue',(.014,.27,.56),.2,.35),('green',(.013,.32,.09),0,.5),('screen_active',(.015,.25,.49),.05,.26,.4),('lamp_active',(.01,.6,.27),0,.22,.8),('link_active',(.01,.6,.25),0,.25,.6),('keylegend',(.66,.69,.72),0,.7),('esd',(.075,.19,.24),0,.82),('red',(.55,.025,.018),0,.3)]:material(*args)
+# Separate worktop and backdrop finishes keep equipment readable under studio lighting.
+material('desk_surface',(.36,.235,.135),0,.75)
+material('backdrop_blue',(.38,.53,.63),0,.85)
+material('room_floor',(.49,.55,.61),0,.8)
 def cv(p):return (p[0],-p[2],p[1])
 def group(name,parent=None,**extras):
  o=bpy.data.objects.new(name,None);bpy.context.collection.objects.link(o);o.parent=parent
@@ -44,7 +48,7 @@ def screw(x,y,z,parent,normal=(0,0,1)):
  if normal==(0,0,1):
   box('Phillips slot',(.04,.009,.015),(x,y,z+.009),'black',parent,.002);box('Phillips cross',(.009,.04,.015),(x,y,z+.009),'black',parent,.002)
 def text(label,pos,size,parent,normal=(0,0,1),mat='keylegend'):
- bpy.ops.object.text_add(location=cv(pos));o=bpy.context.object;o.name='Marking '+label;o.data.body=label;o.data.size=size;o.data.extrude=.0003;o.data.align_x='CENTER';o.data.align_y='CENTER';o.rotation_mode='QUATERNION';o.rotation_quaternion=Vector(cv(normal)).to_track_quat('Z','Y');o.data.materials.append(M[mat]);o.parent=parent
+ bpy.ops.object.text_add(location=cv(pos));o=bpy.context.object;o.name='Marking '+label;o.data.body=label;o.data.size=size;o.data.extrude=.0003;o.data.align_x='CENTER';o.data.align_y='CENTER';o.rotation_mode='QUATERNION';o.rotation_quaternion=(1,0,0,0) if normal==(0,1,0) else Vector(cv(normal)).to_track_quat('Z','Y');o.data.materials.append(M[mat]);o.parent=parent
  bpy.ops.object.convert(target='MESH');return bpy.context.object
 def fan(x,y,z,r,parent):
  cyl('Fan shadow',r,.018,(x,y,z),'black',parent)
@@ -203,8 +207,8 @@ def export(roots,path):
 export(list(roots.values())+list(rack_roots.values()),OUT/'lab-blender-hardware.glb')
 
 room=group('lab_environment',assetAuthoring='Blender')
-box('Seamless room floor',(100,.15,90),(0,FLOOR-.09,0),'ivory',room,.04)
-box('Worktop molded edge',(36,.28,22),(-6,-.16,1),'graphite',room,.14);box('White laminate work surface',(35.92,.105,21.92),(-6,-.015,1),'white',room,.08)
+box('Seamless room floor',(100,.15,90),(0,FLOOR-.09,0),'room_floor',room,.04)
+box('Worktop molded edge',(36,.28,22),(-6,-.16,1),'graphite',room,.14);box('Warm laminate work surface',(35.92,.105,21.92),(-6,-.015,1),'desk_surface',room,.08)
 box('ESD work mat',(31,.018,16),(-6,.047,.2),'esd',room,.1)
 for x in [-22,10]:
  for z in [-8,10]:
@@ -226,7 +230,7 @@ for x in [13.85,20.15]:
 box('Cable tray',(31,.12,1.1),(-6,-.95,-8.7),'graphite',room,.04)
 for x in [-20,8]:box('Tray bracket',(.12,1.05,.8),(x,-.46,-8.7),'steel',room,.03)
 back=group('architectural_backdrop',room)
-box('Back wall',(36,10,.18),(-6,1,-10.85),'white',back,.03);box('Blue wall accent',(36,.13,.08),(-6,5.25,-10.7),'blue',back,.02)
+box('Back wall',(36,10,.18),(-6,1,-10.85),'backdrop_blue',back,.03);box('Blue wall accent',(36,.13,.08),(-6,5.25,-10.7),'blue',back,.02)
 compact(room);export([room],OUT/'lab-blender-room.glb')
 # Rear cable-management hoops stay outside the equipment footprint.
 for y in [base+2*U,base+7*U,base+12*U,base+16*U]:

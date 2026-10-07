@@ -1,4 +1,4 @@
-import * as E from './lab-engine.js?v=os39';
+import * as E from './lab-engine.js?v=focus40';
 export const commands=[
  {command:'Get-NetIPConfiguration',name:'Read addresses',meaning:'Get reads information. NetIPConfiguration lists the active interface’s IPv4 address, gateway and DNS server.',source:'https://learn.microsoft.com/en-us/powershell/module/nettcpip/get-netipconfiguration'},
  {command:'Resolve-DnsName example.com',name:'Look up a name',meaning:'DNS translates a name into records. This example asks for example.com and returns a documentation-only address in the simulation.',source:'https://learn.microsoft.com/en-us/powershell/module/dnsclient/resolve-dnsname'},

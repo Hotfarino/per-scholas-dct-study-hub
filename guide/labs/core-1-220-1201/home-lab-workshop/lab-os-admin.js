@@ -1,6 +1,6 @@
-import * as E from './lab-engine.js?v=os39';
-import {adapter,configuration,configure,serviceRows} from './lab-os-config.js?v=os39';
-import {screenPolicy} from './lab-screen-policy.js?v=os39';
+import * as E from './lab-engine.js?v=focus40';
+import {adapter,configuration,configure,serviceRows} from './lab-os-config.js?v=focus40';
+import {screenPolicy} from './lab-screen-policy.js?v=focus40';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function setupAdmin(api){let tool='devices',selection='nic',tab='general',modal='',message='',menu='',selectedService='LabHTTPS';const windowsTitles={devices:'Device Manager',services:'Services',disks:'Disk Management',information:'System Information'};
  const c=()=>api.context(),s=()=>api.state(),a=()=>adapter(s(),c()),linux=()=>c().os==='ubuntu',titles=()=>linux()?{devices:'Hardware',services:'Services',disks:'Disks',information:'About'}:windowsTitles;

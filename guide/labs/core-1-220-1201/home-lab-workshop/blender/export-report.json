@@ -23,9 +23,9 @@
     "nas",
     "ups"
   ],
-  "library_bytes": 14920032,
-  "room_bytes": 3600976,
+  "library_bytes": 14919948,
+  "room_bytes": 3601308,
   "optimization": "gltfpack 1.3.0, EXT_meshopt_compression; named nodes, materials and extras retained",
-  "optimized_library_bytes": 1424312,
-  "optimized_room_bytes": 302512
+  "optimized_library_bytes": 2052268,
+  "optimized_room_bytes": 302804
 }

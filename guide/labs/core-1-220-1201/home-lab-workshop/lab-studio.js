@@ -1,8 +1,8 @@
-import {refreshConnectionPulses} from './lab-connection-pulses.js?v=os39';
-import * as E from './lab-engine.js?v=os39';
-import {portState} from './lab-hardware.js?v=os39';
-import {templates,recommend,buildTemplate,toolsCatalog,freshness} from './lab-planner.js?v=os39';
-import {commands,runPowerShell} from './lab-powershell.js?v=os39';
+import {refreshConnectionPulses} from './lab-connection-pulses.js?v=focus40';
+import * as E from './lab-engine.js?v=focus40';
+import {portState} from './lab-hardware.js?v=focus40';
+import {templates,recommend,buildTemplate,toolsCatalog,freshness} from './lab-planner.js?v=focus40';
+import {commands,runPowerShell} from './lab-powershell.js?v=focus40';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function setupStudio(api){
  const $=id=>document.getElementById(id),state=()=>api.getState(),scene=$('scene');let owner=state(),undo=null,plan=null,audio=null,zoom=1;

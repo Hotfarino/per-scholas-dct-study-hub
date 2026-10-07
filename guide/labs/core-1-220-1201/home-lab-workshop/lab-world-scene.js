@@ -1,23 +1,23 @@
-import {installDisplay,displayCorners} from './lab-device-display.js?v=os39';
-import {routeCable,roomObstacles} from './lab-world-routing.js?v=os39';
-import {roundedCableCurve,createSeatedPlug} from './lab-world-cables.js?v=os39';
-import {createBlenderEquipment,createBlenderRoom,setBlenderPortLight} from './lab-blender-assets.js?v=os39';
-import * as T from './lab-three.js?v=os39';
-import * as E from './lab-engine.js?v=os39';
-import {createEquipment} from './lab-world-assets.js?v=os39';
-import {portState} from './lab-hardware.js?v=os39';
-import {WORLD,devicePosition,ensureWorldLayout} from './lab-world-state.js?v=os39';
+import {installDisplay,displayCorners} from './lab-device-display.js?v=focus40';
+import {routeCable,roomObstacles} from './lab-world-routing.js?v=focus40';
+import {roundedCableCurve,createSeatedPlug} from './lab-world-cables.js?v=focus40';
+import {createBlenderEquipment,createBlenderRoom,setBlenderPortLight} from './lab-blender-assets.js?v=focus40';
+import * as T from './lab-three.js?v=focus40';
+import * as E from './lab-engine.js?v=focus40';
+import {createEquipment} from './lab-world-assets.js?v=focus40';
+import {portState} from './lab-hardware.js?v=focus40';
+import {WORLD,devicePosition,ensureWorldLayout} from './lab-world-state.js?v=focus40';
 export function createWorldScene(host,api){
  const scene=new T.Scene();scene.background=new T.Color('#eef5fb');scene.fog=new T.Fog('#eef5fb',220,400);
  const renderer=new T.WebGLRenderer({antialias:true,alpha:false});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFShadowMap;renderer.setClearColor('#eef5fb');renderer.outputColorSpace=T.SRGBColorSpace;host.prepend(renderer.domElement);const canvas=renderer.domElement;canvas.setAttribute('aria-label','Interactive 3D workbench and 18U network rack');canvas.tabIndex=0;
  const camera=new T.PerspectiveCamera(40,1,.1,450),controls=new T.OrbitControls(camera,canvas);controls.enableDamping=true;controls.dampingFactor=.09;controls.minDistance=2.5;controls.maxDistance=220;controls.zoomSpeed=.22;controls.panSpeed=.75;controls.rotateSpeed=.65;controls.zoomToCursor=false;controls.screenSpacePanning=true;controls.mouseButtons.LEFT=T.MOUSE.PAN;controls.mouseButtons.RIGHT=T.MOUSE.ROTATE;controls.touches.ONE=T.TOUCH.PAN;controls.touches.TWO=T.TOUCH.DOLLY_PAN;controls.maxPolarAngle=Math.PI*.49;controls.target.set(-3,0,0);camera.position.set(27,28,40);controls.update();
- scene.add(new T.HemisphereLight(0xffffff,0x91a6be,2.7));const sun=new T.DirectionalLight(0xffffff,3.4);sun.position.set(-9,30,16);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-35,right:35,top:25,bottom:-25,near:1,far:80});sun.shadow.bias=-.0002;sun.shadow.normalBias=.025;scene.add(sun);const fill=new T.DirectionalLight(0xb1d9ff,2);fill.position.set(15,15,-18);scene.add(fill);
+ scene.add(new T.HemisphereLight(0xffffff,0x91a6be,1.7));const sun=new T.DirectionalLight(0xffffff,2.3);sun.position.set(-9,30,16);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-35,right:35,top:25,bottom:-25,near:1,far:80});sun.shadow.bias=-.0002;sun.shadow.normalBias=.025;scene.add(sun);const fill=new T.DirectionalLight(0xb1d9ff,1.2);fill.position.set(15,15,-18);scene.add(fill);
  const mat=(c,m=.1,r=.6)=>new T.MeshStandardMaterial({color:c,metalness:m,roughness:r});
  function box(w,h,d,x,y,z,m){const o=new T.Mesh(new T.BoxGeometry(w,h,d),m);o.position.set(x,y,z);o.receiveShadow=true;o.castShadow=true;scene.add(o);return o;}
  const white=mat('#ffffff'),metal=mat('#788e9e',.75,.3),dark=mat('#1c3045',.6,.35),blue=mat('#147fd7');
- box(120,.12,100,0,-9.45,0,mat('#e1eaf2'));box(36,.38,22,-6,-.23,1,white);box(36,.09,.1,-6,-.12,12.06,blue);
+ box(120,.12,100,0,-9.45,0,mat('#b8c4cf'));box(36,.38,22,-6,-.23,1,mat('#a78261',0,.75));box(36,.09,.1,-6,-.12,12.06,blue);
  for(const x of [-22,10])for(const z of [-8,10])box(.28,9.1,.28,x,-4.8,z,metal);
- const backdrop=box(36,10,.2,-6,1,-10.85,white),backTrim=box(36,.25,.17,-6,5.3,-10.7,blue);
+ const backdrop=box(36,10,.2,-6,1,-10.85,mat('#8cabbd',0,.85)),backTrim=box(36,.25,.17,-6,5.3,-10.7,blue);
  // Rack rails and numbered mounting spaces share actual world coordinates with equipment.
  const rows=new T.Group();scene.add(rows);for(const x of [13.6,20.4])for(const z of [-2.9,4.2])box(.18,E.RACK_UNITS*WORLD.unit+.4,.18,x,WORLD.rackBase+E.RACK_UNITS/2*WORLD.unit,z,dark);
  for(const y of [WORLD.rackBase-.2,WORLD.rackBase+E.RACK_UNITS*WORLD.unit+.25]){box(7,.16,7.3,17,y,.65,dark);}for(const x of [13.6,20.4])for(const z of [-2.9,4.2])box(.4,.28,.4,x,-9.2,z,dark);

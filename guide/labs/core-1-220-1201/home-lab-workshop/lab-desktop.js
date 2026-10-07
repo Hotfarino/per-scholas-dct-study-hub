@@ -1,14 +1,14 @@
-import {screenPolicy,screenSession} from './lab-screen-policy.js?v=os39';
-import * as E from './lab-engine.js?v=os39';
-import {context,address,changeAddress,request,runCommand,subnet} from './lab-os-engine.js?v=os39';
-import {lessons,projects,references} from './lab-learning-repos.js?v=os39';
+import {screenPolicy,screenSession} from './lab-screen-policy.js?v=focus40';
+import * as E from './lab-engine.js?v=focus40';
+import {context,address,changeAddress,request,runCommand,subnet} from './lab-os-engine.js?v=focus40';
+import {lessons,projects,references} from './lab-learning-repos.js?v=focus40';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-import {setupAdmin} from './lab-os-admin.js?v=os39';
-import {setupOSPractice} from './lab-os-practice.js?v=os39';
-import {configuration,adapter,configure} from './lab-os-config.js?v=os39';
-import {displayPath} from './lab-os-files.js?v=os39';
-import {commandCatalog} from './lab-os-command-catalog.js?v=os39';
-import {appIcon} from './lab-os-icons.js?v=os39';
+import {setupAdmin} from './lab-os-admin.js?v=focus40';
+import {setupOSPractice} from './lab-os-practice.js?v=focus40';
+import {configuration,adapter,configure} from './lab-os-config.js?v=focus40';
+import {displayPath} from './lab-os-files.js?v=focus40';
+import {commandCatalog} from './lab-os-command-catalog.js?v=focus40';
+import {appIcon} from './lab-os-icons.js?v=focus40';
 const apps={repos:'Learning repositories',terminal:'Terminal',settings:'Settings',browser:'Browser',vms:'Virtual machines',cloud:'Cloud console',tools:'System tools'};
 export function setupDesktop(api){
  const state=()=>api.getState();let machine=null,physical=null,owner=state(),app='repos',folder='home',lessonId=null,projectId=null,shell='powershell',log=[],history=[],historyIndex=0,notice='',maximized=false,minimized=false,guide=true,settingsTab='network',lastFocus=null,quizFeedback='',pageResult=null,windowPosition=null,networkEditing=false,commandLibrary=false,commandFilter='',commandCategory='All',cwd='/';
