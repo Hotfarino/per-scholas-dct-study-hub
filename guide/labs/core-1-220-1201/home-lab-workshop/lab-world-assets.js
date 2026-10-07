@@ -1,5 +1,5 @@
-import * as T from './lab-three.js?v=world33';
-import {bodies,portLayout} from './lab-model3d-data.js?v=world33';
+import * as T from './lab-three.js?v=blender34';
+import {bodies,portLayout} from './lab-model3d-data.js?v=blender34';
 
 // Generic teaching hardware. Each returned group owns its resources; dispose by
 // traversing meshes and collecting unique geometries/materials in Sets.
@@ -231,7 +231,7 @@ export function createEquipment(type,name,powered=false,{rack=false}={}){
   if(rack&&units){
     // Generic rackmount variants retain socket identities and proportional layout.
     // NAS/UPS become low, wide appliance cases instead of standing tower cases.
-    dims=[6,units*.65-.08,d];group.scale.set(dims[0]/w,dims[1]/h,1);
+    dims=[6,units*(6*1.75/19)-.06,d];group.scale.set(dims[0]/w,dims[1]/h,1);
     if(!rackable)for(const sign of [-1,1]){
       box([w*.036,h,.11],[sign*(w/2+w*.009),h/2,d/2-.02],'silver',group,.018);
       for(const yy of [h*.22,h*.78])cylinder(.046,.018,[sign*(w/2+w*.009),yy,d/2+.047],'black');

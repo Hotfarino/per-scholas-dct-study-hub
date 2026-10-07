@@ -1,6 +1,6 @@
-# Home Lab Workshop · 3D edition
+# Home Lab Workshop · Blender 3D edition
 
-The main workbench and 12U rack now share a real-time Three.js scene with generic procedural equipment models. Choose Whole lab, Desk, Top down, Rack front, or Rear / wiring. Device configuration, network tests, RAID, VMs, cloud exercises, narration, sounds and the 42-task guided path retain the existing simulation engine.
+The main workbench and 12U rack now share a real-time Three.js scene with Blender-authored equipment and room models. Models include shaped sockets, contacts, vents, fasteners, drive trays, keyboards and rack hardware. The optimized assets total about 2 MB; generic procedural equipment remains a loading fallback. Choose Whole lab, Desk, Top down, Rack front, or Rear / wiring. Device configuration, network tests, RAID, VMs, cloud exercises, narration, sounds and the 42-task guided path retain the existing simulation engine.
 
 - Select a model; double-click for the exploded 3D connection viewer. It spreads only plugs and wires, keeping the chassis whole and the build unchanged.
 - Drag empty socket markers together to connect. Drag a seated plug to a different socket to move one end, or onto empty desk space to unplug. Rejected moves preserve the original cable. Escape cancels.
@@ -11,9 +11,11 @@ The main workbench and 12U rack now share a real-time Three.js scene with generi
 - Green cable pulses show available power; blue pulses show physical link readiness. Neither is a traffic measurement. Test IP/DNS/services separately.
 - 3D desk coordinates are saved separately in layout.world and survive save/import and shelf Undo. Existing builds load into an orderly initial 3D arrangement.
 
-WebGL 2 is required for the 3D scene. The illustrated workbench remains a fallback if initialization fails. Models and camera dimensions are illustrative, not manufacturer CAD or a physical cable-slack/electrical simulation. 1U remains 1.75 inches and cable lengths are in feet.
+WebGL 2 is required for the 3D scene. The illustrated workbench remains a fallback if initialization fails. Models are generic teaching equipment, not manufacturer CAD or a physical cable-slack/electrical simulation. The 12U rack uses a 19-inch equipment width with the fronts aligned to its rails. 1U remains 1.75 inches and cable lengths are in feet.
 
 Validation: test-lab-world.mjs covers all 13 device types and 116 socket transforms across bench/rack variants, stable placement, collision checks, coordinate persistence, Undo, and rejected cable moves. Existing engine, 42-task guided, save, network, hardware, RAID and VM tests pass. Native browser checks cover plug/unplug, power, double-click explosion, rack drag in/out, invalid move preservation, saved-build reload, and desktop/mobile layout.
+
+Editable assets and reproducible Blender build instructions: [blender/README.md](blender/README.md). The Blender asset test verifies all 58 socket positions, compressed loading, separate link lamps and preserved room identities.
 
 ## Earlier implementation notes
 

@@ -14,3 +14,6 @@ body.learning-active:not(.learning-tools-open) #worldLab{display:block!important
 @media(max-width:760px){.world-active:not(.learning-active) .workspace,.world-active.learning-tools-open .workspace{grid-template-columns:1fr}.world-active:not(.learning-active) .inspector,.world-active.learning-tools-open .inspector{grid-column:1}.world-active .world-stage{height:440px}}
 
 #worldLab .world-guided-power{outline:3px solid #edaa28;animation:world-beacon 1.3s ease-in-out infinite}
+/* Keep action words readable on phones; wrap controls, never individual letters. */
+@media(max-width:760px){#worldLab .world-device-controls>button{flex:1 1 130px;min-width:130px;overflow-wrap:normal;word-break:normal}#worldLab .world-cabling>button{flex:1 1 130px;overflow-wrap:normal;word-break:normal}}
+.world-stage,.world-stage button{user-select:none;-webkit-user-select:none}
