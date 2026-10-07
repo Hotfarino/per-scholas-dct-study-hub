@@ -45,6 +45,11 @@ This manifest records the useful attachment groups. The 84 instructional images 
 - [Per Scholas course slide deck 2](https://docs.google.com/presentation/d/1rpmslTRcK8jxpkXYebyDKLsHsdVlhJiLuaXGlUdFB4k/edit?slide=id.p2#slide=id.p2) — external Google Slides source.
 - [Per Scholas course slide deck 2, referenced slide](https://docs.google.com/presentation/d/1rpmslTRcK8jxpkXYebyDKLsHsdVlhJiLuaXGlUdFB4k/edit?slide=id.g3849c9ab0c4_0_412#slide=id.g3849c9ab0c4_0_412) — direct slide link.
 
+### October 6 Discord updates
+
+- **Lesson 17 infographic pack** — three class infographics shared in `#comptia-help`; categorized as Discord-access course material and not mirrored publicly.
+- **Lesson 15 and Lesson 16 podcast overviews** — compressed M4A recordings shared in `#comptia-help`; cataloged as Discord-access recordings only, with no public copy made.
+
 These two user-provided PNGs remain local source files until redistribution rights for the branded artwork are confirmed.
 
 These original publications are separate from the course-community attachment inventory.

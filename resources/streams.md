@@ -1,5 +1,13 @@
 # Live and Recorded Study Sessions
 
+## Newly cataloged Discord recordings
+
+- **Lesson 13 podcast overview** — shared October 5 in `#comptia-help`; Discord-access M4A, not mirrored publicly.
+- **Lesson 15 podcast overview** — shared October 6 in `#comptia-help`; Discord-access M4A, not mirrored publicly.
+- **Lesson 16 podcast overview** — shared October 6 in `#comptia-help`; Discord-access M4A, not mirrored publicly.
+
+These course recordings remain available through the original Discord channel. They are listed for discovery only and are not republished here without clear redistribution permission.
+
 This catalog tracks course-community study streams and links to recordings only when the recording is intentionally shared and authorized for the listed audience. It does not mirror paid course screens, private participant audio/video, or recordings with unclear permission.
 
 ## Session catalog
