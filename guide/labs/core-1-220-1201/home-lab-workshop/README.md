@@ -1,8 +1,26 @@
-# Home Lab Workshop
+# Home Lab Workshop · 3D edition
+
+The main workbench and 12U rack now share a real-time Three.js scene with generic procedural equipment models. Choose Whole lab, Desk, Top down, Rack front, or Rear / wiring. Device configuration, network tests, RAID, VMs, cloud exercises, narration, sounds and the 42-task guided path retain the existing simulation engine.
+
+- Select a model; double-click for the exploded 3D connection viewer. It spreads only plugs and wires, keeping the chassis whole and the build unchanged.
+- Drag empty socket markers together to connect. Drag a seated plug to a different socket to move one end, or onto empty desk space to unplug. Rejected moves preserve the original cable. Escape cancels.
+- Drag equipment between the desk and numbered rack spaces. Support, height, collision and heavy-UPS placement rules apply. Mounting controls provide a click alternative.
+- Focus selected enlarges small sockets. The named socket buttons and equipment selector provide keyboard alternatives.
+- Device settings opens the inspector. Laptop screen retains the simulated desktop, terminal and browser.
+- Guided Find buttons frame both endpoints together. Guided destinations pulse; Practice and Free build do not flash the answers.
+- Green cable pulses show available power; blue pulses show physical link readiness. Neither is a traffic measurement. Test IP/DNS/services separately.
+- 3D desk coordinates are saved separately in layout.world and survive save/import and shelf Undo. Existing builds load into an orderly initial 3D arrangement.
+
+WebGL 2 is required for the 3D scene. The illustrated workbench remains a fallback if initialization fails. Models and camera dimensions are illustrative, not manufacturer CAD or a physical cable-slack/electrical simulation. 1U remains 1.75 inches and cable lengths are in feet.
+
+Validation: test-lab-world.mjs covers all 13 device types and 116 socket transforms across bench/rack variants, stable placement, collision checks, coordinate persistence, Undo, and rejected cable moves. Existing engine, 42-task guided, save, network, hardware, RAID and VM tests pass. Native browser checks cover plug/unplug, power, double-click explosion, rack drag in/out, invalid move preservation, saved-build reload, and desktop/mobile layout.
+
+## Earlier implementation notes
+
 
 Public interactive simulator: https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site/home-lab.html
 
-Begin in **Guided** mode. The first visible task is **Add Laptop client**. Complete each task and press **Continue** after the lab confirms it. The path runs from first power-up through a home network, rack server, RAID and virtual machine. **All tools & other labs** opens the full workshop without removing the current build.
+Begin with **Home network from zero**. The first guided path continues through a rack server, RAID and virtual machines. Open **Show exact steps & why** at each checkpoint. Use the device inspector to connect labeled ports and configure equipment, then send test traffic.
 
 ## Bright workbench update
 
@@ -12,7 +30,7 @@ The inspector becomes a drawer on smaller screens. Equipment arranges into fewer
 
 ## Direct hardware operation
 
-Click once to select equipment. Double-click its picture for an assembled connection close-up; hold and drag to move it. Right-click for its connection list. Select Operate device above the bench for the larger operating panel, screens and power controls. Choose cable and length, then drag the visible cord onto its first socket. Drag the loose end onto the destination socket. Direct socket-to-socket dragging and clicking each socket also work. Missed drops retain the first end for retry. Existing connector/length/occupied-port/loop rules apply. Seated plugs and cable paths use the actual port positions. Click an occupied socket to unplug the cable. Power controls, PoE, supply loss, physical link indicators, disk status, UPS display and AP illumination derive from the same simulation state.
+Click equipment on the bench to open a larger operating panel. Choose cable and length, click its first socket, and click the destination socket. Existing connector/length/occupied-port/loop rules apply. Seated plugs and cable paths use the actual port positions. Click an occupied socket to unplug the cable. Power controls, PoE, supply loss, physical link indicators, disk status, UPS display and AP illumination derive from the same simulation state.
 
 The laptop has a simulated desktop, network status, command prompt (`ipconfig /all`, `ping 1.1.1.1`, `nslookup example.com`), and a browser teaching page. Opening the page runs the existing DHCP/addressing/routing/DNS/TCP/HTTPS checks. DNS lookup is checked independently from HTTPS. It never executes shell commands or loads an external OS. Activity lights illustrate the last successful test briefly; they are not measurements of actual traffic.
 
@@ -96,10 +114,6 @@ The client supports both modeled radio bands/security profiles, with no roaming 
 
 Sources: [Microsoft Windows network settings](https://support.microsoft.com/en-us/windows/experience/connectivity-networking/essential-network-settings-and-tasks-in-windows), [Cisco wireless RF reference](https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/technical-reference/wireless-rf-reference-guide.html), and the CompTIA objectives linked above.
 
-## Run locally
-
-Serve this directory over HTTP (for example, `python3 -m http.server 8767`) and open `http://localhost:8767/home-lab.html`. JavaScript modules require HTTP; opening the HTML directly from disk is not supported. Share the public link above with classmates.
-
 
 ## Lab studio: templates, tools and feedback
 
@@ -107,7 +121,7 @@ Use **Planner & PowerShell** above the bench. Four working examples cover a conn
 
 The searchable parts library explains eleven equipment types plus CPU, RAM, NIC and storage options. Six diagnostic tools use the existing simulation state. A basic cable check is distinct from bandwidth certification, a power budget is distinct from measured power, and a successful TCP connection is distinct from application or data health.
 
-Healthy power connections pulse green continuously while power is available. Healthy physical data links pulse blue continuously, without first running a traffic test. These are status animations, not measured traffic or electrical waveforms. IP, DNS and application reachability require a separate network test. **Sound on** opts into connection, completion and error tones with a volume control; written results remain available. **Guided steps** and **Connection pulses** can be disabled. Reduced-motion preferences are respected. The workbench/rack has its own scrollable viewport, zoom controls, Fit width, and Up/Down buttons. Expanding the bench recomputes its width and cable geometry.
+Successful test paths show moving data pulses. Brief link pulses require a live data link. Power cables never carry data pulses. **Sound on** opts into connection, completion and error tones with a volume control; written results remain available. **Guided steps** and **Data pulses** can be disabled. Reduced-motion preferences are respected. The workbench/rack has its own scrollable viewport, zoom controls, Fit width, and Up/Down buttons. Expanding the bench recomputes its width and cable geometry.
 
 ### PowerShell practice
 
@@ -126,74 +140,3 @@ Primary references: [Microsoft Get-NetIPConfiguration](https://learn.microsoft.c
 The new AI-generated bench backdrop is native 1672 × 941. It is not advertised as a native 4K photograph. Higgsfield required a paid plan; the available image generator supplied the fallback without a plan upgrade. `lab-reference-4k.svg` has a scalable 3840 × 2160 canvas with correct generic router/switch ports, server storage, rack positions and power/data paths. It is a technical vector reference, not a manufacturer photograph. Existing interactive sockets, switches and indicators remain tied to the teaching model.
 
 `node test-lab-studio.mjs` verifies four connected templates, resource and compatibility checks, PowerShell parser/state changes, isolation, stale-data rejection, optional sounds, scroll/zoom controls, tabs, search and template Undo. Existing lab regression checks also pass. Browser review covered desktop and 390 px layouts, independent rack scrolling at increased zoom, expanded-bench width, template Undo, PowerShell output, fresh/stale examples, data pulses and an empty error console. No horizontal page overflow was observed in those reviewed layouts.
-
-## Grab-and-plug cord interaction
-
-A visible cord tray is available as soon as equipment opens. Unconnected power inputs start with an AC power cord selected. The connection panels appear above the equipment screens. Drag the cord to the first socket, then drag its loose end to the other socket. The dialog scrolls near its edges while dragging; invalid, occupied and missed targets produce a written explanation. Cancel clears the pending cable. Power requires two valid endpoints and the relevant power switches.
-
-Browser checks covered real mouse dragging to the laptop and wall outlet, power-on screen behavior, a missed-drop retry and a 390-pixel layout with no horizontal dialog overflow. Automated checks cover a visible cord before selection, wrong first sockets, cable length, occupied sockets, cancellation and preserving pointer targets during a drag.
-
-## Quick power setup
-
-Open equipment that needs power: its input is preselected with a 6-ft cord. Drag the loose plug directly to a blue outlet, then use the **Turn on** button. No cable is added or switch changed merely by opening equipment. The suggested source prefers powered equipment with a free outlet and avoids chained surge protectors and downstream power sources. Existing wiring stays intact. When no suitable outlet is free, the prompt explains what is missing.
-
-**Cable options** holds manual cable type and length controls. Cancel returns to manual two-end practice; clicking matching sockets still works. Browser checks verified one-drag power, the explicit power-on action, manual options, an empty error console and no horizontal dialog overflow at 390 pixels. Automated checks also cover unavailable outlets, powered surge suggestions and reopening wired equipment.
-
-
-## Physical workbench connections — edition 25
-
-The four sockets on the two wall plates in the workbench photograph are now interactive. Grab the loose cord below equipment and drop it on a wall, surge, UPS or PDU socket. Drag between pictured device ports for data cabling. Blue outlines indicate matching connectors; green highlights a fitting drop. Invalid or occupied sockets and unsuitable cable lengths explain the error without adding a connection. A missed drop keeps the first end selected for retry; **Put cord down** or Escape cancels it. Clicking each socket is an alternative to dragging.
-
-Generic equipment uses a new 12-cell photorealistic atlas (native 1086 × 1448, 362 × 362 per cell). Ports align with the depicted connectors. Seated plugs, AC-to-DC adapter bricks, power lights, the laptop screen and the surge protector’s pictured rocker respond to the lab state. Click a seated plug and choose **Unplug this cable** to remove it. Device movement keeps the cords attached. The switch has eight copper ports plus its modeled SFP+ slot; older six-port saved builds load with ports 7 and 8 set to VLAN 1.
-
-The art depicts generic training equipment, not exact manufacturer replicas. The wall sockets share the existing simulated 1,800 W supply limit. Rear and overview modes remain simplified views. Compact devices use the matched adapter included in the teaching power cable. The laptop’s detailed apps open in its operating panel.
-
-Verification included real browser mouse drags to photographed wall sockets, Ethernet to the switch’s eighth port, wrong-connector rejection, unplugging, power and link states, surge rocker operation, device movement, 115% zoom, and a 390-pixel mobile layout without page overflow. All lab regression suites passed, including saved-build migration, RAID/VM behavior, networking, power rules, planner and PowerShell practice. No browser errors appeared during the reviewed flows.
-
-
-## Beginner workflow — edition 26
-
-The default first visit has one current task beside the workbench, with 42 checked tasks across five chapters: first power-up, building the network, opening a page, building a rack server, and running a virtual machine. Each task says what to do, why it matters and what success looks like. The blue action adds the current device or locates the exact cord, port or settings section. Numbered highlights identify cable endpoints. Continue unlocks from the real simulation state; it does not mark an unfinished task complete.
-
-**Guided** shows explanations, highlights, optional task narration and help. **Practice** keeps the task and checks, with explanations and highlights available on request. **Free build** removes the lesson hints and exposes the full workspace. Changing help levels preserves equipment and wiring. Advanced areas remain available under **All tools & other labs**. Settings open at the relevant section; the VM chapter keeps the lesson next to the VM workspace.
-
-**Save my progress** explicitly saves the lab and current task in this browser. **Resume saved build** loads it. Export/import also preserves the task index. There is no automatic cross-device save. Existing saved builds remain compatible. The parts menu now retains its selected component while installing repeated items, such as four equal drives.
-
-Validation: all 42 tasks were completed through the browser, including direct cord dragging, DHCP configuration, installation of four drives, RAID 10, hypervisor setup and a successful laptop-to-guest HTTPS test. Automated regression checks cover the same complete path, blocked early advance, help modes without resets, optional hints, tool access and save/resume. Desktop and 390-pixel mobile reviews found no page overflow, and the reviewed flows produced no browser errors. The app remains an independent teaching simulation, not an official CompTIA product.
-
-
-## Edition 27: tidy cable runs
-
-Connected cables now follow rounded, orderly runs, with separate power and data lanes. Short same-row connections stay local. Cables remain anchored to their sockets when a device moves, the bench is arranged or the view zooms. Compact AC-to-DC adapters take less space.
-
-Open **Trace a cable** above the bench and choose one connection. Its route and both sockets stand out while the other wires fade. **Show all cables** restores the full build. The readout gives the two endpoints, cable type and configured length in feet; power, Ethernet, fiber and damaged cables also have a legend. This is visual organization only: the engine still checks actual configured cable lengths and connection rules.
-
-Validation covered the 11-cable saved lab, connected-device dragging, traffic pulses, alternate views, zoom and a 390 px mobile layout. The new cable-routing tests and all eleven existing lab test files passed.
-
-
-## Edition 29: continuous connection status
-
-Correct, energized power cords pulse green. Correct physical data links pulse blue. Animations continue in the bench, rack, rear, network map and hardware close-up; they do not expire after a connection or test. Green means power is available at the cord, even if the connected device is switched off. Blue indicates a physical link, not a guarantee of a valid IP address, DNS or Internet access. The legend and cable-trace readout explain this distinction.
-
-Damage, unavailable source power, incompatible connectors, unsupported lengths or missing optical modules stop the affected animation. Power-strip switches update downstream links immediately. Connection pulses can be switched off, and reduced-motion preferences remain respected. Cable tracing and zoom keep working.
-
-Validation: all thirteen lab test files passed. Browser checks confirmed continuous six-power/five-data pulses on a working lab without a traffic test; turning the PDU off stopped downstream pulses, and restoring it restored the status. The same behavior was checked across bench, rack, rear, network and connection views, with no browser console errors.
-
-
-## Edition 32: direct cables and network rack
-
-The exploded view and 3D opening controls have been removed after learner feedback. Double-click equipment or choose **Connection close-up** to see assembled devices and their sockets. Right-click still lists connected cables and empty sockets. Guided mode retains its exact destination beacons, explanations and checked tasks.
-
-- **Plug in:** drag between compatible empty sockets, or drag a device’s ready power cord to an outlet.
-- **Unplug:** grab a seated plug, pull it away from all sockets, and release. Power and link indicators update immediately.
-- **Move one end:** drag a seated plug into another compatible empty socket. Rejected moves keep the original connection. Escape or an interrupted drag cancels without changing wiring.
-- **Mount:** check **Fit compatible rails / shelf when I mount**, then drag equipment to its bottom U number. Existing fitted supports also work. Selecting equipment and clicking a numbered space is the keyboard/touch alternative.
-- **Return to bench:** drag the rack device’s grip back onto open bench space, or select it and press **Return selected to bench**.
-
-The 12U rack checks occupied spaces, device height, supported equipment and low placement for the heavy UPS. A 2U server dropped at U4 occupies U4 and U5. Mounted devices leave the bench and appear once in the rack; their ports remain interactive and their cables follow. **View rack** enlarges the rack area. Zoom and internal scrolling help reach small sockets.
-
-Relocation preserves the cable’s type, length, ID and damaged state. It validates against the same engine before committing. Drag-out removes the complete modeled connection; persistent dangling half-cables are not modeled. Moving equipment preserves cables in this teaching simulation. Real equipment moves require appropriate support, cable slack and power procedures.
-
-Verification: all lab test suites passed, including the 42-task walkthrough and 90 engine assertions. New tests cover atomic cable moves, invalid/cancelled drag preservation, rack supports/collisions/height/UPS rules, non-rackable rejection, no duplicated mounted bench equipment, and unmounting without cable loss. Native browser drags mounted a PDU at U11, returned it to the bench, and unplugged laptop power with the screen turning off. At 390 px, the page and rack toolbar had no horizontal overflow; the bench retains intentional internal scroll/zoom. No browser application errors were reported.
-
-A complete 3D workspace remains a possible future design, with fixed bench/rack views and direct socket interaction. This edition improves the current illustrated simulator; it does not replace the entire environment with 3D.
