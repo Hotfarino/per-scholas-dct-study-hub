@@ -1,3 +1,17 @@
+## Edition 36 — guided labs and simulated operating systems
+
+Open **Open computer desktop** after powering a laptop, or **Open Ubuntu desktop** on an installed, running Linux VM. Learning repositories are reached inside those desktops. Foundations has 12 lessons, workflows, knowledge checks and a /0–/32 subnet calculator. Practice projects has eight exercises checked against the current machine, successful commands and the lab state. The desktop contains Settings, Terminal, Browser, Virtual Machine Manager, Cloud console and a limited System tools view. Window title bars drag; taskbar icons restore minimized windows. Save progress preserves completed learning checks with the lab; terminal history and unactivated Linux profile changes are session-only.
+
+Windows offers PowerShell and Command Prompt. Ubuntu uses a Bash-style teaching console and NetworkManager profile exercises. Only supported commands run; output is simulated, and no real kernel, command process or network request is launched. Guest static addresses feed both the desktop and physical-client VM tests. Internal/private switches remain isolated and do not simulate guest-to-guest application traffic. The Windows-style host-management desktop is a generic teaching console rather than a claim that a generic hypervisor is Windows 11.
+
+Guided and Practice modes now cover every mission: wired 42 steps, NAS 35, virtualization 42, Wi-Fi 29, routed subnets 31, cloud 40, troubleshooting 5 and sandbox orientation 23. Free help mode removes the checklist without resetting equipment. Shared foundation steps are reused intentionally; these counts are not unique lessons or official PBQs.
+
+Wheel zoom uses bounded 4.5% logarithmic steps per animation frame around a fixed center. Hidden or collapsed viewports no longer change the camera, and starting a lab fits the scene. Existing cable routing, rack mounting and Blender models remain integrated.
+
+Primary references appear in the in-desktop lessons: CompTIA 220-1201/220-1202 objectives, Microsoft Windows/PowerShell/Hyper-V documentation, Ubuntu 24.04 nmcli/systemctl manuals, Cisco subnetting guidance and NIST cloud definitions. Subnet arithmetic, service setup and VLAN implementation include extension practice beyond basic A+ recognition.
+
+Validation: `test-lab-courses.mjs` exercises every added guided mission through UI/engine actions; `test-lab-desktop.mjs` covers command behavior, network changes, VM isolation, service state, subnet boundaries, repository interactions and desktop controls. See `test-results/home-lab-desktop-36.md` for browser review.
+
 # Home Lab Workshop · Blender 3D edition
 
 The main workbench and 18U rack now share a real-time Three.js scene with Blender-authored equipment and room models. Models include shaped sockets, contacts, vents, fasteners, drive trays, keyboards and rack hardware. The optimized assets total about 2 MB; generic procedural equipment remains a loading fallback. Choose Whole lab, Desk, Top down, Rack front, or Rear / wiring. Build mode drags equipment and pans empty space; Move view pans from anywhere; Rotate view orbits. Reset view frames the full environment. Scroll zooms toward the cursor; + / − provide bounded steps. Arrow keys pan and Home resets when the scene is focused. Device configuration, network tests, RAID, VMs, cloud exercises, narration, sounds and the 42-task guided path retain the existing simulation engine.
