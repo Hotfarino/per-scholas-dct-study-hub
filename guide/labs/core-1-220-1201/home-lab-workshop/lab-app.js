@@ -1,15 +1,15 @@
-import {setupDesktop} from './lab-desktop.js?v=desktop36';
-import {setupWorld} from './lab-world.js?v=desktop36';
-import {setupModel3D} from './lab-model3d.js?v=desktop36';
-import {setupRackActions,renderNetworkRack,rackGeometry,rackPosition} from './lab-rack.js?v=desktop36';
-import {setupEquipmentActions} from './lab-equipment-actions.js?v=desktop36';
-import {renderCableRoutes,setupCableManager} from './lab-cable-routing.js?v=desktop36';
-import {setupLearningGuide} from './lab-learning.js?v=desktop36';
-import {renderBenchEquipment,setupBenchConnections} from './lab-bench-connections.js?v=desktop36';
-import {setupStudio} from './lab-studio.js?v=desktop36';
-import {setupHardware,portState} from './lab-hardware.js?v=desktop36';
-import {setupLabUX} from './lab-ux.js?v=desktop36';
-import * as E from './lab-engine.js?v=desktop36';
+import {setupDesktop} from './lab-desktop.js?v=screen37';
+import {setupWorld} from './lab-world.js?v=screen37';
+import {setupModel3D} from './lab-model3d.js?v=screen37';
+import {setupRackActions,renderNetworkRack,rackGeometry,rackPosition} from './lab-rack.js?v=screen37';
+import {setupEquipmentActions} from './lab-equipment-actions.js?v=screen37';
+import {renderCableRoutes,setupCableManager} from './lab-cable-routing.js?v=screen37';
+import {setupLearningGuide} from './lab-learning.js?v=screen37';
+import {renderBenchEquipment,setupBenchConnections} from './lab-bench-connections.js?v=screen37';
+import {setupStudio} from './lab-studio.js?v=screen37';
+import {setupHardware,portState} from './lab-hardware.js?v=screen37';
+import {setupLabUX} from './lab-ux.js?v=screen37';
+import * as E from './lab-engine.js?v=screen37';
 const $=id=>document.getElementById(id),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let s=E.fresh(),toastTimer,flowTimer;let ux=null,hardware=null,studio=null,benchConnections=null,learning=null,cables=null,equipmentActions=null,rackActions=null,world=null,model3d=null,desktop=null;const by=t=>E.ofType(s,t)[0],has=t=>!!by(t),allOn=ts=>ts.every(t=>by(t)&&E.powered(s,by(t).id)),networkOK=()=>by('laptop')&&E.test(s,by('laptop').id).ok;
 const term=(name,label=name)=>`<a href="#" data-term="${name}">${label}</a>`,opt=(v,t,cur)=>`<option value="${esc(v)}" ${String(cur)===String(v)?'selected':''}>${esc(t)}</option>`,select=(id,items,cur)=>`<select id="${id}">${items.map(([v,t])=>opt(v,t,cur)).join('')}</select>`,input=(id,v,type='text')=>`<input id="${id}" type="${type}" value="${esc(v)}">`,check=(id,on,label)=>`<label class="check"><input id="${id}" type="checkbox" ${on?'checked':''}> ${label}</label>`;
@@ -158,7 +158,7 @@ render();try{if(typeof setupLearningGuide==='undefined'&&!localStorage.getItem('
 
 ux=setupLabUX({rackHover:(id,x,y,type)=>rackActions?.hover(id,x,y,type),rackClear:()=>rackActions?.clear(),rackDrop:(id,u)=>rackActions?.attempt(id,u),getState:()=>s,positions,portPosition,drawCables,render,renderScene,renderInspector,toast,result,addDevice:type=>E.addDevice(s,type),returnToShelf:id=>E.returnToShelf(s,id),restoreFromShelf:record=>E.restoreFromShelf(s,record)});
 
-if(typeof setupDesktop==='function')desktop=setupDesktop({getState:()=>s,result,render,save:()=>{$('saveLab').click();try{return localStorage.getItem('home-lab-save-v1')===JSON.stringify(s)}catch{return false}}});
+if(typeof setupDesktop==='function')desktop=setupDesktop({getState:()=>s,result,render,mountScreen:(id,element,close)=>world?.openScreen(id,element,close),unmountScreen:()=>world?.closeScreen(),save:()=>{$('saveLab').click();try{return localStorage.getItem('home-lab-save-v1')===JSON.stringify(s)}catch{return false}}});
 
 hardware=setupHardware({getState:()=>s,getConnection:()=>learning?.connection?.(),result,test:testResult,select:id=>{s.selected=id;renderScene();renderInspector()},settings:()=>ux?.revealInspector(),explain:()=>showTerm(E.find(s,s.selected)?.type||'port')});
 

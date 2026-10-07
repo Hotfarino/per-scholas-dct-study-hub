@@ -1,5 +1,5 @@
-import * as T from './lab-three.js?v=desktop36';
-import {bodies,portLayout} from './lab-model3d-data.js?v=desktop36';
+import * as T from './lab-three.js?v=screen37';
+import {bodies,portLayout} from './lab-model3d-data.js?v=screen37';
 
 // Generic teaching hardware. Each returned group owns its resources; dispose by
 // traversing meshes and collecting unique geometries/materials in Sets.
@@ -89,17 +89,8 @@ export function createEquipment(type,name,powered=false,{rack=false}={}){
     const lid=new T.Group();lid.position.set(0,h+.05,-d/2+.07);lid.rotation.x=-.16;group.add(lid);
     box([w,2.66,.13],[0,1.33,0],'shell',lid,.075);
     box([w-.19,2.46,.034],[0,1.35,.075],'black',lid,.035);
-    box([w-.32,2.29,.014],[0,1.35,.099],powered?'screen':'glass',lid,.012);
+    const display=box([w-.32,2.29,.014],[0,1.35,.099],powered?'screen':'glass',lid,.012);display.userData.labDisplay=true;
     cylinder(.027,.014,[0,2.59,.099],'glass',lid);
-    if(powered){
-      box([3.4,1.77,.009],[0,1.39,.111],'blue',lid,.02);
-      box([2.04,1.23,.012],[-.34,1.48,.122],'white',lid,.025);
-      box([.47,1.23,.013],[-1.13,1.48,.132],'shell',lid);
-      instances([.84,.04,.014],Array.from({length:5},(_,i)=>[-.21,1.85-i*.16,.139]),'silver',lid);
-      box([.63,.18,.014],[-.25,1.05,.14],'blue',lid,.015);
-      box([3.38,.13,.013],[0,.55,.123],'face',lid);
-      for(let i=0;i<5;i++)box([.09,.07,.016],[-.3+i*.15,.55,.137],i===2?'cyan':'white',lid,.01);
-    }
     const keys=[];for(let row=0;row<5;row++)for(let col=0;col<12;col++)keys.push([(col-5.5)*.30,h+.039,-.88+row*.235]);
     instances([.255,.034,.178],keys,'face');
     box([1.46,.025,.16],[0,h+.04,.29],'face',group,.014);
