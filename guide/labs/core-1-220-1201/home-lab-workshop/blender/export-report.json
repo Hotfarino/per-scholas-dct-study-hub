@@ -18,9 +18,14 @@
   "port_anchors": 58,
   "unit_inches": 3.1666666666666665,
   "rack_unit_inches": 1.75,
-  "library_bytes": 13244244,
-  "room_bytes": 2356304,
+  "rack_units": 18,
+  "rack_variants": [
+    "nas",
+    "ups"
+  ],
+  "library_bytes": 14920032,
+  "room_bytes": 3600976,
   "optimization": "gltfpack 1.3.0, EXT_meshopt_compression; named nodes, materials and extras retained",
-  "optimized_library_bytes": 1828732,
-  "optimized_room_bytes": 225468
+  "optimized_library_bytes": 1424312,
+  "optimized_room_bytes": 302512
 }

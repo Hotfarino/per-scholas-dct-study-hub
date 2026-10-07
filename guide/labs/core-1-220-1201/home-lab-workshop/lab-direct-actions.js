@@ -1,4 +1,4 @@
-import * as E from './lab-engine.js?v=blender34';
+import * as E from './lab-engine.js?v=refine35a';
 // Validate a cable move on a temporary state, then commit only a successful move.
 export function moveCableEnd(s,linkId,device,port,destination){
  const old=s.links.find(l=>l.id===linkId);if(!old||!((old.a===device&&old.ap===port)||(old.b===device&&old.bp===port)))return {ok:false,message:'That connection changed. Grab its current plug and try again.'};

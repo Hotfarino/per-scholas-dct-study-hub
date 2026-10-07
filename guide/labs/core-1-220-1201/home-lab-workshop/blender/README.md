@@ -1,8 +1,8 @@
 # Blender hardware and environment
 
-The editable `home-lab.blend` contains the 13 equipment types and a furnished home-lab room. Open it in Blender to inspect, refine, or render the models. These are generic teaching models built against the simulator's port contract, not manufacturer CAD or exact product replicas.
+The editable `home-lab.blend` contains the 13 equipment types plus dedicated 2U rack variants for NAS and UPS and a furnished home-lab room. Open it in Blender to inspect, refine, or render the models. These are generic teaching models built against the simulator's port contract, not manufacturer CAD or exact product replicas.
 
-The library adds beveled cases, vents, fasteners, drive trays, rack ears, keyboard legends, screen surfaces, socket contacts, tabletop materials, rack rails and casters. The 12U rack uses a 19-inch equipment width and 1.75-inch U pitch. The coordinate scale is 19/6 inches per simulation unit. Socket IDs are glTF extras, allowing the browser's power, cabling, rack and guided-learning logic to operate the models.
+The library adds beveled cases, vents, fasteners, drive trays, rack ears, keyboard legends, screen surfaces, socket contacts, tabletop materials, rack rails and casters. The 18U rack uses a 19-inch equipment width and 1.75-inch U pitch. The coordinate scale is 19/6 inches per simulation unit. Socket IDs are glTF extras, allowing the browser's power, cabling, rack and guided-learning logic to operate the models.
 
 ## Rebuild from the Sites source checkout
 
@@ -22,3 +22,5 @@ The browser downloads `lab-blender-hardware.glb` and `lab-blender-room.glb`. GLB
 The exploded viewer keeps the Blender chassis whole and animates only its connectors and wires. Physical link lamps, screen illumination, and cable pulses derive from simulation state. A lit Ethernet link still does not prove that IP, DNS, or a service works.
 
 References: [Blender glTF export](https://docs.blender.org/manual/en/5.1/addons/import_export/scene_gltf2.html), [meshoptimizer gltfpack](https://meshoptimizer.org/gltf/).
+
+The browser routes cables along the workbench and outside rack channel. The room includes cable-management hoops aligned with that channel. `equipmentDimensions()` and `equipmentPorts()` define the rack-variant geometry contract; the engine uses 18 numbered units while preserving existing lower-unit saved placements.

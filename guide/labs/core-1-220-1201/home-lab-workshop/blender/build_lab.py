@@ -7,7 +7,7 @@ from pathlib import Path
 from mathutils import Vector
 BASE=Path(__file__).resolve().parent.parent
 SPEC=json.loads((BASE/'blender/hardware-spec.json').read_text())
-OUT=BASE/'site'; U=6*1.75/19; FLOOR=-9.45; RACK_BASE=-8.5
+OUT=BASE/'site'; U=6*1.75/19; FLOOR=-9.45; RACK_BASE=-8.5; RACK_UNITS=18
 bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
 bpy.context.scene.unit_settings.system='IMPERIAL';bpy.context.scene.unit_settings.scale_length=19*.0254/6
 M={}
@@ -164,7 +164,35 @@ def compact(root):
    bpy.ops.object.select_all(action='DESELECT')
    for o in items:o.select_set(True)
    bpy.context.view_layer.objects.active=items[0];bpy.ops.object.join();items[0].name=parent.name+'__'+mat
-for root in roots.values():compact(root)
+# Purpose-built rack chassis preserve component proportions instead of flattening towers.
+rack_roots={}
+for typ in ['nas','ups']:
+ w,h,d=6,2*U-.06,4.5 if typ=='nas' else 4.7
+ root=group('device_'+typ+'_rack',labType=typ,assetAuthoring='Blender',socketContract=1,labDimensions=[w,h,d]);rack_roots[typ]=root
+ box('Rack enclosure',(w,h,d),(0,h/2,0),'aluminum',root,.045)
+ box('Ventilated front bezel',(w-.08,h-.04,.06),(0,h/2,d/2+.02),'graphite',root,.025)
+ for x in [-3.04,3.04]:
+  box('Rack ear',(.25,h,.12),(x,h/2,d/2-.03),'steel',root,.016)
+  for y in [h*.23,h*.77]:cyl('Captive mounting point',.04,.02,(x,y,d/2+.045),'black',root)
+ if typ=='nas':
+  for i in range(4):
+   x=(i-1.5)*1.27
+   box('Drive tray frame',(1.17,.8,.14),(x,h/2,d/2+.05),'steel',root,.03)
+   box('Drive tray',(1.04,.65,.045),(x,h/2,d/2+.14),'black',root,.025)
+   for j in range(6):box('Air intake',(.9,.026,.018),(x,.3+j*.078,d/2+.175),'graphite',root,.005)
+   box('Tray release handle',(.8,.09,.08),(x,.24,d/2+.2),'aluminum',root,.02)
+ else:
+  box('UPS display bezel',(1.6,.72,.075),(-1.15,h/2,d/2+.065),'black',root,.07)
+  box('UPS display',(1.26,.46,.018),(-1.15,h/2,d/2+.111),'screen_active',root,.02)
+  text('900 W',(-1.15,h/2,d/2+.132),.14,root)
+  for j in range(8):box('Cooling intake',(2.2,.025,.018),(1.2,.24+j*.082,d/2+.062),'black',root,.005)
+ for i in range(18):box('Top ventilation',(.032,.014,1.12),((i-8.5)*.15,h+.005,-.3),'black',root,.006)
+ outputs=[p for p in SPEC['ports'][typ] if p['kind']=='powerOut']
+ for p in SPEC['ports'][typ]:
+  pp=dict(p);k=p['kind'];x=-2.3 if k=='powerIn' else (next(i for i,o in enumerate(outputs) if o['id']==p['id'])-(len(outputs)-1)/2)*1.05 if k=='powerOut' else 1.05 if p['id']=='eth' else 2.1
+  pp['position']=[x,h/2+.35,-d/2-.01];pp['normal']=[0,0,-1];socket(root,typ,pp)
+ power=group(typ+'__rack_power',root,labPower=True);cyl('Power switch',.09,.035,(0,0,0),'black',power);ring('Power ring',.055,.008,(0,0,.025),'lamp_active',power);power.location=cv((2.7,h/2,d/2+.085))
+for root in list(roots.values())+list(rack_roots.values()):compact(root)
 def select_tree(root):
  root.select_set(True)
  for o in root.children_recursive:o.select_set(True)
@@ -172,7 +200,7 @@ def export(roots,path):
  bpy.ops.object.select_all(action='DESELECT')
  for root in roots:select_tree(root)
  bpy.ops.export_scene.gltf(filepath=str(path),export_format='GLB',use_selection=True,export_extras=True,export_yup=True,export_cameras=False,export_lights=False,export_animations=False)
-export(roots.values(),OUT/'lab-blender-hardware.glb')
+export(list(roots.values())+list(rack_roots.values()),OUT/'lab-blender-hardware.glb')
 
 room=group('lab_environment',assetAuthoring='Blender')
 box('Seamless room floor',(100,.15,90),(0,FLOOR-.09,0),'ivory',room,.04)
@@ -184,11 +212,11 @@ for x in [-22,10]:
  box('Bench side brace',(.2,.32,18),(x,-7.1,1),'steel',room,.035)
 box('Rear cross brace',(32,.32,.25),(-6,-7.1,-8),'steel',room,.04)
 # Rack matches 19-inch equipment and 1.75-inch unit pitch in the same world scale.
-base=RACK_BASE;top=base+12*U+.25
+base=RACK_BASE;top=base+RACK_UNITS*U+.25
 for x in [13.65,20.35]:
  for z in [-2.9,4.2]:
   box('Rack upright',(.21,top-base+.35,.21),(x,(top+base)/2,z),'graphite',room,.025)
-  for u in range(12):
+  for u in range(RACK_UNITS):
    for f in [.21,.5,.79]:box('Rack rail mounting hole',(.084,.075,.025),(x,base+(u+f)*U,4.315),'black',room,.003)
 for y in [base-.2,top]:box('Rack cross frame',(7,.17,7.35),(17,y,.66),'graphite',room,.03)
 for x in [13.85,20.15]:
@@ -200,8 +228,14 @@ for x in [-20,8]:box('Tray bracket',(.12,1.05,.8),(x,-.46,-8.7),'steel',room,.03
 back=group('architectural_backdrop',room)
 box('Back wall',(36,10,.18),(-6,1,-10.85),'white',back,.03);box('Blue wall accent',(36,.13,.08),(-6,5.25,-10.7),'blue',back,.02)
 compact(room);export([room],OUT/'lab-blender-room.glb')
+# Rear cable-management hoops stay outside the equipment footprint.
+for y in [base+2*U,base+7*U,base+12*U,base+16*U]:
+ ring('Cable management hoop',.55,.028,(21.3,y,-3.95),'steel',room,(0,1,0))
+export([room],OUT/'lab-blender-room.glb')
 # Save an editable assembled home-lab scene, using an intentional overview camera.
 positions={'wall':(-20,3,-10),'isp':(-14,3.5,-10),'laptop':(-18,0,-5),'pdu':(-10,0,-5),'ont':(-2,0,-5),'router':(6,0,-5),'switch':(-18,0,1),'nas':(-10,0,1),'ap':(-2,0,1),'surge':(6,0,1),'ups':(-18,0,7),'panel':(-10,0,7),'server':(17,base+3*U,4.15-SPEC['bodies']['server'][2]/2)}
+for i,root in enumerate(rack_roots.values()):
+ root.location=cv((17,base+(8+i*3)*U,4.15-(4.5 if i==0 else 4.7)/2))
 for typ,root in roots.items():
  root.location=cv(positions[typ])
  if typ=='server':root.scale=(1,1,(2*U-.06)/SPEC['bodies'][typ][1])
@@ -210,6 +244,6 @@ for name,pos,energy,size in [('Daylight softbox',(-10,30,20),4200,18),('Fill lig
  bpy.ops.object.light_add(type='AREA',location=cv(pos));light=bpy.context.object;light.name=name;light.data.energy=energy;light.data.shape='DISK';light.data.size=size;light.rotation_euler=(Vector(cv((-3,0,0)))-light.location).to_track_quat('-Z','Y').to_euler()
 scene=bpy.context.scene;scene.world.color=(.35,.35,.35);scene.render.engine='CYCLES';scene.cycles.samples=24;scene.cycles.use_denoising=True;scene.render.resolution_x=1600;scene.render.resolution_y=1000;scene.render.resolution_percentage=100;scene.render.image_settings.file_format='PNG';scene.render.filepath=str(BASE/'blender/home-lab-preview.png');scene.view_settings.view_transform='AgX'
 bpy.ops.wm.save_as_mainfile(filepath=str(BASE/'blender/home-lab.blend'),compress=True)
-report={'blender':bpy.app.version_string,'device_types':list(roots),'port_anchors':sum(len(SPEC['ports'][k]) for k in roots),'unit_inches':19/6,'rack_unit_inches':1.75,'library_bytes':(OUT/'lab-blender-hardware.glb').stat().st_size,'room_bytes':(OUT/'lab-blender-room.glb').stat().st_size}
+report={'blender':bpy.app.version_string,'device_types':list(roots),'port_anchors':sum(len(SPEC['ports'][k]) for k in roots),'unit_inches':19/6,'rack_unit_inches':1.75,'rack_units':RACK_UNITS,'rack_variants':list(rack_roots),'library_bytes':(OUT/'lab-blender-hardware.glb').stat().st_size,'room_bytes':(OUT/'lab-blender-room.glb').stat().st_size}
 (BASE/'blender/export-report.json').write_text(json.dumps(report,indent=2));print('LAB_EXPORT_REPORT '+json.dumps(report))
 if os.environ.get('LAB_RENDER')=='1':bpy.ops.render.render(write_still=True)

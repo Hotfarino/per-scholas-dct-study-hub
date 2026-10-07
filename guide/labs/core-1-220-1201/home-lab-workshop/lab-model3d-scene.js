@@ -1,6 +1,6 @@
-import {createBlenderEquipment} from './lab-blender-assets.js?v=blender34';
-import * as T from './lab-three.js?v=blender34';
-import {OrbitControls,RoundedBoxGeometry} from './lab-three.js?v=blender34';
+import {createBlenderEquipment} from './lab-blender-assets.js?v=refine35a';
+import * as T from './lab-three.js?v=refine35a';
+import {OrbitControls,RoundedBoxGeometry} from './lab-three.js?v=refine35a';
 // All geometry is generic teaching hardware. The chassis remains assembled.
 export function createModelScene(host,spec,{onSelect,onError,onExplode}={}){
  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -31,7 +31,7 @@ export function createModelScene(host,spec,{onSelect,onError,onExplode}={}){
  else if(spec.type==='wall'){for(const x of [-.78,.78])box([1.23,2.2,.08],[x,1.55,.13],white,chassis,.1);}
  if(['server','switch','router','pdu','panel'].includes(spec.type)){for(const x of [-1,1]){box([.29,h+.06,.13],[x*(w/2+.08),cy,d/2-.02],metal,chassis);for(const sy of [-1,1])cyl(.045,.024,[x*(w/2+.08),cy+sy*h*.3,d/2+.06],black,chassis);}}
  if(!['wall','isp','panel','laptop'].includes(spec.type))box([.2,.03,.13],[w/2-.35,h+.39,d/2-.3],spec.on?green:black,chassis);
- const authored=createBlenderEquipment(spec.type,spec.name,spec.on);if(authored){chassis.visible=false;authored.group.position.y=.35;root.add(authored.group);authored.group.traverse(o=>{if(o.geometry)geometries.add(o.geometry);if(o.material)for(const m of Array.isArray(o.material)?o.material:[o.material])materials.add(m);});for(const port of authored.ports.values())port.removeFromParent();}
+ const authored=createBlenderEquipment(spec.type,spec.name,spec.on,{rack:spec.rack});if(authored){chassis.visible=false;authored.group.position.y=.35;root.add(authored.group);authored.group.traverse(o=>{if(o.geometry)geometries.add(o.geometry);if(o.material)for(const m of Array.isArray(o.material)?o.material:[o.material])materials.add(m);});for(const port of authored.ports.values())port.removeFromParent();}
  label(spec.type==='server'?'2U LAB SERVER':spec.type==='switch'?'MANAGED SWITCH':spec.type==='laptop'?'LAB CLIENT':spec.type.toUpperCase(),[0,h+.95,-.2],3.4);
  function connector(kind,type,isPlug,cable){const g=new T.Group(),barrel=kind==='powerIn'&&['laptop','router','ont','nas','ap'].includes(type);
   if(barrel){cyl(isPlug?.16:.23,isPlug?.45:.1,[0,0,isPlug?.19:0],isPlug?metal:black,g);cyl(isPlug?.085:.055,.08,[0,0,isPlug?-.055:.075],isPlug?black:gold,g);if(isPlug)cyl(.22,.36,[0,0,.54],black,g);}
