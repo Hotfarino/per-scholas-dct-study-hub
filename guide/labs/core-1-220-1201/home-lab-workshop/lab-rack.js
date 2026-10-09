@@ -1,6 +1,6 @@
-import * as E from './lab-engine.js?v=laptop42';
-import {portState} from './lab-hardware.js?v=laptop42';
-import {mountWithSupport,rackCheck,unmountToBench} from './lab-direct-actions.js?v=laptop42';
+import * as E from './lab-engine.js?v=workshop44';
+import {portState} from './lab-hardware.js?v=workshop44';
+import {mountWithSupport,rackCheck,unmountToBench} from './lab-direct-actions.js?v=workshop44';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function rackGeometry(width,view){return {left:width-(view==='rack'?455:305),top:view==='rack'?150:315,width:view==='rack'?430:280,unit:44,header:95};}
 export function rackPosition(d,width,height,view){const g=rackGeometry(width,view);return [(g.left+g.width/2)/width*100,(g.top+g.header+(E.RACK_UNITS-d.rack+1-E.catalog[d.type].u/2)*g.unit)/height*100];}

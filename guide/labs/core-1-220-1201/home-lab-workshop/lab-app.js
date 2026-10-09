@@ -1,20 +1,20 @@
-import {setupControlCenter} from './lab-control-center.js?v=laptop42';
-import {routerPage} from './lab-management.js?v=laptop42';
-import {setupPresentation} from './lab-presentation.js?v=laptop42';
-import {setupDesktop} from './lab-desktop.js?v=laptop42';
-import {setupWorld} from './lab-world.js?v=laptop42';
-import {setupModel3D} from './lab-model3d.js?v=laptop42';
-import {setupRackActions,renderNetworkRack,rackGeometry,rackPosition} from './lab-rack.js?v=laptop42';
-import {setupEquipmentActions} from './lab-equipment-actions.js?v=laptop42';
-import {renderCableRoutes,setupCableManager} from './lab-cable-routing.js?v=laptop42';
-import {setupLearningGuide} from './lab-learning.js?v=laptop42';
-import {renderBenchEquipment,setupBenchConnections} from './lab-bench-connections.js?v=laptop42';
-import {setupStudio} from './lab-studio.js?v=laptop42';
-import {setupHardware,portState} from './lab-hardware.js?v=laptop42';
-import {setupLabUX} from './lab-ux.js?v=laptop42';
-import * as E from './lab-engine.js?v=laptop42';
+import {setupControlCenter} from './lab-control-center.js?v=workshop44';
+import {routerPage} from './lab-management.js?v=workshop44';
+import {setupPresentation} from './lab-presentation.js?v=workshop44';
+import {setupDesktop} from './lab-desktop.js?v=workshop44';
+import {setupWorld} from './lab-world.js?v=workshop44';
+import {setupModel3D} from './lab-model3d.js?v=workshop44';
+import {setupRackActions,renderNetworkRack,rackGeometry,rackPosition} from './lab-rack.js?v=workshop44';
+import {setupEquipmentActions} from './lab-equipment-actions.js?v=workshop44';
+import {renderCableRoutes,setupCableManager} from './lab-cable-routing.js?v=workshop44';
+import {setupLearningGuide} from './lab-learning.js?v=workshop44';
+import {renderBenchEquipment,setupBenchConnections} from './lab-bench-connections.js?v=workshop44';
+import {setupStudio} from './lab-studio.js?v=workshop44';
+import {setupHardware,portState} from './lab-hardware.js?v=workshop44';
+import {setupLabUX} from './lab-ux.js?v=workshop44';
+import * as E from './lab-engine.js?v=workshop44';
 const $=id=>document.getElementById(id),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let s=E.fresh(),toastTimer,flowTimer;let ux=null,hardware=null,studio=null,benchConnections=null,learning=null,cables=null,equipmentActions=null,rackActions=null,world=null,model3d=null,desktop=null,controlCenter=null;const by=t=>E.ofType(s,t)[0],has=t=>!!by(t),allOn=ts=>ts.every(t=>by(t)&&E.powered(s,by(t).id)),networkOK=()=>by('laptop')&&E.test(s,by('laptop').id).ok;
+let s=E.fresh(),toastTimer,flowTimer;let ux=null,hardware=null,studio=null,benchConnections=null,learning=null,cables=null,equipmentActions=null,rackActions=null,world=null,model3d=null,desktop=null,controlCenter=null,presentation=null;const by=t=>E.ofType(s,t)[0],has=t=>!!by(t),allOn=ts=>ts.every(t=>by(t)&&E.powered(s,by(t).id)),networkOK=()=>by('laptop')&&E.test(s,by('laptop').id).ok;
 const term=(name,label=name)=>`<a href="#" data-term="${name}">${label}</a>`,opt=(v,t,cur)=>`<option value="${esc(v)}" ${String(cur)===String(v)?'selected':''}>${esc(t)}</option>`,select=(id,items,cur)=>`<select id="${id}">${items.map(([v,t])=>opt(v,t,cur)).join('')}</select>`,input=(id,v,type='text')=>`<input id="${id}" type="${type}" value="${esc(v)}">`,check=(id,on,label)=>`<label class="check"><input id="${id}" type="checkbox" ${on?'checked':''}> ${label}</label>`;
 const definitions={
  ip:['IP · Internet Protocol','An IP address names an interface on a network. Think of a house number. IPv4 has four number groups, such as 192.168.50.100. Each group is 0–255. A private address works inside a private network; the router usually uses NAT to reach the public Internet.'],
@@ -136,7 +136,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)r
 
 function renderBottom(){if(!$('cloudBackupSource')){const label=document.createElement('label');label.innerHTML='Backup source<select id="cloudBackupSource"></select>';$('cloudBackup').before(label);}fillKeep('cloudBackupSource',s.devices.filter(d=>['server','nas'].includes(d.type)).map(d=>[d.id,d.name]));const ds=s.devices.filter(d=>['laptop','server','nas'].includes(d.type));fillKeep('testSource',ds.map(d=>[d.id,d.name]));fillKeep('testTarget',[['internet','Internet test page'],['cloud','Cloud service'],...ds.map(d=>[d.id,d.name])]);fillKeep('vmHost',E.ofType(s,'server').map(d=>[d.id,d.name]));renderVMWorkshop();$('cloudModel').value=s.cloud.model;$('cloudService').value=s.cloud.service;$('cloudMeaning').textContent=s.cloud.account?cloudExplanation(s.cloud.model,s.cloud.service):'Choose models to see who operates each layer. This creates no real cloud account.';$('backupStatus').textContent=s.cloud.backup?`Simulated recovery copy recorded from ${s.cloud.sourceName}. ${s.cloud.verified?'Recovery record verified.':'Verify it before relying on it.'}`:'No off-site recovery copy yet.';if(!$('verifyBackup')){const b=document.createElement('button');b.id='verifyBackup';b.textContent='Verify recovery copy';$('backupStatus').after(b);b.onclick=()=>{if(!s.cloud.backup)return toast('Run a backup first.',false);s.cloud.verified=true;result({ok:true,message:'Recovery record verified. This confirms the teaching snapshot, not a real file restore.'})};}}
 function cloudExplanation(m,v){return ({public:'Public: a provider serves many customers.',private:'Private: cloud infrastructure is exclusive to one organization.',hybrid:'Hybrid: distinct private and public cloud environments are connected.',community:'Community: organizations share cloud infrastructure for common needs.'}[m]||'')+' '+({iaas:'IaaS: provider manages physical infrastructure; you manage guest OS and apps.',paas:'PaaS: provider manages the platform; you deploy and manage your app.',saas:'SaaS: provider runs the app; you manage your data and access.'}[v]||'');}
-function render(){renderCoach();renderScene();renderInspector();renderCables();renderBottom();$('mission').value=s.mission;$('powerOutage').textContent=s.outage?'Restore wall power':'Simulate wall-power loss';$('safetyTools').innerHTML=check('toolMat',s.safety.mat,'Grounded ESD mat')+check('toolStrap',s.safety.strap,'ESD wrist strap')+check('toolClear',s.safety.clearance,'Airflow and workspace clear')+`<p class="small">${term('esd','Safe component handling')}</p>`;for(const [id,k] of [['toolMat','mat'],['toolStrap','strap'],['toolClear','clearance']])$(id).onchange=e=>{s.safety[k]=e.target.checked};hardware?.refresh();desktop?.refresh();renderNetworkWorkshop();studio?.refresh();learning?.refresh();}
+function render(){renderCoach();renderScene();renderInspector();renderCables();renderBottom();$('mission').value=s.mission;$('powerOutage').textContent=s.outage?'Restore wall power':'Simulate wall-power loss';$('safetyTools').innerHTML=check('toolMat',s.safety.mat,'Grounded ESD mat')+check('toolStrap',s.safety.strap,'ESD wrist strap')+check('toolClear',s.safety.clearance,'Airflow and workspace clear')+`<p class="small">${term('esd','Safe component handling')}</p>`;for(const [id,k] of [['toolMat','mat'],['toolStrap','strap'],['toolClear','clearance']])$(id).onchange=e=>{s.safety[k]=e.target.checked};hardware?.refresh();desktop?.refresh();renderNetworkWorkshop();studio?.refresh();learning?.refresh();presentation?.refresh();}
 function testResult(r){studio?.sound(r.ok?'complete':'error');s.lastTest=r;$('testResult').innerHTML=`<h3 class="${r.ok?'success':'error-text'}">${r.ok?'PASS':'CHECK'} · ${esc(r.why)}</h3><ol>${(r.trace||[]).map(t=>`<li>${esc(t.replace(/^\d+\. /,''))}</li>`).join('')}</ol>`;renderScene();hardware?.refresh();clearTimeout(flowTimer);flowTimer=setTimeout(()=>{s.lastTest=null;renderScene();hardware?.refresh()},12000);}
 function troubleStarter(){for(const type of ['pdu','ont','router','switch','laptop'])E.addDevice(s,type);const p=by('pdu'),o=by('ont'),r=by('router'),w=by('switch'),l=by('laptop');E.connect(s,'wall','out1',p.id,'ac','power',6);[o,r,w,l].forEach((d,i)=>E.connect(s,p.id,'out'+(i+1),d.id,'ac','power',6));E.connect(s,'isp','fiber',o.id,'fiber','sc',20);E.connect(s,o.id,'lan',r.id,'wan','cat5e',6);E.connect(s,r.id,'lan1',w.id,'p1','cat5e',6);E.connect(s,l.id,'eth',w.id,'p2','cat5e',6);s.links.at(-1).broken=true;s.devices.forEach(d=>d.on=true);r.router.dns='192.168.50.250';s.selected=l.id;}
 function start(m){ux?.stop();s=E.fresh(m);if(m==='trouble')troubleStarter();$('goalResult').textContent='';$('testResult').innerHTML='<p>Choose endpoints and send a test to see what happens.</p>';render();world?.view('wide');ux?.onLesson();}
@@ -182,7 +182,7 @@ if(typeof setupModel3D==='function')model3d=setupModel3D({getState:()=>s,openCon
 if(typeof setupWorld==='function')world=setupWorld({getState:()=>s,result,select:id=>{s.selected=id;renderInspector();equipmentActions?.refresh()},explode:(id,p)=>model3d?.open(id,p),operate:id=>configureOnLaptop(id),connections:(id,p)=>hardware?.openConnections(id,p),screen:id=>desktop?.open(id),returnDevice:id=>ux?.returnDevice(id)});
 learning?.refresh();
 
-if(typeof setupPresentation==='function')setupPresentation();
+if(typeof setupPresentation==='function')presentation=setupPresentation({progress:()=>learning?.progress(),clientReady:()=>E.ofType(s,'laptop').some(d=>E.ready(s,d.id).ok)});
 if(typeof setupControlCenter==='function')controlCenter=setupControlCenter({getState:()=>s,select:id=>{s.selected=id;renderInspector();},configure:configureOnLaptop,open:view=>desktop?.openLab(view),message:text=>toast(text,false),redraw:()=>desktop?.redraw()});
 if($('worldOperate'))$('worldOperate').textContent='Configure on laptop';if($('learningDesktop')){$('learningDesktop').textContent='Open laptop';$('learningDesktop').onclick=()=>desktop?.openLab();}
 learning?.refresh();

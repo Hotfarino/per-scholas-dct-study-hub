@@ -1,5 +1,5 @@
-import {configuration,serviceRows,configure} from './lab-os-config.js?v=laptop42';
-import {screenPolicy} from './lab-screen-policy.js?v=laptop42';
+import {configuration,serviceRows,configure} from './lab-os-config.js?v=workshop44';
+import {screenPolicy} from './lab-screen-policy.js?v=workshop44';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function setupOSPractice(api){let active=null,index=0,seen=new Set(),message='',before=null,selected='inspect';const definitions={inspect:{name:'Read → test → open a page',intro:'Read the settings, test the gateway, then open a page.'},adapter:{name:'Repair a disabled network adapter',intro:'Start creates a disabled-adapter fault. You will restore it and test the connection.'},driver:{name:'Install a missing network driver',intro:'Start removes only the supplied practice driver. You will reinstall it.'},service:{name:'Start and verify a web service',intro:'Start stops the teaching web service. You will start it and find its listening port.'}};
  const ctx=()=>api.context(),s=()=>api.state(),isLinux=()=>ctx().os==='ubuntu',allowed=()=>Object.keys(definitions).filter(k=>(k!=='driver'||!isLinux())&&(!['adapter','driver'].includes(k)||ctx().vm||ctx().device.type==='laptop')&&(k!=='service'||screenPolicy(s()).service));

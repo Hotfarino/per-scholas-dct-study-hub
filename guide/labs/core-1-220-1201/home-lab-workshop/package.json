@@ -1,0 +1,16 @@
+{
+  "name": "home-lab-workshop",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Guided 3D home lab with modeled networking, hardware and restricted operating systems.",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node run-tests.mjs"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.12"
+  }
+}

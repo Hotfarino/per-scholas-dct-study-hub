@@ -1,0 +1,951 @@
+{
+  "version": 1,
+  "mission": "wired",
+  "devices": [
+    {
+      "id": "wall",
+      "type": "wall",
+      "name": "Wall outlets",
+      "on": true,
+      "x": 92,
+      "y": 10
+    },
+    {
+      "id": "isp",
+      "type": "isp",
+      "name": "ISP fiber",
+      "on": true,
+      "x": 8,
+      "y": 10
+    },
+    {
+      "id": "pdu1",
+      "type": "pdu",
+      "name": "Rack PDU 1",
+      "on": true,
+      "x": 15,
+      "y": 32,
+      "rack": null,
+      "rails": false,
+      "cpu": "",
+      "ram": 0,
+      "cooler": false,
+      "nic": "1g",
+      "disks": [],
+      "raid": "",
+      "os": "",
+      "virt": false,
+      "drivers": true,
+      "network": {
+        "mode": "dhcp",
+        "ip": "",
+        "mask": "255.255.255.0",
+        "gateway": "",
+        "dns": "",
+        "wifi": false,
+        "ssid": "",
+        "password": ""
+      },
+      "router": {
+        "lan": "192.168.50.1",
+        "mask": "255.255.255.0",
+        "dhcp": false,
+        "start": 100,
+        "end": 150,
+        "dns": "192.168.50.1",
+        "nat": true,
+        "wan": true,
+        "secondary": false,
+        "second": "192.168.60.1",
+        "routing": true
+      },
+      "ports": {
+        "ac": {
+          "vlan": 1
+        },
+        "out1": {
+          "vlan": 1
+        },
+        "out2": {
+          "vlan": 1
+        },
+        "out3": {
+          "vlan": 1
+        },
+        "out4": {
+          "vlan": 1
+        },
+        "out5": {
+          "vlan": 1
+        },
+        "out6": {
+          "vlan": 1
+        },
+        "out7": {
+          "vlan": 1
+        },
+        "out8": {
+          "vlan": 1
+        }
+      },
+      "ssid": "HomeLab",
+      "password": "learnlab123",
+      "security": "WPA2-AES",
+      "band": "5",
+      "channel": "36",
+      "poe": true,
+      "sr": false,
+      "services": {
+        "web": false,
+        "file": false,
+        "dns": false
+      },
+      "firewall": true
+    },
+    {
+      "id": "ont2",
+      "type": "ont",
+      "name": "Fiber ONT 1",
+      "on": true,
+      "x": 38,
+      "y": 32,
+      "rack": null,
+      "rails": false,
+      "cpu": "",
+      "ram": 0,
+      "cooler": false,
+      "nic": "1g",
+      "disks": [],
+      "raid": "",
+      "os": "",
+      "virt": false,
+      "drivers": true,
+      "network": {
+        "mode": "dhcp",
+        "ip": "",
+        "mask": "255.255.255.0",
+        "gateway": "",
+        "dns": "",
+        "wifi": false,
+        "ssid": "",
+        "password": ""
+      },
+      "router": {
+        "lan": "192.168.50.1",
+        "mask": "255.255.255.0",
+        "dhcp": false,
+        "start": 100,
+        "end": 150,
+        "dns": "192.168.50.1",
+        "nat": true,
+        "wan": true,
+        "secondary": false,
+        "second": "192.168.60.1",
+        "routing": true
+      },
+      "ports": {
+        "ac": {
+          "vlan": 1
+        },
+        "fiber": {
+          "vlan": 1
+        },
+        "lan": {
+          "vlan": 1
+        }
+      },
+      "ssid": "HomeLab",
+      "password": "learnlab123",
+      "security": "WPA2-AES",
+      "band": "5",
+      "channel": "36",
+      "poe": true,
+      "sr": false,
+      "services": {
+        "web": false,
+        "file": false,
+        "dns": false
+      },
+      "firewall": true
+    },
+    {
+      "id": "router3",
+      "type": "router",
+      "name": "Edge router 1",
+      "on": true,
+      "x": 61,
+      "y": 32,
+      "rack": null,
+      "rails": false,
+      "cpu": "",
+      "ram": 0,
+      "cooler": false,
+      "nic": "1g",
+      "disks": [],
+      "raid": "",
+      "os": "",
+      "virt": false,
+      "drivers": true,
+      "network": {
+        "mode": "dhcp",
+        "ip": "",
+        "mask": "255.255.255.0",
+        "gateway": "",
+        "dns": "",
+        "wifi": false,
+        "ssid": "",
+        "password": ""
+      },
+      "router": {
+        "lan": "192.168.50.1",
+        "mask": "255.255.255.0",
+        "dhcp": true,
+        "start": 100,
+        "end": 150,
+        "dns": "192.168.50.1",
+        "nat": true,
+        "wan": true,
+        "secondary": true,
+        "second": "192.168.60.1",
+        "routing": true
+      },
+      "ports": {
+        "ac": {
+          "vlan": 1
+        },
+        "wan": {
+          "vlan": 1
+        },
+        "lan1": {
+          "vlan": 1
+        },
+        "lan2": {
+          "vlan": 1
+        }
+      },
+      "ssid": "HomeLab",
+      "password": "learnlab123",
+      "security": "WPA2-AES",
+      "band": "5",
+      "channel": "36",
+      "poe": true,
+      "sr": false,
+      "services": {
+        "web": false,
+        "file": false,
+        "dns": false
+      },
+      "firewall": true
+    },
+    {
+      "id": "switch4",
+      "type": "switch",
+      "name": "Managed switch 1",
+      "on": true,
+      "x": 84,
+      "y": 32,
+      "rack": null,
+      "rails": false,
+      "cpu": "",
+      "ram": 0,
+      "cooler": false,
+      "nic": "1g",
+      "disks": [],
+      "raid": "",
+      "os": "",
+      "virt": false,
+      "drivers": true,
+      "network": {
+        "mode": "dhcp",
+        "ip": "",
+        "mask": "255.255.255.0",
+        "gateway": "",
+        "dns": "",
+        "wifi": false,
+        "ssid": "",
+        "password": ""
+      },
+      "router": {
+        "lan": "192.168.50.1",
+        "mask": "255.255.255.0",
+        "dhcp": false,
+        "start": 100,
+        "end": 150,
+        "dns": "192.168.50.1",
+        "nat": true,
+        "wan": true,
+        "secondary": false,
+        "second": "192.168.60.1",
+        "routing": true
+      },
+      "ports": {
+        "ac": {
+          "vlan": 1
+        },
+        "p1": {
+          "vlan": 1
+        },
+        "p2": {
+          "vlan": 1
+        },
+        "p3": {
+          "vlan": 1
+        },
+        "p4": {
+          "vlan": 20
+        },
+        "p5": {
+          "vlan": 20
+        },
+        "p6": {
+          "vlan": 1
+        },
+        "p7": {
+          "vlan": 1
+        },
+        "p8": {
+          "vlan": 1
+        },
+        "sfp": {
+          "vlan": 1
+        }
+      },
+      "ssid": "HomeLab",
+      "password": "learnlab123",
+      "security": "WPA2-AES",
+      "band": "5",
+      "channel": "36",
+      "poe": true,
+      "sr": false,
+      "services": {
+        "web": false,
+        "file": false,
+        "dns": false
+      },
+      "firewall": true
+    },
+    {
+      "id": "laptop5",
+      "type": "laptop",
+      "name": "Laptop client 1",
+      "on": true,
+      "x": 15,
+      "y": 58,
+      "rack": null,
+      "rails": false,
+      "cpu": "",
+      "ram": 0,
+      "cooler": false,
+      "nic": "1g",
+      "disks": [],
+      "raid": "",
+      "os": "Windows 11",
+      "virt": false,
+      "drivers": true,
+      "network": {
+        "mode": "dhcp",
+        "ip": "",
+        "mask": "255.255.255.0",
+        "gateway": "",
+        "dns": "",
+        "wifi": false,
+        "ssid": "HomeLab",
+        "password": "learnlab123"
+      },
+      "router": {
+        "lan": "192.168.50.1",
+        "mask": "255.255.255.0",
+        "dhcp": false,
+        "start": 100,
+        "end": 150,
+        "dns": "192.168.50.1",
+        "nat": true,
+        "wan": true,
+        "secondary": false,
+        "second": "192.168.60.1",
+        "routing": true
+      },
+      "ports": {
+        "ac": {
+          "vlan": 1
+        },
+        "eth": {
+          "vlan": 1
+        }
+      },
+      "ssid": "HomeLab",
+      "password": "learnlab123",
+      "security": "WPA2-AES",
+      "band": "5",
+      "channel": "36",
+      "poe": true,
+      "sr": false,
+      "services": {
+        "web": false,
+        "file": false,
+        "dns": false
+      },
+      "firewall": true
+    },
+    {
+      "id": "server16",
+      "type": "server",
+      "name": "2U lab server 1",
+      "on": true,
+      "x": 38,
+      "y": 58,
+      "rack": 4,
+      "rails": true,
+      "cpu": "AM4-8",
+      "ram": 32,
+      "cooler": true,
+      "nic": "1g",
+      "disks": [
+        {
+          "tb": 1,
+          "failed": false
+        },
+        {
+          "tb": 1,
+          "failed": false
+        },
+        {
+          "tb": 1,
+          "failed": false
+        },
+        {
+          "tb": 1,
+          "failed": false
+        }
+      ],
+      "raid": "10",
+      "os": "Hypervisor",
+      "virt": true,
+      "drivers": true,
+      "network": {
+        "mode": "dhcp",
+        "ip": "",
+        "mask": "255.255.255.0",
+        "gateway": "",
+        "dns": "",
+        "wifi": false,
+        "ssid": "",
+        "password": ""
+      },
+      "router": {
+        "lan": "192.168.50.1",
+        "mask": "255.255.255.0",
+        "dhcp": false,
+        "start": 100,
+        "end": 150,
+        "dns": "192.168.50.1",
+        "nat": true,
+        "wan": true,
+        "secondary": false,
+        "second": "192.168.60.1",
+        "routing": true
+      },
+      "ports": {
+        "ac": {
+          "vlan": 1
+        },
+        "eth": {
+          "vlan": 1
+        },
+        "sfp": {
+          "vlan": 1
+        }
+      },
+      "ssid": "HomeLab",
+      "password": "learnlab123",
+      "security": "WPA2-AES",
+      "band": "5",
+      "channel": "36",
+      "poe": true,
+      "sr": false,
+      "services": {
+        "web": false,
+        "file": false,
+        "dns": false
+      },
+      "firewall": true
+    },
+    {
+      "id": "ups17",
+      "type": "ups",
+      "name": "900 W UPS 1",
+      "on": true,
+      "x": 61,
+      "y": 58,
+      "rack": 1,
+      "rails": true,
+      "cpu": "",
+      "ram": 0,
+      "cooler": false,
+      "nic": "1g",
+      "disks": [],
+      "raid": "",
+      "os": "",
+      "virt": false,
+      "drivers": true,
+      "network": {
+        "mode": "dhcp",
+        "ip": "",
+        "mask": "255.255.255.0",
+        "gateway": "",
+        "dns": "",
+        "wifi": false,
+        "ssid": "",
+        "password": ""
+      },
+      "router": {
+        "lan": "192.168.50.1",
+        "mask": "255.255.255.0",
+        "dhcp": false,
+        "start": 100,
+        "end": 150,
+        "dns": "192.168.50.1",
+        "nat": true,
+        "wan": true,
+        "secondary": false,
+        "second": "192.168.60.1",
+        "routing": true
+      },
+      "ports": {
+        "ac": {
+          "vlan": 1
+        },
+        "out1": {
+          "vlan": 1
+        },
+        "out2": {
+          "vlan": 1
+        }
+      },
+      "ssid": "HomeLab",
+      "password": "learnlab123",
+      "security": "WPA2-AES",
+      "band": "5",
+      "channel": "36",
+      "poe": true,
+      "sr": false,
+      "services": {
+        "web": false,
+        "file": false,
+        "dns": false
+      },
+      "firewall": true
+    },
+    {
+      "id": "ap23",
+      "type": "ap",
+      "name": "Wi-Fi access point 1",
+      "on": true,
+      "x": 84,
+      "y": 58,
+      "rack": null,
+      "rails": false,
+      "cpu": "",
+      "ram": 0,
+      "cooler": false,
+      "nic": "1g",
+      "disks": [],
+      "raid": "",
+      "os": "",
+      "virt": false,
+      "drivers": true,
+      "network": {
+        "mode": "dhcp",
+        "ip": "",
+        "mask": "255.255.255.0",
+        "gateway": "",
+        "dns": "",
+        "wifi": false,
+        "ssid": "",
+        "password": ""
+      },
+      "router": {
+        "lan": "192.168.50.1",
+        "mask": "255.255.255.0",
+        "dhcp": false,
+        "start": 100,
+        "end": 150,
+        "dns": "192.168.50.1",
+        "nat": true,
+        "wan": true,
+        "secondary": false,
+        "second": "192.168.60.1",
+        "routing": true
+      },
+      "ports": {
+        "ac": {
+          "vlan": 1
+        },
+        "eth": {
+          "vlan": 1
+        }
+      },
+      "ssid": "HomeLab",
+      "password": "learnlab123",
+      "security": "WPA2-AES",
+      "band": "5",
+      "channel": "36",
+      "poe": true,
+      "sr": false,
+      "services": {
+        "web": false,
+        "file": false,
+        "dns": false
+      },
+      "firewall": true
+    },
+    {
+      "id": "laptop25",
+      "type": "laptop",
+      "name": "Laptop client 2",
+      "on": true,
+      "x": 15,
+      "y": 84,
+      "rack": null,
+      "rails": false,
+      "cpu": "",
+      "ram": 0,
+      "cooler": false,
+      "nic": "1g",
+      "disks": [],
+      "raid": "",
+      "os": "Windows 11",
+      "virt": false,
+      "drivers": true,
+      "network": {
+        "mode": "static",
+        "ip": "192.168.60.100",
+        "mask": "255.255.255.0",
+        "gateway": "192.168.60.1",
+        "dns": "1.1.1.1",
+        "wifi": false,
+        "ssid": "",
+        "password": ""
+      },
+      "router": {
+        "lan": "192.168.50.1",
+        "mask": "255.255.255.0",
+        "dhcp": false,
+        "start": 100,
+        "end": 150,
+        "dns": "192.168.50.1",
+        "nat": true,
+        "wan": true,
+        "secondary": false,
+        "second": "192.168.60.1",
+        "routing": true
+      },
+      "ports": {
+        "ac": {
+          "vlan": 1
+        },
+        "eth": {
+          "vlan": 1
+        }
+      },
+      "ssid": "HomeLab",
+      "password": "learnlab123",
+      "security": "WPA2-AES",
+      "band": "5",
+      "channel": "36",
+      "poe": true,
+      "sr": false,
+      "services": {
+        "web": false,
+        "file": false,
+        "dns": false
+      },
+      "firewall": true
+    },
+    {
+      "id": "nas29",
+      "type": "nas",
+      "name": "Four-bay NAS 1",
+      "on": true,
+      "x": 38,
+      "y": 84,
+      "rack": null,
+      "rails": false,
+      "cpu": "",
+      "ram": 0,
+      "cooler": false,
+      "nic": "1g",
+      "disks": [
+        {
+          "tb": 1,
+          "failed": false
+        },
+        {
+          "tb": 1,
+          "failed": false
+        },
+        {
+          "tb": 1,
+          "failed": false
+        },
+        {
+          "tb": 1,
+          "failed": false
+        }
+      ],
+      "raid": "6",
+      "os": "NAS OS",
+      "virt": false,
+      "drivers": true,
+      "network": {
+        "mode": "dhcp",
+        "ip": "",
+        "mask": "255.255.255.0",
+        "gateway": "",
+        "dns": "",
+        "wifi": false,
+        "ssid": "",
+        "password": ""
+      },
+      "router": {
+        "lan": "192.168.50.1",
+        "mask": "255.255.255.0",
+        "dhcp": false,
+        "start": 100,
+        "end": 150,
+        "dns": "192.168.50.1",
+        "nat": true,
+        "wan": true,
+        "secondary": false,
+        "second": "192.168.60.1",
+        "routing": true
+      },
+      "ports": {
+        "ac": {
+          "vlan": 1
+        },
+        "eth": {
+          "vlan": 1
+        }
+      },
+      "ssid": "HomeLab",
+      "password": "learnlab123",
+      "security": "WPA2-AES",
+      "band": "5",
+      "channel": "36",
+      "poe": true,
+      "sr": false,
+      "services": {
+        "web": false,
+        "file": true,
+        "dns": false
+      },
+      "firewall": true
+    }
+  ],
+  "links": [
+    {
+      "id": "c7",
+      "a": "pdu1",
+      "ap": "out1",
+      "b": "ont2",
+      "bp": "ac",
+      "type": "power",
+      "length": 6,
+      "broken": false
+    },
+    {
+      "id": "c8",
+      "a": "pdu1",
+      "ap": "out2",
+      "b": "router3",
+      "bp": "ac",
+      "type": "power",
+      "length": 6,
+      "broken": false
+    },
+    {
+      "id": "c9",
+      "a": "pdu1",
+      "ap": "out3",
+      "b": "switch4",
+      "bp": "ac",
+      "type": "power",
+      "length": 6,
+      "broken": false
+    },
+    {
+      "id": "c10",
+      "a": "pdu1",
+      "ap": "out4",
+      "b": "laptop5",
+      "bp": "ac",
+      "type": "power",
+      "length": 6,
+      "broken": false
+    },
+    {
+      "id": "c11",
+      "a": "isp",
+      "ap": "fiber",
+      "b": "ont2",
+      "bp": "fiber",
+      "type": "sc",
+      "length": 6,
+      "broken": false
+    },
+    {
+      "id": "c12",
+      "a": "ont2",
+      "ap": "lan",
+      "b": "router3",
+      "bp": "wan",
+      "type": "cat5e",
+      "length": 6,
+      "broken": false
+    },
+    {
+      "id": "c13",
+      "a": "router3",
+      "ap": "lan1",
+      "b": "switch4",
+      "bp": "p1",
+      "type": "cat5e",
+      "length": 6,
+      "broken": false
+    },
+    {
+      "id": "c14",
+      "a": "laptop5",
+      "ap": "eth",
+      "b": "switch4",
+      "bp": "p2",
+      "type": "cat5e",
+      "length": 6,
+      "broken": false
+    },
+    {
+      "id": "c18",
+      "a": "wall",
+      "ap": "out1",
+      "b": "ups17",
+      "bp": "ac",
+      "type": "power",
+      "length": 6,
+      "broken": false
+    },
+    {
+      "id": "c19",
+      "a": "ups17",
+      "ap": "out1",
+      "b": "pdu1",
+      "bp": "ac",
+      "type": "power",
+      "length": 6,
+      "broken": false
+    },
+    {
+      "id": "c20",
+      "a": "pdu1",
+      "ap": "out5",
+      "b": "server16",
+      "bp": "ac",
+      "type": "power",
+      "length": 6,
+      "broken": false
+    },
+    {
+      "id": "c21",
+      "a": "server16",
+      "ap": "eth",
+      "b": "switch4",
+      "bp": "p3",
+      "type": "cat5e",
+      "length": 6,
+      "broken": false
+    },
+    {
+      "id": "c26",
+      "a": "pdu1",
+      "ap": "out6",
+      "b": "laptop25",
+      "bp": "ac",
+      "type": "power",
+      "length": 6,
+      "broken": false
+    },
+    {
+      "id": "c27",
+      "a": "laptop25",
+      "ap": "eth",
+      "b": "switch4",
+      "bp": "p4",
+      "type": "cat5e",
+      "length": 6,
+      "broken": false
+    },
+    {
+      "id": "c28",
+      "a": "router3",
+      "ap": "lan2",
+      "b": "switch4",
+      "bp": "p5",
+      "type": "cat5e",
+      "length": 6,
+      "broken": false
+    },
+    {
+      "id": "c30",
+      "a": "pdu1",
+      "ap": "out7",
+      "b": "nas29",
+      "bp": "ac",
+      "type": "power",
+      "length": 6,
+      "broken": false
+    },
+    {
+      "id": "c31",
+      "a": "nas29",
+      "ap": "eth",
+      "b": "switch4",
+      "bp": "p6",
+      "type": "cat5e",
+      "length": 6,
+      "broken": false
+    }
+  ],
+  "nextId": 32,
+  "safety": {
+    "mat": true,
+    "strap": true,
+    "clearance": true
+  },
+  "outage": false,
+  "tool": "inspect",
+  "view": "bench",
+  "selected": null,
+  "step": 0,
+  "events": [],
+  "cloud": {
+    "model": "hybrid",
+    "service": "iaas",
+    "account": false
+  },
+  "vms": [
+    {
+      "id": "vm22",
+      "host": "server16",
+      "name": "Web-Lab",
+      "ram": 4,
+      "cpu": 2,
+      "disk": 40,
+      "mode": "external",
+      "os": "Linux",
+      "running": true,
+      "service": true
+    }
+  ],
+  "checkpoints": [],
+  "lastTest": null
+}

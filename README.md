@@ -4,6 +4,12 @@ An unofficial, community-organized study hub for CompTIA A+ Core 1, Core 2 and f
 
 Last course-resource review: September 11, 2026.
 
+## Featured project: Home Lab Workshop
+
+A guided 3D lab for building networks, rack servers, RAID storage and virtual machines. Configure and troubleshoot through a restricted Windows/Ubuntu laptop simulation, with explanations and progress checks for beginners.
+
+**[Try the live lab](https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site/home-lab.html?edition=44#learningBar)** · [Source, setup and tests](guide/labs/core-1-220-1201/home-lab-workshop/README.md) · [Automated checks](https://github.com/Hotfarino/per-scholas-dct-study-hub/actions/workflows/home-lab.yml)
+
 ## Browse by subject
 
 Start with the [category index](CATEGORY-INDEX.md) to find the notes, videos, websites, images, and practice material for one subject in the same place.

@@ -1,0 +1,28 @@
+name: Home Lab checks
+on:
+  push:
+    paths:
+      - 'guide/labs/core-1-220-1201/home-lab-workshop/**'
+      - '.github/workflows/home-lab.yml'
+  pull_request:
+    paths:
+      - 'guide/labs/core-1-220-1201/home-lab-workshop/**'
+      - '.github/workflows/home-lab.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lab-tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: guide/labs/core-1-220-1201/home-lab-workshop
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: guide/labs/core-1-220-1201/home-lab-workshop/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm test

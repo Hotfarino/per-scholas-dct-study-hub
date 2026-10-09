@@ -1,15 +1,15 @@
-import {screenPolicy,screenSession} from './lab-screen-policy.js?v=laptop42';
-import * as E from './lab-engine.js?v=laptop42';
-import {context,address,changeAddress,request,runCommand,subnet} from './lab-os-engine.js?v=laptop42';
-import {lessons,projects,references} from './lab-learning-repos.js?v=laptop42';
+import {screenPolicy,screenSession} from './lab-screen-policy.js?v=workshop44';
+import * as E from './lab-engine.js?v=workshop44';
+import {context,address,changeAddress,request,runCommand,subnet} from './lab-os-engine.js?v=workshop44';
+import {lessons,projects,references} from './lab-learning-repos.js?v=workshop44';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-import {setupAdmin} from './lab-os-admin.js?v=laptop42';
-import {setupOSPractice} from './lab-os-practice.js?v=laptop42';
-import {configuration,adapter,configure} from './lab-os-config.js?v=laptop42';
-import {displayPath} from './lab-os-files.js?v=laptop42';
-import {commandCatalog} from './lab-os-command-catalog.js?v=laptop42';
-import {appIcon} from './lab-os-icons.js?v=laptop42';
-import {isBrowser,createBrowserState,visitBrowser,moveBrowser,browserMarkup} from './lab-browser.js?v=laptop42';
+import {setupAdmin} from './lab-os-admin.js?v=workshop44';
+import {setupOSPractice} from './lab-os-practice.js?v=workshop44';
+import {configuration,adapter,configure} from './lab-os-config.js?v=workshop44';
+import {displayPath} from './lab-os-files.js?v=workshop44';
+import {commandCatalog} from './lab-os-command-catalog.js?v=workshop44';
+import {appIcon} from './lab-os-icons.js?v=workshop44';
+import {isBrowser,createBrowserState,visitBrowser,moveBrowser,browserMarkup} from './lab-browser.js?v=workshop44';
 const apps={lab:'Lab console',repos:'Learning repositories',terminal:'Terminal',settings:'Settings',browser:'Google Chrome',firefox:'Mozilla Firefox',vms:'Virtual machines',cloud:'Cloud console',tools:'System tools'};
 export function setupDesktop(api){
  const state=()=>api.getState();let machine=null,physical=null,owner=state(),app='repos',folder='home',lessonId=null,projectId=null,shell='powershell',log=[],history=[],historyIndex=0,notice='',maximized=false,minimized=false,guide=true,settingsTab='network',lastFocus=null,quizFeedback='',browserStates={browser:createBrowserState(),firefox:createBrowserState()},windowPosition=null,networkEditing=false,commandLibrary=false,commandFilter='',commandCategory='All',cwd='/';

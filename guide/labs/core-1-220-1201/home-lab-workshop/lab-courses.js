@@ -1,4 +1,4 @@
-import * as E from './lab-engine.js?v=laptop42';
+import * as E from './lab-engine.js?v=workshop44';
 export const courseNames={wired:'Home network → rack server → VMs',nas:'Rack storage & RAID',virtual:'Virtualization server',wifi:'Wireless home office',routed:'Two subnets, one router',cloud:'Local storage + cloud backup',trouble:'Repair a faulty network',free:'Build your own network'};
 const d=(s,t,n=0)=>E.ofType(s,t)[n], link=(s,a,ap,b,bp,an=0)=>s.links.some(l=>!l.broken&&((l.a===d(s,a,an)?.id&&l.ap===ap&&l.b===(d(s,b)?.id||b)&&l.bp===bp)||(l.b===d(s,a,an)?.id&&l.bp===ap&&l.a===(d(s,b)?.id||b)&&l.ap===bp)));
 export function buildCourse(mission,base){
@@ -42,7 +42,7 @@ export function buildCourse(mission,base){
  settings('Fix the DNS resolver','Change router DNS from 192.168.50.250 to 192.168.50.1, then Apply router settings.','DNS means Domain Name System. It finds records for names. In this lab the router forwards DNS queries.',s=>d(s,'router')?.router.dns==='192.168.50.1','router','Router configuration','routerDns');
  test('Verify the complete web path','Run the HTTPS test. Read every stage of the result.','A good fix restores the intended service. Cable, address, routing, DNS, TCP and TLS checks must agree.');
  }else if(mission==='free'){
- add('Explore your computer desktop','Select your powered laptop and choose Laptop screen. Open Learning repositories on the desktop.','Free build can still have a gentle starting checklist. Turn help to Free build whenever you want independent practice.','The desktop has opened at least once.',s=>s.desktopProgress?.opened===true,{desktop:true,action:'Open laptop desktop'});
+ add('Explore your computer desktop','Select your powered laptop and choose Open laptop. Open Learning repositories on the desktop.','Free build can still have a gentle starting checklist. Turn help to Free build whenever you want independent practice.','The desktop has opened at least once.',s=>s.desktopProgress?.opened===true,{desktop:true,action:'Open laptop desktop'});
  }
  return list;
 }

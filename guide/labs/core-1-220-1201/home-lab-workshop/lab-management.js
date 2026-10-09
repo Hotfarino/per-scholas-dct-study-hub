@@ -1,4 +1,4 @@
-import * as E from './lab-engine.js?v=laptop42';
+import * as E from './lab-engine.js?v=workshop44';
 export function routerPage(s,clientId,raw){
  let url;try{url=new URL(/^\d+\.\d+\.\d+\.\d+(?:\/|$)/.test(raw)?'http://'+raw:raw);}catch{return null;}
  const router=E.ofType(s,'router').find(d=>d.router.lan===url.hostname||(d.router.secondary&&d.router.second===url.hostname));

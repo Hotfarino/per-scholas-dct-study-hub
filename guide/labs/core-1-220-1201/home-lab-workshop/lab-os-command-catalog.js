@@ -1,4 +1,4 @@
-import {commandAllowed,screenPolicy} from './lab-screen-policy.js?v=laptop42';
+import {commandAllowed,screenPolicy} from './lab-screen-policy.js?v=workshop44';
 export function commandCatalog(s,shell,c){const a=c?.device?.network?.wifi?'Wi-Fi':'Ethernet',linux=shell==='bash',ps=shell==='powershell',rows=[];const add=(category,command,why)=>rows.push({category,command,why});
  add('Basics','help','List the commands enabled for this lab.');add('Basics','whoami','Show the account used inside this computer.');add('Basics','hostname','Read this computer’s name.');
  if(linux){
