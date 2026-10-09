@@ -50,6 +50,11 @@ This manifest records the useful attachment groups. The 84 instructional images 
 - **Lesson 17 infographic pack** — three class infographics shared in `#comptia-help`; categorized as Discord-access course material and not mirrored publicly.
 - **Lesson 15 and Lesson 16 podcast overviews** — compressed M4A recordings shared in `#comptia-help`; cataloged as Discord-access recordings only, with no public copy made.
 
+### October 7 Discord updates
+
+- **Lesson 18 infographic pack** — three double-sided PDFs (`18.1000AB.pdf`, `18.2000AB.pdf`, and `18.3333AB.pdf`) shared in `#comptia-help`; cataloged as Discord-access course material and not mirrored publicly.
+- **Lesson 17 and Lesson 18 podcast overviews** — compressed M4A recordings shared in `#comptia-help`; cataloged as Discord-access recordings only, with no public copy made.
+
 These two user-provided PNGs remain local source files until redistribution rights for the branded artwork are confirmed.
 
 These original publications are separate from the course-community attachment inventory.
