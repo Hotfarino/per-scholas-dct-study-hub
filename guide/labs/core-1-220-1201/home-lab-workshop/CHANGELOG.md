@@ -2,6 +2,10 @@
 
 Historical notes describe each edition at the time it shipped. Use the README and in-app manual for the current interface.
 
+## Edition 44 — functional audit
+
+Added all 28 regression suites to the runnable project. Fixed diagnostic selector/result consistency, repeatable VM HTTPS tests, misleading save-success text, delayed RAID rebuilds surviving a lab reset, and unnecessary equipment expansion from connection hints. See the functional audit for browser coverage and test limits.
+
 ## Edition 44 — focused workshop
 
 A stable task/workbench layout, compact equipment tray, separate lab and file dialogs, progress indicator, and a single Open laptop entry point. Existing simulation rules and portable-save format are preserved. Added a repeatable GitHub test command and CI configuration.

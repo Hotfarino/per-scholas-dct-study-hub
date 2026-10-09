@@ -1,5 +1,5 @@
-import * as E from './lab-engine.js?v=workshop44';
-import {adapter,configuration,configure,serviceRows} from './lab-os-config.js?v=workshop44';
+import * as E from './lab-engine.js?v=workshop44qa1';
+import {adapter,configuration,configure,serviceRows} from './lab-os-config.js?v=workshop44qa1';
 export function moreCommands(s,c,cmd,shell,api){const linux=shell==='bash',ps=shell==='powershell',q=configuration(s,c.id),ad=adapter(s,c),out=(ok,output,extra={})=>({ok,output,...extra}),change=(action,value)=>{const r=configure(s,c,action,value);return out(r.ok,r.message,{changed:r.changed})};let m;
  if(/^hostname$/i.test(cmd))return out(true,q.hostname);
  if(!linux&&/^(systeminfo|Get-ComputerInfo)$/i.test(cmd)){const d=c.device,h=c.vm?E.find(s,c.vm.host):d;return out(true,`Host Name:                 ${q.hostname}\nOS Profile:                ${c.vm?'Ubuntu 24.04 LTS':d.os}\nSystem Type:               ${c.vm?'Virtual machine':'Physical teaching computer'}\nMemory:                    ${c.vm?c.vm.ram+' GB':h.ram?h.ram+' GB':'Not specified by this laptop model'}\nNetwork Adapter:           ${ad.description}\n\nOnly modeled properties are shown; BIOS/build dates and performance are not measured.`);}

@@ -1,5 +1,5 @@
-import {buildCourse,courseChapters,courseNames} from './lab-courses.js?v=workshop44';
-import * as E from './lab-engine.js?v=workshop44';
+import {buildCourse,courseChapters,courseNames} from './lab-courses.js?v=workshop44qa1';
+import * as E from './lab-engine.js?v=workshop44qa1';
 const device=(s,type)=>E.ofType(s,type)[0];
 const id=(s,type,n=0)=>['wall','isp'].includes(type)?type:E.ofType(s,type)[n]?.id;
 const wire=(s,a,ap,b,bp)=>s.links.some(l=>!l.broken&&((l.a===id(s,a)&&l.ap===ap&&l.b===id(s,b)&&l.bp===bp)||(l.b===id(s,a)&&l.bp===ap&&l.a===id(s,b)&&l.ap===bp)));
@@ -68,7 +68,7 @@ export function setupLearningGuide(api){
  function action(){const step=steps[current()];if(!step)return;
   if(step.add){if(!E.ofType(state(),step.add)[step.nth||0]){const r=E.addDevice(state(),step.add);if(r.ok)state().selected=r.id;api.result(r);}return;}
   if(step.desktop)return api.desktop?.(id(state(),'laptop'));
-  if(step.reveal){toolsOpen=true;refresh();const el=$(step.reveal)||document.querySelector('.cable-list');el?.closest('details')?.setAttribute('open','');el?.scrollIntoView({block:'center',behavior:'smooth'});return;}
+  if(step.reveal){if(!document.body.classList.contains('workshop-shell'))toolsOpen=true;refresh();const el=$(step.reveal)||document.querySelector('.cable-list');el?.closest('details')?.setAttribute('open','');el?.scrollIntoView({block:'center',behavior:'smooth'});return;}
   if(step.runTest&&api.openTest){const t=step.runTest;return api.openTest({source:id(state(),'laptop'),target:typeof t.target==='function'?t.target(state()):t.target,protocol:t.protocol});}
   if(step.runTest){const s=state(),t=step.runTest,r=E.test(s,id(s,'laptop'),typeof t.target==='function'?t.target(s):t.target,t.protocol);s.walkthrough[t.flag]=!!r.ok;api.test(r);refresh();return;}
   if(step.settings)return settings(step);
@@ -108,7 +108,7 @@ export function setupLearningGuide(api){
  $('learningMode').onchange=e=>setMode(e.target.value);
  $('learningTools').onclick=()=>{toolsOpen=!toolsOpen;$('learningTools').textContent=toolsOpen?'Return to focused lesson':'All tools & other labs';$('learningTools').setAttribute('aria-expanded',String(toolsOpen));refresh();};
  $('learningDesktop').onclick=()=>{const d=E.find(state(),state().selected);api.desktop?.(d&&['laptop','server'].includes(d.type)?d.id:id(state(),'laptop'));};
- $('learningSave').onclick=()=>{$('saveLab').click();$('learningSave').textContent='Saved ✓';$('learningLoad').hidden=false;};
+ $('learningSave').onclick=()=>{const saved=api.save?api.save():($('saveLab').click(),null);$('learningSave').textContent=saved===true?'Saved ✓':saved===false?'Save failed':'Check save message';if(saved===true)$('learningLoad').hidden=false;};
  try{$('learningLoad').hidden=!localStorage.getItem('home-lab-save-v1');}catch{}
  $('learningLoad').onclick=()=>{$('loadLab').click();refresh();};
  // Keep the same hint setting in both locations; never leave two competing toggles.

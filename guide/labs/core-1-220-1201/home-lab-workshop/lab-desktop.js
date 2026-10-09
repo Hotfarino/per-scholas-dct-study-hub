@@ -1,15 +1,15 @@
-import {screenPolicy,screenSession} from './lab-screen-policy.js?v=workshop44';
-import * as E from './lab-engine.js?v=workshop44';
-import {context,address,changeAddress,request,runCommand,subnet} from './lab-os-engine.js?v=workshop44';
-import {lessons,projects,references} from './lab-learning-repos.js?v=workshop44';
+import {screenPolicy,screenSession} from './lab-screen-policy.js?v=workshop44qa1';
+import * as E from './lab-engine.js?v=workshop44qa1';
+import {context,address,changeAddress,request,runCommand,subnet} from './lab-os-engine.js?v=workshop44qa1';
+import {lessons,projects,references} from './lab-learning-repos.js?v=workshop44qa1';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-import {setupAdmin} from './lab-os-admin.js?v=workshop44';
-import {setupOSPractice} from './lab-os-practice.js?v=workshop44';
-import {configuration,adapter,configure} from './lab-os-config.js?v=workshop44';
-import {displayPath} from './lab-os-files.js?v=workshop44';
-import {commandCatalog} from './lab-os-command-catalog.js?v=workshop44';
-import {appIcon} from './lab-os-icons.js?v=workshop44';
-import {isBrowser,createBrowserState,visitBrowser,moveBrowser,browserMarkup} from './lab-browser.js?v=workshop44';
+import {setupAdmin} from './lab-os-admin.js?v=workshop44qa1';
+import {setupOSPractice} from './lab-os-practice.js?v=workshop44qa1';
+import {configuration,adapter,configure} from './lab-os-config.js?v=workshop44qa1';
+import {displayPath} from './lab-os-files.js?v=workshop44qa1';
+import {commandCatalog} from './lab-os-command-catalog.js?v=workshop44qa1';
+import {appIcon} from './lab-os-icons.js?v=workshop44qa1';
+import {isBrowser,createBrowserState,visitBrowser,moveBrowser,browserMarkup} from './lab-browser.js?v=workshop44qa1';
 const apps={lab:'Lab console',repos:'Learning repositories',terminal:'Terminal',settings:'Settings',browser:'Google Chrome',firefox:'Mozilla Firefox',vms:'Virtual machines',cloud:'Cloud console',tools:'System tools'};
 export function setupDesktop(api){
  const state=()=>api.getState();let machine=null,physical=null,owner=state(),app='repos',folder='home',lessonId=null,projectId=null,shell='powershell',log=[],history=[],historyIndex=0,notice='',maximized=false,minimized=false,guide=true,settingsTab='network',lastFocus=null,quizFeedback='',browserStates={browser:createBrowserState(),firefox:createBrowserState()},windowPosition=null,networkEditing=false,commandLibrary=false,commandFilter='',commandCategory='All',cwd='/';
@@ -102,7 +102,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
  app='lab';controlView='device';minimized=false;draw();const el=document.getElementById(field);if(el&&choose)el.value=choose;el?.focus();return true;}
  function runNetworkTest(spec){const id=clientFor(E.find(state(),spec.source)?.type==='laptop'?spec.source:physical);if(!id){api.result({ok:false,message:'Power a laptop before running network tests.'});return false;}if(!dialog.open||machine!==id){if(!open(id))return false;}
  if(spec.protocol==='https'&&spec.target==='internet'&&spec.source===id){app='browser';minimized=false;visitBrowser(browserStates.browser,'https://example.com',()=>request(state(),machine));const r=browserStates.browser.result;api.networkResult?.(spec,r);if(r.ok){progress().page=true;practice.mark('browser:success');}draw();return true;}
- openLab('tests');const r=spec.vm?E.testVM(state(),spec.source,spec.target):E.test(state(),spec.source,spec.target,spec.protocol);api.networkResult?.(spec,r);draw();return true;}
+ openLab('tests');const guest=state().vms.some(v=>v.id===spec.target),r=guest||spec.vm?(spec.protocol==='https'?E.testVM(state(),spec.source,spec.target):{ok:false,why:'This VM diagnostic checks HTTPS only. Choose HTTPS (TCP 443), or use the simulated Terminal to ping the guest address.',trace:[]}):E.test(state(),spec.source,spec.target,spec.protocol);api.networkResult?.(spec,r);draw();return true;}
  function drawLabTask(){const old=chrome.querySelector('#osBuildTask');old?.remove();const g=api.guideInfo?.();if(!g)return;const el=document.createElement('div');el.id='osBuildTask';el.className='os-build-task';el.innerHTML=`<div><b>Lab task ${g.index+1} · ${esc(g.title)}</b><p>${esc(g.instruction)}</p></div><button id="osBuildContinue" ${g.pass?'':'disabled'}>${g.pass?'Continue lab →':'Complete this task'}</button>`;chrome.prepend(el);el.querySelector('button').onclick=()=>{api.guideNext?.();const next=api.guideInfo?.();if(next?.screen)api.guideAction?.();else close();drawLabTask();};}
  function refresh(){if(!dialog.open)return;if(owner!==state()){close();sessions.clear();physical=null;owner=state();return;}if(availability!==JSON.stringify(screenSession(state(),machine,physical)))draw();else {api.refreshControls?.();drawLabTask();}}
  return {open,close,refresh,openLab,configureDevice,runNetworkTest,redraw:draw};

@@ -2,7 +2,7 @@
 
 An interactive 3D networking and hardware lab for beginners. Build on the workbench, configure through the laptop, and use simulated tests to explain why a connection succeeds or fails.
 
-**[Open the live demo](https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site/home-lab.html?edition=44#learningBar)** · [Development notes](CHANGELOG.md) · [Validation notes](test-results/home-lab-workshop-44.md)
+**[Open the live demo](https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site/home-lab.html?edition=44#learningBar)** · [Development notes](CHANGELOG.md) · [Functional audit](test-results/home-lab-functional-audit.md) · [Layout review](test-results/home-lab-workshop-44.md)
 
 ## Start here
 
@@ -56,7 +56,7 @@ npm ci
 npm test
 ```
 
-The suite covers engine constraints, all 247 guided tasks, laptop configuration and browser behavior, save-file validation, and workshop navigation/state preservation. DOM tests use LinkeDOM and replace WebGL with a stub; they do not prove rendered geometry or pointer behavior. Visual and interaction checks are recorded in the validation notes. GitHub Actions runs the same command when this lab changes.
+The 28-suite test run covers engine constraints, all 247 guided tasks, laptop configuration and browser behavior, save-file validation, and workshop navigation/state preservation. DOM tests use LinkeDOM and replace WebGL with a stub; they do not prove rendered geometry or pointer behavior. Visual and interaction checks are recorded in the validation notes. GitHub Actions runs the same command when this lab changes.
 
 ## How it works
 

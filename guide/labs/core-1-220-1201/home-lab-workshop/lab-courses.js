@@ -1,4 +1,4 @@
-import * as E from './lab-engine.js?v=workshop44';
+import * as E from './lab-engine.js?v=workshop44qa1';
 export const courseNames={wired:'Home network → rack server → VMs',nas:'Rack storage & RAID',virtual:'Virtualization server',wifi:'Wireless home office',routed:'Two subnets, one router',cloud:'Local storage + cloud backup',trouble:'Repair a faulty network',free:'Build your own network'};
 const d=(s,t,n=0)=>E.ofType(s,t)[n], link=(s,a,ap,b,bp,an=0)=>s.links.some(l=>!l.broken&&((l.a===d(s,a,an)?.id&&l.ap===ap&&l.b===(d(s,b)?.id||b)&&l.bp===bp)||(l.b===d(s,a,an)?.id&&l.bp===ap&&l.a===(d(s,b)?.id||b)&&l.ap===bp)));
 export function buildCourse(mission,base){
@@ -23,7 +23,7 @@ export function buildCourse(mission,base){
  }else if(mission==='wifi'){
  place('ap');connect('ap','eth','switch','p3','cat5e');on('ap');settings('Configure your wireless network','Use SSID HomeLab, password learnlab123, WPA2-AES, 5 GHz and channel 36. Press Apply Wi-Fi settings.','SSID is the network name. The password protects entry. The channel is a slice of radio spectrum. PoE supplies this AP over Ethernet.',s=>{const a=d(s,'ap');return a?.ssid==='HomeLab'&&a.password==='learnlab123'&&a.security==='WPA2-AES'&&a.band==='5'&&a.channel==='36'},'ap','Wireless settings','apSsid');
  settings('Join from the laptop','In laptop Settings → Wi-Fi, choose HomeLab and enter learnlab123. Press Connect; keep automatic addressing.','The laptop must first join the radio network, then request IP settings. Matching a name alone is not enough.',s=>!!d(s,'laptop')?.network.wifi&&E.wifiAssociation(s,d(s,'laptop').id).ok,'laptop','Network configuration','useWifi');
- add('Unplug the laptop Ethernet cord','Select the laptop ETH plug. Drag it away from the socket and release, or use Connected cables → Unplug. Leave its power cord connected.','Removing the wired path proves that your radio path works.','No Ethernet cable is connected to the laptop.',s=>!s.links.some(l=>l.type!=='power'&&(l.a===d(s,'laptop')?.id||l.b===d(s,'laptop')?.id)),{reveal:'cableList',action:'Open cable list'});
+ add('Unplug the laptop Ethernet cord','Select the laptop ETH plug. Drag it away from the socket and release, or use Connected cables → Disconnect. Leave its power cord connected.','Removing the wired path proves that your radio path works.','No Ethernet cable is connected to the laptop.',s=>!s.links.some(l=>l.type!=='power'&&(l.a===d(s,'laptop')?.id||l.b===d(s,'laptop')?.id)),{reveal:'cableList',action:'Open cable list'});
  test('Browse through Wi-Fi','Run this test from the wireless laptop.','Laptop radio → AP → switch → router → ONT → provider. The AP bridges; the router routes.');
  }else if(mission==='routed'){
  place('laptop',1);connect('laptop','ac','wall','out2','power',1);on('laptop',1);

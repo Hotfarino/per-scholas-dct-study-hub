@@ -1,0 +1,121 @@
+
+> test:lab
+> node run-lab-tests.mjs
+
+
+test-lab
+90 home lab engine assertions passed.
+
+test-lab-bench-connections
+PASS: every photographed device port, all four wall sockets, direct cord and data dragging, power/screen/link state, occupied/wrong/missed drops, cable length, unplug, equipment gesture isolation and session reset.
+PASS: bench drag-out drops power, seated-end moves preserve cable, rejected destinations and cancelled drags preserve original wiring.
+
+test-lab-blender
+PASS: compressed Blender assets load; 58 socket positions match across 13 models; rack proportions, independent link lamps, scene/backdrop names preserved.
+
+test-lab-browsers
+PASS browsers: independent app and machine histories, forward-history truncation, fresh DNS/adapter checks on reload, unsupported addresses, Windows/Ubuntu shortcuts, private-VM isolation, original Browser alias and progress evidence.
+
+test-lab-cable-routing
+PASS: socket endpoints, rounded routing, separate lanes, drag offsets, unchanged lab state, trace selection, both socket highlights, reset and removed-cable recovery.
+
+test-lab-connection-pulses
+PASS: continuous power/data eligibility without tests, switched-off loads, outages, damage, source switches, DNS distinction, optical module/length validation, trace dimming, disconnects and duplicate-free refresh.
+
+test-lab-courses
+PASS nas: 35 checked guided tasks, UI actions and save/resume.
+PASS virtual: 42 checked guided tasks, UI actions and save/resume.
+PASS wifi: 29 checked guided tasks, UI actions and save/resume.
+PASS routed: 31 checked guided tasks, UI actions and save/resume.
+PASS cloud: 40 checked guided tasks, UI actions and save/resume.
+PASS trouble: 5 checked guided tasks, UI actions and save/resume.
+PASS free: 23 checked guided tasks, UI actions and save/resume.
+
+test-lab-desktop
+PASS OS logic: physical/VM state, distinct IPs, static guest settings, staged Linux changes, service idempotence, isolation, DNS diagnosis, power gating, unsupported-command rejection, /0–/32 subnet boundaries.
+PASS desktop UI: OS appearance selection, repository navigation, subnet input, quiz grading, terminal, static settings, browser, project evidence, minimize/restore/maximize, app navigation, unique IDs and power-loss view.
+
+test-lab-equipment-actions
+PASS: click selection, stable double-click target, connection close-up callbacks, device-specific right-click wiring, live status, empty ports, edge containment, keyboard alternatives, state preservation and stale-menu cleanup.
+
+test-lab-hardware
+PASS: physical link vs DHCP distinction, remote power loss, damaged cable, passive patch path, click-to-plug power, switch state, desktop handoff, removal of duplicate mini-browser/terminal, and unplugging.
+PASS: PoE power/link dependency and DNS failure independent of IP ping.
+PASS: drag success, missed drop, occupied and incompatible sockets, cancellation, cable length, click retry, and persistent outcome prompts.
+PASS: visible cord before selection, wrong first socket, two-end drag, missed-drop retry, device power state, and stable pointer targets.
+PASS: one-drag power setup, explicit power-on, powered outlet suggestions, no hidden wiring, unavailable outlets, and reopening connected equipment.
+PASS: assembled connection UI, guided targets, zoom without mutations, seated-plug detach and replug, invalid moves and cancellation preserve cables, all device ports, and exact connected peer.
+
+test-lab-laptop-config
+PASS laptop control center: panels stay inside OS; router DHCP bootstrap, static recovery, local access without WAN/DNS/NAT, address-change invalidation; native settings; public test page; all workspaces; guide evidence; VM isolation; park/restore and unique IDs.
+
+test-lab-laptop-courses
+PASS laptop-routed wired: 42 checked guided tasks, UI actions and save/resume.
+PASS laptop-routed nas: 35 checked guided tasks, UI actions and save/resume.
+PASS laptop-routed virtual: 42 checked guided tasks, UI actions and save/resume.
+PASS laptop-routed wifi: 29 checked guided tasks, UI actions and save/resume.
+PASS laptop-routed routed: 31 checked guided tasks, UI actions and save/resume.
+PASS laptop-routed cloud: 40 checked guided tasks, UI actions and save/resume.
+PASS laptop-routed trouble: 5 checked guided tasks, UI actions and save/resume.
+PASS laptop-routed free: 23 checked guided tasks, UI actions and save/resume.
+
+test-lab-learning
+PASS: 42 guided tasks through real UI/engine actions, blocked early advance, hardware/network/RAID/VM completion, help levels without resets, hints, tools, saved progress and resume.
+PASS: one exact guided destination, explicit connection close-up action, practice/free exclusion and beacon removal after success.
+
+test-lab-model3d
+PASS: 13 model types, 58 uniquely mapped finite socket positions, connector definitions, real power/link/peer state, empty examples, faults, outages, and no lab mutations.
+
+test-lab-network
+PASS: IP validation, non-/24 subnet calculation, wrong gateway, DNS vs ping, DHCP/APIPA, secured Wi-Fi/PoE, band/channel validation, ordered diagnostic stop/reset, and form changes.
+
+test-lab-os-admin
+PASS OS tools logic: adapter/driver/link state, local recovery, DHCP release/renew/reactivation, DNS independence, shell syntax, listeners, firewall authority, guest/host paths, restricted services, real virtual files and command catalog.
+PASS beginner OS workflow: no skipping, full Device Manager repair, driver wizard validates package, service/listener task, fault restoration, rename, command library filtering, Ubuntu hardware and adapter recovery.
+
+test-lab-presentation
+PASS: workshop menus, save handlers, power-gated laptop access, help modes, progress, cancel/start and unique controls.
+
+test-lab-rack-direct
+PASS: drag rack rules, explicit supports, height/collisions, heavy UPS low, non-rackable rejection, no duplicate bench equipment, read-only hover, unmount preserves cables, atomic cable relocation and damage preservation.
+
+test-lab-recovery
+PASS: diagnostic selector/retry consistency, VM requests, unsupported protocols, truthful save errors, rebuild interruption/retry/reset isolation, focused cable hints.
+
+test-lab-return
+PASS: return/undo preserves VM and layout, restores valid links, rejects duplicates/fixed anchors, protects occupied ports and rack units.
+
+test-lab-save
+PASS: portable lab round trip preserves connected equipment, RAID and working guests; malformed VM, cable and component data rejected.
+PASS: six-port saves migrate safely; malformed VLANs and missing original ports remain rejected.
+PASS: guest IPv4 settings and desktop learning evidence survive portable saves; unknown machine evidence and invalid guest masks are rejected.
+PASS: OS adapter/driver/DHCP/name/rules and guided task completion persist; unsupported fields stripped and invalid booleans rejected.
+
+test-lab-screen
+PASS screen: real Blender LCD bounds, perspective click mapping at 3 positions, degenerate projection, physical-client ownership, management-link/power/VM failures, isolated guest console, lab capability policies.
+
+test-lab-studio
+PASS: four working templates, resource/compatibility planner, safe PowerShell parser and state changes, freshness rejection, sound opt-in, zoom/scroll, guidance toggles, tabs, template undo, search and console controls.
+
+test-lab-surge-vm
+PASS: surge power/switch/outage/overload/chaining, guest prerequisites, switch isolation and VM budget enforcement.
+
+test-lab-ui
+UI test source loading
+UI initial render
+All inspectors done
+All missions done
+Save/load done
+PASS: all device inspectors, eight configurations, five views, fault diagnosis, browser save/load, portable round trip, VM rendering, malformed-import rejection, glossary and unique controls.
+PASS: VM resource preview, presets, create gating, guest cards, switch diagrams, and surge save round trip.
+
+test-lab-ux
+PASS: real interaction layer, drag placement, outside drops, cancellation, saved coordinates, inspector grouping, sensible cable defaults, opt-in narration, pause/resume/stop and stale speech callbacks.
+
+test-lab-world
+PASS: 3D geometry for every device and 116 socket transforms, stable mounting/desk placement, collision rejection, exact coordinate round trip, shelf undo, and atomic cable moves.
+
+test-lab-world-routing
+PASS: 20 bench/wall/rack paths and rounded curves avoid solid geometry; Blender normals and socket positions match; blocked routes rejected; 18U mounting boundaries and UPS safety preserved.
+
+All 28 Home Lab suites passed.

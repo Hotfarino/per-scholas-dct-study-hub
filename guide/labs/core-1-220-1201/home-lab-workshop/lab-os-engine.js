@@ -1,10 +1,10 @@
-import {commandAllowed,screenPolicy} from './lab-screen-policy.js?v=workshop44';
-import * as E from './lab-engine.js?v=workshop44';
-import {configuration,adapter,configure,serviceRows} from './lab-os-config.js?v=workshop44';
-import {fileCommand} from './lab-os-files.js?v=workshop44';
-import {moreCommands} from './lab-os-more-commands.js?v=workshop44';
-import {commandCatalog} from './lab-os-command-catalog.js?v=workshop44';
-import {runPowerShell} from './lab-powershell.js?v=workshop44';
+import {commandAllowed,screenPolicy} from './lab-screen-policy.js?v=workshop44qa1';
+import * as E from './lab-engine.js?v=workshop44qa1';
+import {configuration,adapter,configure,serviceRows} from './lab-os-config.js?v=workshop44qa1';
+import {fileCommand} from './lab-os-files.js?v=workshop44qa1';
+import {moreCommands} from './lab-os-more-commands.js?v=workshop44qa1';
+import {commandCatalog} from './lab-os-command-catalog.js?v=workshop44qa1';
+import {runPowerShell} from './lab-powershell.js?v=workshop44qa1';
 // Pure simulation adapter. It never invokes a real shell or sends network requests.
 export const maskFor=p=>Number.isInteger(p)&&p>=0&&p<=32?[24,16,8,0].map(b=>((p?0xffffffff<<(32-p):0)>>>b)&255).join('.'):null;
 export function subnet(ip,prefix){const n=E.ipNumber(ip),p=Number(prefix);if(n===null||!Number.isInteger(p)||p<0||p>32)return null;const mask=maskFor(p),m=E.ipNumber(mask),net=(n&m)>>>0,last=(net|~m)>>>0,fmt=v=>[24,16,8,0].map(b=>(v>>>b)&255).join('.'),count=2**(32-p);return {ip,prefix:p,mask,network:fmt(net),broadcast:p<31?fmt(last):'None (/31 or /32 special case)',first:fmt(p<31?net+1:net),last:fmt(p<31?last-1:last),addresses:count,hosts:p<31?count-2:count,bits:mask.split('.').map(x=>Number(x).toString(2).padStart(8,'0')).join('.'),note:p===31?'A /31 is for supported point-to-point links. Both addresses can be endpoints.':p===32?'A /32 describes one host address or route. It is not a normal shared LAN.':'Ordinary IPv4 subnet: reserve the network and broadcast addresses. Address ranges can include reserved space; this math is not an allocation recommendation.'};}
