@@ -1,4 +1,4 @@
-import * as E from './lab-engine.js?v=class46';
+import * as E from './lab-engine.js?v=class46r2';
 const d=(s,t)=>E.ofType(s,t)[0];
 export function foundationIssues(s,kind='network'){
  if(!s||!Array.isArray(s.devices)||!Array.isArray(s.links)||!Array.isArray(s.vms))return ['The saved foundation is damaged or incomplete. Validate and save a new working build.'];

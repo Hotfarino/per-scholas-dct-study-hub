@@ -71,3 +71,5 @@ run("by('router').router.dns='192.168.50.1';render()");click('challengeSubmit');
 click('learningDesktop');assert.match($('osBuildTask').textContent,/Independent challenge/);assert.ok($('osCheckChallenge'));run('desktop.close()');click('challengeReturn');assert.equal($('learningGuide').hidden,false);
 const saved=run('validateSave(JSON.parse(JSON.stringify(s)))');assert.equal(saved.assessment,undefined);
 console.log('PASS: foundation save/start via real controls, guest workspace starts clean, coach definitions, separate challenge UI, optional hints, failed/fixed results, laptop result submission, return to learning.');
+
+click('workshopChooseLab');$('mission').value='wired';$('mission').dispatchEvent(new Event('change',{bubbles:true}));assert.equal($('workshopUseFoundation').disabled,false);$('workshopUseFoundation').checked=true;click('newLab');click('confirmReset');assert.equal(run('s.walkthrough.index'),22);assert.equal(run('s.mission'),'wired');console.log('PASS: returning Home Network learners can also skip the checked network foundation.');

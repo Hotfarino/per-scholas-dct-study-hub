@@ -1,4 +1,4 @@
-import * as E from './lab-engine.js?v=class46';
+import * as E from './lab-engine.js?v=class46r2';
 
 const names={wired:'Home network → rack → VMs',nas:'Shared storage & RAID',virtual:'Virtual machines',wifi:'Wi-Fi network',routed:'Routed networks',cloud:'Cloud backup',trouble:'Troubleshooting',free:'Free build'};
 export function screenPolicy(s){

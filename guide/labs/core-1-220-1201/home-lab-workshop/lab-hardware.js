@@ -1,6 +1,6 @@
-import {moveCableEnd} from './lab-direct-actions.js?v=class46';
-import {cableIssue,refreshConnectionPulses} from './lab-connection-pulses.js?v=class46';
-import * as E from './lab-engine.js?v=class46';
+import {moveCableEnd} from './lab-direct-actions.js?v=class46r2';
+import {cableIssue,refreshConnectionPulses} from './lab-connection-pulses.js?v=class46r2';
+import * as E from './lab-engine.js?v=class46r2';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const powerIcon='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v10M6 5a9 9 0 1012 0"/></svg>';
 export function portState(s,id,p,seen=new Set()){

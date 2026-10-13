@@ -1,16 +1,16 @@
-import {coachMarkup} from './lab-coach.js?v=class46';
-import {screenPolicy,screenSession} from './lab-screen-policy.js?v=class46';
-import * as E from './lab-engine.js?v=class46';
-import {context,address,changeAddress,request,runCommand,subnet} from './lab-os-engine.js?v=class46';
-import {lessons,projects,references} from './lab-learning-repos.js?v=class46';
+import {coachMarkup} from './lab-coach.js?v=class46r2';
+import {screenPolicy,screenSession} from './lab-screen-policy.js?v=class46r2';
+import * as E from './lab-engine.js?v=class46r2';
+import {context,address,changeAddress,request,runCommand,subnet} from './lab-os-engine.js?v=class46r2';
+import {lessons,projects,references} from './lab-learning-repos.js?v=class46r2';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-import {setupAdmin} from './lab-os-admin.js?v=class46';
-import {setupOSPractice} from './lab-os-practice.js?v=class46';
-import {configuration,adapter,configure} from './lab-os-config.js?v=class46';
-import {displayPath} from './lab-os-files.js?v=class46';
-import {commandCatalog} from './lab-os-command-catalog.js?v=class46';
-import {appIcon} from './lab-os-icons.js?v=class46';
-import {isBrowser,createBrowserState,visitBrowser,moveBrowser,browserMarkup} from './lab-browser.js?v=class46';
+import {setupAdmin} from './lab-os-admin.js?v=class46r2';
+import {setupOSPractice} from './lab-os-practice.js?v=class46r2';
+import {configuration,adapter,configure} from './lab-os-config.js?v=class46r2';
+import {displayPath} from './lab-os-files.js?v=class46r2';
+import {commandCatalog} from './lab-os-command-catalog.js?v=class46r2';
+import {appIcon} from './lab-os-icons.js?v=class46r2';
+import {isBrowser,createBrowserState,visitBrowser,moveBrowser,browserMarkup} from './lab-browser.js?v=class46r2';
 const apps={lab:'Lab console',repos:'Learning repositories',terminal:'Terminal',settings:'Settings',browser:'Google Chrome',firefox:'Mozilla Firefox',vms:'Virtual machines',cloud:'Cloud console',tools:'System tools'};
 export function setupDesktop(api){
  const state=()=>api.getState();let machine=null,physical=null,owner=state(),app='repos',folder='home',lessonId=null,projectId=null,shell='powershell',log=[],history=[],historyIndex=0,notice='',maximized=false,minimized=false,guide=true,settingsTab='network',lastFocus=null,quizFeedback='',browserStates={browser:createBrowserState(),firefox:createBrowserState()},windowPosition=null,networkEditing=false,commandLibrary=false,commandFilter='',commandCategory='All',cwd='/';

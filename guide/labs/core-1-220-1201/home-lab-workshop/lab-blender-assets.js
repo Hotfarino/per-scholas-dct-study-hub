@@ -1,9 +1,9 @@
-import * as T from './lab-three.js?v=class46';
-import {bodies,equipmentDimensions} from './lab-model3d-data.js?v=class46';
-import {catalog} from './lab-engine.js?v=class46';
+import * as T from './lab-three.js?v=class46r2';
+import {bodies,equipmentDimensions} from './lab-model3d-data.js?v=class46r2';
+import {catalog} from './lab-engine.js?v=class46r2';
 let library=null,room=null,promise=null;
 export async function loadBlenderAssets(){
- if(!promise)promise=(async()=>{const loader=new T.GLTFLoader().setMeshoptDecoder(T.MeshoptDecoder);const results=await Promise.allSettled([loader.loadAsync('./lab-blender-hardware.glb?v=class46'),loader.loadAsync('./lab-blender-room.glb?v=class46')]);if(results[0].status==='fulfilled')library=results[0].value.scene;if(results[1].status==='fulfilled')room=results[1].value.scene;return {hardware:!!library,room:!!room};})();return promise;
+ if(!promise)promise=(async()=>{const loader=new T.GLTFLoader().setMeshoptDecoder(T.MeshoptDecoder);const results=await Promise.allSettled([loader.loadAsync('./lab-blender-hardware.glb?v=class46r2'),loader.loadAsync('./lab-blender-room.glb?v=class46r2')]);if(results[0].status==='fulfilled')library=results[0].value.scene;if(results[1].status==='fulfilled')room=results[1].value.scene;return {hardware:!!library,room:!!room};})();return promise;
 }
 // Test import uses the same parser and model factory without a network request.
 export function setBlenderLibraryForTest(scene){library=scene;}

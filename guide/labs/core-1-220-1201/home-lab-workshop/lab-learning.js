@@ -1,7 +1,7 @@
-import {coachLesson,coachMarkup} from './lab-coach.js?v=class46';
-import {checkedTask} from './lab-task-checks.js?v=class46';
-import {buildCourse,courseChapters,courseNames} from './lab-courses.js?v=class46';
-import * as E from './lab-engine.js?v=class46';
+import {coachLesson,coachMarkup} from './lab-coach.js?v=class46r2';
+import {checkedTask} from './lab-task-checks.js?v=class46r2';
+import {buildCourse,courseChapters,courseNames} from './lab-courses.js?v=class46r2';
+import * as E from './lab-engine.js?v=class46r2';
 const device=(s,type)=>E.ofType(s,type)[0];
 const id=(s,type,n=0)=>['wall','isp'].includes(type)?type:E.ofType(s,type)[n]?.id;
 const wire=(s,a,ap,b,bp)=>s.links.some(l=>!l.broken&&((l.a===id(s,a)&&l.ap===ap&&l.b===id(s,b)&&l.bp===bp)||(l.b===id(s,a)&&l.bp===ap&&l.a===id(s,b)&&l.ap===bp)));

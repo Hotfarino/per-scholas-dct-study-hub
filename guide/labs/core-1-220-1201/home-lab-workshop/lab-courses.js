@@ -1,4 +1,4 @@
-import * as E from './lab-engine.js?v=class46';
+import * as E from './lab-engine.js?v=class46r2';
 export const courseNames={wired:'Home network → rack server → VMs',nas:'Rack storage & RAID',virtual:'Virtualization server',wifi:'Wireless home office',routed:'Two subnets, one router',cloud:'Local storage + cloud backup',trouble:'Repair a faulty network',free:'Build your own network'};
 export function courseDescription(mission,total){
  const focus={nas:'shared storage, RAID and recovery',wifi:'Wi-Fi security and wireless connectivity',routed:'addresses, gateways and traffic between subnets',cloud:'a cloud model and a recovery copy',free:'desktop orientation'};

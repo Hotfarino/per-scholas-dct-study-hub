@@ -1,4 +1,4 @@
-import * as E from './lab-engine.js?v=class46';
+import * as E from './lab-engine.js?v=class46r2';
 const first=(s,t,n=0)=>E.ofType(s,t)[n];
 const yes=x=>x?'on':'off';
 export function taskChecks(s,st){
