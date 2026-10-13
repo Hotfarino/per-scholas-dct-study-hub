@@ -1,5 +1,13 @@
-import * as E from './lab-engine.js?v=workshop44qa1';
+import * as E from './lab-engine.js?v=network45';
 export const courseNames={wired:'Home network → rack server → VMs',nas:'Rack storage & RAID',virtual:'Virtualization server',wifi:'Wireless home office',routed:'Two subnets, one router',cloud:'Local storage + cloud backup',trouble:'Repair a faulty network',free:'Build your own network'};
+export function courseDescription(mission,total){
+ const focus={nas:'shared storage, RAID and recovery',wifi:'Wi-Fi security and wireless connectivity',routed:'addresses, gateways and traffic between subnets',cloud:'a cloud model and a recovery copy',free:'desktop orientation'};
+ if(mission==='wired')return `${total} steps · Recommended first lab: follow the network from laptop to router, server and VM. Virtualization server uses this same sequence.`;
+ if(mission==='virtual')return `${total} steps · The same sequence as Home network → rack server → VMs, with an emphasis on how the laptop reaches a guest through the physical and virtual networks. No additional unique tasks.`;
+ if(mission==='trouble')return `${total} fault-repair steps · Start with a broken network. Repair its cable, DHCP and DNS, then test the path.`;
+ const shared=mission==='cloud'?37:22;
+ return `${total}${mission==='free'?' optional':''} steps · ${shared} shared foundation steps + ${total-shared} ${mission==='cloud'?'cloud-specific':'follow-on'} steps for ${focus[mission]||'networking practice'}. Shared steps repeat the home-network build.`;
+}
 const d=(s,t,n=0)=>E.ofType(s,t)[n], link=(s,a,ap,b,bp,an=0)=>s.links.some(l=>!l.broken&&((l.a===d(s,a,an)?.id&&l.ap===ap&&l.b===(d(s,b)?.id||b)&&l.bp===bp)||(l.b===d(s,a,an)?.id&&l.bp===ap&&l.a===(d(s,b)?.id||b)&&l.ap===bp)));
 export function buildCourse(mission,base){
  if(mission==='wired'||mission==='virtual')return base;

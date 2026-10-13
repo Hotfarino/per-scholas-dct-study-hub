@@ -64,3 +64,33 @@ for(const mission of ['wired','nas','virtual','wifi','routed','cloud','trouble',
  }
  const clean=run('validateSave(JSON.parse(JSON.stringify(s)))');assert.equal(clean.walkthrough.index,steps.length);console.log('PASS laptop-routed '+mission+': '+steps.length+' checked guided tasks, UI actions and save/resume.');
 }
+
+// Exercise wrong saved values, not just the normal happy path.
+run("s=buildTemplate('vm');s.mission='virtual';s.vms=[];render();s.walkthrough.index=learning.steps.findIndex(x=>x.title==='Create your first virtual machine');learning.refresh()");
+click('learningAction');
+$('vmName').value='Web-Lab';$('vmRam').value='2';$('vmCpu').value='1';$('vmDisk').value='20';$('vmMode').value='private';click('createVm');
+assert.equal($('learningNext').disabled,true,'a name alone must not finish VM creation');
+assert.equal($('osBuildContinue').disabled,true,'laptop guidance must also block the wrong setup');
+for(const text of ['4 GB','2 vCPUs','40 GB','External'])assert.ok($('osBuildTask').textContent.includes(text),'show the missing VM setting: '+text);
+const vmMode=document.querySelector('[data-vmmode]');vmMode.value='external';vmMode.dispatchEvent(new Event('change',{bubbles:true}));
+assert.equal($('osBuildTask').querySelector('.os-setup-feedback').textContent.includes('Choose External'),false,'feedback updates while other settings are still wrong');
+assert.equal($('osBuildContinue').disabled,true);
+document.querySelector('[data-vmdelete]').click();
+$('vmName').value='Web-Lab';$('vmRam').value='4';$('vmCpu').value='2';$('vmDisk').value='40';$('vmMode').value='external';click('createVm');
+assert.equal($('osBuildContinue').disabled,false,'recreating with the required settings recovers the task');
+const vmState=run('s'),guest=vmState.vms[0],creation=run('learning.steps[s.walkthrough.index]');
+for(const [key,bad] of [['name','Other'],['host','missing'],['ram',2],['cpu',1],['disk',20],['mode','private'],['mode','internal']]){const good=guest[key];guest[key]=bad;assert.equal(creation.pass(vmState),false,'reject wrong VM '+key);guest[key]=good;assert.equal(creation.pass(vmState),true);}
+
+run("desktop.close();s=buildTemplate('vm');s.walkthrough={index:19};render()");
+assert.equal(run('learning.steps[19].settings.field'),'dhcp');
+click('learningAction');$('routerDns').value='192.168.50.254';click('applyRouter');
+assert.equal($('learningNext').disabled,true);assert.equal($('osBuildContinue').disabled,true);
+assert.match($('osBuildTask').textContent,/Set DNS to 192\.168\.50\.1/);
+$('routerDns').value='192.168.50.1';run('learning.refresh()');
+assert.equal($('learningNext').disabled,true,'unsaved fields must not receive completion');
+click('applyRouter');assert.equal($('learningNext').disabled,false);assert.equal($('osBuildContinue').disabled,false);
+const routerState=run('s'),router=E.ofType(routerState,'router')[0].router,dhcp=run('learning.steps[19]');
+for(const [key,bad] of [['dhcp',false],['lan','192.168.51.1'],['mask','255.255.0.0'],['start',101],['end',149],['dns','192.168.50.254']]){const good=router[key];router[key]=bad;assert.equal(dhcp.pass(routerState),false,'reject wrong DHCP '+key);router[key]=good;assert.equal(dhcp.pass(routerState),true);}
+router.dns='192.168.50.254';run("start('trouble')");const trouble=run('s');E.ofType(trouble,'router')[0].router.dhcp=true;
+assert.equal(run("learning.steps.find(x=>x.title==='Restore DHCP').pass(s)"),true,'troubleshooting deliberately fixes DHCP before DNS');
+console.log('PASS: bad VM resources/host/mode and every DHCP setting rejected; unsaved inputs rejected; laptop feedback refreshes; correcting through real controls unlocks Continue; isolated DHCP repair preserved.');

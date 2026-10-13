@@ -1,8 +1,8 @@
 # Home Lab Workshop
 
-An interactive 3D networking and hardware lab for beginners. Build on the workbench, configure through the laptop, and use simulated tests to explain why a connection succeeds or fails.
+An interactive 3D lab for learning networking from the beginning. Hardware, servers, VMs and cloud examples give network traffic a source, a path and a destination. Build on the workbench, configure through the laptop, and use simulated tests to explain why a connection succeeds or fails.
 
-**[Open the live demo](https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site/home-lab.html?edition=44#learningBar)** · [Development notes](CHANGELOG.md) · [Functional audit](test-results/home-lab-functional-audit.md) · [Layout review](test-results/home-lab-workshop-44.md)
+**[Open the live demo](https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site/home-lab.html?edition=45#learningBar)** · [Development notes](CHANGELOG.md) · [Functional audit](test-results/home-lab-functional-audit.md) · [Layout review](test-results/home-lab-workshop-44.md)
 
 ## Start here
 
@@ -27,6 +27,10 @@ A desktop or laptop browser with WebGL 2 is recommended. Small screens use a sta
 | Hybrid cloud & backup | Local infrastructure, cloud model and recovery copy | 40 |
 | Find and repair faults | Cable, DHCP and DNS diagnosis | 5 |
 | Free build | Open-ended work with an optional orientation | 23 |
+
+These totals count step occurrences, not unique skills. Home Network and Virtualization use the **same 42-step sequence**. Cloud shares 37 foundation steps and adds three cloud-specific tasks. Storage, wireless, routing and free build each reuse the first 22 foundation steps. There are 80 distinct task titles across the current courses; titles also do not measure unique skills.
+
+Correct setup and understanding the network path are the goals. Checks are practice feedback, not exam grades or evidence of full A+ coverage. The DHCP step checks the saved LAN address, mask, pool endpoints, DNS and enabled state. VM creation checks Web-Lab’s host, RAM, vCPUs, disk and External networking. Guided mode explains mismatches on the task card and inside the laptop.
 
 Guided mode provides explanations and hints. Practice mode reduces help. Free mode hides the checklist. All three use the same connection and configuration rules.
 
@@ -56,7 +60,7 @@ npm ci
 npm test
 ```
 
-The 28-suite test run covers engine constraints, all 247 guided tasks, laptop configuration and browser behavior, save-file validation, and workshop navigation/state preservation. DOM tests use LinkeDOM and replace WebGL with a stub; they do not prove rendered geometry or pointer behavior. Visual and interaction checks are recorded in the validation notes. GitHub Actions runs the same command when this lab changes.
+The 28-suite test run covers engine constraints, all 247 guided step occurrences (including repeated foundation steps), laptop configuration and browser behavior, save-file validation, and workshop navigation/state preservation. DOM tests use LinkeDOM and replace WebGL with a stub; they do not prove rendered geometry or pointer behavior. Visual and interaction checks are recorded in the validation notes. GitHub Actions runs the same command when this lab changes.
 
 ## How it works
 

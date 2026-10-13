@@ -42,3 +42,16 @@ click('workshopChooseLab');$('mission').value='wifi';click('newLab');click('conf
 assert.equal(run('s.mission'),'wifi');assert.equal($('workshopProgressText').textContent,'Step 1 of 29');
 const ids=[...document.querySelectorAll('[id]')].map(n=>n.id);assert.equal(ids.length,new Set(ids).size,'moved tools must keep unique IDs');
 console.log('PASS: workshop menus, save handlers, power-gated laptop access, help modes, progress, cancel/start and unique controls.');
+
+click('workshopChooseLab');
+for(const [mission,pattern] of [['virtual',/same sequence.*No additional unique tasks/s],['cloud',/37 shared foundation steps \+ 3 cloud-specific steps/],['wifi',/22 shared foundation steps \+ 7 follow-on steps/]]){
+ $('mission').value=mission;$('mission').dispatchEvent(new Event('change',{bubbles:true}));assert.match($('workshopLabDescription').textContent,pattern);
+}
+assert.match($('workshopLabs').textContent,/step counts do not count unique skills/);
+assert.equal(document.querySelector('#worldDeviceOptions summary').textContent,'More');
+assert.equal(document.querySelector('#worldViewOptions summary').textContent,'Camera');
+const manual=$('manualDialog').textContent;
+assert.equal(manual.includes('More device actions'),false);
+assert.match(manual,/then choose Continue/);
+assert.match(manual,/networking first/);
+console.log('PASS: course overlap is explicit, counts describe occurrences, and main-workflow help matches More/Camera/Continue.');

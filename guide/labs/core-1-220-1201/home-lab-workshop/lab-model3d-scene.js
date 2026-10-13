@@ -1,6 +1,6 @@
-import {createBlenderEquipment} from './lab-blender-assets.js?v=workshop44qa1';
-import * as T from './lab-three.js?v=workshop44qa1';
-import {OrbitControls,RoundedBoxGeometry} from './lab-three.js?v=workshop44qa1';
+import {createBlenderEquipment} from './lab-blender-assets.js?v=network45';
+import * as T from './lab-three.js?v=network45';
+import {OrbitControls,RoundedBoxGeometry} from './lab-three.js?v=network45';
 // All geometry is generic teaching hardware. The chassis remains assembled.
 export function createModelScene(host,spec,{onSelect,onError,onExplode}={}){
  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;

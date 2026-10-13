@@ -2,6 +2,12 @@
 
 Historical notes describe each edition at the time it shipped. Use the README and in-app manual for the current interface.
 
+## Edition 45 — networking setup feedback
+
+The workshop is explicitly for learning networking. Task checks guide a correct setup, not exam grading. VM creation now checks the named guest's host, 4 GB RAM, 2 vCPUs, 40 GB disk and External networking; the following VM steps use the same guest and retain these requirements. Router DHCP setup checks the saved LAN, mask, pool endpoints, DNS and enabled state. Guided feedback lists missing settings both beside the workbench and inside the laptop. VM recovery help explains switching the network or removing/recreating an incorrectly sized guest.
+
+Course descriptions disclose shared foundations instead of implying 247 unique tasks. Home Network and Virtualization retain the same 42-step sequence; cloud shares 37 steps and adds three. Existing course order and saved indices remain compatible. Current manual instructions use More, Camera, Guide options and Continue; separate OS exercises still use their actual Check & continue button.
+
 ## Edition 44 — functional audit
 
 Added all 28 regression suites to the runnable project. Fixed diagnostic selector/result consistency, repeatable VM HTTPS tests, misleading save-success text, delayed RAID rebuilds surviving a lab reset, and unnecessary equipment expansion from connection hints. See the functional audit for browser coverage and test limits.
