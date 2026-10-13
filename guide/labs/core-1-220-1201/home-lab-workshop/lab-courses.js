@@ -1,16 +1,24 @@
-import * as E from './lab-engine.js?v=network45';
+import * as E from './lab-engine.js?v=class46';
 export const courseNames={wired:'Home network → rack server → VMs',nas:'Rack storage & RAID',virtual:'Virtualization server',wifi:'Wireless home office',routed:'Two subnets, one router',cloud:'Local storage + cloud backup',trouble:'Repair a faulty network',free:'Build your own network'};
 export function courseDescription(mission,total){
  const focus={nas:'shared storage, RAID and recovery',wifi:'Wi-Fi security and wireless connectivity',routed:'addresses, gateways and traffic between subnets',cloud:'a cloud model and a recovery copy',free:'desktop orientation'};
- if(mission==='wired')return `${total} steps · Recommended first lab: follow the network from laptop to router, server and VM. Virtualization server uses this same sequence.`;
- if(mission==='virtual')return `${total} steps · The same sequence as Home network → rack server → VMs, with an emphasis on how the laptop reaches a guest through the physical and virtual networks. No additional unique tasks.`;
+ if(mission==='wired')return `${total} steps · Recommended first lab: follow the network from laptop to router, server and VM. Virtualization shares the foundation and adds isolation exercises.`;
+ if(mission==='virtual')return `${total} steps · 37 shared foundation steps + ${total-37} guest and virtual-network steps. Compare External, Private and Internal paths from the laptop. Use a validated server checkpoint to begin at the guest exercises.`;
  if(mission==='trouble')return `${total} fault-repair steps · Start with a broken network. Repair its cable, DHCP and DNS, then test the path.`;
  const shared=mission==='cloud'?37:22;
  return `${total}${mission==='free'?' optional':''} steps · ${shared} shared foundation steps + ${total-shared} ${mission==='cloud'?'cloud-specific':'follow-on'} steps for ${focus[mission]||'networking practice'}. Shared steps repeat the home-network build.`;
 }
 const d=(s,t,n=0)=>E.ofType(s,t)[n], link=(s,a,ap,b,bp,an=0)=>s.links.some(l=>!l.broken&&((l.a===d(s,a,an)?.id&&l.ap===ap&&l.b===(d(s,b)?.id||b)&&l.bp===bp)||(l.b===d(s,a,an)?.id&&l.bp===ap&&l.a===(d(s,b)?.id||b)&&l.ap===bp)));
 export function buildCourse(mission,base){
- if(mission==='wired'||mission==='virtual')return base;
+ if(mission==='wired')return base;
+ if(mission==='virtual'){
+  const list=[...base];
+  for(const [mode,name,expected,flag]of [['private','Private',false,'privateVmTest'],['internal','Internal',false,'internalVmTest'],['external','External',true,'restoredVmTest']]){
+   list.push({chapter:4,title:'Move Web-Lab to '+name+' networking',instruction:'In the laptop Virtual machines workspace, find Web-Lab. Change Network for this VM to '+name+'. Keep 4 GB RAM, 2 vCPUs, 40 GB disk, the running guest OS and its enabled HTTPS service.',why:mode==='external'?'External joins the physical LAN through the host NIC. Restore this mode so your physical laptop can reach the guest.':mode==='internal'?'Internal connects the host and its guests. This lab has no NAT or router on that virtual network, so the physical laptop stays outside.':'Private connects guests on that host. The host OS and physical laptop stay outside.',expect:name+' is saved on the Web-Lab card.',pass:s=>d(s,'server')&&s.vms.some(v=>v.name==='Web-Lab'&&v.mode===mode&&E.vmStatus(s,v).ok),panel:'vm',action:'Open VM workspace',vmMode:mode,term:'vswitch'});
+   list.push({chapter:4,title:expected?'Verify the restored guest path':'Observe '+name+' isolation',instruction:'Run Test my VM from the physical laptop. '+(expected?'Expect HTTPS to succeed.':'Expect it to fail because the virtual switch isolates the physical laptop. A stopped guest or broken host is a different problem.'),why:'Compare a deliberate network boundary with a fault. Read the reason the request stops.',expect:expected?'Guest web page reached.':'The running guest remains isolated from the physical LAN.',pass:s=>s.walkthrough?.[flag]===true,test:'vm',testFlag:flag,expectedOk:expected,vmMode:mode,panel:'test',action:'Test my VM',term:'vswitch'});
+  }
+  return list;
+ }
  const list=mission==='trouble'?[]:base.slice(0,mission==='cloud'?37:22);
  const add=(title,instruction,why,expect,pass,extra={})=>list.push({chapter:mission==='trouble'?0:3,title,instruction,why,expect,pass,...extra});
  const settings=(title,instruction,why,pass,type,section,field,extra={})=>add(title,instruction,why,'The live configuration matches the task.',pass,{settings:{type,section,field},action:'Open '+section.toLowerCase(),...extra});

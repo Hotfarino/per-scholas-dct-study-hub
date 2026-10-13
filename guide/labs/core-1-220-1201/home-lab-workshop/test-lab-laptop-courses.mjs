@@ -1,3 +1,4 @@
+import {makeFoundation,checkpointStart,foundationKey} from './lab-foundation.js';
 import {setupPresentation} from './lab-presentation.js';
 import {setupDesktop} from './lab-desktop.js';
 import {setupControlCenter} from './lab-control-center.js';
@@ -15,7 +16,7 @@ for(const method of ['scrollIntoView','setPointerCapture','focus'])HTMLElement.p
 HTMLElement.prototype.showModal=function(){this.open=true};HTMLElement.prototype.close=function(){this.open=false};HTMLElement.prototype.getBoundingClientRect=()=>({left:0,top:0,width:1000,height:800,right:1000,bottom:800});
 const store=new Map(),win={addEventListener(){},matchMedia:()=>({matches:false})},localStorage={getItem:k=>store.get(k),setItem:(k,v)=>store.set(k,v)};
 Object.assign(globalThis,{location:{hash:''},document,window:win,localStorage,requestAnimationFrame:()=>1,cancelAnimationFrame(){}});
-const ctx=vm.createContext({setupPresentation,setupDesktop,setupControlCenter,routerPage,buildTemplate,setupWorld:()=>{const root=document.createElement('section');root.id='worldLab';const source=fs.readFileSync('lab-world.js','utf8'),markup=source.slice(source.indexOf('root.innerHTML=`')+16,source.indexOf('`;\n',source.indexOf('root.innerHTML=`')));root.innerHTML=new Function('E','esc','return `'+markup+'`')(E,x=>x);document.getElementById('benchViewport').before(root);return {openScreen:()=>true,closeScreen(){},refresh(){},guide(){},view(){}};},E,portState,renderBenchEquipment,setupBenchConnections,setupLearningGuide,setupHardware:()=>null,setupStudio:()=>{const frame=document.createElement('div');frame.id='benchViewport';const scene=document.getElementById('scene');scene.before(frame);frame.append(scene);return {refresh(){},refreshScene(){},onResult(){},sound(){}};},document,window:win,Option:function(t,v){const e=document.createElement('option');e.textContent=t;e.value=v;return e},localStorage,requestAnimationFrame:()=>1,cancelAnimationFrame(){},setTimeout:(fn,ms)=>{if(ms===2500)fn();return 1},clearTimeout(){},queueMicrotask,console,Blob,URL});
+const ctx=vm.createContext({makeFoundation,checkpointStart,foundationKey,setupPresentation,setupDesktop,setupControlCenter,routerPage,buildTemplate,setupWorld:()=>{const root=document.createElement('section');root.id='worldLab';const source=fs.readFileSync('lab-world.js','utf8'),markup=source.slice(source.indexOf('root.innerHTML=`')+16,source.indexOf('`;\n',source.indexOf('root.innerHTML=`')));root.innerHTML=new Function('E','esc','return `'+markup+'`')(E,x=>x);document.getElementById('benchViewport').before(root);return {openScreen:()=>true,closeScreen(){},refresh(){},guide(){},view(){}};},E,portState,renderBenchEquipment,setupBenchConnections,setupLearningGuide,setupHardware:()=>null,setupStudio:()=>{const frame=document.createElement('div');frame.id='benchViewport';const scene=document.getElementById('scene');scene.before(frame);frame.append(scene);return {refresh(){},refreshScene(){},onResult(){},sound(){}};},document,window:win,Option:function(t,v){const e=document.createElement('option');e.textContent=t;e.value=v;return e},localStorage,requestAnimationFrame:()=>1,cancelAnimationFrame(){},setTimeout:(fn,ms)=>{if(ms===2500)fn();return 1},clearTimeout(){},queueMicrotask,console,Blob,URL});
 const run=x=>vm.runInContext(x,ctx),$=x=>document.getElementById(x),click=x=>$(x).dispatchEvent(new Event('click',{bubbles:true})),change=(x,v)=>{$(x).checked=v;$(x).dispatchEvent(new Event('change',{bubbles:true}));};
 run(fs.readFileSync('lab-ux.js','utf8').replaceAll('export function','function'));run(fs.readFileSync('lab-app.js','utf8').replace(/^import .*;$/gm,''));
 
@@ -53,7 +54,8 @@ for(const mission of ['wired','nas','virtual','wifi','routed','cloud','trouble',
   else if(st.desktop)click('learningAction');
   else if(st.panel==='vm'){
    click('learningAction');
-   if(st.title.startsWith('Choose a cloud')){$('cloudModel').value='hybrid';$('cloudService').value='iaas';click('provisionCloud');}
+   if(st.vmMode){const select=document.querySelector('[data-vmmode]');select.value=st.vmMode;select.dispatchEvent(new Event('change',{bubbles:true}));}
+   else if(st.title.startsWith('Choose a cloud')){$('cloudModel').value='hybrid';$('cloudService').value='iaas';click('provisionCloud');}
    else if(st.prepareBackup)click('cloudBackup');
    else if(st.title.startsWith('Verify the recovery'))click('verifyBackup');
    else if(st.title.startsWith('Create'))click('createVm');
@@ -71,9 +73,9 @@ click('learningAction');
 $('vmName').value='Web-Lab';$('vmRam').value='2';$('vmCpu').value='1';$('vmDisk').value='20';$('vmMode').value='private';click('createVm');
 assert.equal($('learningNext').disabled,true,'a name alone must not finish VM creation');
 assert.equal($('osBuildContinue').disabled,true,'laptop guidance must also block the wrong setup');
-for(const text of ['4 GB','2 vCPUs','40 GB','External'])assert.ok($('osBuildTask').textContent.includes(text),'show the missing VM setting: '+text);
+for(const text of ['Guest RAM','Guest vCPUs','Guest disk','Virtual switch'])assert.ok($('osBuildTask').textContent.includes(text),'show the missing VM setting: '+text);
 const vmMode=document.querySelector('[data-vmmode]');vmMode.value='external';vmMode.dispatchEvent(new Event('change',{bubbles:true}));
-assert.equal($('osBuildTask').querySelector('.os-setup-feedback').textContent.includes('Choose External'),false,'feedback updates while other settings are still wrong');
+assert.equal($('osBuildTask').querySelector('.os-setup-feedback').textContent.includes('Virtual switch:'),false,'feedback updates while other settings are still wrong');
 assert.equal($('osBuildContinue').disabled,true);
 document.querySelector('[data-vmdelete]').click();
 $('vmName').value='Web-Lab';$('vmRam').value='4';$('vmCpu').value='2';$('vmDisk').value='40';$('vmMode').value='external';click('createVm');
@@ -85,7 +87,7 @@ run("desktop.close();s=buildTemplate('vm');s.walkthrough={index:19};render()");
 assert.equal(run('learning.steps[19].settings.field'),'dhcp');
 click('learningAction');$('routerDns').value='192.168.50.254';click('applyRouter');
 assert.equal($('learningNext').disabled,true);assert.equal($('osBuildContinue').disabled,true);
-assert.match($('osBuildTask').textContent,/Set DNS to 192\.168\.50\.1/);
+assert.match($('osBuildTask').textContent,/DNS: expected 192\.168\.50\.1/);
 $('routerDns').value='192.168.50.1';run('learning.refresh()');
 assert.equal($('learningNext').disabled,true,'unsaved fields must not receive completion');
 click('applyRouter');assert.equal($('learningNext').disabled,false);assert.equal($('osBuildContinue').disabled,false);

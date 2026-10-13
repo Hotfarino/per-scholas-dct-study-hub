@@ -2,6 +2,12 @@
 
 Historical notes describe each edition at the time it shipped. Use the README and in-app manual for the current interface.
 
+## Edition 46 — teach, validate and troubleshoot
+
+Guided tasks include plain-language teaching, relevant acronym definitions and a completion recap. Saved network/server foundations are validated before loading and trimmed to prerequisite devices. Virtualization adds six distinct isolation/restoration tasks. Six independent challenges keep goals, optional hints and results separate from guided lessons, with current-state checks for every requirement. Setup validation now covers cable type, rack supports, requested IP/Wi-Fi/subnet settings, exact failed drives, device-owned rebuild completion and cloud prerequisites. Old saves accept the new rebuild counter's default zero.
+
+The RAID guide's hidden-block lesson now has an explicit Next parity lesson control, allows proceeding from one missing block to two, and explains how to unlock editing. Playback pauses on navigation and page hiding; images decode lazily. This addresses the apparent locked state. Browser and regression checks cover the repaired interaction; no infinite-loop cause was identified in the XOR arithmetic.
+
 ## Edition 45 — networking setup feedback
 
 The workshop is explicitly for learning networking. Task checks guide a correct setup, not exam grading. VM creation now checks the named guest's host, 4 GB RAM, 2 vCPUs, 40 GB disk and External networking; the following VM steps use the same guest and retain these requirements. Router DHCP setup checks the saved LAN, mask, pool endpoints, DNS and enabled state. Guided feedback lists missing settings both beside the workbench and inside the laptop. VM recovery help explains switching the network or removing/recreating an incorrectly sized guest.

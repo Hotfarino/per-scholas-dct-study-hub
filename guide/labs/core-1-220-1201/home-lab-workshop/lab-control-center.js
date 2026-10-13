@@ -1,6 +1,6 @@
-import * as E from './lab-engine.js?v=network45';
-import {routerPage,labConsoleAccess} from './lab-management.js?v=network45';
-import {screenPolicy} from './lab-screen-policy.js?v=network45';
+import * as E from './lab-engine.js?v=class46';
+import {routerPage,labConsoleAccess} from './lab-management.js?v=class46';
+import {screenPolicy} from './lab-screen-policy.js?v=class46';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function setupControlCenter(api){
  const $=id=>document.getElementById(id),state=()=>api.getState();let mounted=null,view='home',target=null,section=null,client=null,routerURL=null,accessKey=null;

@@ -1,3 +1,4 @@
+import {makeFoundation,checkpointStart,foundationKey} from './lab-foundation.js';
 import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';import {parseHTML} from 'linkedom';import * as E from './lab-engine.js';
 import {setupLearningGuide} from './lab-learning.js';
 import {renderBenchEquipment,setupBenchConnections} from './lab-bench-connections.js';
@@ -10,7 +11,7 @@ for(const method of ['scrollIntoView','setPointerCapture','focus'])HTMLElement.p
 HTMLElement.prototype.showModal=function(){this.open=true};HTMLElement.prototype.close=function(){this.open=false};HTMLElement.prototype.getBoundingClientRect=()=>({left:0,top:0,width:1000,height:800,right:1000,bottom:800});
 const store=new Map(),win={addEventListener(){},matchMedia:()=>({matches:false})},localStorage={getItem:k=>store.get(k),setItem:(k,v)=>store.set(k,v)};
 Object.assign(globalThis,{document,window:win,localStorage,requestAnimationFrame:()=>1,cancelAnimationFrame(){}});
-const ctx=vm.createContext({E,portState,renderBenchEquipment,setupBenchConnections,setupLearningGuide,setupHardware:()=>null,setupStudio:()=>{const frame=document.createElement('div');frame.id='benchViewport';const scene=document.getElementById('scene');scene.before(frame);frame.append(scene);return {refresh(){},refreshScene(){},onResult(){},sound(){}};},document,window:win,Option:function(t,v){const e=document.createElement('option');e.textContent=t;e.value=v;return e},localStorage,requestAnimationFrame:()=>1,cancelAnimationFrame(){},setTimeout:(fn,ms)=>{if(ms===2500)fn();return 1},clearTimeout(){},queueMicrotask,console,Blob,URL});
+const ctx=vm.createContext({makeFoundation,checkpointStart,foundationKey,E,portState,renderBenchEquipment,setupBenchConnections,setupLearningGuide,setupHardware:()=>null,setupStudio:()=>{const frame=document.createElement('div');frame.id='benchViewport';const scene=document.getElementById('scene');scene.before(frame);frame.append(scene);return {refresh(){},refreshScene(){},onResult(){},sound(){}};},document,window:win,Option:function(t,v){const e=document.createElement('option');e.textContent=t;e.value=v;return e},localStorage,requestAnimationFrame:()=>1,cancelAnimationFrame(){},setTimeout:(fn,ms)=>{if(ms===2500)fn();return 1},clearTimeout(){},queueMicrotask,console,Blob,URL});
 const run=x=>vm.runInContext(x,ctx),$=x=>document.getElementById(x),click=x=>$(x).dispatchEvent(new Event('click',{bubbles:true})),change=(x,v)=>{$(x).checked=v;$(x).dispatchEvent(new Event('change',{bubbles:true}));};
 run(fs.readFileSync('lab-ux.js','utf8').replaceAll('export function','function'));run(fs.readFileSync('lab-app.js','utf8').replace(/^import .*;$/gm,''));
 for(const mission of ['nas','virtual','wifi','routed','cloud','trouble','free']){
@@ -42,7 +43,8 @@ for(const mission of ['nas','virtual','wifi','routed','cloud','trouble','free'])
   else if(st.desktop)run('s.desktopProgress={opened:true,machines:{}};render()');
   else if(st.panel==='vm'){
    click('learningAction');
-   if(st.title.startsWith('Choose a cloud')){$('cloudModel').value='hybrid';$('cloudService').value='iaas';click('provisionCloud');}
+   if(st.vmMode){const select=document.querySelector('[data-vmmode]');select.value=st.vmMode;select.dispatchEvent(new Event('change',{bubbles:true}));}
+   else if(st.title.startsWith('Choose a cloud')){$('cloudModel').value='hybrid';$('cloudService').value='iaas';click('provisionCloud');}
    else if(st.prepareBackup)click('cloudBackup');
    else if(st.title.startsWith('Verify the recovery'))click('verifyBackup');
    else if(st.title.startsWith('Create'))click('createVm');
