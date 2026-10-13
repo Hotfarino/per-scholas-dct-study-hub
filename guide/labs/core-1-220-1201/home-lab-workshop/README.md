@@ -2,7 +2,11 @@
 
 An interactive 3D lab for learning networking from the beginning. Hardware, servers, VMs and cloud examples give network traffic a source, a path and a destination. Build on the workbench, configure through the laptop, and use simulated tests to explain why a connection succeeds or fails.
 
-**[Open the live demo](https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site/home-lab.html?edition=46#learningBar)** · [Development notes](CHANGELOG.md) · [Functional audit](test-results/home-lab-functional-audit.md) · [Layout review](test-results/home-lab-workshop-44.md)
+**[Open the live demo](https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site/home-lab.html?edition=47#learningBar)** · [Development notes](CHANGELOG.md) · [Functional audit](test-results/home-lab-functional-audit.md) · [Layout review](test-results/home-lab-workshop-44.md)
+
+## Latest audit update
+
+[Edition 47 validation record](test-results/audit47.json): stricter portable-file checks, separated device labels, camera fitting and smooth connector animations with stable mesh buffers. Hidden scenes pause, graphics failures stop rendering cleanly, and shared Blender textures remain reusable. The larger hosted site also has patched dependencies and bounded practice/PBQ request parsing. The record distinguishes hosted API checks from this standalone lab.
 
 ## Start here
 

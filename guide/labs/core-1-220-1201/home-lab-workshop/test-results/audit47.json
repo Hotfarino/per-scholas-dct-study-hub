@@ -1,0 +1,49 @@
+{
+  "edition": 47,
+  "date": "2026-10-13",
+  "scope": [
+    "npm dependencies",
+    "practice/PBQ input validation and authorization regression checks",
+    "portable lab import validation",
+    "3D connector geometry/camera/labels/resource lifecycle",
+    "desktop and 390px mobile browser QA"
+  ],
+  "fixes": [
+    "fflate 0.8.3 and nested esbuild 0.25.12",
+    "Bound streamed JSON bytes before full allocation; strict JSON media type",
+    "Reject inherited card/device/cable/course/challenge identifiers",
+    "Validate imported component enums, device counts and non-overlapping supported rack placement",
+    "Reuse cable mesh buffers during exploded animation; preserve insertion axes and route tails in ordered lanes",
+    "Keep device labels separate with leader lines and prioritize selected/guided equipment",
+    "Pause hidden rendering and stop on graphics-context loss; dispose unique resources without destroying shared Blender maps",
+    "Generate flashcard and Three.js assets atomically; fail builds containing empty application assets"
+  ],
+  "validation": {
+    "lab_suites": 30,
+    "lab_suites_result": "passed",
+    "practice_questions": 763,
+    "practice_tests_result": "passed",
+    "pbq_scenarios": 10,
+    "pbq_tests_result": "passed",
+    "security_regressions": "passed",
+    "drizzle_generate": "no schema changes",
+    "browser_errors_observed": 0,
+    "npm_audit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    }
+  },
+  "advisory_sources": [
+    "https://github.com/advisories/GHSA-px8p-9vwx-vf98",
+    "https://github.com/advisories/GHSA-67mh-4wv8-2f99"
+  ],
+  "limits": [
+    "Educational simulator; no real hardware, VM host or packet forwarding",
+    "Dependency scan reports known advisories only",
+    "Browser visual checks cover representative connected builds and viewports, not every possible user-created layout"
+  ]
+}

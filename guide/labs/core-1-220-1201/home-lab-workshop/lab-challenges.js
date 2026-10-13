@@ -1,5 +1,5 @@
-import * as E from './lab-engine.js?v=class46r2';
-import {buildTemplate} from './lab-planner.js?v=class46r2';
+import * as E from './lab-engine.js?v=class47';
+import {buildTemplate} from './lab-planner.js?v=class47';
 const d=(s,t)=>E.ofType(s,t)[0];
 const row=(name,ok,detail)=>({name,ok:!!ok,detail});
 const networkRows=s=>{const c=d(s,'laptop'),cfg=c?E.network(s,c.id):{ok:false,why:'Laptop missing'},ping=c?E.test(s,c.id,'internet','ping'):{ok:false,why:'Laptop missing'},dns=c?E.lookupDNS(s,c.id):{ok:false,why:'Laptop missing'},https=c?E.test(s,c.id,'internet','https'):{ok:false,why:'Laptop missing'};return [row('Power and address',cfg.ok,cfg.ok?`${cfg.ip}; mask ${cfg.mask}; gateway ${cfg.gateway}; DNS ${cfg.dns}`:cfg.why),row('IP reachability',ping.ok,ping.why),row('Name lookup',dns.ok,dns.why),row('Web application',https.ok,https.why)];};

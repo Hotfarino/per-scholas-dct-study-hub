@@ -1,3 +1,12 @@
+# Edition 47 · security, stability and wiring clarity
+
+- Reject incompatible imported parts, inherited identifiers and overlapping rack placements.
+- Keep labels separate and connect shifted labels to their equipment with leader lines.
+- Reuse cable buffers during exploded animation; keep plugs on their socket axes and fan tails into ordered lanes.
+- Improve camera fitting, focus, mobile controls and graphics-resource cleanup.
+- Preserve guided courses, laptop configuration and existing connection logic.
+- Validation: 30 lab suites, additional geometry/import regressions and desktop/390px browser checks. See `test-results/audit47.json` for scope and limits.
+
 # Home Lab Workshop development notes
 
 Historical notes describe each edition at the time it shipped. Use the README and in-app manual for the current interface.

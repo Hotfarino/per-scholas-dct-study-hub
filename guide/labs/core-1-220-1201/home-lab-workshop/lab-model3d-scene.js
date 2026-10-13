@@ -1,11 +1,12 @@
-import {createBlenderEquipment} from './lab-blender-assets.js?v=class46r2';
-import * as T from './lab-three.js?v=class46r2';
-import {OrbitControls,RoundedBoxGeometry} from './lab-three.js?v=class46r2';
+import {connectionLayout,updateTube,fittedBoxDistance} from './lab-model3d-geometry.js?v=class47';
+import {createBlenderEquipment} from './lab-blender-assets.js?v=class47';
+import * as T from './lab-three.js?v=class47';
+import {OrbitControls,RoundedBoxGeometry} from './lab-three.js?v=class47';
 // All geometry is generic teaching hardware. The chassis remains assembled.
 export function createModelScene(host,spec,{onSelect,onError,onExplode}={}){
  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
  const renderer=new T.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0xf3f7fc);renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFShadowMap;renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.25;host.append(renderer.domElement);renderer.domElement.setAttribute('aria-label','Interactive 3D equipment. Drag to rotate. Scroll to zoom. Choose sockets using the adjacent buttons.');renderer.domElement.tabIndex=0;
- const scene=new T.Scene(),camera=new T.PerspectiveCamera(38,1,.1,100);const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.09;controls.minDistance=4;controls.maxDistance=23;controls.maxPolarAngle=Math.PI*.86;controls.target.set(0,.9,0);controls.enablePan=false;
+ const scene=new T.Scene(),camera=new T.PerspectiveCamera(38,1,.1,100);const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.09;controls.minDistance=4;controls.maxDistance=23;controls.maxPolarAngle=Math.PI*.86;controls.target.set(0,.9,0);controls.enablePan=false;controls.zoomSpeed=.35;controls.rotateSpeed=.65;
  scene.add(new T.HemisphereLight(0xe4f5ff,0x718198,3));const key=new T.DirectionalLight(0xffffff,4.2);key.position.set(-4,9,6);key.castShadow=true;key.shadow.mapSize.set(2048,2048);Object.assign(key.shadow.camera,{left:-9,right:9,top:9,bottom:-9,near:.1,far:30});key.shadow.bias=-.0004;scene.add(key);const rim=new T.DirectionalLight(0x80beff,2.5);rim.position.set(5,4,-6);scene.add(rim);
  const root=new T.Group();scene.add(root);const targets=[],assemblies=[];const materials=new Set(),geometries=new Set(),textures=new Set();
  function mat(color,metalness=0,roughness=.42,extra={}){const m=new T.MeshStandardMaterial({color,metalness,roughness,...extra});materials.add(m);return m;}
@@ -13,7 +14,7 @@ export function createModelScene(host,spec,{onSelect,onError,onExplode}={}){
  function mesh(geometry,material,parent=root){geometries.add(geometry);const m=new T.Mesh(geometry,material);m.castShadow=true;m.receiveShadow=true;parent.add(m);return m;}
  function box(size,pos,material=white,parent=root,r=.04){const o=mesh(new RoundedBoxGeometry(...size,2,Math.min(r,...size.map(v=>v/4))),material,parent);o.position.set(...pos);return o;}
  function cyl(radius,len,pos,material=metal,parent=root){const o=mesh(new T.CylinderGeometry(radius,radius,len,32),material,parent);o.rotation.x=Math.PI/2;o.position.set(...pos);return o;}
- function label(text,pos,width=2,parent=root){const cv=document.createElement('canvas');cv.width=768;cv.height=96;const c=cv.getContext('2d');c.clearRect(0,0,768,96);c.fillStyle='#283d57';c.font='600 40px system-ui';c.textAlign='center';c.fillText(text,384,61);const tex=new T.CanvasTexture(cv);tex.colorSpace=T.SRGBColorSpace;textures.add(tex);const material=new T.SpriteMaterial({map:tex,transparent:true,depthTest:false});materials.add(material);const sprite=new T.Sprite(material);sprite.position.set(...pos);sprite.scale.set(width,width/8,1);parent.add(sprite);return sprite;}
+ function label(text,pos,width=2,parent=root){const cv=document.createElement('canvas');cv.width=768;cv.height=96;const c=cv.getContext('2d');c.clearRect(0,0,768,96);c.fillStyle='#283d57';let font=40;c.font='600 '+font+'px system-ui';while(c.measureText(text).width>720&&font>19)c.font='600 '+(--font)+'px system-ui';if(c.measureText(text).width>720){while(text.length&&c.measureText(text+'…').width>720)text=text.slice(0,-1);text+='…';}c.textAlign='center';c.fillText(text,384,61);const tex=new T.CanvasTexture(cv);tex.colorSpace=T.SRGBColorSpace;textures.add(tex);const material=new T.SpriteMaterial({map:tex,transparent:true,depthTest:false});materials.add(material);const sprite=new T.Sprite(material);sprite.position.set(...pos);sprite.scale.set(width,width/8,1);parent.add(sprite);return sprite;}
  const floor=mesh(new T.PlaneGeometry(200,200),mat(0xf3f7fc,0,.9),scene);floor.rotation.x=-Math.PI/2;floor.position.y=-.3;floor.castShadow=false;const platform=box([8,.18,6.3],[0,-.18,0],mat(0xe5edf5,.2,.55),root,.12);const grid=new T.GridHelper(7.6,19,0xc1d5e7,0xd7e4ef);grid.position.y=-.08;root.add(grid);materials.add(grid.material);geometries.add(grid.geometry);
  const [w,h,d]=spec.dimensions,cy=h/2+.35;const chassis=new T.Group();root.add(chassis);
  if(spec.type==='ap'){const o=mesh(new T.CylinderGeometry(1.5,1.45,h,64),white,chassis);o.position.y=cy;const ring=mesh(new T.TorusGeometry(1.24,.025,12,80),spec.on?light:metal,chassis);ring.rotation.x=Math.PI/2;ring.position.y=h+.37;}
@@ -47,30 +48,83 @@ export function createModelScene(host,spec,{onSelect,onError,onExplode}={}){
  for(const p of spec.ports){const holder=new T.Group();holder.position.fromArray(p.position);holder.quaternion.setFromUnitVectors(new T.Vector3(0,0,1),toV(p.normal));root.add(holder);const socket=connector(p.kind,spec.type,false,p.cable);holder.add(socket);tagObjects(socket,p.id);
   const halo=mesh(new T.TorusGeometry(p.kind.startsWith('power')?.45:.35,.017,8,48),mat(p.live?(p.power?0x05c78e:0x188aff):0xa5b7c9,0,.5,{emissive:p.live?(p.power?0x05c78e:0x188aff):0,emissiveIntensity:.3}),holder);halo.position.z=.13;halo.visible=false;
   const plug=connector(p.kind,spec.type,true,p.cable);root.add(plug);plug.quaternion.copy(holder.quaternion);tagObjects(plug,p.id);
-  const lineMat=new T.LineDashedMaterial({color:0x65a3d2,dashSize:.09,gapSize:.07,transparent:true,opacity:.75});materials.add(lineMat);const guide=new T.Line(new T.BufferGeometry(),lineMat);geometries.add(guide.geometry);root.add(guide);
-  const wireMat=mat(p.connected?(p.live?(p.power?0x148763:0x1484d5):0x677889):0x9dafc0,.2,.48);const wire=mesh(new T.BufferGeometry(),wireMat);wire.castShadow=false;
+  const lineMat=new T.LineDashedMaterial({color:0x65a3d2,dashSize:.09,gapSize:.07,transparent:true,opacity:.75});materials.add(lineMat);const guideGeo=new T.BufferGeometry();guideGeo.setAttribute('position',new T.Float32BufferAttribute(new Float32Array(6),3));guideGeo.setAttribute('lineDistance',new T.Float32BufferAttribute([0,0],1));const guide=new T.Line(guideGeo,lineMat);geometries.add(guide.geometry);root.add(guide);
+  const wireMat=mat(p.connected?(p.live?(p.power?0x148763:0x1484d5):0x677889):0x9dafc0,.2,.48);const initial=connectionLayout(p,spec.ports,0);const wire=mesh(new T.TubeGeometry(initial.curve,32,p.power?.044:.032,8,false),wireMat);wire.castShadow=false;
   const bead=mesh(new T.SphereGeometry(.052,12,10),mat(p.power?0x36ffba:0x60cfff,.05,.1,{emissive:p.power?0x00cb7f:0x007fff,emissiveIntensity:2.5}));bead.castShadow=false;const endCap=mesh(new T.SphereGeometry(.09,16,12),wireMat);endCap.castShadow=false;
   const caption=label(p.id.toUpperCase(),[0,0,0],1.15);const endLabel=label(p.connected?('TO '+p.peer+' · '+p.peerPort.toUpperCase()):'EXAMPLE · NO CABLE',[0,0,0],3.2);const adapter=p.kind==='powerIn'&&['laptop','router','ont','nas','ap'].includes(spec.type)?box([.68,.32,.4],[0,0,0],dark):null;
-  assemblies.push({p,holder,plug,halo,guide,wire,bead,endCap,caption,endLabel,adapter,curve:null});
+  assemblies.push({p,holder,plug,halo,guide,wire,bead,endCap,caption,endLabel,adapter,curve:initial.curve,geometryAmount:-1});
  }
- let selected=spec.ports[0]?.id,amount=0,animation=null,disposed=false,raf=0,last=0;let interacting=false,viewportFit=1;
- function disposeGeometry(object,newGeo){geometries.delete(object.geometry);object.geometry.dispose();object.geometry=newGeo;geometries.add(newGeo);}
- function updateGeometry(){for(const a of assemblies){const {p}=a,n=toV(p.normal),base=toV(p.position),selectedPort=p.id===selected,visible=p.connected||selectedPort;a.plug.visible=a.wire.visible=a.endCap.visible=visible;a.guide.visible=visible&&amount>.02;a.caption.visible=selectedPort;a.endLabel.visible=selectedPort;a.halo.visible=selectedPort;a.bead.visible=visible&&p.live&&!reduced;if(a.adapter)a.adapter.visible=visible;
-   // Pull plugs along their insertion axis; a little spread exposes crowded sockets.
-   const pull=.13+amount*1.6,tip=base.clone().addScaledVector(n,pull);a.plug.position.copy(tip);const tail=tip.clone().addScaledVector(n,p.kind==='powerIn'?.66:.82),end=base.clone().addScaledVector(n,3.6);end.y=Math.max(.35,base.y-.35);const bend=tail.clone().addScaledVector(n,.8);bend.y=Math.max(.45,bend.y+.35);a.curve=new T.CatmullRomCurve3([tail,bend,end.clone().add(new T.Vector3(0,.15,0)),end]);disposeGeometry(a.wire,new T.TubeGeometry(a.curve,32,p.power?.044:.032,8,false));a.endCap.position.copy(end);a.endLabel.position.copy(end.clone().add(new T.Vector3(0,-.35,0)));a.bead.position.copy(tail);if(a.adapter)a.adapter.position.copy(a.curve.getPoint(.67));disposeGeometry(a.guide,new T.BufferGeometry().setFromPoints([base.clone().addScaledVector(n,.12),tip]));a.guide.computeLineDistances();a.caption.position.copy(tip.clone().add(new T.Vector3(0,.6,0)));a.wire.material.transparent=!selectedPort;a.wire.material.opacity=selectedPort?1:.58;
-  }}
+ let selected=spec.ports[0]?.id,amount=0,animation=null,disposed=false,contextLost=false,raf=0,last=0,interacting=false;
+ function updateGeometry(){
+  for(const a of assemblies){
+   const {p}=a,selectedPort=p.id===selected,visible=p.connected||selectedPort;
+   a.plug.visible=a.wire.visible=a.endCap.visible=visible;
+   a.guide.visible=visible&&amount>.02;a.caption.visible=a.endLabel.visible=a.halo.visible=selectedPort;
+   a.bead.visible=visible&&p.live&&!reduced;if(a.adapter)a.adapter.visible=visible;
+   if(visible&&a.geometryAmount!==amount){
+    const layout=connectionLayout(p,spec.ports,amount);a.geometryAmount=amount;a.curve=layout.curve;
+    a.plug.position.copy(layout.tip);updateTube(a.wire.geometry,a.curve,p.power?.044:.032);
+    a.endCap.position.copy(layout.end);a.endLabel.position.copy(layout.end).add(new T.Vector3(0,-.32,0));
+    if(a.adapter){a.adapter.position.copy(a.curve.getPointAt(.64));a.adapter.quaternion.setFromUnitVectors(new T.Vector3(0,0,1),a.curve.getTangentAt(.64));}
+    const line=a.guide.geometry.getAttribute('position'),from=layout.base.clone().addScaledVector(layout.normal,.12);
+    line.setXYZ(0,from.x,from.y,from.z);line.setXYZ(1,layout.tip.x,layout.tip.y,layout.tip.z);line.needsUpdate=true;
+    const distance=a.guide.geometry.getAttribute('lineDistance');distance.setX(1,from.distanceTo(layout.tip));distance.needsUpdate=true;a.guide.geometry.computeBoundingSphere();
+    a.caption.position.copy(layout.tip).add(new T.Vector3(0,.52,0));
+   }
+   a.wire.material.transparent=!selectedPort;a.wire.material.opacity=selectedPort?1:.3;
+  }
+ }
  function select(id){if(!assemblies.some(a=>a.p.id===id))return;selected=id;updateGeometry();}
- function setExplosion(v){animation=null;amount=Math.max(0,Math.min(1,v));updateGeometry();onExplode?.(amount);}
- function animateTo(value){if(reduced)return setExplosion(value);animation={from:amount,to:value,start:performance.now()};}
- function view(name){const point={hero:[-6,5,7.5],front:[0,2.8,10.3],rear:[-4.5,5,-9.5],top:[0,11.5,.01]}[name]||[-8,6.6,10];camera.position.set(...point).multiplyScalar(viewportFit);controls.target.set(spec.type==='laptop'?-1.2:0,spec.type==='laptop'?1.15:.85,name==='rear'?-1:name==='top'?0:.7);if(spec.type==='laptop')camera.position.x-=1.2;controls.update();}
- view(['server','nas','ups','ap'].includes(spec.type)?'rear':'hero');updateGeometry();
- const resize=()=>{if(disposed)return;const {width,height}=host.getBoundingClientRect();if(!width||!height)return;const fit=Math.max(1,1.5/(width/height));if(Math.abs(fit-viewportFit)>.01){camera.position.sub(controls.target).multiplyScalar(fit/viewportFit).add(controls.target);viewportFit=fit;}renderer.setSize(width,height,false);camera.aspect=width/height;camera.updateProjectionMatrix();};const ro=new ResizeObserver(resize);ro.observe(host);resize();
- const ray=new T.Raycaster(),mouse=new T.Vector2();let pointer=null;const down=e=>{pointer={x:e.clientX,y:e.clientY};},up=e=>{if(!pointer||Math.hypot(e.clientX-pointer.x,e.clientY-pointer.y)>5){pointer=null;return;}pointer=null;const r=renderer.domElement.getBoundingClientRect();mouse.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);ray.setFromCamera(mouse,camera);const hits=ray.intersectObjects(targets).filter(hit=>{let o=hit.object;while(o){if(!o.visible)return false;o=o.parent;}return true;});if(hits[0]){select(hits[0].object.userData.port);onSelect?.(selected);}};
- renderer.domElement.addEventListener('pointerdown',down);renderer.domElement.addEventListener('pointerup',up);
- const keyboard=e=>{if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)){e.preventDefault();const v=camera.position.clone().sub(controls.target),sph=new T.Spherical().setFromVector3(v);if(e.key==='ArrowLeft')sph.theta-=.12;if(e.key==='ArrowRight')sph.theta+=.12;if(e.key==='ArrowUp')sph.phi=Math.max(.1,sph.phi-.12);if(e.key==='ArrowDown')sph.phi=Math.min(Math.PI*.86,sph.phi+.12);camera.position.copy(controls.target).add(new T.Vector3().setFromSpherical(sph));controls.update();}};renderer.domElement.addEventListener('keydown',keyboard);
- const lost=e=>{e.preventDefault();onError?.('The 3D display lost its graphics connection. Close and reopen this view, or use the connection close-up.');};renderer.domElement.addEventListener('webglcontextlost',lost);
- controls.addEventListener('start',()=>{interacting=true});controls.addEventListener('end',()=>{interacting=false});
- function tick(now){if(disposed)return;raf=requestAnimationFrame(tick);if(now-last<25&&!interacting)return;last=now;if(animation){const t=Math.max(0,Math.min(1,(now-animation.start)/1400));amount=animation.from+(animation.to-animation.from)*(1-(1-t)**3);updateGeometry();onExplode?.(amount);if(t===1)animation=null;}for(let i=0;i<assemblies.length;i++){const a=assemblies[i];if(a.bead.visible&&a.curve)a.bead.position.copy(a.curve.getPointAt((now/2600+i*.18)%1));}controls.update();renderer.render(scene,camera);}
- raf=requestAnimationFrame(tick);
- return {select,setExplosion,animateTo,view,focus(){const a=assemblies.find(a=>a.p.id===selected);if(!a)return;const center=toV(a.p.position).addScaledVector(toV(a.p.normal),.8);controls.target.copy(center);camera.position.copy(center).addScaledVector(toV(a.p.normal),4.4).add(new T.Vector3(1.6,2.2,1.2));controls.update();},zoom(factor){camera.position.sub(controls.target).multiplyScalar(factor).clampLength(controls.minDistance,controls.maxDistance).add(controls.target);controls.update();},dispose(){disposed=true;cancelAnimationFrame(raf);ro.disconnect();controls.dispose();renderer.domElement.removeEventListener('webglcontextlost',lost);for(const x of geometries)x.dispose();for(const x of materials)x.dispose();for(const x of textures)x.dispose();renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();}};
+ function setExplosion(v){if(!Number.isFinite(v))return;animation=null;amount=Math.max(0,Math.min(1,v));updateGeometry();onExplode?.(amount);}
+ function animateTo(value){if(!Number.isFinite(value))return;value=Math.max(0,Math.min(1,value));if(reduced)return setExplosion(value);animation={from:amount,to:value,start:performance.now()};}
+ function framing(){
+  const bounds=new T.Box3(new T.Vector3(-w/2,0,-d/2),new T.Vector3(w/2,h+.8,d/2));
+  if(spec.type==='laptop')bounds.max.y=Math.max(bounds.max.y,3.3);
+  for(const a of assemblies)if(a.p.connected||a.p.id===selected){const l=connectionLayout(a.p,spec.ports,1);bounds.expandByPoint(l.tip);bounds.expandByPoint(l.tail);bounds.expandByPoint(l.end.clone().add(new T.Vector3(0,-.5,0)));}
+  return {center:bounds.getCenter(new T.Vector3()),bounds};
+ }
+ let currentView=['server','nas','ups','ap'].includes(spec.type)?'rear':'hero';
+ function view(name){
+  currentView=name;const directions={hero:[-6,5,8],front:[0,2,10],rear:[-4.5,4,-10],top:[0,12,.001]},f=framing();
+  const direction=toV(directions[name]||directions.hero).normalize();f.distance=fittedBoxDistance(f.bounds,direction,camera.aspect);
+  controls.maxDistance=Math.max(23,f.distance*1.8);controls.enableDamping=false;
+  controls.target.copy(f.center);camera.position.copy(f.center).addScaledVector(direction,f.distance);controls.update();controls.enableDamping=true;
+ }
+ updateGeometry();
+ let previousAspect=0;
+ const resize=()=>{if(disposed)return;const {width,height}=host.getBoundingClientRect();if(!width||!height)return;renderer.setSize(width,height,false);camera.aspect=width/height;camera.updateProjectionMatrix();if(Math.abs(camera.aspect-previousAspect)>.05){view(currentView);previousAspect=camera.aspect;}};
+ const ro=new ResizeObserver(resize);ro.observe(host);resize();
+ const ray=new T.Raycaster(),mouse=new T.Vector2();let pointer=null;
+ const cancel=()=>{pointer=null;},down=e=>{pointer=e.button===0?{x:e.clientX,y:e.clientY,id:e.pointerId}:null;},up=e=>{
+  if(!pointer||pointer.id!==e.pointerId||Math.hypot(e.clientX-pointer.x,e.clientY-pointer.y)>5){cancel();return;}cancel();
+  const r=renderer.domElement.getBoundingClientRect();if(!r.width||!r.height)return;
+  mouse.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);ray.setFromCamera(mouse,camera);
+  const hits=ray.intersectObjects(targets).filter(hit=>{let o=hit.object;while(o){if(!o.visible)return false;o=o.parent;}return true;});
+  if(hits[0]){select(hits[0].object.userData.port);onSelect?.(selected);}
+ };
+ renderer.domElement.addEventListener('pointerdown',down);renderer.domElement.addEventListener('pointerup',up);renderer.domElement.addEventListener('pointercancel',cancel);
+ const keyboard=e=>{if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)){
+  e.preventDefault();const v=camera.position.clone().sub(controls.target),sph=new T.Spherical().setFromVector3(v);
+  if(e.key==='ArrowLeft')sph.theta-=.12;if(e.key==='ArrowRight')sph.theta+=.12;if(e.key==='ArrowUp')sph.phi=Math.max(.1,sph.phi-.12);if(e.key==='ArrowDown')sph.phi=Math.min(Math.PI*.86,sph.phi+.12);
+  camera.position.copy(controls.target).add(new T.Vector3().setFromSpherical(sph));controls.update();
+ }};renderer.domElement.addEventListener('keydown',keyboard);
+ const lost=e=>{e.preventDefault();contextLost=true;cancelAnimationFrame(raf);onError?.('The 3D display lost its graphics connection. Close and reopen this view, or choose “Wire this socket in the lab.”');};renderer.domElement.addEventListener('webglcontextlost',lost);
+ const begin=()=>{interacting=true;},end=()=>{interacting=false;};controls.addEventListener('start',begin);controls.addEventListener('end',end);
+ function tick(now){
+  if(disposed||contextLost||document.hidden)return;raf=requestAnimationFrame(tick);if(now-last<(interacting?16:33))return;last=now;
+  if(animation){const t=Math.max(0,Math.min(1,(now-animation.start)/1400));amount=animation.from+(animation.to-animation.from)*(1-(1-t)**3);updateGeometry();onExplode?.(amount);if(t===1)animation=null;}
+  for(let i=0;i<assemblies.length;i++){const a=assemblies[i];if(a.bead.visible&&a.curve)a.bead.position.copy(a.curve.getPointAt((now/2600+i*.18)%1));}
+  controls.update();renderer.render(scene,camera);
+ }
+ const visibility=()=>{cancelAnimationFrame(raf);if(!document.hidden&&!disposed&&!contextLost){last=0;raf=requestAnimationFrame(tick);}};
+ document.addEventListener('visibilitychange',visibility);raf=requestAnimationFrame(tick);
+ return {select,setExplosion,animateTo,view,focus(){
+  const a=assemblies.find(a=>a.p.id===selected);if(!a)return;const l=connectionLayout(a.p,spec.ports,amount),center=l.tip.clone().lerp(l.end,.25);
+  controls.enableDamping=false;controls.target.copy(center);camera.position.copy(center).addScaledVector(l.normal,5.2).add(new T.Vector3(0,1.8,0));controls.update();controls.enableDamping=true;
+ },zoom(factor){if(!Number.isFinite(factor)||factor<=0)return;camera.position.sub(controls.target).multiplyScalar(factor).clampLength(controls.minDistance,controls.maxDistance).add(controls.target);controls.update();},dispose(){
+  disposed=true;cancelAnimationFrame(raf);ro.disconnect();document.removeEventListener('visibilitychange',visibility);
+  controls.removeEventListener('start',begin);controls.removeEventListener('end',end);controls.dispose();
+  for(const [name,fn]of [['webglcontextlost',lost],['pointerdown',down],['pointerup',up],['pointercancel',cancel],['keydown',keyboard]])renderer.domElement.removeEventListener(name,fn);
+  for(const x of geometries)x.dispose();for(const x of materials)x.dispose();for(const x of textures)x.dispose();renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();
+ }};
 }
