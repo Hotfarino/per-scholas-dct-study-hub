@@ -6,6 +6,8 @@ An interactive 3D lab for learning networking from the beginning. Hardware, serv
 
 ## Latest audit update
 
+[Repository verification — October 20, 2026](test-results/repository-check-2026-10-20.json): the published lab matches this source, all 30 lab suites pass from a fresh checkout, and the README links resolve.
+
 [Edition 47 validation record](test-results/audit47.json): stricter portable-file checks, separated device labels, camera fitting and smooth connector animations with stable mesh buffers. Hidden scenes pause, graphics failures stop rendering cleanly, and shared Blender textures remain reusable. The larger hosted site also has patched dependencies and bounded practice/PBQ request parsing. The record distinguishes hosted API checks from this standalone lab.
 
 ## Start here
@@ -50,6 +52,8 @@ Guided mode provides explanations and hints. Practice mode reduces help. Free mo
 Clone this repository, then run:
 
 ```sh
+git clone https://github.com/Hotfarino/per-scholas-dct-study-hub.git
+cd per-scholas-dct-study-hub
 cd guide/labs/core-1-220-1201/home-lab-workshop
 python3 -m http.server 8768 --bind 127.0.0.1
 ```

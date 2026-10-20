@@ -1,0 +1,20 @@
+{
+  "verified_on": "2026-10-20",
+  "github_source_commit_checked": "00f7ba0c7040c0763d6f3817c1e8155d07c254ab",
+  "site_edition": 47,
+  "site_source_commit": "99b2d3ac398f495d67311ddb9301b9aee8f5542e",
+  "public_demo": "https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site/home-lab.html?edition=47#learningBar",
+  "checks": {
+    "lab_test_suites": 30,
+    "lab_test_result": "passed from a fresh checkout with npm ci --ignore-scripts and npm test",
+    "published_js_css_files_compared": 67,
+    "published_js_css_result": "all byte-identical to GitHub",
+    "published_html_result": "identical after removing the hosting-injected Cloudflare script",
+    "relative_readme_links_checked": 111,
+    "broken_relative_readme_links": 0,
+    "test_dependency_known_advisories": 0,
+    "previous_github_actions_run": "https://github.com/Hotfarino/per-scholas-dct-study-hub/actions/runs/38421489642",
+    "previous_github_actions_result": "success"
+  },
+  "scope": "Repository/demo consistency, reproducible automated tests, README links and project presentation. This does not certify full exam coverage, all possible browser interactions, or production infrastructure readiness."
+}

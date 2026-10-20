@@ -2,13 +2,24 @@
 
 An unofficial, community-organized study hub for CompTIA A+ Core 1, Core 2 and foundational data-center support topics.
 
-Last course-resource review: September 11, 2026.
+Course-resource review: September 11, 2026. Home Lab release: **Edition 47**.
 
 ## Featured project: Home Lab Workshop
 
 A guided 3D lab for building networks, rack servers, RAID storage and virtual machines. Configure and troubleshoot through a restricted Windows/Ubuntu laptop simulation, with explanations and progress checks for beginners.
 
-**[Try the live lab](https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site/home-lab.html?edition=44#learningBar)** · [Source, setup and tests](guide/labs/core-1-220-1201/home-lab-workshop/README.md) · [Automated checks](https://github.com/Hotfarino/per-scholas-dct-study-hub/actions/workflows/home-lab.yml)
+**[Try the live lab](https://core-1-reviewed-flashcards.bigdawgroof812178.chatgpt.site/home-lab.html?edition=47#learningBar)** · [Source, setup and tests](guide/labs/core-1-220-1201/home-lab-workshop/README.md) · [Automated checks](https://github.com/Hotfarino/per-scholas-dct-study-hub/actions/workflows/home-lab.yml)
+
+[![Home Lab checks](https://github.com/Hotfarino/per-scholas-dct-study-hub/actions/workflows/home-lab.yml/badge.svg?branch=main)](https://github.com/Hotfarino/per-scholas-dct-study-hub/actions/workflows/home-lab.yml)
+
+### Project at a glance
+
+- **Networking practice:** connect power and data cables, configure IPv4/DHCP/DNS and Wi-Fi, and diagnose connection failures.
+- **Infrastructure practice:** mount compatible equipment in an 18U rack, configure RAID storage, and explore virtual-machine network isolation.
+- **Implementation:** JavaScript modules, HTML/CSS, Three.js, Blender/GLB models, browser saves and portable JSON exports.
+- **Verification:** 30 automated lab suites run in GitHub Actions. The [project README](guide/labs/core-1-220-1201/home-lab-workshop/README.md) explains setup, architecture, test coverage and limitations.
+
+The lab runs in a browser with guided instructions and optional independent challenges. Operating systems, terminals, networks and VMs are **educational simulations**. The project demonstrates networking concepts and software implementation; it does not provision real machines or claim official CompTIA endorsement.
 
 ## Browse by subject
 
